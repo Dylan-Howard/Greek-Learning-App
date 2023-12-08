@@ -1,0 +1,134 @@
+{
+  "grammaticalForms": [
+    {
+      "formId": 1,
+      "name": "Singular",
+      "lessonId": 4
+    },
+    {
+      "formId": 2,
+      "name": "Plural",
+      "lessonId": 4
+    },
+    {
+      "formId": 3,
+      "name": "Masculine",
+      "lessonId": 4
+    },
+    {
+      "formId": 4,
+      "name": "Feminine",
+      "lessonId": 4
+    },
+    {
+      "formId": 5,
+      "name": "Neuter",
+      "lessonId": 5
+    },
+    {
+      "formId": 6,
+      "name": "1st Declension",
+      "lessonId": 5
+    },
+    {
+      "formId": 7,
+      "name": "2nd Declension",
+      "lessonId": 4
+    },
+    {
+      "formId": 8,
+      "name": "Present",
+      "lessonId": 3
+    },
+    {
+      "formId": 9,
+      "name": "Aorist",
+      "lessonId": 7
+    },
+    {
+      "formId": 10,
+      "name": "Imperfect",
+      "lessonId": 7
+    },
+    {
+      "formId": 11,
+      "name": "Future",
+      "lessonId": 4
+    },
+    {
+      "formId": 12,
+      "name": "Perfect",
+      "lessonId": 10
+    },
+    {
+      "formId": 13,
+      "name": "Pluperfect",
+      "lessonId": 10
+    },
+    {
+      "formId": 14,
+      "name": "Active",
+      "lessonId": 3
+    },
+    {
+      "formId": 15,
+      "name": "Middle",
+      "lessonId": 12
+    },
+    {
+      "formId": 16,
+      "name": "Passive",
+      "lessonId": 12
+    },
+    {
+      "formId": 17,
+      "name": "Indicative",
+      "lessonId": 2
+    },
+    {
+      "formId": 18,
+      "name": "Subjunctive",
+      "lessonId": 23
+    },
+    {
+      "formId": 19,
+      "name": "Imperative",
+      "lessonId": 24
+    },
+    {
+      "formId": 20,
+      "name": "Optative",
+      "lessonId": 24
+    },
+    {
+      "formId": 21,
+      "name": "First Person",
+      "lessonId": 2
+    },
+    {
+      "formId": 22,
+      "name": "Second Person",
+      "lessonId": 2
+    },
+    {
+      "formId": 23,
+      "name": "Third Person",
+      "lessonId": 2
+    },
+    {
+      "formId": 24,
+      "name": "Singular",
+      "lessonId": 2
+    },
+    {
+      "formId": 25,
+      "name": "Plural",
+      "lessonId": 2
+    },
+    {
+      "formId": 26,
+      "name": "Prepositions",
+      "lessonId": 8
+    }
+  ]
+}

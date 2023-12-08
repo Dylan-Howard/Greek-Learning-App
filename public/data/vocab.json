@@ -1,0 +1,28 @@
+{
+  "dictionary": [
+    {
+      "vocabId": 1,
+      "content": "ὁ, ἡ, τό",
+      "gloss": "the",
+      "occurances": 19864
+    },
+    {
+      "vocabId": 2,
+      "content": "εἰμί",
+      "gloss": "I am, I exist",
+      "occurances": 2463
+    },
+    {
+      "vocabId": 3,
+      "content": "ἀπό",
+      "gloss": "(away) from, with, for",
+      "occurances": 646
+    },
+    {
+      "vocabId": 4,
+      "content": "ἀρχή, -ῆς, ἡ",
+      "gloss": "beginning, origin, ruler",
+      "occurances": 55
+    }
+  ]
+}

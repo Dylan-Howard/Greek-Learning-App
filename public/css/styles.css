@@ -1,0 +1,118 @@
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+}
+
+nav.nav-bar {
+  background: #1B2021;
+  color: #FFFAFF;
+  display: block;
+  width: 80px;
+  padding: 8px 16px;
+  /* max-width: 300px; */
+}
+
+nav.nav-bar > .nav-icon {
+  background: #333333;
+  height: 80px;
+  margin: 8px;
+}
+
+
+.settings-container {
+  background: #1B2021;
+  color: #FFFAFF;
+  display: block;
+  width: 300px;
+  padding: 8px 16px;
+  /* max-width: 300px; */
+}
+
+#settings-menu > .menu-label {
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+#settings-menu > .settings-label {
+  width: 100%;
+}
+
+#settings-menu > .settings-option {
+  display: block;
+  height: 14px;
+  width: 100%;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px 16px;
+  background: #FFFAFF;
+  color: #1B2021;
+  width: 100%;
+
+  font-family: 'Noto Serif', serif;
+}
+#renderedText {
+  height: 100%;
+  width: 100%;
+  padding: 4rem 0 4rem 1rem;
+}
+
+.text-container ::selection {
+  color: inherit;
+  background-color: #E6C960;
+}
+.text-container ::-moz-selection {
+  color: inherit;
+  background-color: #E6C960;
+  /* opacity: .2; */
+}
+
+.text-container .text-unit {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  /* padding: .2rem 0; */
+}
+.text-container .text-unit:hover {
+  color: #4A89BF;
+  transition: .2s;
+  -webkit-transition: .2s;
+  -ms-transition: .2s;
+  
+  cursor: pointer;
+}
+
+#popup-container {
+  display: block;
+  height: 200px;
+  width: 100%;
+}
+
+#popup-container > .details-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* height: 200px; */
+  width: 100%;
+}
+
+#popup-container > .details-section > .details-label {
+  display: block;
+  width: 100%;
+
+  color: #636363;
+  font-size: .8rem;
+}

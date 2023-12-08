@@ -1,0 +1,36 @@
+{
+  "declensions": [
+    {
+      "declensionId": 1,
+      "vocabId": 1,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ὃ"
+    },
+    {
+      "declensionId": 2,
+      "vocabId": 2,
+      "tenseId": 10,
+      "voiceId": 14,
+      "moodId": 17,
+      "personId": 23,
+      "countId": 25,
+      "content": "ἦν"
+    },
+    {
+      "declensionId": 3,
+      "vocabId": 3,
+      "grammerId": 26,
+      "content": "ἀπ"
+    },
+    {
+      "declensionId": 4,
+      "vocabId": 4,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ἀρχῆς"
+    }
+  ]
+}
