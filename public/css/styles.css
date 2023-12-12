@@ -14,61 +14,115 @@ body {
 nav.nav-bar {
   background: #1B2021;
   color: #FFFAFF;
-  display: block;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
   width: 80px;
-  padding: 8px 16px;
+  padding: 8px 0;
   /* max-width: 300px; */
+}
+nav.nav-bar ::selection {
+  /* color: inherit; */
+  background-color: transparent;
+}
+nav.nav-bar ::-moz-selection {
+  /* color: inherit; */
+  background-color: transparent;
 }
 
 nav.nav-bar > .nav-icon {
-  background: #333333;
-  height: 80px;
-  margin: 8px;
+  /* background: #333333; */
+  cursor: pointer;
+  /* margin: 16px 4px; */
+  padding: 16px 4px;
+  width: 100%;
+}
+
+nav.nav-bar > .nav-icon.nav-active {
+  background: #252B2D;
+}
+
+nav.nav-bar > .nav-icon > .material-symbols-outlined {
+  font-size: 1.8rem;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+}
+
+nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
+  color: #4A89BF;
 }
 
 
 .settings-container {
-  background: #1B2021;
+  background: #252B2D;
   color: #FFFAFF;
   display: block;
-  width: 300px;
-  padding: 8px 16px;
-  /* max-width: 300px; */
+  padding: 8px 0;
+  overflow-y: scroll;
+  /* overflow-x: auto; */
+}
+
+.settings-container ::selection {
+  /* color: inherit; */
+  background-color: transparent;
+}
+.settings-container ::-moz-selection {
+  /* color: inherit; */
+  background-color: transparent;
 }
 
 #settings-menu > .menu-label {
+  display: block;
+  margin: 8px 16px;
+  line-height: 2rem;
   font-size: 1.8rem;
   font-weight: 600;
   width: 100%;
 }
 
-#settings-menu > .settings-label {
-  width: 100%;
+#settings-menu > input[type="checkbox"].settings-option {
+  display: none;
 }
+
+#settings-menu > label.settings-label {
+  line-height: 1.2rem;
+  font-size: 1rem;
+  display: block;
+  outline: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.settings-option:checked + .settings-label { color: #4A89BF; }
 
 #settings-menu > .settings-option {
   display: block;
-  height: 14px;
-  width: 100%;
   padding: 8px 16px;
   cursor: pointer;
+}
+
+#settings-menu > .settings-option:hover {
+  background: #282e30;
 }
 
 .text-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 8px 16px;
   background: #FFFAFF;
-  color: #1B2021;
   width: 100%;
-
-  font-family: 'Noto Serif', serif;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 #renderedText {
   height: 100%;
-  width: 100%;
-  padding: 4rem 0 4rem 1rem;
+  width: calc(100% - 4rem);
+  padding: 4rem 2rem 4rem 2rem;
+
+  color: #1B2021;
+  font-family: 'Noto Serif', serif;
 }
 
 .text-container ::selection {
@@ -78,13 +132,11 @@ nav.nav-bar > .nav-icon {
 .text-container ::-moz-selection {
   color: inherit;
   background-color: #E6C960;
-  /* opacity: .2; */
 }
 
 .text-container .text-unit {
   font-size: 1.1rem;
-  line-height: 1.4rem;
-  /* padding: .2rem 0; */
+  line-height: 1.8rem;
 }
 .text-container .text-unit:hover {
   color: #4A89BF;
@@ -98,15 +150,17 @@ nav.nav-bar > .nav-icon {
 #popup-container {
   display: block;
   height: 200px;
-  width: 100%;
+  width: calc(100% - 4rem);
+  padding: 4rem 2rem 4rem 2rem;
 }
 
 #popup-container > .details-section {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   flex-direction: column;
   /* height: 200px; */
-  width: 100%;
+  width: 50%;
+  padding: 4px 0;
 }
 
 #popup-container > .details-section > .details-label {

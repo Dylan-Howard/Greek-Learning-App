@@ -8,31 +8,38 @@
 <body>
   <div class="app-container">
     <nav class="nav-bar">
-      <div class="nav-icon">Option 1</div>
-      <div class="nav-icon">Option 2</div>
+      <div id="home" class="nav-icon">
+        <span class="material-symbols-outlined">home</span>
+      </div>
+      <div id="lessons" class="nav-icon">
+        <span class="material-symbols-outlined">play_lesson</span>
+      </div>
+      <div id="dictionary" class="nav-icon">
+        <span class="material-symbols-outlined">dictionary</span>
+      </div>
+      <div id="settings" class="nav-icon">
+        <span class="material-symbols-outlined">settings</span>
+      </div>
     </nav>
     <div class="settings-container">
-      <div id="settings-menu">
-        <span class="menu-label">Lessons</span>
-        <span class="settings-option">Lesson 1</span>
-        <span class="settings-option">Lesson 2</span>
-      </div>
+      <div id="settings-menu"></div>
     </div>
     <div class="text-container">
       <div id="renderedText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum doloribus dolores in eum sit quis ducimus atque id! Corporis consequuntur, ad assumenda fugit nisi libero amet hic maiores repudiandae voluptates!</div>
-      <div id="popup-container">
-        
-      </div>
+      <div id="popup-container"></div>
     </div>
   </div>
+  <!-- <script type="module" src="./js/nav.js"></script> -->
   <script type="module" src="./js/render.js"></script>
-  <script type="module" src="./js/delayedTooltip.js"></script>
-  <script type="module" src="./js/lessons.js"></script>
+  <!-- <script type="module" src="./js/delayedTooltip.js"></script> -->
+  <script type="module" src="./js/vocab.js"></script>
+  <!-- <script type="module" src="./js/lessons.js"></script> -->
 </body>
   <link rel="stylesheet" type="text/css" href="./css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </html>

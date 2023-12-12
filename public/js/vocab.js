@@ -1,12 +1,12 @@
 
-import lessons from "../data/lessons.json" assert { type: "json" };
+import vocab from "../data/vocab.json" assert { type: "json" };
 
-/** Initiates user without any lessons complete */
-const userLessons = lessons.lessons;
-userLessons.forEach((lsn) => lsn.isComplete = false);
+// /** Initiates user without any lessons complete */
+const USER_DICTIONARY = vocab.dictionary;
+USER_DICTIONARY.forEach((vcb) => vcb.isComplete = true);
 
 /**
- * Initiate Lessons Menu Rendering
+ * Initiate Text Rendering
  */
 (() => {
   const settingsMenu = document.getElementById("settings-menu");
@@ -14,24 +14,28 @@ userLessons.forEach((lsn) => lsn.isComplete = false);
 
   const menuLabel = document.createElement("span");
   menuLabel.classList.add("menu-label");
-  menuLabel.textContent = "Lessons";
+  menuLabel.textContent = "Dictionary";
   settingsMenu.appendChild(menuLabel);
 
-  lessons.lessons.forEach((lsn) => {
+  vocab.dictionary.forEach((vcb) => {
     /* Creates span element for each literary unit */
     const settingsOption = document.createElement("input");
     settingsOption.setAttribute("type","checkbox");
-    settingsOption.setAttribute("id",`lesson-${lsn.lessonId}`);
+    settingsOption.setAttribute("id",`vocab-${vcb.vocabId}`);
+    settingsOption.setAttribute(
+      "checked",
+      USER_DICTIONARY.find((dic) => dic.vocabId == vcb.vocabId).isComplete,
+    )
     settingsOption.classList.add("settings-option");
-    settingsOption.dataset.lessonId = lsn.lessonId;
+    settingsOption.dataset.vocabId = vcb.vocabId;
 
     settingsMenu.innerHTML = settingsMenu.innerHTML;
     settingsMenu.appendChild(settingsOption);
 
     const settingsLabel = document.createElement("label");
-    settingsLabel.setAttribute("for",`lesson-${lsn.lessonId}`);
+    settingsLabel.setAttribute("for",`vocab-${vcb.vocabId}`);
     settingsLabel.classList.add("settings-label");
-    settingsLabel.textContent = lsn.title;
+    settingsLabel.textContent = vcb.content;
 
     settingsMenu.innerHTML = settingsMenu.innerHTML;
     settingsMenu.appendChild(settingsLabel);
@@ -45,8 +49,8 @@ userLessons.forEach((lsn) => lsn.isComplete = false);
   settings.forEach((el) => el.addEventListener(
     "change",
     ({ currentTarget }) => {
-      userLessons.find(
-        (lsn) => lsn.lessonId == currentTarget.dataset.lessonId
+      userDictionary.find(
+        (vcb) => vcb.vocabId == currentTarget.dataset.vocabId
       ).isComplete = currentTarget.checked;
     }
   ));

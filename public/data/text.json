@@ -1,7 +1,7 @@
 {
   "texts": [
     {
-      "title": "1 John",
+      "title": "ΙΩΑΝΝΟΥ Α (1 John)",
       "chapters": [
         {
           "chapterNumber": 1,
@@ -25,6 +25,97 @@
                 {
                   "content": "ἀρχῆς",
                   "declensionId": 4
+                },
+                {
+                  "content": ","
+                },
+                {
+                  "content": "ὃ",
+                  "declensionId": 1
+                },
+                {
+                  "content": "ἀκηκόαμεν",
+                  "declensionId": 5
+                },
+                {
+                  "content": ","
+                },
+                {
+                  "content": "ὃ",
+                  "declensionId": 1
+                },
+                {
+                  "content": "ἑωράκαμεν",
+                  "declensionId": 6
+                },
+                {
+                  "content": "τοῖς",
+                  "declensionId": 7
+                },
+                {
+                  "content": "ὀφθαλμοῖς",
+                  "declensionId": 8
+                },
+                {
+                  "content": "ἡμῶν",
+                  "declensionId": 9
+                },
+                {
+                  "content": ","
+                },
+                {
+                  "content": "ὃ",
+                  "declensionId": 1
+                },
+                {
+                  "content": "ἐθεασάμεθα",
+                  "declensionId": 10
+                },
+                {
+                  "content": "καὶ",
+                  "declensionId": 11
+                },
+                {
+                  "content": "αἱ",
+                  "declensionId": 12
+                },
+                {
+                  "content": "χεῖρες",
+                  "declensionId": 13
+                },
+                {
+                  "content": "ἡμῶν",
+                  "declensionId": 9
+                },
+                {
+                  "content": "ἐψηλάφησαν",
+                  "declensionId": 14
+                },
+                {
+                  "content": ","
+                },
+                {
+                  "content": "περὶ",
+                  "declensionId": 15
+                },
+                {
+                  "content": "τοῦ",
+                  "declensionId": 16
+                },
+                {
+                  "content": "λόγου",
+                  "declensionId": 17
+                },
+                {
+                  "content": "τῆς",
+                  "declensionId": 19
+                },
+                {
+                  "content": "ζωῆς",
+                  "declensionId": 20
+                },
+                {
+                  "content": "—"
                 }
               ]
             },
