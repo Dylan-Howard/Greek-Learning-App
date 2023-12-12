@@ -1,5 +1,6 @@
 // eslint-disable-next-line node/no-unsupported-features/es-syntax
 import vocabMenu from "../js/vocab.js";
+import lessonsMenu from "../js/lessons.js";
 
 const mainNav = () => {
   /* Attaches listener for click events on text units */
@@ -20,11 +21,17 @@ const mainNav = () => {
 /**
  * Initiate Nav Bar
  */
-const navbar = (appDictionary, userDictionary, menuId) => {
+const navbar = (
+  appDictionary,
+  userDictionary,
+  appLessons,
+  userLessons,
+  { dictionaryMenuId, lessonsMenuId },
+) => {
   /* Initializes main navbar */
   mainNav();
-  vocabMenu(appDictionary, userDictionary, menuId);
-  // console.log("navbar initialized");
+  vocabMenu(appDictionary, userDictionary, dictionaryMenuId);
+  lessonsMenu(appLessons, userLessons, lessonsMenuId);
 };
 
 // eslint-disable-next-line node/no-unsupported-features/es-syntax

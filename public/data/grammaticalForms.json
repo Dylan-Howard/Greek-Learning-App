@@ -3,131 +3,157 @@
     {
       "formId": 1,
       "name": "Singular",
+      "short": "S",
       "lessonId": 4
     },
     {
       "formId": 2,
       "name": "Plural",
+      "short": "P",
       "lessonId": 4
     },
     {
       "formId": 3,
       "name": "Masculine",
+      "short": "M",
       "lessonId": 4
     },
     {
       "formId": 4,
       "name": "Feminine",
+      "short": "F",
       "lessonId": 4
     },
     {
       "formId": 5,
       "name": "Neuter",
+      "short": "N",
       "lessonId": 5
     },
     {
       "formId": 6,
       "name": "1st Declension",
+      "short": "1st",
       "lessonId": 5
     },
     {
       "formId": 7,
       "name": "2nd Declension",
+      "short": "2nd",
       "lessonId": 4
     },
     {
       "formId": 8,
       "name": "Present",
+      "short": "P",
       "lessonId": 3
     },
     {
       "formId": 9,
       "name": "Aorist",
+      "short": "A",
       "lessonId": 7
     },
     {
       "formId": 10,
       "name": "Imperfect",
+      "short": "I",
       "lessonId": 7
     },
     {
       "formId": 11,
       "name": "Future",
+      "short": "F",
       "lessonId": 4
     },
     {
       "formId": 12,
       "name": "Perfect",
+      "short": "Pf",
       "lessonId": 10
     },
     {
       "formId": 13,
       "name": "Pluperfect",
+      "short": "Ppf",
       "lessonId": 10
     },
     {
       "formId": 14,
       "name": "Active",
+      "short": "A",
       "lessonId": 3
     },
     {
       "formId": 15,
       "name": "Middle",
+      "short": "M",
       "lessonId": 12
     },
     {
       "formId": 16,
       "name": "Passive",
+      "short": "P",
       "lessonId": 12
     },
     {
       "formId": 17,
       "name": "Indicative",
+      "short": "Ind",
       "lessonId": 2
     },
     {
       "formId": 18,
       "name": "Subjunctive",
+      "short": "Sub",
       "lessonId": 23
     },
     {
       "formId": 19,
       "name": "Imperative",
+      "short": "Imp",
       "lessonId": 24
     },
     {
       "formId": 20,
       "name": "Optative",
+      "short": "Op",
       "lessonId": 24
     },
     {
       "formId": 21,
       "name": "First Person",
+      "short": "1",
       "lessonId": 2
     },
     {
       "formId": 22,
       "name": "Second Person",
+      "short": "2",
       "lessonId": 2
     },
     {
       "formId": 23,
       "name": "Third Person",
+      "short": "3",
       "lessonId": 2
     },
     {
       "formId": 24,
       "name": "Singular",
+      "short": "S",
       "lessonId": 2
     },
     {
       "formId": 25,
       "name": "Plural",
+      "short": "P",
       "lessonId": 2
     },
     {
       "formId": 26,
       "name": "Prepositions",
+      "short": "Prep",
       "lessonId": 8
     }
   ]

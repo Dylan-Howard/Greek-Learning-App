@@ -12,26 +12,31 @@
               "units": [
                 {
                   "content": "Ὃ",
-                  "declensionId": 1
+                  "declensionId": 1,
+                  "en": "That which"
                 },
                 {
                   "content": "ἦν",
-                  "declensionId": 2
+                  "declensionId": 2,
+                  "en": "was"
                 },
                 {
                   "content": "ἀπʼ",
-                  "declensionId": 3
+                  "declensionId": 3,
+                  "en": "from"
                 },
                 {
                   "content": "ἀρχῆς",
-                  "declensionId": 4
+                  "declensionId": 4,
+                  "en": "the begining"
                 },
                 {
                   "content": ","
                 },
                 {
                   "content": "ὃ",
-                  "declensionId": 1
+                  "declensionId": 1,
+                  "en": "that which"
                 },
                 {
                   "content": "ἀκηκόαμεν",
@@ -42,7 +47,8 @@
                 },
                 {
                   "content": "ὃ",
-                  "declensionId": 1
+                  "declensionId": 1,
+                  "en": "that which"
                 },
                 {
                   "content": "ἑωράκαμεν",
@@ -65,7 +71,8 @@
                 },
                 {
                   "content": "ὃ",
-                  "declensionId": 1
+                  "declensionId": 1,
+                  "en": "that which"
                 },
                 {
                   "content": "ἐθεασάμεθα",
@@ -73,19 +80,23 @@
                 },
                 {
                   "content": "καὶ",
-                  "declensionId": 11
+                  "declensionId": 11,
+                  "en": "and"
                 },
                 {
                   "content": "αἱ",
-                  "declensionId": 12
+                  "declensionId": 12,
+                  "en": ""
                 },
                 {
                   "content": "χεῖρες",
-                  "declensionId": 13
+                  "declensionId": 13,
+                  "en": "hands"
                 },
                 {
                   "content": "ἡμῶν",
-                  "declensionId": 9
+                  "declensionId": 9,
+                  "en": "our"
                 },
                 {
                   "content": "ἐψηλάφησαν",

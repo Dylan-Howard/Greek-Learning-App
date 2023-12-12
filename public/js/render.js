@@ -21,21 +21,39 @@ const fetchDeclensionDetails = (declension) => ({
 });
 
 const stringifyDeclensionDetails = ({
-  tense, voice, mood, person, count, gender, pattern, root, gloss
+  tense, voice, mood, person, count, gender, pattern, root
 }) => {
   const details = [];
+  if (root) { details.push(`[${root.name}:`) }
   /* Verb Details */
   if (tense) { details.push(`${tense.name} `); }
   if (voice) { details.push(`${voice.name} `); }
   if (mood) { details.push(`${mood.name} `) }
-  if (person) { details.push(`${person.name} `) }
+  if (person) { details.push(`${person.name}`) }
+  if (tense && person) { details.push("]") }
   /* Noun Details */
   if (count) { details.push(`${count.name} `) }
   if (gender) { details.push(`${gender.name} `) }
-  if (pattern) { details.push(`${pattern.name} `) }
-  if (root) { details.push(`(${root.name}): `) }
-  if (vocab) { details.push(gloss.name) }
-  // if (vocab) { details.push(`(${vocab.content}): ${vocab.gloss}`) }
+  if (pattern) { details.push(`${pattern.name}]`) }
+
+  return details.join('');
+};
+
+const stringifyShorthandDeclensionDetails = ({
+  tense, voice, mood, person, count, gender, pattern, root
+}) => {
+  const details = [];
+  if (root) { details.push(`[${root.name}: `) }
+  /* Verb Details */
+  if (tense) { details.push(`${tense.short}`); }
+  if (voice) { details.push(`${voice.short}`); }
+  if (mood) { details.push(`${mood.short}`) }
+  if (person) { details.push(`${person.short}`) }
+  if (tense && person) { details.push("]") }
+  /* Noun Details */
+  if (count) { details.push(`${count.short}`) }
+  if (gender) { details.push(`${gender.short}`) }
+  if (pattern) { details.push(`${pattern.short}]`) }
 
   return details.join('');
 };
@@ -70,18 +88,18 @@ const renderDetailsPopup = (details) => {
   });
 };
 
-const renderVerse = (vrs) => {
+const renderVerse = (verse, userDictionary, userLessons) => {
   /* Creates text conatiner */
   const textContainer = document.getElementById("renderedText");
   textContainer.textContent = "";
 
   /* Creates verse indicator */
   const verseIndicator = document.createElement("span");
-  verseIndicator.textContent = vrs.verseNumber;
+  verseIndicator.textContent = verse.verseNumber;
   textContainer.appendChild(verseIndicator);
 
   /* Creates span element for each literary unit */
-  vrs.units.forEach((unit) => {
+  verse.units.forEach((unit) => {
     const unitElement = document.createElement("span");
     unitElement.classList.add("text-unit");
 
@@ -89,7 +107,41 @@ const renderVerse = (vrs) => {
      * @TODO insert content based on userLessons
      * @TODO add hover class if is a literary unit and 
      */
-    unitElement.textContent = unit.content;
+    const declension = declensions.declensions.find((declension) => declension.declensionId == unit.declensionId);
+    // let isUnitRecognizable = true;
+    let unitContent = '';
+
+    if (declension) {
+      console.log("Rendering Declension");
+      const userVocab = userDictionary.find((vcb) => vcb.vocabId == declension.vocabId);
+
+      if (userVocab && userVocab.isComplete) {
+        unitContent = unit.content;
+        const details = fetchDeclensionDetails(declension);
+
+        const detailFields = Object.keys(details)
+          .filter((fld) => !!details[fld]);
+
+        const userProgress = detailFields.map(
+          (dtl) => {
+              if (details[dtl].lessonId) {
+                const userLesson = userLessons.find((lsn) => lsn.lessonId === details[dtl].lessonId);
+                if (userLesson) {
+                  return userLesson.isComplete;
+                }
+              }
+              return true;
+            }
+          );
+        const isGrammarRecognizable = userProgress.every((prg) => !!prg);
+        console.log(details);
+        unitContent = isGrammarRecognizable ? unit.content : stringifyShorthandDeclensionDetails(details);
+        console.log(unitContent);
+      } else {
+        unitContent = unit.en;
+      }
+    }
+    unitElement.textContent = unitContent;
 
     if (unit.declensionId) {
       unitElement.dataset.declensionId = unit.declensionId;
@@ -102,16 +154,19 @@ const renderVerse = (vrs) => {
   });
 };
 
-const renderText = (text) => {
+const renderText = (text, userDictionary, userLessons) => {
+  console.log("Rendering text");
+  // console.log(userLessons);
   const testChapter = text.chapters[0];
   const testVerse = testChapter.verses[0];
-  renderVerse(testVerse);
+  renderVerse(testVerse, userDictionary, userLessons);
 
   /* Attaches listener for click events on text units */
   const units = document.querySelectorAll("span.text-unit");
   units.forEach((el) => el.addEventListener(
     "click",
     (e) => {
+      /* Matches delcension document for the literary unit */
       const declensionId = e.currentTarget.dataset.declensionId;
       /* Matches delcension document for the literary unit */
       const declension = declensions.declensions.find((declension) => declension.declensionId == declensionId);

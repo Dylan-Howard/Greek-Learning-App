@@ -17,20 +17,19 @@ const vocabMenu = (appDictionary, userDictionary, menuId) => {
   appDictionary.forEach((vcb) => {
     /* Creates span element for each literary unit */
     const settingsOption = document.createElement("input");
-    settingsOption.setAttribute("type","checkbox");
-    settingsOption.setAttribute("id",`vocab-${vcb.vocabId}`);
+    settingsOption.setAttribute("type", "checkbox");
+    settingsOption.setAttribute("id", `vocab-${vcb.vocabId}`);
     settingsOption.setAttribute(
       "checked",
-      userDictionary.find((dic) => dic.vocabId == vcb.vocabId).isComplete,
+      userDictionary.find((dic) => dic.vocabId === vcb.vocabId).isComplete,
     );
-
     settingsOption.classList.add("settings-option");
     settingsOption.dataset.vocabId = vcb.vocabId;
 
     settingsMenu.appendChild(settingsOption);
 
     const settingsLabel = document.createElement("label");
-    settingsLabel.setAttribute("for",`vocab-${vcb.vocabId}`);
+    settingsLabel.setAttribute("for", `vocab-${vcb.vocabId}`);
     settingsLabel.classList.add("settings-label");
     settingsLabel.textContent = vcb.content;
 
@@ -39,15 +38,16 @@ const vocabMenu = (appDictionary, userDictionary, menuId) => {
 
   /* Attaches listener for click events on text units */
   const settings = document.querySelectorAll(
-    `${menuId} > input[type="checkbox"]`,
+    `#${menuId} > input[type="checkbox"]`,
   );
+
   /* On change, update `userDictionary` based on checkbox */
   settings.forEach((el) =>
     el.addEventListener("change", ({ currentTarget }) => {
-      // eslint-disable-next-line no-param-reassign
-      userDictionary.find(
-        (vcb) => vcb.vocabId === currentTarget.dataset.vocabId,
-      ).isComplete = currentTarget.checked;
+      const userVocab = userDictionary.find(
+        (vcb) => vcb.vocabId === parseInt(currentTarget.dataset.vocabId, 10),
+      );
+      userVocab.isComplete = currentTarget.checked;
     }),
   );
 };

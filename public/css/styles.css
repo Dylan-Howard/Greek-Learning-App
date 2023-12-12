@@ -54,7 +54,6 @@ nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
   color: #4A89BF;
 }
 
-
 .settings-container {
   background: #252B2D;
   color: #FFFAFF;
@@ -73,7 +72,7 @@ nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
   background-color: transparent;
 }
 
-#settings-menu > .menu-label {
+.settings-menu-tab > .menu-label {
   display: block;
   margin: 8px 16px;
   line-height: 2rem;
@@ -82,11 +81,11 @@ nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
   width: 100%;
 }
 
-#settings-menu > input[type="checkbox"].settings-option {
+.settings-menu-tab > input[type="checkbox"].settings-option {
   display: none;
 }
 
-#settings-menu > label.settings-label {
+.settings-menu-tab > label.settings-label {
   line-height: 1.2rem;
   font-size: 1rem;
   display: block;
@@ -97,13 +96,13 @@ nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
 
 .settings-option:checked + .settings-label { color: #4A89BF; }
 
-#settings-menu > .settings-option {
+.settings-menu-tab > .settings-option {
   display: block;
   padding: 8px 16px;
   cursor: pointer;
 }
 
-#settings-menu > .settings-option:hover {
+.settings-menu-tab > .settings-option:hover {
   background: #282e30;
 }
 
@@ -116,6 +115,7 @@ nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+
 #renderedText {
   height: 100%;
   width: calc(100% - 4rem);
