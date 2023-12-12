@@ -1,6 +1,5 @@
 
 // eslint-disable-next-line node/no-unsupported-features/es-syntax
-import text from "../data/text.json" assert { type: "json" };
 import vocab from "../data/vocab.json" assert { type: "json" };
 import declensions from "../data/declensions.json" assert { type: "json" };
 import grammaticalForms from "../data/grammaticalForms.json" assert { type: "json" };
@@ -132,21 +131,4 @@ const renderText = (text) => {
   ));
 };
 
-/**
- * Initiate Text Rendering
- */
-(() => {
-  const testText = text.texts[0];
-  renderText(testText);
-})();
-
-// const userVocabulary = {
-//   userId: 1,
-//   vocabulary: [
-//     {
-//       vocabId: 1,
-//       correct: 50,
-//       remindDate: "2023-12-30",
-//     },
-//   ],
-// };
+export default renderText;
