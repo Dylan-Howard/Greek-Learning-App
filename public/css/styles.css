@@ -72,6 +72,14 @@ nav.nav-bar > .nav-icon:hover > .material-symbols-outlined {
   background-color: transparent;
 }
 
+.settings-menu-tab {
+  display: none;
+}
+
+.settings-menu-tab.menu-active {
+  display: block;
+}
+
 .settings-menu-tab > .menu-label {
   display: block;
   margin: 8px 16px;
