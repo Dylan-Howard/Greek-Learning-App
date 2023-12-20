@@ -1,0 +1,158 @@
+{
+  "declensions": [
+    {
+      "declensionId": 1,
+      "vocabId": 15,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ὃ"
+    },
+    {
+      "declensionId": 2,
+      "vocabId": 31,
+      "tenseId": 10,
+      "voiceId": 14,
+      "moodId": 17,
+      "personId": 23,
+      "countId": 25,
+      "content": "ἦν"
+    },
+    {
+      "declensionId": 3,
+      "vocabId": 91,
+      "grammerId": 26,
+      "content": "ἀπ"
+    },
+    {
+      "declensionId": 4,
+      "vocabId": 142,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ἀρχῆς"
+    },
+    {
+      "declensionId": 5,
+      "vocabId": 32,
+      "tenseId": 10,
+      "voiceId": 14,
+      "moodId": 17,
+      "personId": 23,
+      "countId": 25,
+      "content": "ἀκηκόαμεν"
+    },
+    {
+      "declensionId": 6,
+      "vocabId": 47,
+      "tenseId": 10,
+      "voiceId": 14,
+      "moodId": 17,
+      "personId": 23,
+      "countId": 25,
+      "content": "ἑωράκαμεν"
+    },
+    {
+      "declensionId": 7,
+      "vocabId": 142,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "τοῖς"
+    },
+    {
+      "declensionId": 8,
+      "vocabId": 142,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ὀφθαλμοῖς"
+    },
+    {
+      "declensionId": 9,
+      "vocabId": 279,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ἡμῶν"
+    },
+    {
+      "declensionId": 10,
+      "vocabId": 227,
+      "tenseId": 10,
+      "voiceId": 14,
+      "moodId": 17,
+      "personId": 23,
+      "countId": 25,
+      "content": "ἐθεασάμεθα"
+    },
+    {
+      "declensionId": 11,
+      "vocabId": 13,
+      "content": "καὶ"
+    },
+    {
+      "declensionId": 1,
+      "vocabId": 142,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "αἱ"
+    },
+    {
+      "declensionId": 13,
+      "vocabId": 210,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "χεῖρες"
+    },
+    {
+      "declensionId": 14,
+      "vocabId": 0,
+      "tenseId": 0,
+      "voiceId": 0,
+      "moodId": 0,
+      "personId": 0,
+      "countId": 0,
+      "content": "ἐψηλάφησαν"
+    },
+    {
+      "declensionId": 15,
+      "vocabId": 100,
+      "content": "περὶ"
+    },
+    {
+      "declensionId": 16,
+      "vocabId": 1,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "τοῦ"
+    },
+    {
+      "declensionId": 17,
+      "vocabId": 21,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "λόγου"
+    },
+    {
+      "declensionId": 18,
+      "vocabId": 142,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "τῆς"
+    },
+    {
+      "declensionId": 19,
+      "vocabId": 142,
+      "countId": 1,
+      "genderId": 3,
+      "patternId": 7,
+      "content": "ζωῆς"
+    }
+  ]
+}

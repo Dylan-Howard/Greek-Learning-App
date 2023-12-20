@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": "user1",
+      "progress": {
+        "lessons": [
+          {
+            "id": 1,
+            "isComplete": true
+          },
+          {
+            "id": 2,
+            "isComplete": true
+          },
+          {
+            "id": 3,
+            "isComplete": true
+          },
+          {
+            "id": 4,
+            "isComplete": true
+          },
+          {
+            "id": 5,
+            "isComplete": true
+          },
+          {
+            "id": 6,
+            "isComplete": true
+          }
+        ],
+        "vocabulary": [
+          {
+            "id": 1,
+            "isComplete": true
+          },
+          {
+            "id": 2,
+            "isComplete": true
+          },
+          {
+            "id": 3,
+            "isComplete": true
+          },
+          {
+            "id": 4,
+            "isComplete": true
+          },
+          {
+            "id": 5,
+            "isComplete": true
+          },
+          {
+            "id": 6,
+            "isComplete": true
+          }
+        ]
+      },
+      "settings" : {
+        "alwaysShowFullDetails": false
+      }
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

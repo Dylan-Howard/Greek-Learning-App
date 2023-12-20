@@ -1,0 +1,346 @@
+﻿rootId,content,gloss,occurances
+1,"ἀγάπη, ἡ",love,?
+2,"γῆ, ἡ","earth, land, ground",?
+3,"ζωή, ἡ",life,?
+4,"φωνή, ἡ","voice, sound",?
+5,"ἀλήθεια, ἡ",truth,?
+6,"ἁμαρτία, ἡ",sin,?
+7,"βασιλεία, ἡ","kingdom, reign",?
+8,"δόξα, ἡ","glory, majesty",?
+9,"ἐκκλησία, ἡ","congregation, assembly, church",?
+10,"ἡμέρα, ἡ",day,?
+11,"καρδία, ἡ",heart,?
+12,δέ,"and, but, now",?
+13,καί,"and, even, also",?
+14,μέν,"on the one hand, indeed",?
+15,"ὁ, ἡ, τό",the,?
+16,"ἀδελφός, ὁ",brother (and sister),?
+17,"ἄνθρωπος, ὁ","man, human being, husband",?
+18,"θεός, ὁ",God,?
+19,"κόσμος, ὁ","world, universe; adornment",?
+20,"κύριος, ὁ","Lord, master, sir",?
+21,"λόγος, ὁ","word, message, account",?
+22,"νόμος, ὁ","law, principle",?
+23,"οὐρανός, ὁ","heaven, sky",?
+24,"υἱός, ὁ","son, descendant",?
+25,"Χριστός, ὁ","Christ, Messiah, Anointed One",?
+26,"ἔργον, τό","work, deed",?
+27,"εὐαγγέλιον, τό","good news, gospel",?
+28,"ἱερόν, τό","temple, sanctuary",?
+29,σημεῖον τό,sign,?
+30,"τέκνον, τό","child, son, descendant",?
+31,εἰμί,"I am, exist",?
+32,ἀκούω,"I hear, listen to, obey",?
+33,γινώσκω,"I know, understand, acknowledge",?
+34,γράφω,I write,?
+35,ἔχω,"I have, hold",?
+36,λέγω,"I say, speak",?
+37,λαμβάνω,"I take, receive",?
+38,λύω,"I loose, destroy",?
+39,πιστεύω,"I believe, have faith/trust in",?
+40,ἀποκρίνομαι,"I answer, reply",?
+41,γίνομαι,"I become, come, exist, am born",?
+42,ἔρχομαι,"I come, go",?
+43,πορεύομαι,"I go, travel",?
+44,ἀλλά,"but, yet, nevertheless",?
+45,ὅτι,"that, because",?
+46,ἄγω,"I lead, bring",?
+47,βλέπω,"I see, look at",?
+48,διδάσκω,I teach,?
+49,ἐγείρω,I raise up,?
+50,κρίνω,"I judge, condemn",?
+51,μένω,"I remain, abide, dwell",?
+52,ὑπάγω,"I go away, depart",?
+53,"δοῦλος, ὁ",slave,?
+54,"θάνατος, ὁ",death,?
+55,"ψυχή, ἡ","soul, live, living being",?
+56,"ὥρα, ἡ",hour,?
+57,εἰ,"if, whether",?
+58,εἴτε,"if, whether",?
+59,καθώς,"as, just as, even as",?
+60,ὡς,"as, like",?
+61,βαπτίζω,"I baptize, immerse, dip",?
+62,θεραπεύω,I heal,?
+63,κράζω,I cry out,?
+64,"ἄγγελος, ὁ","angel, messenger",?
+65,"μαθητής, ὁ","disciple, follower",?
+66,"ὄχλος, ὁ",crowd,?
+67,"προφήτης, ὁ",prophet,?
+68,γάρ,"for, because",?
+69,ἐκεῖ,"there, in that place",?
+70,κἀγώ,and I (καί + ἐγώ),?
+71,οὖν,"then, so, therefore",?
+72,οὕτως,"in this manner, thus, so",?
+73,τέ,"and, but",?
+74,"οὐ, οὐκ, οὐχ","no, not",?
+75,οὐχί,no! (emphatic),?
+76,ἀγαπάω,I love,?
+77,γεννάω,"I give birth to, bear, beget",?
+78,ἐπερωτάω,I ask,?
+79,ἐρωτάω,"I ask, question, request",?
+80,αἰτέω,"I ask, demand",?
+81,ἀκολουθέω,I follow,?
+82,ζητέω,"I seek, look for",?
+83,καλέω,"I call, invite, name",?
+84,λαλέω,"I speak, say",?
+85,μαρτυρέω,"I testify, bear witness",?
+86,παρακαλέω,"I call, urge, comfort",?
+87,περιπατέω,"I walk, live",?
+88,ποιέω,"I do, make",?
+89,φοβέομαι,"I am afraid, fear, respect",?
+90,πληρόω,"I fill, fulfill, complete",?
+91,ἀπό,"from, away from (gen)",?
+92,διά,through (gen); because of (acc),?
+93,εἰς,"into, among, for (acc)",?
+94,ἐκ,"from, out of (gen)",?
+95,ἐν,"in, on, at, by, with (dat)",?
+96,ἐπί,"on, over (gen); on, at, in (dat); on, to, for (acc)",?
+97,κατά,"down, against (gen); according to (acc)",?
+98,μετά,"with, among (gen); after (acc)",?
+99,παρά,"from (gen); beside (dat); on, at (acc)",?
+100,περί,"about, concerning (gen); around (acc)",?
+101,πρός,"to, toward (acc)",?
+102,σύν,with (dat),?
+103,ὑπέρ,"for (gen); above, beyond (acc)",?
+104,ὑπό,"by (gen); under, below (acc)",?
+105,ἐνώπιον,"before, in the presence of",?
+106,"αὐτός, -ή, -ό","he, she, it; self, same",?
+107,"ἐγώ, ἡμεῖς",I; we,?
+108,"ὅς, ἤ, ὅ","who, which, that",?
+109,"σύ, ὑμεῖς",you (sg); you (pl),?
+110,"ἄρτος, ὁ","bread, food",?
+111,"δικαιοσύνην, ἡ","righteousness, justice",?
+112,"εἰρήνη, ἡ",peace,?
+113,"ἐξουσία, ἡ","authority, right, power",?
+114,"θάλασσα, ἡ","lake, sea",?
+115,"λαός, ὁ","people, crowd",?
+116,"ὁδός, ἡ","way, road",?
+117,"οἰκία, ἡ","home, dwelling, family",?
+118,"οἶκος, ὁ","house, household, family",?
+119,"ὀφθαλμός, ὁ",eye,?
+120,"τόπος, ὁ",place,?
+121,διώκω,"I pursue, persecute",?
+122,δοξάζω,"I glorify, praise",?
+123,πέμπω,I send,?
+124,πράσσω,"I do, practice",?
+125,σῴζω,"I save, rescue, heal",?
+126,τηρέω,"I keep, guard, obey",?
+127,"ἀπόστολος, ὁ","apostle, messenger",?
+128,"ἐντολή, ἡ",command,?
+129,"καιρός, ὁ","time, season",?
+130,"κεφαλή, ἡ",head,?
+131,"πρόσωπον, τό","face, appearance",?
+132,"σάββατον, τό","Sabbath, week",?
+133,ἔτι,"still, yet, more",?
+134,μᾶλλον,"more, rather",?
+135,οὐκέτι,no longer,?
+136,ἀνοίγω,I open ,?
+137,ἀπολύω,"I set free, dismiss, divorce",?
+138,ἄρχω,"I rule, begin (mid)",?
+139,προσεύχομαι,I pray,?
+140,προσκυνέω,I worship,?
+141,συνάγω,"I gather, bring together",?
+142,"ἀρχή, ἡ",beginning ,?
+143,"δαιμόνιον, τό",demon,?
+144,"διδάσκαλος, ὁ",teacher,?
+145,"θρόνος, ὁ",throne,?
+146,"ἱμάτιον, τό","clothing, garment",?
+147,"καρπός, ὁ","fruit, crop",?
+148,"πλοῖον, τό","ship, boat",?
+149,"συναγωγή, ἡ","synagogue, assembly",?
+150,"χαρά, ἡ",joy,?
+151,ἀναβαίνω,"I go up, ascend",?
+152,ἀπέρχομαι,"I go away, depart",?
+153,ἀποθνῄσκω,I die,?
+154,βάλλω ,"I throw, cast out",?
+155,εἰσέρχομαι,"I go in, enter",?
+156,ἐκβάλλω,I drive/send out,?
+157,ἐσθίω,I eat,?
+158,ἐξέρχομαι,"I go out, depart, leave",?
+159,εὑρίσκω,"I find, discover",?
+160,καταβαίνω,"I go down, descend",?
+161,πίνω,I drink,?
+162,πίπτω ,I fall,?
+163,προσέρχομαι,"I go to, approach",?
+164,φέρω,"I bear, carry",?
+165,"ἐπαγγελία, ἡ",promise,?
+166,αἴρω,I take up/away,?
+167,ἀπαγγέλλω,"I announce, report",?
+168,ἀποκτείνω ,"I kill, put to death",?
+169,ἀποστέλλω ,I send out,?
+170,σπείρω,"I sow, plant",?
+171,"γλῶσσα, ἡ","language, tongue",?
+172,"γραφή, ἡ","writing, Scripture",?
+173,"λίθος, ὁ",stone,?
+174,"ναός, ὁ","temple, sanctuary",?
+175,"παραβολή, ἡ",parable,?
+176,"σοφία, ἡ",wisdom,?
+177,"σωτηρία, ἡ","salvation, deliverance",?
+178,"χρόνος, ὁ",time,?
+179,διό,"therefore, for this reason",?
+180,εὐθύς,immediately,?
+181,"αἰών, -ῶνος, ὁ","eternity, age, world",?
+182,"ἀνήρ, ἀνδρός, ὁ","man, husband",?
+183,"ἀρχιερεύς, -έως, ὁ",high priest,?
+184,"βασιλεύς, -έως, ὁ",king,?
+185,"πατήρ, πατρός, ὁ","father, ancestor",?
+186,"γυνή, γυναικός, ἡ","woman, wife",?
+187,"μήτηρ, -τρός, ἡ","mother,",?
+188,"πίστις, -εως, ἡ","faith, trust",?
+189,"πόλις, -εως, ἡ","city, town",?
+190,"σάρξ, σαρκός, ἡ","flesh, body, mortal nature",?
+191,"χάρις, -ιτος, ἡ","grace, thanks",?
+192,"ἔθνος, -ους, τό","nation, people; Gentiles (pl)",?
+193,"ὄνομα, -ατος, τό",name,?
+194,"πνεῦμα, -ατος, τό","Spirit, spirit, wind",?
+195,"σῶμα, -ατος, τό",body,?
+196,ἐγγίζω,"I approach, draw near",?
+197,ζάω,I live,?
+198,οἶδα,"I know, understand",?
+199,ὁράω,"I see, perceive",?
+200,πείθω,"I persuade, convince",?
+201,"αἷμα, -ατος, τό",blood,?
+202,"γραμματεύς, -εως, ὁ",scribe,?
+203,"δύναμις, -εως, ἡ","power, miracle",?
+204,"πούς, ποδός, ὁ",foot,?
+205,"πῦρ, -ός, τό",fire,?
+206,"ῥῆμα, -ατος, τό","word, saying",?
+207,"στόμα, -ατος, ἡ",mouth,?
+208,"ὕδωρ, -ατος, τό",water,?
+209,"φῶς, φωτός, τό",light,?
+210,"χείρ, χειρός, ἡ",hand,?
+211,"ἀγαθός, -ή, -όν",good,?
+212,"ἅγιος, -α, -ον",holy; saints (pl  subst),?
+213,"ἄλλος, -η, -ο","other, another, different",?
+214,"δίκαιος, -α, -ον","righteous, just",?
+215,"ἕτερος, -α, -ον","other, another, different",?
+216,"καλός, -ή, -όν","good, beautiful",?
+217,"μέγας, μεγάλη, μέγα","large, great",?
+218,"νεκρός, -ά, -όν",dead,?
+219,"πᾶς, πᾶσα, πᾶν","every, all",?
+220,"πιστός, -ή, -όν","faithful, believing",?
+221,"πολύς, πολλή, πολύ","much, many, large, great",?
+222,"πονηρός, -ά, -όν","evil, wicked",?
+223,νῦν,"now, at present",?
+224,πάλιν,again,?
+225,ἤ,"or, than",?
+226,εὐαγγελίζω,"I announce good news, preach",?
+227,θεωρέω,"I gaze, behold, look at",?
+228,κάθημαι,I sit,?
+229,κηρύσσω,"I herald, proclaim, preach",?
+230,ὑπάρχω,"I exist, am",?
+231,"αἰώνιος, -α, -ον",eternal,?
+232,"ἕκαστος, -η, -ον",each,?
+233,"οὐδείς, οὐδεμία, οὐδέν","no one, nothing (subst)",?
+234,"πρεσβύτερος, -α, -ον","elder, older",?
+235,ἀμήν,"amen, truly, so be it",?
+236,ἔξω,outside,?
+237,ἕως,"until, while",?
+238,οὐδέ,"and not, neither, nor",?
+239,οὔτε,"and not, neither, nor",?
+240,τότε,then,?
+241,φανερόω,"I reveal, make known, manifest",?
+242,κρατέω,"I grasp, seize, arrest",?
+243,"εἷς, μία, ἕν",one,?
+244,δύο,two,?
+245,τρεῖς,three,?
+246,τέσσαρες,four,?
+247,πέντε,five ,?
+248,ἑπτά,seven ,?
+249,δέκα,ten ,?
+250,δώδεκα,twelve ,?
+251,"πρῶτος, -η, -ον",first,?
+252,"δεύτερος, -α, -ον",second,?
+253,"τρίτος, -η, -ον",third,?
+254,"τέταρτος, -η, -ον",fourth,?
+255,μή,"no, not",?
+256,προσφέρω,"I bring to, offer",?
+257,ἑτοιμάζω,I prepare,?
+258,δέω,I bind,?
+259,"παιδίον, τό",child,?
+260,"ὄρος, -ους, τό","mountain, hill",?
+261,"ἐλπίς, -ίδος, ἡ",hope,?
+262,"μόνος, -η, -ον","only, single, alone",?
+263,"ὅλος, -η, -ον","whole, entire, complete",?
+264,"ἀγαπητός, -ή, -όν",beloved,?
+265,"μέσος, -η, - ον","middle, midst",?
+266,"λοιπός, -ή, -όν","remaining, rest",?
+267,"δεξιός, -ά, -όν",right,?
+268,ἄρα,so then,?
+269,ἤδη,"already, now",?
+270,ὧδε,here,?
+271,ἀλλήλων,of one another (alien),?
+272,"ἑαυτοῦ, -ῆς, -οῦ","(of) himself, herself, itself",?
+273,"ἐκεῖνος, -η, -ο",that; those (pl),?
+274,"ἐμαυτοῦ, -ῆς",myself,?
+275,"οὗτος, αὕτη, τοῦτο",this; these (pl),?
+276,"σεαυτοῦ, -ῆς",(of) yourself,?
+277,"τις, τι","someone, certain",?
+278,"τίς, τί",who? which? what?,?
+279,"ἐμός, -ή, -όν","my, mine",?
+280,"ἔσχατος, -η, - ον",last,?
+281,"ἴδιος, -α, -ον","one’s own, peculiar",?
+282,"κακός, -ή, -όν","bad, evil",?
+283,"ὅσος, -η, -ον",as much as,?
+284,"τοιοῦτος, -αύτη, οῦτον","of such a kind, such as this",?
+285,πῶς,how?,?
+286,ἁμαρτάνω,I sin (ἥμαρτον),?
+287,βούλομαι,"I wish, want, desire",?
+288,δεῖ,"It is necessary, one must/should ",?
+289,δοκέω,"I seem, suppose, think",?
+290,δύναμαι,"I am able, can",?
+291,θέλω,"I want, wish, desire",?
+292,μέλλω,"I am about to, am going to",?
+293,"θέλημα, -ατος, τό","will, wish, desire",?
+294,"νύξ, νυκτός, ἡ",night,?
+295,"μακάριος, -α, -ον","blessed, happy",?
+296,"μηδείς, μηδεία, μηδέν","no one, nothing (subst)",?
+297,"τυφλός, -ή, -όν",blind; blind person (subst),?
+298,πρό,"before, in front of (gen)",?
+299,μηδέ,"and not, nor",?
+300,ὥστε,so that,?
+301,δέχομαι,"I take, receive, welcome",?
+302,δικαιόω,"I declare righteous, justify",?
+303,λογίζομαι,"consider, reckon",?
+304,σταυρόω,I crucify,?
+305,ἄν,(particle of indefiniteness: untranslated),?
+306,ἐάν,"if, when",?
+307,ἐὰν μή,unless,?
+308,ἕως,"until, while",?
+309,ἵνα,"in order that, so that, that",?
+310,ὅπου,where,?
+311,ὅπως,"in order that, that",?
+312,"ὅστις, ἥτις, ὅ τι","whoever, whatever, who",?
+313,ὅταν,"whenever, when (ὅτε + ἄν)",?
+314,ὅτε,when,?
+315,ποῦ,where?,?
+316,ἀσπάζομαι,I greet,?
+317,ἐπιγινώσκω,"I know, understand",?
+318,ἐργάζομαι,"I work, do, perform",?
+319,καθίζω,I sit ,?
+320,κατοικέω,"I live, dwell",?
+321,χαίρω,I rejoice; greetings ,?
+322,"ἔτος, -ους, τό",year,?
+323,"θηρίον, τό","animal, beast",?
+324,"θλῖψις, -εως, ἡ","tribulation, affliction",?
+325,"χρεία, ἡ",need,?
+326,"κρίσις, -εως, ἡ","judgment, condemnation",?
+327,"φόβος, ὁ","fear, reverence, respect",?
+328,"φυλακή, ἡ","watch, guard, prison",?
+329,ἔμπροσθεν,"in front of, before",?
+330,ἰδού,"behold, look, see",?
+331,ἀνίστημι,"I stand up, arise",?
+332,ἀποδίδωμι,"I give back, pay",?
+333,ἀπόλλυμι,"I destroy, am lost (mid)",?
+334,ἀφίημι,"I forgive, let go, divorce",?
+335,δίδωμι,I give ,?
+336,ἵστημι,"I stand, set",?
+337,παραδίδωμι,"I hand over, betray, entrust",?
+338,τίθημι,"I put, place, appoint",?
+339,φημί,"I say, affirm",?
+340,"ἁμαρτωλός, -όν","sinful, sinner (subst)",?
+341,"γενεά, -ᾶς, ἡ","generation, family",?
+342,"μικρός, -ά, -όν",small,?
+343,"ὅμοιος-α, -ον","same nature, similar",?
+344,ἄχρι,until,?
+345,οὐαί,woe,?

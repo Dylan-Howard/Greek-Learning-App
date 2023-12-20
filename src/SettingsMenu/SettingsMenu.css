@@ -1,0 +1,61 @@
+
+.SettingsMenu {
+  background: #252B2D;
+  color: #FFFAFF;
+  display: block;
+  padding: 8px 0;
+  overflow-y: scroll;
+  /* overflow-x: auto; */
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 72px;
+}
+
+.SettingsMenu ::selection {
+  /* color: inherit; */
+  background-color: transparent;
+}
+.SettingsMenu ::-moz-selection {
+  /* color: inherit; */
+  background-color: transparent;
+}
+
+.SettingsMenuTab {
+  display: none;
+  width: 300px;
+}
+
+.SettingsMenuTab.MenuActive {
+  display: block;
+}
+
+.SettingsMenuTab .MenuTabTitle {
+  display: block;
+  margin: 8px 16px;
+  line-height: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.SettingsMenuTab > .SettingsOption {
+  display: block;
+  cursor: pointer;
+  width: 100%;
+  outline: 0;
+  padding: 8px 16px;
+
+  background-color: #252B2D;
+  border: none;
+  color: #FFFAFF;
+  
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-align: left;
+}
+.SettingsMenuTab > .SettingsOption.SettingsActive {
+  color: #4A89BF;
+}
+
+.SettingsMenuTab .SettingsOption:hover { background: #282e30; }

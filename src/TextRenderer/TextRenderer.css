@@ -1,0 +1,81 @@
+.TextContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  background: #FFFAFF;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.TextContainer ::selection {
+  color: inherit;
+  background-color: #E6C960;
+}
+.TextContainer ::-moz-selection {
+  color: inherit;
+  background-color: #E6C960;
+}
+
+.TextRendererRow {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.TextForm {
+  background-color: #e4e4e8;
+  padding: .6rem 0 .4rem;
+}
+
+.TextForm .TextSelect {
+  font-size: .8rem;
+  padding: .6rem 1rem;
+  background-color: #fff;
+  border: 1px solid #CACDE1;
+  cursor: pointer;
+
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+}
+
+#RenderedText {
+  height: 100%;
+  width: calc(100% - 4rem);
+  /* width: 100%; */
+  padding: 4rem 2rem 4rem 2rem;
+
+  color: #1B2021;
+  font-family: 'Noto Serif', serif;
+}
+
+.TextContainer .TextHeading {
+  display: block;
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 0 0 2rem;
+}
+
+.TextContainer .TextUnit {
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+.TextContainer .TextUnit.HiglightOnHover {
+  transition: .2s;
+  -webkit-transition: .2s;
+  -ms-transition: .2s;
+}
+.TextContainer .TextUnit.HiglightOnHover:hover {
+  color: #4A89BF;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 800px) {
+  #RenderedText {
+    height: 100%;
+    width: 80%;
+    padding: 6rem 0 0;
+    max-width: 650px;
+  }
+}
