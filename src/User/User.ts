@@ -1,7 +1,6 @@
 /**
  * User class
  */
-// import LanguageData from '../LanguageData/LanguageData';
 import { createContext, useContext } from 'react';
 import userData from '../data/userData.json';
 
@@ -14,6 +13,10 @@ type UserProgress = {
     id: number,
     isComplete: boolean,
   }[] | undefined,
+};
+
+type User = {
+  progress: UserProgress,
 };
 
 function fetchUserProgressData(userId: string, progressArea: string):
@@ -32,18 +35,18 @@ function fetchUserProgressData(userId: string, progressArea: string):
   return undefined;
 }
 
-class User {
-  progress: UserProgress;
+const fetchUser = (userId: string) : User => {
+  const progress: UserProgress = {
+    lessons: fetchUserProgressData(userId, 'lessons'),
+    vocabulary: fetchUserProgressData(userId, 'vocabulary'),
+  };
+  return { progress };
+};
 
-  constructor(userId: string) {
-    this.progress = {
-      lessons: fetchUserProgressData(userId, 'lessons'),
-      vocabulary: fetchUserProgressData(userId, 'vocabulary'),
-    };
-  }
-}
-
-export const UserContext = createContext<User | undefined>(undefined);
+export const UserContext = createContext<{ user: User | undefined, setUser: Function }>({
+  user: undefined,
+  setUser: () => {},
+});
 
 export function useUserContext() {
   const context = useContext(UserContext);
@@ -54,4 +57,4 @@ export function useUserContext() {
   return context;
 }
 
-export default User;
+export default fetchUser;

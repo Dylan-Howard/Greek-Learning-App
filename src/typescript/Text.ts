@@ -1,4 +1,5 @@
 export type Unit = {
+  unitId: number,
   content?: string;
   declensionId?: number,
   en?: string,

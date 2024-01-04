@@ -6,6 +6,9 @@
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+
+  font-size: 1.1rem;
+  line-height: 2rem;
 }
 
 .TextContainer ::selection {
@@ -57,10 +60,6 @@
   margin: 0 0 2rem;
 }
 
-.TextContainer .TextUnit {
-  font-size: 1.1rem;
-  line-height: 2rem;
-}
 .TextContainer .TextUnit.HiglightOnHover {
   transition: .2s;
   -webkit-transition: .2s;

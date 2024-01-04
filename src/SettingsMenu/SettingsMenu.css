@@ -9,7 +9,7 @@
   height: 100%;
   position: fixed;
   top: 0;
-  left: 72px;
+  left: 66px;
 }
 
 .SettingsMenu ::selection {
@@ -38,8 +38,10 @@
   font-weight: 600;
   width: 100%;
 }
-
 .SettingsMenuTab > .SettingsOption {
+  display: none;
+}
+.SettingsMenuTab > .SettingsLabel {
   display: block;
   cursor: pointer;
   width: 100%;
@@ -54,8 +56,8 @@
   line-height: 1.2rem;
   text-align: left;
 }
-.SettingsMenuTab > .SettingsOption.SettingsActive {
+.SettingsMenuTab > input[type="checkbox"].SettingsOption:checked + .SettingsLabel {
   color: #4A89BF;
 }
 
-.SettingsMenuTab .SettingsOption:hover { background: #282e30; }
+.SettingsMenuTab .SettingsLabel:hover { background: #282e30; }
