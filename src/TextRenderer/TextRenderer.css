@@ -2,13 +2,16 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background: #FFFAFF;
+  background: #FAFAFA;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
 
   font-size: 1.1rem;
   line-height: 2rem;
+
+  position: relative;
+  top: 0;
 }
 
 .TextContainer ::selection {
@@ -27,18 +30,20 @@
 }
 
 .TextForm {
-  background-color: #e4e4e8;
+  background-color: #FAFAFA;
   padding: .6rem 0 .4rem;
 }
 
 .TextForm .TextSelect {
   font-size: .8rem;
   padding: .6rem 1rem;
-  background-color: #fff;
+  background-color: #FAFAFA;
   border: 1px solid #CACDE1;
+  border-radius: 8px;
   cursor: pointer;
 
   appearance: none;
+  outline: none;
   /* safari */
   -webkit-appearance: none;
 }
@@ -69,6 +74,55 @@
   color: #4A89BF;
   cursor: pointer;
 }
+
+.TextContainer .TextRendererPopup {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #ECECEA;
+  width: calc(100% - 67px);
+
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+
+  box-shadow: 0 -8px 10px rgba(0,0,0,0.12);
+}
+
+.TextContainer .TextDetails {
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  width: calc(100% - 4rem);
+  padding: 1.2rem 2rem 4rem 2rem;
+}
+
+.TextContainer .TextDetails > .DetailsSection {
+  display: inline-flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  padding: 4px 0;
+}
+
+.TextContainer .TextDetails > .DetailsSection > .DetailsLabel {
+  display: block;
+  width: 100%;
+
+  color: #636363;
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+.TextContainer .TextDetails > .DetailsSection > .DetailsValue {
+  display: block;
+  width: 100%;
+
+  /* color: #636363; */
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
+
 
 @media screen and (min-width: 800px) {
   #RenderedText {

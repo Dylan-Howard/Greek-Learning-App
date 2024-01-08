@@ -1,6 +1,6 @@
 
 .SettingsMenu {
-  background: #252B2D;
+  background: #2A2A27;
   color: #FFFAFF;
   display: block;
   padding: 8px 0;
@@ -10,6 +10,9 @@
   position: fixed;
   top: 0;
   left: 66px;
+  z-index: 1;
+  
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .SettingsMenu ::selection {
@@ -27,7 +30,10 @@
 }
 
 .SettingsMenuTab.MenuActive {
-  display: block;
+  /* display: block; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .SettingsMenuTab .MenuTabTitle {
@@ -37,6 +43,15 @@
   font-size: 1.8rem;
   font-weight: 600;
   width: 100%;
+}
+.SettingsMenuTab .SettingsSearchBox {
+  display: block;
+  width: 90%;
+  padding: 4px 8px;
+  margin: 8px;
+  outline: none;
+
+  font-size: 1rem;
 }
 .SettingsMenuTab > .SettingsOption {
   display: none;

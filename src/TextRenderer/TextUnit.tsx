@@ -6,52 +6,64 @@ import declensions from '../data/declensions.json';
 import { Unit } from '../typescript/Text';
 import { useUserContext } from '../User/User';
 
-function TextUnit({ unit }: { unit: Unit | undefined }) {
+function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
   const fetchDeclension = (unt: Unit) => (
     declensions.declensions.find((dcl) => dcl.declensionId === unt.declensionId)
   );
 
   const isRecognizable = (unt: Unit) => {
     const { user } = useUserContext();
-    if (!user || !user.progress.lessons) { return true; }
+    if (!user || !user.progress.lessons || !user.progress.vocabulary) { return 'unrecognizable'; }
+    const { lessons, vocabulary } = user.progress;
 
-    const { lessons } = user.progress;
     const declension = fetchDeclension(unt);
+    if (!declension) { return 'unrecognizable'; }
+    const {
+      countId,
+      genderId,
+      tenseId,
+      voiceId,
+      moodId,
+      personId,
+      patternId,
+      vocabId,
+    } = declension;
 
     const progressCheck = [
-      declension?.countId
-        ? lessons.find((lsn) => lsn.id === declension.countId)?.isComplete
-        : false,
-      declension?.genderId
-        ? lessons.find((lsn) => lsn.id === declension.genderId)?.isComplete
-        : false,
-      declension?.tenseId
-        ? lessons.find((lsn) => lsn.id === declension.tenseId)?.isComplete
-        : false,
-      declension?.voiceId
-        ? lessons.find((lsn) => lsn.id === declension.voiceId)?.isComplete
-        : false,
-      declension?.moodId
-        ? lessons.find((lsn) => lsn.id === declension.moodId)?.isComplete
-        : false,
-      declension?.personId
-        ? lessons.find((lsn) => lsn.id === declension.personId)?.isComplete
-        : false,
-      declension?.patternId
-        ? lessons.find((lsn) => lsn.id === declension.patternId)?.isComplete
-        : false,
+      countId ? lessons.find(({ id }) => id === countId)?.isComplete : true,
+      genderId ? lessons.find(({ id }) => id === genderId)?.isComplete : true,
+      tenseId ? lessons.find(({ id }) => id === tenseId)?.isComplete : true,
+      voiceId ? lessons.find(({ id }) => id === voiceId)?.isComplete : true,
+      moodId ? lessons.find(({ id }) => id === moodId)?.isComplete : true,
+      personId ? lessons.find(({ id }) => id === personId)?.isComplete : true,
+      patternId ? lessons.find(({ id }) => id === patternId)?.isComplete : true,
+      vocabId ? vocabulary.find(({ id }) => id === vocabId)?.isComplete : true,
     ];
 
-    // console.log(unt);
-    // console.log(progressCheck);
+    if (progressCheck.some((prg) => !prg)) {
+      return progressCheck[7] ? 'needsHelps' : 'unrecognizable';
+    }
 
-    return progressCheck.includes(false);
+    return 'recognizable';
   };
+
+  const textContentMap = {
+    unrecognizable: unit.en || unit.content,
+    needsHelps: `${unit.content} []`,
+    recognizable: unit.content,
+  };
+  const textContent = textContentMap[isRecognizable(unit)];
 
   if (unit) {
     return (
-      <span className="TextUnit HiglightOnHover">
-        {`${isRecognizable(unit) ? unit.content : unit.en} `}
+      <span
+        className="TextUnit HiglightOnHover"
+        onClick={(e) => onClick(e)}
+        onKeyUp={(e) => onClick(e)}
+        role="button"
+        tabIndex={0}
+      >
+        {`${textContent} `}
       </span>
     );
   }

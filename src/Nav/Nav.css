@@ -1,6 +1,6 @@
 nav.Navbar {
-  background: #1B2021;
-  color: #FFFAFF;
+  background: #2D2D2A;
+  color: #FAFAFA;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -8,6 +8,7 @@ nav.Navbar {
   width: 72px;
   padding: 8px 0;
   position: relative;
+  z-index: 2;
   /* max-width: 300px; */
 }
 .Navbar ::selection {
@@ -20,11 +21,10 @@ nav.Navbar {
 }
 
 .Navbar > .NavIcon {
-  background: #1B2021;
+  background: #252B2D;
   border: none;
-  color: #FFFAFF;
+  color: #FAFAFA;
   cursor: pointer;
-  /* margin: 16px 4px; */
   padding: 16px 4px;
   width: 100%;
 }

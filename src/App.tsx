@@ -4,7 +4,8 @@ import fetchUser, { UserContext } from './User/User';
 import Nav from './Nav/Nav';
 import TextRenderer from './TextRenderer/TextRenderer';
 
-const TEST_USER_ID = 'user1';
+// const TEST_USER_ID = 'user1';
+const TEST_USER_ID = 'user2';
 
 // eslint-disable-next-line no-console, @typescript-eslint/no-unused-vars
 const log = (message: any) => console.log(message);

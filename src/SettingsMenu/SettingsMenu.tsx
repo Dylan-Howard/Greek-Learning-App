@@ -75,23 +75,22 @@ function SettingsMenu(
   }
   if (title === 'Dictionary') {
     const vocabulary = fetchVocabulary(LANGUAGE);
-    console.log(`Filtering by: ${filter}`);
 
     options.push(
-      ...vocabulary.map((vcb : Word) => ({
-        id: vcb.wordId,
-        name: vcb.content,
-        type: 'Word',
-        isActive: !!user?.progress.vocabulary?.find(
-          (prg) => prg.id === vcb.wordId,
-        )?.isComplete,
-      })),
+      ...vocabulary
+        .filter((vcb: Word) => (
+          filter === transliterateGreek(
+            vcb.content.substring(0, filter.length),
+          )))
+        .map((vcb : Word) => ({
+          id: vcb.wordId,
+          name: vcb.content,
+          type: 'Word',
+          isActive: !!user?.progress.vocabulary?.find(
+            (prg) => prg.id === vcb.wordId,
+          )?.isComplete,
+        })),
     );
-
-    const filterTest = options.map((opt) => opt.name)
-      .filter((wrd) => filter === transliterateGreek(wrd.substring(0, filter.length)));
-
-    console.log(filterTest);
   }
 
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -135,29 +134,31 @@ function SettingsMenu(
 
   return (
     <div className="SettingsMenu">
-      <div id={`${title}-menu`} className={options.length !== 0 ? 'SettingsMenuTab MenuActive' : 'SettingsMenuTab'}>
+      <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
         <span className="MenuTabTitle">{title}</span>
         <input
-          type="text"
+          className="SettingsSearchBox"
           placeholder="Search"
           onChange={(e) => handleTextboxChange(e)}
         />
         {
-          options.map(({
-            id,
-            type,
-            name,
-            isActive,
-          }) => (
-            <OptionCheckbox
-              id={id}
-              key={`option-${type}-${id}`}
-              type={type}
-              name={name}
-              value={isActive}
-              onChange={(e) => handleCheckboxChange(e, id, type)}
-            />
-          ))
+          options.length !== 0
+            ? options.map(({
+              id,
+              type,
+              name,
+              isActive,
+            }) => (
+              <OptionCheckbox
+                id={id}
+                key={`option-${type}-${id}`}
+                type={type}
+                name={name}
+                value={isActive}
+                onChange={(e) => handleCheckboxChange(e, id, type)}
+              />
+            ))
+            : <span>No options match this search filter</span>
         }
       </div>
     </div>
