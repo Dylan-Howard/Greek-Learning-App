@@ -19,7 +19,8 @@ function App() {
     { title: 'Home', iconName: 'home' },
     { title: 'Lessons', iconName: 'play_lesson' },
     { title: 'Dictionary', iconName: 'dictionary' },
-    { title: 'Settings', iconName: 'settings' },
+    // { title: 'Settings', iconName: 'settings' },
+    // { title: 'Details', iconName: 'chat_info' },
   ];
 
   return (

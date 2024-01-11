@@ -1,3 +1,7 @@
+.GreekText {
+  font-family: 'Noto Serif', serif;
+}
+
 .TextContainer {
   display: flex;
   justify-content: flex-start;
@@ -28,6 +32,7 @@
   justify-content: center;
   flex-direction: row;
 }
+.TextRendererRow.SpaceBetween { justify-content: space-between; }
 
 .TextForm {
   background-color: #FAFAFA;
@@ -48,19 +53,29 @@
   -webkit-appearance: none;
 }
 
-#RenderedText {
-  height: 100%;
-  width: calc(100% - 4rem);
-  /* width: 100%; */
-  padding: 4rem 2rem 4rem 2rem;
+.TextContainer .TextRendererRow .TextRendererColumn {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+}
+
+.TextDisplay {
+  width: calc(100% - 8rem);
+  padding: 4rem;
 
   color: #1B2021;
   font-family: 'Noto Serif', serif;
 }
 
+.TextDisplay.ReducedSize {
+  width: calc(100% - 6rem);
+  padding: 4rem 2rem 4rem 4rem;
+}
+
 .TextContainer .TextHeading {
   display: block;
   font-size: 3.2rem;
+  line-height: 3.6rem;
   text-align: center;
   margin: 0 0 2rem;
 }
@@ -75,34 +90,43 @@
   cursor: pointer;
 }
 
-.TextContainer .TextRendererPopup {
-  display: block;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  background: #ECECEA;
-  width: calc(100% - 67px);
-
-  border-top-left-radius: 2rem;
-  border-top-right-radius: 2rem;
-
-  box-shadow: 0 -8px 10px rgba(0,0,0,0.12);
-}
-
+/*
+ * @TODO - Break Text Details into sidebar
+ * @TODO - Use DetailsSection for each info unit 
+ * @TODO - Style each info unit according to function
+ */
 .TextContainer .TextDetails {
   display: flex;
   flex-wrap: wrap;
-  height: 200px;
-  width: calc(100% - 4rem);
-  padding: 1.2rem 2rem 4rem 2rem;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+  height: calc(100vh - 70px);
+  /* height: calc(100vh - 70px - 1rem); */
+  width: 240px;
+  padding: 2rem 1.8rem 0 1.8rem;
+
+  background: #EFEFEF;
 }
 
 .TextContainer .TextDetails > .DetailsSection {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 50%;
-  padding: 4px 0;
+  width: 48%;
+  margin: 0 2% 1rem 0;
+}
+
+.TextContainer .TextDetails > .DetailsHeading {
+  display: block;
+  width: 100%;
+  margin: 0 0 1rem;
+
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  text-align: left;
 }
 
 .TextContainer .TextDetails > .DetailsSection > .DetailsLabel {

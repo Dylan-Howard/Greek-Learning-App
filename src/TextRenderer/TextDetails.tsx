@@ -10,13 +10,16 @@ function TextDetails({ details } : { details: DeclensionDetails }) {
   return (
     <div className="TextDetails">
       {
+        details.root ? <span className="DetailsHeading GreekText">{`${details.root.name}`}</span> : ''
+      }
+      {
         // @ts-ignore
         keys.filter((key) => !!details[key])
           .map((key) => (
           // @ts-ignore
             <div className="DetailsSection" key={`detail-${key}`}>
               <span className="DetailsLabel">{key}</span>
-              <span className="DetailsValue">
+              <span className={`DetailsValue ${key === 'root' ? 'GreekText' : ''}`}>
                 {
                   // @ts-ignore
                   details[key].name

@@ -52,7 +52,8 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
     needsHelps: `${unit.content} []`,
     recognizable: unit.content,
   };
-  const textContent = textContentMap[isRecognizable(unit)];
+  const isKnown = isRecognizable(unit);
+  const textContent = textContentMap[isKnown];
 
   if (unit) {
     return (

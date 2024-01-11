@@ -156,40 +156,43 @@ function TextRenderer() {
           }
         </select>
       </form>
-      <div className="TextRendererRow">
-        <div id="RenderedText">
+      <div className="TextRendererRow SpaceBetween">
+        {/* <div id="RenderedText"> */}
+        <div className="TextRendererColumn">
+          <div className={activeDeclension ? 'TextDisplay ReducedSize' : 'TextDisplay'}>
+            {
+              activeText ? (
+                <span className="TextHeading">{heading}</span>
+              ) : ''
+            }
+            {
+              activeText.chapters[activeChapterIndex - 1].verses
+                .map((vrs) => (
+                  vrs.units
+                    ? vrs.units.map((unt) => (
+                      <TextUnit
+                        key={`unit-${unt.unitId}`}
+                        unit={unt}
+                        onClick={(e: Event) => handleUnitClick(e, unt.declensionId)}
+                      />
+                    ))
+                    : <span key={`unit-c${activeChapterIndex}v${vrs.verseNumber}`}>{`${vrs.verseNumber} ${vrs.content} `}</span>
+                ))
+            }
+          </div>
+        </div>
+        <div className="TextRendererColumn">
           {
-            activeText ? (
-              <span className="TextHeading">{heading}</span>
-            ) : ''
-          }
-          {
-            activeText.chapters[activeChapterIndex - 1].verses
-              .map((vrs) => (
-                vrs.units
-                  ? vrs.units.map((unt) => (
-                    <TextUnit
-                      key={`unit-${unt.unitId}`}
-                      unit={unt}
-                      onClick={(e: Event) => handleUnitClick(e, unt.declensionId)}
-                    />
-                  ))
-                  : <span key={`unit-c${activeChapterIndex}v${vrs.verseNumber}`}>{`${vrs.verseNumber} ${vrs.content} `}</span>
-              ))
+            activeDeclension
+              ? (
+                <TextDetails
+                  // @ts-ignore
+                  details={fetchDeclensionDetails(activeDeclension)}
+                />
+              )
+              : <span />
           }
         </div>
-      </div>
-      <div className="TextRendererPopup">
-        {
-          activeDeclension
-            ? (
-              <TextDetails
-                // @ts-ignore
-                details={fetchDeclensionDetails(activeDeclension)}
-              />
-            )
-            : <span />
-        }
       </div>
     </div>
   );

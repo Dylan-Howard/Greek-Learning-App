@@ -1,9 +1,10 @@
 
 .SettingsMenu {
-  background: #2A2A27;
+  background: #2D2D2A;
   color: #FFFAFF;
   display: block;
-  padding: 8px 0;
+  box-sizing: border-box;
+  padding: 2rem 0;
   overflow-y: scroll;
   /* overflow-x: auto; */
   height: 100%;
@@ -26,6 +27,7 @@
 
 .SettingsMenuTab {
   display: none;
+  box-sizing: border-box;
   width: 300px;
 }
 
@@ -39,17 +41,19 @@
 .SettingsMenuTab .MenuTabTitle {
   display: block;
   margin: 8px 16px;
-  line-height: 2rem;
+
   font-size: 1.8rem;
+  line-height: 2rem;
   font-weight: 600;
-  width: 100%;
+  
 }
 .SettingsMenuTab .SettingsSearchBox {
   display: block;
-  width: 90%;
-  padding: 4px 8px;
+  box-sizing: border-box;
+  padding: 8px 16px;
   margin: 8px;
   outline: none;
+  border-radius: 8px;
 
   font-size: 1rem;
 }
@@ -58,12 +62,13 @@
 }
 .SettingsMenuTab > .SettingsLabel {
   display: block;
+  box-sizing: border-box;
   cursor: pointer;
   width: 100%;
   outline: 0;
   padding: 8px 16px;
 
-  background-color: #252B2D;
+  background-color: #2D2D2A;
   border: none;
   color: #FFFAFF;
   
@@ -75,4 +80,4 @@
   color: #4A89BF;
 }
 
-.SettingsMenuTab .SettingsLabel:hover { background: #282e30; }
+.SettingsMenuTab .SettingsLabel:hover { background: #252B2D; }

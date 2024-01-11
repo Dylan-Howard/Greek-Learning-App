@@ -21,7 +21,7 @@ nav.Navbar {
 }
 
 .Navbar > .NavIcon {
-  background: #252B2D;
+  background: #2D2D2A;
   border: none;
   color: #FAFAFA;
   cursor: pointer;
@@ -38,6 +38,10 @@ nav.Navbar {
   text-align: center;
   vertical-align: middle;
   width: 100%;
+}
+
+.Navbar > .NavIcon:hover {
+  background: #252B2D;
 }
 
 .Navbar > .NavIcon:hover > .material-symbols-outlined {

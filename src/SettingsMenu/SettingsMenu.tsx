@@ -51,7 +51,7 @@ function SettingsMenu(
   const { user, setUser } = useContext(UserContext);
   const [filter, setFilter] = useState('');
 
-  if (title !== 'Lessons' && title !== 'Dictionary') { return <span />; }
+  if (title === 'Home') { return <span />; }
   const options : {
     id: number,
     name: string,
@@ -63,14 +63,18 @@ function SettingsMenu(
     const lessons = fetchLessons(LANGUAGE);
 
     options.push(
-      ...lessons.map((lsn : Lesson) => ({
-        id: lsn.lessonId,
-        name: lsn.title,
-        type: 'Lesson',
-        isActive: !!user?.progress.lessons?.find(
-          (prg) => prg.id === lsn.lessonId,
-        )?.isComplete,
-      })),
+      ...lessons
+        .filter((lsn: Lesson) => (
+          filter === lsn.title.substring(0, filter.length)
+        ))
+        .map((lsn : Lesson) => ({
+          id: lsn.lessonId,
+          name: lsn.title,
+          type: 'Lesson',
+          isActive: !!user?.progress.lessons?.find(
+            (prg) => prg.id === lsn.lessonId,
+          )?.isComplete,
+        })),
     );
   }
   if (title === 'Dictionary') {
