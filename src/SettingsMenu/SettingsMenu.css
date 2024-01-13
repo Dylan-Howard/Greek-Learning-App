@@ -1,7 +1,8 @@
 
 .SettingsMenu {
-  background: #2D2D2A;
-  color: #FFFAFF;
+  /* background: #1B2021; */
+  background: #EDF2F4;
+  color: #1B2021;
   display: block;
   box-sizing: border-box;
   padding: 2rem 0;
@@ -16,10 +17,7 @@
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-.SettingsMenu ::selection {
-  /* color: inherit; */
-  background-color: transparent;
-}
+.SettingsMenu ::selection,
 .SettingsMenu ::-moz-selection {
   /* color: inherit; */
   background-color: transparent;
@@ -40,23 +38,36 @@
 
 .SettingsMenuTab .MenuTabTitle {
   display: block;
-  margin: 8px 16px;
+  margin: 8px 2rem;
 
   font-size: 1.8rem;
   line-height: 2rem;
   font-weight: 600;
-  
+  color: #1B2021;
 }
 .SettingsMenuTab .SettingsSearchBox {
   display: block;
   box-sizing: border-box;
   padding: 8px 16px;
-  margin: 8px;
+  margin: 8px 2rem;
+  
   outline: none;
+  border: #DAE4E7;
   border-radius: 8px;
 
   font-size: 1rem;
+
+  transition: 100ms;
 }
+.SettingsMenuTab > .SettingsSearchBox:hover,
+.SettingsMenuTab > .SettingsSearchBox:focus {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.SettingsMenuTab > .SettingsSearchBox ::selection,
+.SettingsMenuTab > .SettingsSearchBox ::-moz-selection {
+  background-color: #4A89BF;
+}
+
 .SettingsMenuTab > .SettingsOption {
   display: none;
 }
@@ -66,18 +77,25 @@
   cursor: pointer;
   width: 100%;
   outline: 0;
-  padding: 8px 16px;
+  padding: 8px 2rem;
 
-  background-color: #2D2D2A;
+  /* background-color: #1B2021; */
+  background-color: #EDF2F4;
   border: none;
-  color: #FFFAFF;
+  /* color: #1B2021; */
   
   font-size: 1rem;
   line-height: 1.2rem;
   text-align: left;
+
+  transition: 100ms;
 }
+
+.SettingsMenuTab .SettingsLabel:hover {
+  background-color: #DAE4E7;
+}
+
 .SettingsMenuTab > input[type="checkbox"].SettingsOption:checked + .SettingsLabel {
   color: #4A89BF;
 }
 
-.SettingsMenuTab .SettingsLabel:hover { background: #252B2D; }

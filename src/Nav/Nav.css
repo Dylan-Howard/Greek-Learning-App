@@ -1,5 +1,5 @@
 nav.Navbar {
-  background: #2D2D2A;
+  background: #1B2021;
   color: #FAFAFA;
   display: flex;
   justify-content: flex-start;
@@ -21,7 +21,7 @@ nav.Navbar {
 }
 
 .Navbar > .NavIcon {
-  background: #2D2D2A;
+  background: #1B2021;
   border: none;
   color: #FAFAFA;
   cursor: pointer;
@@ -30,7 +30,8 @@ nav.Navbar {
 }
 
 .Navbar > .NavIcon.NavActive {
-  background: #252B2D;
+  /* background: #252B2D; */
+  background: #4A89BF;
 }
 
 .Navbar > .NavIcon > .material-symbols-outlined {
@@ -43,7 +44,13 @@ nav.Navbar {
 .Navbar > .NavIcon:hover {
   background: #252B2D;
 }
+.Navbar > .NavIcon.NavActive:hover {
+  background-color: #3A74A6;
+}
 
 .Navbar > .NavIcon:hover > .material-symbols-outlined {
   color: #4A89BF;
+}
+.Navbar > .NavIcon.NavActive:hover > .material-symbols-outlined {
+  color: #FFFAFF;
 }
