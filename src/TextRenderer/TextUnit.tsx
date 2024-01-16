@@ -77,7 +77,6 @@ const fetchDeclension = ({ declensionId }: Unit) => (
 
 function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
   const declension = fetchDeclension(unit);
-  // if (!declension) { return <span>NaN</span>; }
 
   const isRecognizable = (dcl: Declension) => {
     const { user } = useUserContext();
