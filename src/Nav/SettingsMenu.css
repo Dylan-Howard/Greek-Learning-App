@@ -62,26 +62,27 @@
   background-color: #4A89BF;
 }
 
-.SettingsMenuTab > .SettingsOption {
-  display: none;
-}
+.SettingsMenuTab > .SettingsNotice,
 .SettingsMenuTab > .SettingsLabel {
   display: block;
   box-sizing: border-box;
-  cursor: pointer;
   width: 100%;
   outline: 0;
   padding: 8px 2rem;
 
-  /* background-color: #1B2021; */
   background-color: #EDF2F4;
   border: none;
-  /* color: #1B2021; */
   
   font-size: 1rem;
   line-height: 1.2rem;
   text-align: left;
+}
 
+.SettingsMenuTab > .SettingsOption {
+  display: none;
+}
+.SettingsMenuTab > .SettingsLabel {
+  cursor: pointer;
   transition: 100ms;
 }
 

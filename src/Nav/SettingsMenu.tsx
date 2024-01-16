@@ -141,7 +141,7 @@ function SettingsMenu(
                 onChange={(e) => handleCheckboxChange(e, id, type)}
               />
             ))
-            : <span>No options match this search filter</span>
+            : <span className="SettingsNotice">No options match this search filter</span>
         }
       </div>
     </div>
