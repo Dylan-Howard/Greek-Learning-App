@@ -1,0 +1,56 @@
+
+.SettingsMenu h1.MenuTabTitle {
+  display: block;
+  margin: 0 2rem 2rem;
+
+  font-size: 3.2rem;
+  line-height: 3.2rem;
+  text-align: left;
+}
+.SettingsMenu h2.MenuTabTitle {
+  display: block;
+  margin: 0 2rem 2rem;
+
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  text-align: left;
+}
+
+.SettingsMenu .DetailsSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  box-sizing: border-box;
+  width: 240px;
+  margin: 8px 2rem;
+}
+
+.SettingsMenu .DetailsSection > .DetailsItem {
+  background: #EFEFEF;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 48%;
+  margin: 0 2% 1rem 0;
+}
+
+.DetailsSection .DetailsItem > .DetailsLabel {
+  display: block;
+  width: 100%;
+
+  color: #636363;
+  font-size: .8rem;
+  line-height: 1rem;
+}
+
+.DetailsSection .DetailsItem > .DetailsValue {
+  display: block;
+  width: 100%;
+
+  /* color: #636363; */
+  font-size: 1rem;
+  line-height: 1.2rem;
+}

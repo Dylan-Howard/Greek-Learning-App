@@ -3,21 +3,88 @@
  */
 
 import declensions from '../data/declensions.json';
-import { Unit } from '../typescript/Text';
+import forms from '../data/grammaticalForms.json';
+import vocab from '../data/vocabulary.json';
+import { Unit, Declension, DeclensionDetails } from '../typescript/Text';
 import { useUserContext } from '../User/User';
 
-function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
-  const fetchDeclension = (unt: Unit) => (
-    declensions.declensions.find((dcl) => dcl.declensionId === unt.declensionId)
-  );
+const fetchDeclensionDetails = (declension: Declension) : DeclensionDetails => {
+  // @ts-ignore
+  const {
+    tenseId,
+    voiceId,
+    moodId,
+    personId,
+    countId,
+    genderId,
+    patternId,
+    vocabId,
+  } : {
+    tenseId: keyof typeof forms,
+    voiceId: keyof typeof forms,
+    moodId: keyof typeof forms,
+    personId: keyof typeof forms,
+    countId: keyof typeof forms,
+    genderId: keyof typeof forms,
+    patternId: keyof typeof forms,
+    vocabId: keyof typeof vocab,
+  } = declension;
 
-  const isRecognizable = (unt: Unit) => {
+  return ({
+    type: tenseId ? { name: 'verb' } : { name: 'noun' },
+    tense: tenseId ? forms[tenseId] : undefined,
+    voice: voiceId ? forms[voiceId] : undefined,
+    mood: moodId ? forms[moodId] : undefined,
+    person: personId ? forms[personId] : undefined,
+    count: countId ? forms[countId] : undefined,
+    gender: genderId ? forms[genderId] : undefined,
+    pattern: patternId ? forms[patternId] : undefined,
+    root: vocabId
+    // @ts-ignore
+      ? { name: vocab.gk.filter(({ wordId }) => wordId === vocabId)[0].content }
+      : undefined,
+    gloss: vocabId
+      // @ts-ignore
+      ? { name: vocab.gk.filter(({ wordId }) => wordId === vocabId)[0].content }
+      : undefined,
+  });
+};
+
+const stringifyShorthandDetails = (details: DeclensionDetails | undefined) => {
+  if (!details) { return ''; }
+  const {
+    root, tense, voice, mood, person, count, gender, pattern,
+  } = details;
+  const shorthand = [];
+  if (root) { shorthand.push(`[${root.name}: `); }
+  /* Verb Details */
+  if (tense) { shorthand.push(`${tense.short}`); }
+  if (voice) { shorthand.push(`${voice.short}`); }
+  if (mood) { shorthand.push(`${mood.short}`); }
+  if (person) { shorthand.push(`${person.short}`); }
+  if (tense && person) { shorthand.push(']'); }
+  /* Noun Details */
+  if (count) { shorthand.push(`${count.short}`); }
+  if (gender) { shorthand.push(`${gender.short}`); }
+  if (pattern) { shorthand.push(`${pattern.short}]`); }
+
+  return shorthand.join('');
+};
+
+const fetchDeclension = ({ declensionId }: Unit) => (
+  declensions.declensions.find((dcl) => dcl.declensionId === declensionId)
+);
+
+function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
+  const declension = fetchDeclension(unit);
+  // if (!declension) { return <span>NaN</span>; }
+
+  const isRecognizable = (dcl: Declension) => {
     const { user } = useUserContext();
     if (!user || !user.progress.lessons || !user.progress.vocabulary) { return 'unrecognizable'; }
     const { lessons, vocabulary } = user.progress;
 
-    const declension = fetchDeclension(unt);
-    if (!declension) { return 'unrecognizable'; }
+    if (!dcl) { return 'unrecognizable'; }
     const {
       countId,
       genderId,
@@ -27,7 +94,7 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
       personId,
       patternId,
       vocabId,
-    } = declension;
+    } = dcl;
 
     const progressCheck = [
       countId ? lessons.find(({ id }) => id === countId)?.isComplete : true,
@@ -47,12 +114,14 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
     return 'recognizable';
   };
 
+  const details = declension ? fetchDeclensionDetails(declension) : undefined;
+
   const textContentMap = {
     unrecognizable: unit.en || unit.content,
-    needsHelps: `${unit.content} []`,
+    needsHelps: `${unit.content} ${stringifyShorthandDetails(details)}`,
     recognizable: unit.content,
   };
-  const isKnown = isRecognizable(unit);
+  const isKnown = declension ? isRecognizable(declension) : 'recognizable';
   const textContent = textContentMap[isKnown];
 
   if (unit) {

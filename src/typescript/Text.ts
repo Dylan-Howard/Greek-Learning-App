@@ -43,28 +43,42 @@ export type Declension = {
 
 export type DeclensionDetails = {
   type: {
-    name: string
+    name: string;
   } | undefined,
   tense: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   voice: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   mood: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   person: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   count: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   gender: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   pattern: {
-    name: string
+    name: string;
+    short: string;
+    lessonId: number;
   } | undefined,
   root: {
     name: string

@@ -1,8 +1,8 @@
 import './App.css';
 import { useState } from 'react';
 import fetchUser, { UserContext } from './User/User';
-import Nav from './Nav/Nav';
 import TextRenderer from './TextRenderer/TextRenderer';
+import Nav from './Nav/Nav';
 
 // const TEST_USER_ID = 'user1';
 const TEST_USER_ID = 'user2';
@@ -14,21 +14,32 @@ function App() {
   const [activeUser, setActiveUser] = useState(
     fetchUser(TEST_USER_ID),
   );
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeDeclensionId, setActiveDeclensionId] = useState(0);
 
   const tabs = [
     { title: 'Home', iconName: 'home' },
     { title: 'Lessons', iconName: 'play_lesson' },
     { title: 'Dictionary', iconName: 'dictionary' },
-    // { title: 'Settings', iconName: 'settings' },
-    // { title: 'Details', iconName: 'chat_info' },
+    { title: 'Settings', iconName: 'settings' },
   ];
+
+  if (activeDeclensionId) {
+    tabs.push({ title: 'Details', iconName: 'chat_info' });
+  }
 
   return (
     // eslint-disable-next-line react/jsx-no-constructed-context-values
     <UserContext.Provider value={{ user: activeUser, setUser: setActiveUser }}>
       <div className="App">
-        <Nav tabs={tabs} />
-        <TextRenderer />
+        <Nav
+          tabs={tabs}
+          activeTabIndex={activeTabIndex}
+          setActiveTabIndex={setActiveTabIndex}
+          activeDeclensionId={activeDeclensionId}
+          setActiveDeclensionId={setActiveDeclensionId}
+        />
+        <TextRenderer setActiveDeclensionId={setActiveDeclensionId} />
       </div>
     </UserContext.Provider>
   );

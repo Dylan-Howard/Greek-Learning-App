@@ -1,54 +1,49 @@
-import { MouseEventHandler, useState } from 'react';
 import './Nav.css';
-import SettingsMenu from '../SettingsMenu/SettingsMenu';
+import SettingsMenu from './SettingsMenu';
 import { Tab } from '../Common/Tab';
+import { NavButton } from './NavButton';
+import DetailsMenu from './DetailsMenu';
 
-function NavButton(
-  {
-    title,
-    iconName,
-    isActive,
-    onShow,
-  } : {
-    title: string,
-    iconName: string,
-    isActive: boolean,
-    onShow: MouseEventHandler<HTMLButtonElement>
-  },
-) {
+function Nav({
+  tabs,
+  activeTabIndex,
+  setActiveTabIndex,
+  activeDeclensionId,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  setActiveDeclensionId,
+} : {
+  tabs: Tab[],
+  activeTabIndex: number,
+  setActiveTabIndex: Function,
+  activeDeclensionId: number,
+  setActiveDeclensionId: Function,
+}) {
   return (
-    <button
-      id={title}
-      key={title}
-      type="button"
-      className={isActive ? 'NavIcon NavActive' : 'NavIcon'}
-      data-menu={`${title}-menu`}
-      onClick={onShow}
-    >
-      <span className="material-symbols-outlined">{iconName}</span>
-    </button>
-  );
-}
-
-function Nav({ tabs } : { tabs: Tab[] }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  return (
-    <>
-      <nav className="Navbar">
+    <nav className="Navbar">
+      <div className="NavIcons">
         {
           tabs.map(({ title, iconName }, i) => (
             <NavButton
               key={title}
               title={title}
               iconName={iconName}
-              isActive={activeIndex === i}
-              onShow={() => setActiveIndex(i)}
+              isActive={activeTabIndex === i}
+              onShow={() => setActiveTabIndex(i)}
             />
           ))
         }
-      </nav>
-      <SettingsMenu tab={tabs[activeIndex]} />
-    </>
+      </div>
+      {
+        tabs[activeTabIndex].title === 'Details'
+          ? <DetailsMenu activeDeclensionId={activeDeclensionId} />
+          : (
+            <SettingsMenu
+              tab={tabs[activeTabIndex]}
+              activeDeclensionId={activeDeclensionId}
+            />
+          )
+      }
+    </nav>
   );
 }
 

@@ -1,18 +1,12 @@
 
 .SettingsMenu {
-  /* background: #1B2021; */
   background: #EDF2F4;
   color: #1B2021;
   display: block;
   box-sizing: border-box;
   padding: 2rem 0;
   overflow-y: scroll;
-  /* overflow-x: auto; */
   height: 100%;
-  position: fixed;
-  top: 0;
-  left: 66px;
-  z-index: 1;
   
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }

@@ -2,7 +2,6 @@ import './SettingsMenu.css';
 
 import {
   ChangeEvent,
-  ChangeEventHandler,
   useContext,
   useState,
 } from 'react';
@@ -12,41 +11,12 @@ import { Tab } from '../Common/Tab';
 import { Lesson } from '../Common/Lesson';
 import { Word } from '../Common/Word';
 import transliterateGreek from '../typescript/Transliterate';
+import OptionCheckbox from './OptionCheckbox';
 
 const LANGUAGE = 'gk';
 
-function OptionCheckbox(
-  {
-    id,
-    type,
-    name,
-    value,
-    onChange,
-  }: {
-    id: number,
-    type: string,
-    name: string,
-    value: boolean,
-    onChange: ChangeEventHandler<HTMLInputElement>,
-  },
-) {
-  return (
-    <>
-      <input
-        key={`${type}-${id}`}
-        id={`${type}-${id}`}
-        className="SettingsOption"
-        checked={value}
-        type="checkbox"
-        onChange={onChange}
-      />
-      <label htmlFor={`${type}-${id}`} className="SettingsLabel">{name}</label>
-    </>
-  );
-}
-
 function SettingsMenu(
-  { tab: { title } } : { tab: Tab },
+  { tab: { title }, activeDeclensionId } : { tab: Tab, activeDeclensionId: number },
 ) {
   const { user, setUser } = useContext(UserContext);
   const [filter, setFilter] = useState('');
@@ -97,6 +67,15 @@ function SettingsMenu(
     );
   }
 
+  if (title === 'Details') {
+    options.push({
+      id: 1,
+      type: 'Details',
+      name: activeDeclensionId.toString(),
+      isActive: true,
+    });
+  }
+
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFilter(e.target.value);
   };
@@ -139,7 +118,7 @@ function SettingsMenu(
   return (
     <div className="SettingsMenu">
       <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
-        <span className="MenuTabTitle">{title}</span>
+        <h1 className="MenuTabTitle">{title}</h1>
         <input
           className="SettingsSearchBox"
           placeholder="Search"

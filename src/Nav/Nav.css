@@ -1,4 +1,12 @@
-nav.Navbar {
+.Navbar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+
+  background: #1B2021;
+}
+
+nav.NavIcons {
   background: #1B2021;
   color: #FAFAFA;
   display: flex;
@@ -8,49 +16,50 @@ nav.Navbar {
   width: 72px;
   padding: 8px 0;
   position: relative;
-  z-index: 2;
+  /* z-index: 2; */
   /* max-width: 300px; */
 }
-.Navbar ::selection {
+.NavIcons ::selection {
   /* color: inherit; */
   background-color: transparent;
 }
-.Navbar ::-moz-selection {
+.NavIcons ::-moz-selection {
   /* color: inherit; */
   background-color: transparent;
 }
 
-.Navbar > .NavIcon {
+.NavIcons > .NavIcon {
+  display: block;
   background: #1B2021;
   border: none;
   color: #FAFAFA;
   cursor: pointer;
-  padding: 16px 4px;
-  width: 100%;
+  padding: 16px 8px;
+  width: 64px;
 }
 
-.Navbar > .NavIcon.NavActive {
+.NavIcons > .NavIcon.NavActive {
   /* background: #252B2D; */
   background: #4A89BF;
 }
 
-.Navbar > .NavIcon > .material-symbols-outlined {
+.NavIcons > .NavIcon > .material-symbols-outlined {
   font-size: 1.8rem;
   text-align: center;
   vertical-align: middle;
   width: 100%;
 }
 
-.Navbar > .NavIcon:hover {
+.NavIcons > .NavIcon:hover {
   background: #252B2D;
 }
-.Navbar > .NavIcon.NavActive:hover {
+.NavIcons > .NavIcon.NavActive:hover {
   background-color: #3A74A6;
 }
 
-.Navbar > .NavIcon:hover > .material-symbols-outlined {
+.NavIcons > .NavIcon:hover > .material-symbols-outlined {
   color: #4A89BF;
 }
-.Navbar > .NavIcon.NavActive:hover > .material-symbols-outlined {
+.NavIcons > .NavIcon.NavActive:hover > .material-symbols-outlined {
   color: #FFFAFF;
 }
