@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/GraduatedInterlinear/static/css/main.c4336141.css",
-    "main.js": "/GraduatedInterlinear/static/js/main.17dec0a0.js",
+    "main.js": "/GraduatedInterlinear/static/js/main.d1f0bbc8.js",
     "static/js/787.e1cea973.chunk.js": "/GraduatedInterlinear/static/js/787.e1cea973.chunk.js",
     "index.html": "/GraduatedInterlinear/index.html",
     "main.c4336141.css.map": "/GraduatedInterlinear/static/css/main.c4336141.css.map",
-    "main.17dec0a0.js.map": "/GraduatedInterlinear/static/js/main.17dec0a0.js.map",
+    "main.d1f0bbc8.js.map": "/GraduatedInterlinear/static/js/main.d1f0bbc8.js.map",
     "787.e1cea973.chunk.js.map": "/GraduatedInterlinear/static/js/787.e1cea973.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4336141.css",
-    "static/js/main.17dec0a0.js"
+    "static/js/main.d1f0bbc8.js"
   ]
 }
