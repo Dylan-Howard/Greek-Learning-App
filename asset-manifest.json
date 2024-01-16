@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.c4336141.css",
-    "main.js": "/static/js/main.2c14bb90.js",
-    "static/js/787.e1cea973.chunk.js": "/static/js/787.e1cea973.chunk.js",
-    "index.html": "/index.html",
-    "main.c4336141.css.map": "/static/css/main.c4336141.css.map",
-    "main.2c14bb90.js.map": "/static/js/main.2c14bb90.js.map",
-    "787.e1cea973.chunk.js.map": "/static/js/787.e1cea973.chunk.js.map"
+    "main.css": "/GraduatedInterlinear/static/css/main.c4336141.css",
+    "main.js": "/GraduatedInterlinear/static/js/main.17dec0a0.js",
+    "static/js/787.e1cea973.chunk.js": "/GraduatedInterlinear/static/js/787.e1cea973.chunk.js",
+    "index.html": "/GraduatedInterlinear/index.html",
+    "main.c4336141.css.map": "/GraduatedInterlinear/static/css/main.c4336141.css.map",
+    "main.17dec0a0.js.map": "/GraduatedInterlinear/static/js/main.17dec0a0.js.map",
+    "787.e1cea973.chunk.js.map": "/GraduatedInterlinear/static/js/787.e1cea973.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c4336141.css",
-    "static/js/main.2c14bb90.js"
+    "static/js/main.17dec0a0.js"
   ]
 }
