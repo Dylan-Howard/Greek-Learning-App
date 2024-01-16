@@ -130,6 +130,7 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
         className="TextUnit HiglightOnHover"
         onClick={(e) => onClick(e)}
         onKeyUp={(e) => onClick(e)}
+        onTouchEnd={(e) => onClick(e)}
         role="button"
         tabIndex={0}
       >
