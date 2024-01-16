@@ -28,6 +28,6 @@ function OptionCheckbox(
       <label htmlFor={`${type}-${id}`} className="SettingsLabel">{name}</label>
     </>
   );
-};
+}
 
 export default OptionCheckbox;
