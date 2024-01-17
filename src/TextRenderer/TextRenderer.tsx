@@ -15,7 +15,7 @@ const log = (message: any) => {
   console.log(message);
 };
 
-function TextRenderer({ setActiveDeclensionId } : { setActiveDeclensionId: Function }) {
+function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Function }) {
   const [activeText, setActiveText] = useState(texts.texts[DEFAULT_TEXT_ID]);
   const [activeChapterIndex, setActiveChapterIndex] = useState(1);
 
@@ -37,7 +37,7 @@ function TextRenderer({ setActiveDeclensionId } : { setActiveDeclensionId: Funct
   };
 
   const handleUnitClick = (e: any, declensionId: number | undefined) => {
-    setActiveDeclensionId(declensionId || 0);
+    changeActiveDeclension(declensionId || 0);
   };
 
   const heading = activeText?.title;

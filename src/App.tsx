@@ -24,6 +24,12 @@ function App() {
     { title: 'Settings', iconName: 'settings' },
   ];
 
+  const changeActiveDeclension = (declensionId: number) => {
+    setActiveDeclensionId(declensionId);
+    if (!declensionId) { setActiveTabIndex(0); }
+    if (declensionId && activeTabIndex !== 4) { setActiveTabIndex(4); }
+  };
+
   if (activeDeclensionId) {
     tabs.push({ title: 'Details', iconName: 'chat_info' });
   }
@@ -39,7 +45,7 @@ function App() {
           activeDeclensionId={activeDeclensionId}
           setActiveDeclensionId={setActiveDeclensionId}
         />
-        <TextRenderer setActiveDeclensionId={setActiveDeclensionId} />
+        <TextRenderer changeActiveDeclension={changeActiveDeclension} />
       </div>
     </UserContext.Provider>
   );
