@@ -1,19 +1,27 @@
 
 .SettingsMenu {
-  background: #EDF2F4;
-  color: #1B2021;
-  display: block;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
-  padding: 2rem 0;
   overflow-y: scroll;
-  height: 100%;
-  
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  padding: 2rem 0;
+  max-height: 80vh;
+
+  background: #EDF2F4;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  color: #1B2021;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  text-align: left;
+
+  box-shadow: rgba(99, 99, 99, 0.2) 0px -2px 8px 0px;
+  position: relative;
+  z-index: 1;
 }
 
 .SettingsMenu ::selection,
 .SettingsMenu ::-moz-selection {
-  /* color: inherit; */
   background-color: transparent;
 }
 
@@ -24,38 +32,30 @@
 }
 
 .SettingsMenuTab.MenuActive {
-  /* display: block; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  margin: 0;
+  width: 100%;
 }
 
-.SettingsMenuTab .MenuTabTitle {
-  display: block;
-  margin: 8px 2rem;
-
-  font-size: 1.8rem;
-  line-height: 2rem;
-  font-weight: 600;
-  color: #1B2021;
-}
 .SettingsMenuTab .SettingsSearchBox {
   display: block;
   box-sizing: border-box;
-  padding: 8px 16px;
+  padding: 12px 20px;
   margin: 8px 2rem;
   
   outline: none;
   border: #DAE4E7;
   border-radius: 8px;
 
-  font-size: 1rem;
+  font-size: 1.2rem;
 
   transition: 100ms;
 }
 .SettingsMenuTab > .SettingsSearchBox:hover,
 .SettingsMenuTab > .SettingsSearchBox:focus {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .SettingsMenuTab > .SettingsSearchBox ::selection,
 .SettingsMenuTab > .SettingsSearchBox ::-moz-selection {
@@ -68,12 +68,12 @@
   box-sizing: border-box;
   width: 100%;
   outline: 0;
-  padding: 8px 2rem;
+  padding: 12px 2rem;
 
   background-color: #EDF2F4;
   border: none;
   
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.2rem;
   text-align: left;
 }
@@ -94,3 +94,29 @@
   color: #4A89BF;
 }
 
+@media (min-width: 600px) {
+  .SettingsMenu {
+    display: block;
+    max-height: none;
+
+    font-size: 1rem;
+    line-height: 1rem;
+
+    border-radius: 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* box-shadow: 0 1px 2px 0 #0000, 0 1px 3px 1px #0000; */
+    /* transition: box-shadow .08s linear,min-width .15s cubic-bezier(0.4,0,0.2,1) */
+  }
+  .SettingsMenuTab .SettingsSearchBox {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  .SettingsMenuTab > .SettingsNotice,
+  .SettingsMenuTab > .SettingsLabel {
+    font-size: 1rem;
+    padding: 8px 2rem;
+  }
+  .SettingsMenuTab.MenuActive {
+    justify-content: center;
+  }
+}

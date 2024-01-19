@@ -60,8 +60,8 @@
 }
 
 .TextDisplay {
-  width: calc(100% - 8rem);
-  padding: 4rem;
+  /* width: calc(100% - 8rem); */
+  padding: 2rem;
 
   color: #1B2021;
   font-family: 'Noto Serif', serif;
@@ -92,6 +92,9 @@
  */
 
 @media screen and (min-width: 800px) {
+  .TextDisplay {
+    padding: 4rem;
+  }
   #RenderedText {
     height: 100%;
     width: 80%;

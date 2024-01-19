@@ -1,6 +1,14 @@
 .App {
   display: flex;
+  flex-direction: column-reverse;
   justify-content: space-between;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 100%;
   width: 100vw;
+}
+
+@media (min-width: 600px) {
+  .App {
+    flex-direction: row;
+  }
 }

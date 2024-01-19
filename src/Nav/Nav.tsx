@@ -20,7 +20,7 @@ function Nav({
 }) {
   return (
     <nav className="Navbar">
-      <div className="NavIcons">
+      <div className="NavButtons">
         {
           tabs.map(({ title, iconName }, i) => (
             <NavButton
