@@ -123,21 +123,21 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
   const isKnown = declension ? isRecognizable(declension) : 'recognizable';
   const textContent = textContentMap[isKnown];
 
-  if (unit) {
+  if (unit && details) {
     return (
       <span
-        className="TextUnit HiglightOnHover"
+        className={details ? 'TextUnit HiglightOnHover' : 'TextUnit'}
         onClick={(e) => onClick(e)}
         onKeyUp={(e) => onClick(e)}
         onTouchEnd={(e) => onClick(e)}
         role="button"
         tabIndex={0}
       >
-        {`${textContent} `}
+        {` ${textContent}`}
       </span>
     );
   }
-  return <span className="TextUnit HiglightOnHover">test</span>;
+  return <span className="TextUnit">{`${textContent}`}</span>;
 }
 
 export default TextUnit;
