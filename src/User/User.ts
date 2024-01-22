@@ -15,8 +15,20 @@ type UserProgress = {
   }[] | undefined,
 };
 
+// type UserSettings = {
+//   alwaysShowFullDetails: boolean,
+//   prefersDarkMode: boolean,
+// };
+
+interface UserSettings {
+  alwaysShowFullDetails: boolean,
+  prefersDarkMode: boolean,
+  [key: string]: any,
+}
+
 type User = {
   progress: UserProgress,
+  settings: UserSettings,
 };
 
 function fetchUserProgressData(userId: string, progressArea: string):
@@ -35,12 +47,20 @@ function fetchUserProgressData(userId: string, progressArea: string):
   return undefined;
 }
 
+function fetchUserSettings(userId: string): UserSettings | undefined {
+  return userData.users.find(({ id }: { id: string }) => id === userId)?.settings;
+}
+
 const fetchUser = (userId: string) : User => {
   const progress: UserProgress = {
     lessons: fetchUserProgressData(userId, 'lessons'),
     vocabulary: fetchUserProgressData(userId, 'vocabulary'),
   };
-  return { progress };
+  const settings: UserSettings = fetchUserSettings(userId) || {
+    alwaysShowFullDetails: false,
+    prefersDarkMode: true,
+  };
+  return { progress, settings };
 };
 
 export const UserContext = createContext<{ user: User | undefined, setUser: Function }>({

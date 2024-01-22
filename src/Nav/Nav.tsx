@@ -21,6 +21,9 @@ function Nav({
   return (
     <nav className="Navbar">
       <div className="NavButtons">
+        {/* <div className="NavLogo">
+          <img src="/public/favicon.ico" alt="Scriptura Logo" />
+        </div> */}
         {
           tabs.map(({ title, iconName }, i) => (
             <NavButton

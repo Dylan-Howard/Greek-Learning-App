@@ -13,28 +13,30 @@
   color: #FAFAFA;
   width: 100%;
   padding-bottom: env(safe-area-inset-bottom);
+
+  position: relative;
+  z-index: 2;
 }
 .NavButtons ::selection {
-  /* color: inherit; */
   background-color: transparent;
 }
 .NavButtons ::-moz-selection {
-  /* color: inherit; */
   background-color: transparent;
 }
 
-.NavButtons > .NavIcon {
+.NavButtons > .NavIcon,
+.NavButtons > .NavLogo {
   display: block;
+  padding: 16px 8px;
+  width: 64px;
+
   background: #1B2021;
   border: none;
   color: #FAFAFA;
   cursor: pointer;
-  padding: 16px 8px;
-  width: 64px;
 }
 
 .NavButtons > .NavIcon.NavActive {
-  /* background: #252B2D; */
   background: #4A89BF;
 }
 

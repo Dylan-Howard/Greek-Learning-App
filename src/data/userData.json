@@ -57,7 +57,8 @@
         ]
       },
       "settings" : {
-        "alwaysShowFullDetails": false
+        "alwaysShowFullDetails": false,
+        "prefersDarkMode": false
       }
     },
     {
@@ -1585,7 +1586,8 @@
         ]
       },
       "settings" : {
-        "alwaysShowFullDetails": false
+        "alwaysShowFullDetails": false,
+        "prefersDarkMode": true
       }
     }
   ]

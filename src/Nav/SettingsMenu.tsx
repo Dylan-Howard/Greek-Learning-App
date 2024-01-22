@@ -21,6 +21,8 @@ function SettingsMenu(
   const { user, setUser } = useContext(UserContext);
   const [filter, setFilter] = useState('');
 
+  const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
+
   if (title === 'Home') { return <span />; }
   const options : {
     id: number,
@@ -66,6 +68,26 @@ function SettingsMenu(
         })),
     );
   }
+  if (title === 'Settings') {
+    if (user) {
+      const { settings } = user;
+
+      const keys = Object.keys(settings);
+
+      options.push(
+        ...keys
+          .filter((set: string) => (
+            filter === set.substring(0, filter.length)
+          ))
+          .map((set: string) => ({
+            id: keys.indexOf(set),
+            name: set,
+            type: 'setting',
+            isActive: settings[set],
+          })),
+      );
+    }
+  }
 
   if (title === 'Details') {
     options.push({
@@ -91,14 +113,23 @@ function SettingsMenu(
       progress: {
         ...user.progress,
       },
+      settings: {
+        ...user.settings,
+      },
     };
     /* Guards from non-existant settings */
-    if (settingType !== 'Lesson' && settingType !== 'Word') { return; }
+    if (
+      settingType !== 'Lesson'
+      && settingType !== 'Word'
+    ) { return; }
     const settingsTypeMap = { Lesson: 'lessons', Word: 'vocabulary' };
     const targetSettingType = settingsTypeMap[settingType];
 
     /* Selects the target list */
-    if (targetSettingType !== 'lessons' && targetSettingType !== 'vocabulary') { return; }
+    if (
+      targetSettingType !== 'lessons'
+      && targetSettingType !== 'vocabulary'
+    ) { return; }
     const targetProgressList = updatedUser.progress[targetSettingType];
     if (!targetProgressList) { return; }
 
@@ -115,8 +146,32 @@ function SettingsMenu(
     setUser(updatedUser);
   };
 
+  const handleSettingChange = (
+    e: ChangeEvent<HTMLInputElement>,
+    settingId: number,
+  ) => {
+    /* Guards if no active user is set */
+    if (!user) { return; }
+    const updatedUser = {
+      progress: {
+        ...user.progress,
+      },
+      settings: {
+        ...user.settings,
+      },
+    };
+    /* Guards from non-existant settings */
+    const { settings } = updatedUser;
+    const keys = Object.keys(settings);
+    if (!keys || !keys[settingId]) { return; }
+    /* Updates the setting */
+    settings[keys[settingId]] = e.target.checked;
+
+    setUser(updatedUser);
+  };
+
   return (
-    <div className="SettingsMenu">
+    <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
         <h1 className="MenuTabTitle">{title}</h1>
         <input
@@ -138,7 +193,11 @@ function SettingsMenu(
                 type={type}
                 name={name}
                 value={isActive}
-                onChange={(e) => handleCheckboxChange(e, id, type)}
+                onChange={
+                  type === 'setting'
+                    ? (e) => handleSettingChange(e, id)
+                    : (e) => handleCheckboxChange(e, id, type)
+                }
               />
             ))
             : <span className="SettingsNotice">No options match this search filter</span>

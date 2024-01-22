@@ -1,10 +1,14 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * TextRenderer
  */
 import './TextRenderer.css';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useContext, useState } from 'react';
 import TextUnit from './TextUnit';
 import texts from '../data/text.json';
+import TextSelect from './TextSelect';
+import { UserContext } from '../User/User';
 /** @TODO Consider renaming declesnions to morphology */
 
 const DEFAULT_TEXT_ID = 0;
@@ -16,24 +20,26 @@ const log = (message: any) => {
 };
 
 function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Function }) {
-  const [activeText, setActiveText] = useState(texts.texts[DEFAULT_TEXT_ID]);
-  const [activeChapterIndex, setActiveChapterIndex] = useState(1);
+  const { user } = useContext(UserContext);
+  const [activeTextIndex, setActiveTextIndex] = useState(DEFAULT_TEXT_ID);
+  const [activeChapterIndex, setActiveChapterIndex] = useState(0);
 
-  const handleTextChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    const targetText = texts.texts.find((txt) => txt.title === e.target.value);
-    if (targetText) {
-      setActiveText(targetText);
-      setActiveChapterIndex(1);
-    }
+  const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
+  const activeText = texts.texts[activeTextIndex];
+
+  const handleTextChange = (targetTextIndex: number) => {
+    const targetText = texts.texts[targetTextIndex];
+    if (!targetText) { return; }
+
+    setActiveTextIndex(targetTextIndex);
+    setActiveChapterIndex(0);
   };
 
-  const handleChapterChange = ({ target }: ChangeEvent<HTMLSelectElement>) => {
-    const selectedChapter = parseInt(target.value, 10);
-    if (selectedChapter) {
-      setActiveChapterIndex(selectedChapter);
-    } else {
-      target.setAttribute('value', activeChapterIndex.toString());
-    }
+  const handleChapterChange = (targetChapterIndex: number) => {
+    const targetChapter = texts.texts[targetChapterIndex];
+    if (!targetChapter) { return; }
+
+    setActiveChapterIndex(targetChapterIndex);
   };
 
   const handleUnitClick = (e: any, declensionId: number | undefined) => {
@@ -43,28 +49,20 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   const heading = activeText?.title;
 
   return (
-    <div className="TextContainer">
+    <div className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}>
       <form className="TextRendererRow TextForm">
-        <select
-          className="TextSelect"
-          onChange={(e) => handleTextChange(e)}
-        >
-          {
-            texts.texts.map((txt) => (
-              <option key={txt.label}>{txt.title}</option>
-            ))
+        <TextSelect
+          activeOption={texts.texts[activeTextIndex].title}
+          setOptionIndex={handleTextChange}
+          options={texts.texts.map((txt) => txt.title)}
+        />
+        <TextSelect
+          activeOption={(activeChapterIndex + 1).toString()}
+          setOptionIndex={handleChapterChange}
+          options={
+            texts.texts[activeTextIndex].chapters.map((chp) => chp.chapterNumber.toString())
           }
-        </select>
-        <select
-          className="TextSelect"
-          onChange={(e) => handleChapterChange(e)}
-        >
-          {
-            activeText.chapters.map((chp) => (
-              <option key={`chapter-${chp.chapterNumber}`}>{chp.chapterNumber}</option>
-            ))
-          }
-        </select>
+        />
       </form>
       <div className="TextRendererRow">
         <div className="TextRendererColumn">
@@ -75,7 +73,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
               ) : ''
             }
             {
-              activeText.chapters[activeChapterIndex - 1].verses
+              activeText.chapters[activeChapterIndex].verses
                 .map((vrs) => (
                   vrs.units
                     ? vrs.units.map((unt) => (

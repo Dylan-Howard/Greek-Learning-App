@@ -29,7 +29,6 @@
 }
 
 .SettingsMenu .DetailsSection > .DetailsItem {
-  background: #EFEFEF;
   display: flex;
   justify-content: center;
   flex-direction: column;

@@ -1,8 +1,10 @@
 import './DetailsMenu.css';
+import { useContext } from 'react';
 import { Declension, DeclensionDetails } from '../typescript/Text';
 import declensions from '../data/declensions.json';
 import forms from '../data/grammaticalForms.json';
 import vocab from '../data/vocabulary.json';
+import { UserContext } from '../User/User';
 
 const fetchDeclensionDetails = (declension: Declension) : DeclensionDetails => {
   // @ts-ignore
@@ -47,6 +49,9 @@ const fetchDeclensionDetails = (declension: Declension) : DeclensionDetails => {
 };
 
 function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: number }) {
+  const { user } = useContext(UserContext);
+  const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
+
   const unitForm = declensions.declensions.filter(
     ({ declensionId }) => declensionId === activeDeclensionId,
   );
@@ -58,7 +63,7 @@ function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: number }) {
 
   const keys = Object.keys(details);
   return (
-    <div className="SettingsMenu">
+    <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id="details-menu" className="SettingsMenuTab MenuActive">
         {
           details.root ? <h1 className="MenuTabTitle GreekText">{`${details.root.name}`}</h1> : ''
@@ -68,7 +73,6 @@ function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: number }) {
           // @ts-ignore
           keys.filter((key) => !!details[key])
             .map((key) => (
-            // @ts-ignore
               <div className="DetailsItem" key={`detail-${key}`}>
                 <span className="DetailsLabel">{key}</span>
                 <span className={`DetailsValue ${key === 'root' ? 'GreekText' : ''}`}>

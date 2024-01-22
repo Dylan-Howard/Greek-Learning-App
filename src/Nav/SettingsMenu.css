@@ -19,6 +19,14 @@
   position: relative;
   z-index: 1;
 }
+.SettingsMenu.MenuLight {
+  background: #EDF2F4;
+  color: #1B2021;
+}
+.SettingsMenu.MenuDark {
+  background: #1B2021;
+  color: #FAFAFA;
+}
 
 .SettingsMenu ::selection,
 .SettingsMenu ::-moz-selection {
@@ -26,9 +34,15 @@
 }
 
 .SettingsMenuTab {
-  display: none;
+  /* display: none; */
   box-sizing: border-box;
   width: 300px;
+
+  display: flex;
+  /* visibility: hidden;
+  transform: translate(-1rem, 0);
+
+  transition: 300ms; */
 }
 
 .SettingsMenuTab.MenuActive {
@@ -37,6 +51,9 @@
   justify-content: flex-start;
   margin: 0;
   width: 100%;
+
+  /* visibility: visible;
+  transform: translate(0, 0); */
 }
 
 .SettingsMenuTab .SettingsSearchBox {
@@ -77,6 +94,15 @@
   line-height: 1.2rem;
   text-align: left;
 }
+.SettingsMenu.MenuLight .SettingsNotice,
+.SettingsMenu.MenuLight .SettingsLabel {
+  background-color: #EDF2F4;
+}
+.SettingsMenu.MenuDark .SettingsNotice,
+.SettingsMenu.MenuDark .SettingsLabel {
+  background-color: #1B2021;
+  color: #FAFAFA;
+}
 
 .SettingsMenuTab > .SettingsOption {
   display: none;
@@ -86,8 +112,12 @@
   transition: 100ms;
 }
 
-.SettingsMenuTab .SettingsLabel:hover {
+.SettingsMenuTab .SettingsLabel:hover,
+.SettingsMenu.MenuLight .SettingsLabel:hover {
   background-color: #DAE4E7;
+}
+.SettingsMenu.MenuDark .SettingsLabel:hover {
+  background-color: #252B2D;
 }
 
 .SettingsMenuTab > input[type="checkbox"].SettingsOption:checked + .SettingsLabel {

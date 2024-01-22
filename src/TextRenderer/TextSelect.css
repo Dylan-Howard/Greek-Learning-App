@@ -1,0 +1,118 @@
+
+.TextSelect {
+  position: relative;
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+.SelectButton {
+  appearance: none;
+  outline: none;
+  /* safari */
+  -webkit-appearance: none;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid #CACDE1;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+.TextContainer.TextLight .SelectButton,
+.TextContainer.TextLight .SelectDropdown {
+  background-color: #FAFAFA;
+  color: #4A89BF;
+  border-color: #CACDE1;
+}
+.TextContainer.TextDark .SelectButton,
+.TextContainer.TextDark .SelectDropdown {
+  background-color: #1B2021;
+  color: #FAFAFA;
+  border-color: #404B4F;
+}
+
+.SelectedValue { text-align: center; }
+
+.SelectDropdown {
+  list-style: none;
+  width: 200px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: #FAFAFA;
+  border: 1px solid #CACED1;
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+  transition: 0.5s ease;
+  transform: translate(0, -10%);
+  opacity: 0;
+  visibility: hidden;
+
+  position: absolute;
+  left: -30px;
+}
+
+.TextSelect.Active .SelectDropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+}
+
+/* .SelectDropdown:focus-within {
+  box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
+} */
+
+.SelectDropdown li {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.SelectDropdown li label {
+  width: 100%;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.SelectDropdown::-webkit-scrollbar {
+  width: 8px;
+}
+.SelectDropdown::-webkit-scrollbar-track {
+  background: #F0F0F0;
+  border-radius: 8px;
+}
+
+.SelectDropdown::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 8px;
+}
+
+.TextContainer.TextLight .SelectDropdown li:hover {
+  background-color: #F0F0F0;
+}
+.TextContainer.TextDark .SelectDropdown li:hover {
+  background-color: #252B2D;
+}
+
+.SelectDropdown input[type="radio"] {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+
+@media screen and (min-width: 800px) {
+  .SelectButton {
+    font-size: .8rem;
+    padding: .8rem 1.2rem;
+  }
+}
