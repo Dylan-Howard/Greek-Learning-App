@@ -2,6 +2,12 @@
   font-family: 'Noto Serif', serif;
 }
 
+.HebrewText {
+  direction: rtl;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
 .TextContainer {
   display: flex;
   justify-content: flex-start;

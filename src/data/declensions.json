@@ -1,158 +1,1139 @@
-{
-  "declensions": [
-    {
-      "declensionId": 1,
-      "vocabId": 15,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "ὃ"
-    },
-    {
-      "declensionId": 2,
-      "vocabId": 31,
-      "tenseId": 10,
-      "voiceId": 14,
-      "moodId": 17,
-      "personId": 23,
-      "countId": 25,
-      "content": "ἦν"
-    },
-    {
-      "declensionId": 3,
-      "vocabId": 91,
-      "grammerId": 26,
-      "content": "ἀπ"
-    },
-    {
-      "declensionId": 4,
-      "vocabId": 142,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "ἀρχῆς"
-    },
-    {
-      "declensionId": 5,
-      "vocabId": 32,
-      "tenseId": 10,
-      "voiceId": 14,
-      "moodId": 17,
-      "personId": 23,
-      "countId": 25,
-      "content": "ἀκηκόαμεν"
-    },
-    {
-      "declensionId": 6,
-      "vocabId": 47,
-      "tenseId": 10,
-      "voiceId": 14,
-      "moodId": 17,
-      "personId": 23,
-      "countId": 25,
-      "content": "ἑωράκαμεν"
-    },
-    {
-      "declensionId": 7,
-      "vocabId": 142,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "τοῖς"
-    },
-    {
-      "declensionId": 8,
-      "vocabId": 142,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "ὀφθαλμοῖς"
-    },
-    {
-      "declensionId": 9,
-      "vocabId": 279,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "ἡμῶν"
-    },
-    {
-      "declensionId": 10,
-      "vocabId": 227,
-      "tenseId": 10,
-      "voiceId": 14,
-      "moodId": 17,
-      "personId": 23,
-      "countId": 25,
-      "content": "ἐθεασάμεθα"
-    },
-    {
-      "declensionId": 11,
-      "vocabId": 13,
-      "content": "καὶ"
-    },
-    {
-      "declensionId": 1,
-      "vocabId": 142,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "αἱ"
-    },
-    {
-      "declensionId": 13,
-      "vocabId": 210,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "χεῖρες"
-    },
-    {
-      "declensionId": 14,
-      "vocabId": 0,
-      "tenseId": 0,
-      "voiceId": 0,
-      "moodId": 0,
-      "personId": 0,
-      "countId": 0,
-      "content": "ἐψηλάφησαν"
-    },
-    {
-      "declensionId": 15,
-      "vocabId": 100,
-      "content": "περὶ"
-    },
-    {
-      "declensionId": 16,
-      "vocabId": 1,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "τοῦ"
-    },
-    {
-      "declensionId": 17,
-      "vocabId": 21,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "λόγου"
-    },
-    {
-      "declensionId": 18,
-      "vocabId": 142,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "τῆς"
-    },
-    {
-      "declensionId": 19,
-      "vocabId": 142,
-      "countId": 1,
-      "genderId": 3,
-      "patternId": 7,
-      "content": "ζωῆς"
-    }
-  ]
-}
+[
+  {
+    "morphId": "1",
+    "content": "ὃ",
+    "dupId": "1",
+    "vocabId": "15",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "2",
+    "content": "ἦν",
+    "dupId": "2",
+    "vocabId": "31",
+    "tenseId": "11",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "3",
+    "content": "ἀπʼ",
+    "dupId": "3",
+    "vocabId": "91",
+    "grammerId": "26"
+  },
+  {
+    "morphId": "4",
+    "content": "ἀρχῆς",
+    "dupId": "4",
+    "vocabId": "142",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "5",
+    "content": "ἀκηκόαμεν",
+    "dupId": "5",
+    "vocabId": "32",
+    "tenseId": "13",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "6",
+    "content": "ἑωράκαμεν",
+    "dupId": "6",
+    "vocabId": "47",
+    "tenseId": "13",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "7",
+    "content": "τοῖς",
+    "dupId": "7",
+    "vocabId": "15",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "27",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "8",
+    "content": "ὀφθαλμοῖς",
+    "dupId": "8",
+    "vocabId": "119",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "27",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "9",
+    "content": "ἡμῶν",
+    "dupId": "9",
+    "vocabId": "279",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "10",
+    "content": "ἐθεασάμεθα",
+    "dupId": "10",
+    "vocabId": "227",
+    "tenseId": "10",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "13",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "11",
+    "content": "καὶ",
+    "dupId": "11",
+    "vocabId": "13",
+    "grammerId": ""
+  },
+  {
+    "morphId": "12",
+    "content": "αἱ",
+    "dupId": "12",
+    "vocabId": "15",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "13",
+    "content": "χεῖρες",
+    "dupId": "13",
+    "vocabId": "210",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "3",
+    "grammerId": ""
+  },
+  {
+    "morphId": "14",
+    "content": "ἐψηλάφησαν",
+    "dupId": "14",
+    "vocabId": "346",
+    "tenseId": "10",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "24",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "15",
+    "content": "περὶ",
+    "dupId": "15",
+    "vocabId": "100",
+    "grammerId": "26"
+  },
+  {
+    "morphId": "16",
+    "content": "τοῦ",
+    "dupId": "16",
+    "vocabId": "15",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "17",
+    "content": "λόγου",
+    "dupId": "17",
+    "vocabId": "21",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "18",
+    "content": "τῆς",
+    "dupId": "18",
+    "vocabId": "15",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "19",
+    "content": "ζωῆς",
+    "dupId": "19",
+    "vocabId": "3",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "20",
+    "content": "ἡ",
+    "dupId": "20",
+    "vocabId": "15",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "21",
+    "content": "ζωὴ",
+    "dupId": "21",
+    "vocabId": "3",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "22",
+    "content": "ἐφανερώθη",
+    "dupId": "22",
+    "vocabId": "241",
+    "tenseId": "10",
+    "voiceId": "18",
+    "moodId": "19",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "23",
+    "content": "μαρτυροῦμεν",
+    "dupId": "23",
+    "vocabId": "85",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "24",
+    "content": "ἀπαγγέλλομεν",
+    "dupId": "24",
+    "vocabId": "167",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "25",
+    "content": "ὑμῖν",
+    "dupId": "25",
+    "vocabId": "109",
+    "caseId": "27",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "26",
+    "content": "τὴν",
+    "dupId": "26",
+    "vocabId": "15",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "27",
+    "content": "ζωὴν",
+    "dupId": "27",
+    "vocabId": "3",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "28",
+    "content": "αἰώνιον",
+    "dupId": "28",
+    "vocabId": "181",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "29",
+    "content": "ἥτις",
+    "dupId": "29",
+    "vocabId": "312",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "30",
+    "content": "πρὸς",
+    "dupId": "30",
+    "vocabId": "101",
+    "grammerId": "26"
+  },
+  {
+    "morphId": "31",
+    "content": "τὸν",
+    "dupId": "31",
+    "vocabId": "15",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "32",
+    "content": "πατέρα",
+    "dupId": "32",
+    "vocabId": "185",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "33",
+    "content": "ἡμῖν",
+    "dupId": "33",
+    "vocabId": "109",
+    "caseId": "27",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "34",
+    "content": "ἵνα",
+    "dupId": "34",
+    "vocabId": "309",
+    "grammerId": "subjunctive"
+  },
+  {
+    "morphId": "35",
+    "content": "ὑμεῖς",
+    "dupId": "35",
+    "vocabId": "109",
+    "caseId": "25",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "36",
+    "content": "κοινωνίαν",
+    "dupId": "36",
+    "vocabId": "644",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "37",
+    "content": "ἔχητε",
+    "dupId": "37",
+    "vocabId": "35",
+    "tenseId": "10",
+    "voiceId": "16",
+    "moodId": "28",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "38",
+    "content": "μεθʼ",
+    "dupId": "38",
+    "vocabId": "98",
+    "grammerId": "26"
+  },
+  {
+    "morphId": "39",
+    "content": "κοινωνία",
+    "dupId": "39",
+    "vocabId": "644",
+    "genderId": "4",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "40",
+    "content": "δὲ",
+    "dupId": "40",
+    "vocabId": "12",
+    "grammerId": ""
+  },
+  {
+    "morphId": "41",
+    "content": "ἡμετέρα",
+    "dupId": "41",
+    "vocabId": "272",
+    "genderId": "4",
+    "patternId": "6",
+    "caseId": "25",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "42",
+    "content": "μετὰ",
+    "dupId": "42",
+    "vocabId": "98",
+    "grammerId": "26"
+  },
+  {
+    "morphId": "43",
+    "content": "πατρὸς",
+    "dupId": "43",
+    "vocabId": "185",
+    "genderId": "3",
+    "patternId": "8",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "44",
+    "content": "υἱοῦ",
+    "dupId": "44",
+    "vocabId": "24",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "45",
+    "content": "αὐτοῦ",
+    "dupId": "45",
+    "vocabId": "106",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "46",
+    "content": "Ἰησοῦ",
+    "dupId": "46",
+    "vocabId": "867",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "47",
+    "content": "Χριστοῦ",
+    "dupId": "47",
+    "vocabId": "25",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "48",
+    "content": "ταῦτα",
+    "dupId": "48",
+    "vocabId": "275",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "28",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "49",
+    "content": "γράφομεν",
+    "dupId": "49",
+    "vocabId": "34",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "50",
+    "content": "ἡμεῖς",
+    "dupId": "50",
+    "vocabId": "107",
+    "caseId": "25",
+    "personId": "1",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "51",
+    "content": "χαρὰ",
+    "dupId": "51",
+    "vocabId": "150",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "52",
+    "content": "ᾖ",
+    "dupId": "52",
+    "vocabId": "31",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "20",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "53",
+    "content": "πεπληρωμένη",
+    "dupId": "53",
+    "vocabId": "90",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "tenseId": "13",
+    "voiceId": "18",
+    "moodId": "15",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "54",
+    "content": "ἔστιν",
+    "dupId": "54",
+    "vocabId": "31",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "55",
+    "content": "αὕτη",
+    "dupId": "55",
+    "vocabId": "275",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "56",
+    "content": "ἀγγελία",
+    "dupId": "56",
+    "vocabId": "868",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "57",
+    "content": "ἣν",
+    "dupId": "57",
+    "vocabId": "108",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "58",
+    "content": "ἀναγγέλλομεν",
+    "dupId": "58",
+    "vocabId": "831",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "59",
+    "content": "ὅτι",
+    "dupId": "59",
+    "vocabId": "45",
+    "grammerId": "?"
+  },
+  {
+    "morphId": "60",
+    "content": "ὁ",
+    "dupId": "60",
+    "vocabId": "15",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "61",
+    "content": "θεὸς",
+    "dupId": "61",
+    "vocabId": "18",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "62",
+    "content": "φῶς",
+    "dupId": "62",
+    "vocabId": "209",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "63",
+    "content": "ἐστιν",
+    "dupId": "63",
+    "vocabId": "31",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "64",
+    "content": "σκοτία",
+    "dupId": "64",
+    "vocabId": "819",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "65",
+    "content": "ἐν",
+    "dupId": "65",
+    "vocabId": "95",
+    "grammerId": "8"
+  },
+  {
+    "morphId": "66",
+    "content": "αὐτῷ",
+    "dupId": "66",
+    "vocabId": "106",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "27",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "67",
+    "content": "οὐκ",
+    "dupId": "67",
+    "vocabId": "74",
+    "grammerId": "4"
+  },
+  {
+    "morphId": "68",
+    "content": "οὐδεμία",
+    "dupId": "68",
+    "vocabId": "233",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "69",
+    "content": "ἐὰν",
+    "dupId": "69",
+    "vocabId": "306",
+    "grammerId": "?"
+  },
+  {
+    "morphId": "70",
+    "content": "εἴπωμεν",
+    "dupId": "70",
+    "vocabId": "36",
+    "tenseId": "10",
+    "voiceId": "16",
+    "moodId": "20",
+    "personId": "1",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "71",
+    "content": "ἔχομεν",
+    "dupId": "71",
+    "vocabId": "35",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "72",
+    "content": "μετʼ",
+    "dupId": "72",
+    "vocabId": "98",
+    "grammerId": "?"
+  },
+  {
+    "morphId": "73",
+    "content": "τῷ",
+    "dupId": "73",
+    "vocabId": "15",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "27",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "74",
+    "content": "σκότει",
+    "dupId": "74",
+    "vocabId": "499",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "27",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "75",
+    "content": "περιπατῶμεν",
+    "dupId": "75",
+    "vocabId": "87",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "20",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "76",
+    "content": "ψευδόμεθα",
+    "dupId": "76",
+    "vocabId": "869",
+    "tenseId": "9",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "77",
+    "content": "οὐ",
+    "dupId": "77",
+    "vocabId": "74",
+    "grammerId": "?"
+  },
+  {
+    "morphId": "78",
+    "content": "ποιοῦμεν",
+    "dupId": "78",
+    "vocabId": "88",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "79",
+    "content": "ἀλήθειαν",
+    "dupId": "79",
+    "vocabId": "5",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "80",
+    "content": "φωτὶ",
+    "dupId": "80",
+    "vocabId": "209",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "27",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "81",
+    "content": "ὡς",
+    "dupId": "81",
+    "vocabId": "60",
+    "grammerId": "?",
+    "FIELD14": "adverb"
+  },
+  {
+    "morphId": "82",
+    "content": "αὐτός",
+    "dupId": "82",
+    "vocabId": "106",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "83",
+    "content": "φωτί",
+    "dupId": "83",
+    "vocabId": "209",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "25",
+    "grammerId": ""
+  },
+  {
+    "morphId": "84",
+    "content": "ἀλλήλων",
+    "dupId": "84",
+    "vocabId": "271",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "85",
+    "content": "τὸ",
+    "dupId": "85",
+    "vocabId": "15",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "86",
+    "content": "αἷμα",
+    "dupId": "86",
+    "vocabId": "201",
+    "genderId": "5",
+    "patternId": "8",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "87",
+    "content": "καθαρίζει",
+    "dupId": "87",
+    "vocabId": "446",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "88",
+    "content": "ἡμᾶς",
+    "dupId": "88",
+    "vocabId": "107",
+    "caseId": "28",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": "",
+    "FIELD14": "pronoun"
+  },
+  {
+    "morphId": "89",
+    "content": "ἀπὸ",
+    "dupId": "89",
+    "vocabId": "91",
+    "grammerId": "",
+    "FIELD14": "preposition"
+  },
+  {
+    "morphId": "90",
+    "content": "πάσης",
+    "dupId": "90",
+    "vocabId": "219",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": "",
+    "FIELD14": "adjective"
+  },
+  {
+    "morphId": "91",
+    "content": "ἁμαρτίας",
+    "dupId": "91",
+    "vocabId": "6",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": "",
+    "FIELD14": "noun"
+  },
+  {
+    "morphId": "92",
+    "content": "ἁμαρτίαν",
+    "dupId": "92",
+    "vocabId": "6",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "93",
+    "content": "ἑαυτοὺς",
+    "dupId": "93",
+    "vocabId": "272",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "28",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": "",
+    "FIELD14": "pronoun"
+  },
+  {
+    "morphId": "94",
+    "content": "πλανῶμεν",
+    "dupId": "94",
+    "vocabId": "419",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "95",
+    "content": "ἀλήθεια",
+    "dupId": "95",
+    "vocabId": "5",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "96",
+    "content": "ὁμολογῶμεν",
+    "dupId": "96",
+    "vocabId": "773",
+    "tenseId": "9",
+    "voiceId": "16",
+    "moodId": "20",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "97",
+    "content": "τὰς",
+    "dupId": "97",
+    "vocabId": "15",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "98",
+    "content": "πιστός",
+    "dupId": "98",
+    "vocabId": "220",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": "",
+    "FIELD14": "adj"
+  },
+  {
+    "morphId": "99",
+    "content": "δίκαιος",
+    "dupId": "99",
+    "vocabId": "214",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "100",
+    "content": "ἀφῇ",
+    "dupId": "100",
+    "vocabId": "334",
+    "tenseId": "10",
+    "voiceId": "16",
+    "moodId": "20",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "101",
+    "content": "καθαρίσῃ",
+    "dupId": "101",
+    "vocabId": "446",
+    "tenseId": "10",
+    "voiceId": "16",
+    "moodId": "20",
+    "personId": "24",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "102",
+    "content": "ἀδικίας",
+    "dupId": "102",
+    "vocabId": "507",
+    "genderId": "4",
+    "patternId": "7",
+    "caseId": "26",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "103",
+    "content": "οὐχ",
+    "dupId": "103",
+    "vocabId": "74",
+    "grammerId": "",
+    "FIELD14": "adverb"
+  },
+  {
+    "morphId": "104",
+    "content": "ἡμαρτήκαμεν",
+    "dupId": "104",
+    "vocabId": "387",
+    "tenseId": "13",
+    "voiceId": "16",
+    "moodId": "19",
+    "personId": "23",
+    "countId": "2",
+    "grammerId": ""
+  },
+  {
+    "morphId": "105",
+    "content": "ψεύστην",
+    "dupId": "105",
+    "vocabId": "870",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "28",
+    "countId": "1",
+    "grammerId": ""
+  },
+  {
+    "morphId": "106",
+    "content": "αὐτὸν",
+    "dupId": "106",
+    "vocabId": "106",
+    "caseId": "28",
+    "grammerId": ""
+  },
+  {
+    "morphId": "107",
+    "content": "λόγος",
+    "dupId": "107",
+    "vocabId": "21",
+    "genderId": "3",
+    "patternId": "6",
+    "caseId": "25",
+    "countId": "1",
+    "grammerId": ""
+  }
+]

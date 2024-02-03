@@ -6,11 +6,11 @@ import userData from '../data/userData.json';
 
 type UserProgress = {
   lessons: {
-    id: number,
+    id: string,
     isComplete: boolean,
   }[] | undefined,
   vocabulary: {
-    id: number,
+    id: string,
     isComplete: boolean,
   }[] | undefined,
 };
@@ -32,7 +32,7 @@ type User = {
 };
 
 function fetchUserProgressData(userId: string, progressArea: string):
-{ id: number, isComplete: boolean }[] | undefined {
+{ id: string, isComplete: boolean }[] | undefined {
   const userProgress = userData.users.find(({ id }: { id: string }) => id === userId)?.progress;
 
   if (!userProgress) {

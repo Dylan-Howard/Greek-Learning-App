@@ -1,2074 +1,5224 @@
 {
   "gk": [
     {
-      "wordId": 1,
+      "wordId": "1",
       "content": "ἀγάπη, ἡ",
       "gloss": "love",
-      "occurances": "?"
+      "occurances": 116
     },
     {
-      "wordId": 2,
+      "wordId": "2",
       "content": "γῆ, ἡ",
       "gloss": "earth, land, ground",
-      "occurances": "?"
+      "occurances": 250
     },
     {
-      "wordId": 3,
+      "wordId": "3",
       "content": "ζωή, ἡ",
       "gloss": "life",
-      "occurances": "?"
+      "occurances": 135
     },
     {
-      "wordId": 4,
+      "wordId": "4",
       "content": "φωνή, ἡ",
       "gloss": "voice, sound",
-      "occurances": "?"
+      "occurances": 139
     },
     {
-      "wordId": 5,
+      "wordId": "5",
       "content": "ἀλήθεια, ἡ",
       "gloss": "truth",
-      "occurances": "?"
+      "occurances": 109
     },
     {
-      "wordId": 6,
+      "wordId": "6",
       "content": "ἁμαρτία, ἡ",
       "gloss": "sin",
-      "occurances": "?"
+      "occurances": 173
     },
     {
-      "wordId": 7,
+      "wordId": "7",
       "content": "βασιλεία, ἡ",
       "gloss": "kingdom, reign",
-      "occurances": "?"
+      "occurances": 162
     },
     {
-      "wordId": 8,
+      "wordId": "8",
       "content": "δόξα, ἡ",
       "gloss": "glory, majesty",
-      "occurances": "?"
+      "occurances": 166
     },
     {
-      "wordId": 9,
+      "wordId": "9",
       "content": "ἐκκλησία, ἡ",
       "gloss": "congregation, assembly, church",
-      "occurances": "?"
+      "occurances": 114
     },
     {
-      "wordId": 10,
+      "wordId": "10",
       "content": "ἡμέρα, ἡ",
       "gloss": "day",
-      "occurances": "?"
+      "occurances": 389
     },
     {
-      "wordId": 11,
+      "wordId": "11",
       "content": "καρδία, ἡ",
       "gloss": "heart",
-      "occurances": "?"
+      "occurances": 156
     },
     {
-      "wordId": 12,
+      "wordId": "12",
       "content": "δέ",
       "gloss": "and, but, now",
-      "occurances": "?"
+      "occurances": 2788
     },
     {
-      "wordId": 13,
+      "wordId": "13",
       "content": "καί",
       "gloss": "and, even, also",
-      "occurances": "?"
+      "occurances": 8998
     },
     {
-      "wordId": 14,
+      "wordId": "14",
       "content": "μέν",
       "gloss": "on the one hand, indeed",
-      "occurances": "?"
+      "occurances": 179
     },
     {
-      "wordId": 15,
+      "wordId": "15",
       "content": "ὁ, ἡ, τό",
       "gloss": "the",
-      "occurances": "?"
+      "occurances": 19864
     },
     {
-      "wordId": 16,
+      "wordId": "16",
       "content": "ἀδελφός, ὁ",
       "gloss": "brother (and sister)",
-      "occurances": "?"
+      "occurances": 353
     },
     {
-      "wordId": 17,
+      "wordId": "17",
       "content": "ἄνθρωπος, ὁ",
       "gloss": "man, human being, husband",
-      "occurances": "?"
+      "occurances": 550
     },
     {
-      "wordId": 18,
+      "wordId": "18",
       "content": "θεός, ὁ",
       "gloss": "God",
-      "occurances": "?"
+      "occurances": 1317
     },
     {
-      "wordId": 19,
+      "wordId": "19",
       "content": "κόσμος, ὁ",
       "gloss": "world, universe; adornment",
-      "occurances": "?"
+      "occurances": 186
     },
     {
-      "wordId": 20,
+      "wordId": "20",
       "content": "κύριος, ὁ",
       "gloss": "Lord, master, sir",
-      "occurances": "?"
+      "occurances": 716
     },
     {
-      "wordId": 21,
+      "wordId": "21",
       "content": "λόγος, ὁ",
       "gloss": "word, message, account",
-      "occurances": "?"
+      "occurances": 330
     },
     {
-      "wordId": 22,
+      "wordId": "22",
       "content": "νόμος, ὁ",
       "gloss": "law, principle",
-      "occurances": "?"
+      "occurances": 194
     },
     {
-      "wordId": 23,
+      "wordId": "23",
       "content": "οὐρανός, ὁ",
       "gloss": "heaven, sky",
-      "occurances": "?"
+      "occurances": 296
     },
     {
-      "wordId": 24,
+      "wordId": "24",
       "content": "υἱός, ὁ",
       "gloss": "son, descendant",
-      "occurances": "?"
+      "occurances": 377
     },
     {
-      "wordId": 25,
+      "wordId": "25",
       "content": "Χριστός, ὁ",
       "gloss": "Christ, Messiah, Anointed One",
-      "occurances": "?"
+      "occurances": 529
     },
     {
-      "wordId": 26,
+      "wordId": "26",
       "content": "ἔργον, τό",
       "gloss": "work, deed",
-      "occurances": "?"
+      "occurances": 169
     },
     {
-      "wordId": 27,
+      "wordId": "27",
       "content": "εὐαγγέλιον, τό",
       "gloss": "good news, gospel",
-      "occurances": "?"
+      "occurances": 76
     },
     {
-      "wordId": 28,
+      "wordId": "28",
       "content": "ἱερόν, τό",
       "gloss": "temple, sanctuary",
-      "occurances": "?"
+      "occurances": 70
     },
     {
-      "wordId": 29,
+      "wordId": "29",
       "content": "σημεῖον τό",
       "gloss": "sign",
-      "occurances": "?"
+      "occurances": 77
     },
     {
-      "wordId": 30,
+      "wordId": "30",
       "content": "τέκνον, τό",
       "gloss": "child, son, descendant",
-      "occurances": "?"
+      "occurances": 98
     },
     {
-      "wordId": 31,
+      "wordId": "31",
       "content": "εἰμί",
       "gloss": "I am, exist",
-      "occurances": "?"
+      "occurances": 2463
     },
     {
-      "wordId": 32,
+      "wordId": "32",
       "content": "ἀκούω",
       "gloss": "I hear, listen to, obey",
-      "occurances": "?"
+      "occurances": 428
     },
     {
-      "wordId": 33,
+      "wordId": "33",
       "content": "γινώσκω",
       "gloss": "I know, understand, acknowledge",
-      "occurances": "?"
+      "occurances": 222
     },
     {
-      "wordId": 34,
+      "wordId": "34",
       "content": "γράφω",
       "gloss": "I write",
-      "occurances": "?"
+      "occurances": 191
     },
     {
-      "wordId": 35,
+      "wordId": "35",
       "content": "ἔχω",
       "gloss": "I have, hold",
-      "occurances": "?"
+      "occurances": 708
     },
     {
-      "wordId": 36,
+      "wordId": "36",
       "content": "λέγω",
       "gloss": "I say, speak",
-      "occurances": "?"
+      "occurances": 2353
     },
     {
-      "wordId": 37,
+      "wordId": "37",
       "content": "λαμβάνω",
       "gloss": "I take, receive",
-      "occurances": "?"
+      "occurances": 258
     },
     {
-      "wordId": 38,
+      "wordId": "38",
       "content": "λύω",
       "gloss": "I loose, destroy",
-      "occurances": "?"
+      "occurances": 42
     },
     {
-      "wordId": 39,
+      "wordId": "39",
       "content": "πιστεύω",
       "gloss": "I believe, have faith/trust in",
-      "occurances": "?"
+      "occurances": 241
     },
     {
-      "wordId": 40,
+      "wordId": "40",
       "content": "ἀποκρίνομαι",
       "gloss": "I answer, reply",
-      "occurances": "?"
+      "occurances": 231
     },
     {
-      "wordId": 41,
+      "wordId": "41",
       "content": "γίνομαι",
       "gloss": "I become, come, exist, am born",
-      "occurances": "?"
+      "occurances": 669
     },
     {
-      "wordId": 42,
+      "wordId": "42",
       "content": "ἔρχομαι",
       "gloss": "I come, go",
-      "occurances": "?"
+      "occurances": 631
     },
     {
-      "wordId": 43,
+      "wordId": "43",
       "content": "πορεύομαι",
       "gloss": "I go, travel",
-      "occurances": "?"
+      "occurances": 153
     },
     {
-      "wordId": 44,
+      "wordId": "44",
       "content": "ἀλλά",
       "gloss": "but, yet, nevertheless",
-      "occurances": "?"
+      "occurances": 638
     },
     {
-      "wordId": 45,
+      "wordId": "45",
       "content": "ὅτι",
       "gloss": "that, because",
-      "occurances": "?"
+      "occurances": 1296
     },
     {
-      "wordId": 46,
+      "wordId": "46",
       "content": "ἄγω",
       "gloss": "I lead, bring",
-      "occurances": "?"
+      "occurances": 68
     },
     {
-      "wordId": 47,
+      "wordId": "47",
       "content": "βλέπω",
       "gloss": "I see, look at",
-      "occurances": "?"
+      "occurances": 132
     },
     {
-      "wordId": 48,
+      "wordId": "48",
       "content": "διδάσκω",
       "gloss": "I teach",
-      "occurances": "?"
+      "occurances": 97
     },
     {
-      "wordId": 49,
+      "wordId": "49",
       "content": "ἐγείρω",
       "gloss": "I raise up",
-      "occurances": "?"
+      "occurances": 144
     },
     {
-      "wordId": 50,
+      "wordId": "50",
       "content": "κρίνω",
       "gloss": "I judge, condemn",
-      "occurances": "?"
+      "occurances": 114
     },
     {
-      "wordId": 51,
+      "wordId": "51",
       "content": "μένω",
       "gloss": "I remain, abide, dwell",
-      "occurances": "?"
+      "occurances": 118
     },
     {
-      "wordId": 52,
+      "wordId": "52",
       "content": "ὑπάγω",
       "gloss": "I go away, depart",
-      "occurances": "?"
+      "occurances": 79
     },
     {
-      "wordId": 53,
+      "wordId": "53",
       "content": "δοῦλος, ὁ",
       "gloss": "slave",
-      "occurances": "?"
+      "occurances": 124
     },
     {
-      "wordId": 54,
+      "wordId": "54",
       "content": "θάνατος, ὁ",
       "gloss": "death",
-      "occurances": "?"
+      "occurances": 120
     },
     {
-      "wordId": 55,
+      "wordId": "55",
       "content": "ψυχή, ἡ",
       "gloss": "soul, live, living being",
-      "occurances": "?"
+      "occurances": 103
     },
     {
-      "wordId": 56,
+      "wordId": "56",
       "content": "ὥρα, ἡ",
       "gloss": "hour",
-      "occurances": "?"
+      "occurances": 106
     },
     {
-      "wordId": 57,
+      "wordId": "57",
       "content": "εἰ",
       "gloss": "if, whether",
-      "occurances": "?"
+      "occurances": 502
     },
     {
-      "wordId": 58,
+      "wordId": "58",
       "content": "εἴτε",
       "gloss": "if, whether",
-      "occurances": "?"
+      "occurances": 65
     },
     {
-      "wordId": 59,
+      "wordId": "59",
       "content": "καθώς",
       "gloss": "as, just as, even as",
-      "occurances": "?"
+      "occurances": 182
     },
     {
-      "wordId": 60,
+      "wordId": "60",
       "content": "ὡς",
       "gloss": "as, like",
-      "occurances": "?"
+      "occurances": 504
     },
     {
-      "wordId": 61,
+      "wordId": "61",
       "content": "βαπτίζω",
       "gloss": "I baptize, immerse, dip",
-      "occurances": "?"
+      "occurances": 77
     },
     {
-      "wordId": 62,
+      "wordId": "62",
       "content": "θεραπεύω",
       "gloss": "I heal",
-      "occurances": "?"
+      "occurances": 43
     },
     {
-      "wordId": 63,
+      "wordId": "63",
       "content": "κράζω",
       "gloss": "I cry out",
-      "occurances": "?"
+      "occurances": 55
     },
     {
-      "wordId": 64,
+      "wordId": "64",
       "content": "ἄγγελος, ὁ",
       "gloss": "angel, messenger",
-      "occurances": "?"
+      "occurances": 175
     },
     {
-      "wordId": 65,
+      "wordId": "65",
       "content": "μαθητής, ὁ",
       "gloss": "disciple, follower",
-      "occurances": "?"
+      "occurances": 261
     },
     {
-      "wordId": 66,
+      "wordId": "66",
       "content": "ὄχλος, ὁ",
       "gloss": "crowd",
-      "occurances": "?"
+      "occurances": 175
     },
     {
-      "wordId": 67,
+      "wordId": "67",
       "content": "προφήτης, ὁ",
       "gloss": "prophet",
-      "occurances": "?"
+      "occurances": 144
     },
     {
-      "wordId": 68,
+      "wordId": "68",
       "content": "γάρ",
       "gloss": "for, because",
-      "occurances": "?"
+      "occurances": 1041
     },
     {
-      "wordId": 69,
+      "wordId": "69",
       "content": "ἐκεῖ",
       "gloss": "there, in that place",
-      "occurances": "?"
+      "occurances": 95
     },
     {
-      "wordId": 70,
+      "wordId": "70",
       "content": "κἀγώ",
       "gloss": "and I (καί + ἐγώ)",
-      "occurances": "?"
+      "occurances": 84
     },
     {
-      "wordId": 71,
+      "wordId": "71",
       "content": "οὖν",
       "gloss": "then, so, therefore",
-      "occurances": "?"
+      "occurances": 498
     },
     {
-      "wordId": 72,
+      "wordId": "72",
       "content": "οὕτως",
       "gloss": "in this manner, thus, so",
-      "occurances": "?"
+      "occurances": 194
     },
     {
-      "wordId": 73,
+      "wordId": "73",
       "content": "τέ",
       "gloss": "and, but",
-      "occurances": "?"
+      "occurances": 215
     },
     {
-      "wordId": 74,
+      "wordId": "74",
       "content": "οὐ, οὐκ, οὐχ",
       "gloss": "no, not",
-      "occurances": "?"
+      "occurances": 1621
     },
     {
-      "wordId": 75,
+      "wordId": "75",
       "content": "οὐχί",
       "gloss": "no! (emphatic)",
-      "occurances": "?"
+      "occurances": 54
     },
     {
-      "wordId": 76,
+      "wordId": "76",
       "content": "ἀγαπάω",
       "gloss": "I love",
-      "occurances": "?"
+      "occurances": 143
     },
     {
-      "wordId": 77,
+      "wordId": "77",
       "content": "γεννάω",
       "gloss": "I give birth to, bear, beget",
-      "occurances": "?"
+      "occurances": 97
     },
     {
-      "wordId": 78,
+      "wordId": "78",
       "content": "ἐπερωτάω",
       "gloss": "I ask",
-      "occurances": "?"
+      "occurances": 56
     },
     {
-      "wordId": 79,
+      "wordId": "79",
       "content": "ἐρωτάω",
       "gloss": "I ask, question, request",
-      "occurances": "?"
+      "occurances": 63
     },
     {
-      "wordId": 80,
+      "wordId": "80",
       "content": "αἰτέω",
       "gloss": "I ask, demand",
-      "occurances": "?"
+      "occurances": 70
     },
     {
-      "wordId": 81,
+      "wordId": "81",
       "content": "ἀκολουθέω",
       "gloss": "I follow",
-      "occurances": "?"
+      "occurances": 90
     },
     {
-      "wordId": 82,
+      "wordId": "82",
       "content": "ζητέω",
       "gloss": "I seek, look for",
-      "occurances": "?"
+      "occurances": 117
     },
     {
-      "wordId": 83,
+      "wordId": "83",
       "content": "καλέω",
       "gloss": "I call, invite, name",
-      "occurances": "?"
+      "occurances": 148
     },
     {
-      "wordId": 84,
+      "wordId": "84",
       "content": "λαλέω",
       "gloss": "I speak, say",
-      "occurances": "?"
+      "occurances": 318
     },
     {
-      "wordId": 85,
+      "wordId": "85",
       "content": "μαρτυρέω",
       "gloss": "I testify, bear witness",
-      "occurances": "?"
+      "occurances": 76
     },
     {
-      "wordId": 86,
+      "wordId": "86",
       "content": "παρακαλέω",
       "gloss": "I call, urge, comfort",
-      "occurances": "?"
+      "occurances": 109
     },
     {
-      "wordId": 87,
+      "wordId": "87",
       "content": "περιπατέω",
       "gloss": "I walk, live",
-      "occurances": "?"
+      "occurances": 95
     },
     {
-      "wordId": 88,
+      "wordId": "88",
       "content": "ποιέω",
       "gloss": "I do, make",
-      "occurances": "?"
+      "occurances": 568
     },
     {
-      "wordId": 89,
-      "content": "φοβέομαι",
+      "wordId": "89",
+      "content": "φοβέω",
       "gloss": "I am afraid, fear, respect",
-      "occurances": "?"
+      "occurances": 95
     },
     {
-      "wordId": 90,
+      "wordId": "90",
       "content": "πληρόω",
       "gloss": "I fill, fulfill, complete",
-      "occurances": "?"
+      "occurances": 86
     },
     {
-      "wordId": 91,
+      "wordId": "91",
       "content": "ἀπό",
       "gloss": "from, away from (gen)",
-      "occurances": "?"
+      "occurances": 646
     },
     {
-      "wordId": 92,
+      "wordId": "92",
       "content": "διά",
       "gloss": "through (gen); because of (acc)",
-      "occurances": "?"
+      "occurances": 667
     },
     {
-      "wordId": 93,
+      "wordId": "93",
       "content": "εἰς",
       "gloss": "into, among, for (acc)",
-      "occurances": "?"
+      "occurances": 1768
     },
     {
-      "wordId": 94,
+      "wordId": "94",
       "content": "ἐκ",
       "gloss": "from, out of (gen)",
-      "occurances": "?"
+      "occurances": 914
     },
     {
-      "wordId": 95,
+      "wordId": "95",
       "content": "ἐν",
       "gloss": "in, on, at, by, with (dat)",
-      "occurances": "?"
+      "occurances": 2752
     },
     {
-      "wordId": 96,
+      "wordId": "96",
       "content": "ἐπί",
       "gloss": "on, over (gen); on, at, in (dat); on, to, for (acc)",
-      "occurances": "?"
+      "occurances": 890
     },
     {
-      "wordId": 97,
+      "wordId": "97",
       "content": "κατά",
       "gloss": "down, against (gen); according to (acc)",
-      "occurances": "?"
+      "occurances": 473
     },
     {
-      "wordId": 98,
+      "wordId": "98",
       "content": "μετά",
       "gloss": "with, among (gen); after (acc)",
-      "occurances": "?"
+      "occurances": 469
     },
     {
-      "wordId": 99,
+      "wordId": "99",
       "content": "παρά",
       "gloss": "from (gen); beside (dat); on, at (acc)",
-      "occurances": "?"
+      "occurances": 194
     },
     {
-      "wordId": 100,
+      "wordId": "100",
       "content": "περί",
       "gloss": "about, concerning (gen); around (acc)",
-      "occurances": "?"
+      "occurances": 333
     },
     {
-      "wordId": 101,
+      "wordId": "101",
       "content": "πρός",
       "gloss": "to, toward (acc)",
-      "occurances": "?"
+      "occurances": 700
     },
     {
-      "wordId": 102,
+      "wordId": "102",
       "content": "σύν",
       "gloss": "with (dat)",
-      "occurances": "?"
+      "occurances": 128
     },
     {
-      "wordId": 103,
+      "wordId": "103",
       "content": "ὑπέρ",
       "gloss": "for (gen); above, beyond (acc)",
-      "occurances": "?"
+      "occurances": 150
     },
     {
-      "wordId": 104,
+      "wordId": "104",
       "content": "ὑπό",
       "gloss": "by (gen); under, below (acc)",
-      "occurances": "?"
+      "occurances": 220
     },
     {
-      "wordId": 105,
+      "wordId": "105",
       "content": "ἐνώπιον",
       "gloss": "before, in the presence of",
-      "occurances": "?"
+      "occurances": 94
     },
     {
-      "wordId": 106,
+      "wordId": "106",
       "content": "αὐτός, -ή, -ό",
       "gloss": "he, she, it; self, same",
-      "occurances": "?"
+      "occurances": 5597
     },
     {
-      "wordId": 107,
+      "wordId": "107",
       "content": "ἐγώ, ἡμεῖς",
       "gloss": "I; we",
-      "occurances": "?"
+      "occurances": 2570
     },
     {
-      "wordId": 108,
+      "wordId": "108",
       "content": "ὅς, ἤ, ὅ",
       "gloss": "who, which, that",
-      "occurances": "?"
+      "occurances": 1407
     },
     {
-      "wordId": 109,
+      "wordId": "109",
       "content": "σύ, ὑμεῖς",
       "gloss": "you (sg); you (pl)",
-      "occurances": "?"
+      "occurances": 2900
     },
     {
-      "wordId": 110,
+      "wordId": "110",
       "content": "ἄρτος, ὁ",
       "gloss": "bread, food",
-      "occurances": "?"
+      "occurances": 97
     },
     {
-      "wordId": 111,
-      "content": "δικαιοσύνην, ἡ",
+      "wordId": "111",
+      "content": "δικαιοσύνη, ἡ",
       "gloss": "righteousness, justice",
-      "occurances": "?"
+      "occurances": 91
     },
     {
-      "wordId": 112,
+      "wordId": "112",
       "content": "εἰρήνη, ἡ",
       "gloss": "peace",
-      "occurances": "?"
+      "occurances": 92
     },
     {
-      "wordId": 113,
+      "wordId": "113",
       "content": "ἐξουσία, ἡ",
       "gloss": "authority, right, power",
-      "occurances": "?"
+      "occurances": 102
     },
     {
-      "wordId": 114,
+      "wordId": "114",
       "content": "θάλασσα, ἡ",
       "gloss": "lake, sea",
-      "occurances": "?"
+      "occurances": 91
     },
     {
-      "wordId": 115,
+      "wordId": "115",
       "content": "λαός, ὁ",
       "gloss": "people, crowd",
-      "occurances": "?"
+      "occurances": 142
     },
     {
-      "wordId": 116,
+      "wordId": "116",
       "content": "ὁδός, ἡ",
       "gloss": "way, road",
-      "occurances": "?"
+      "occurances": 101
     },
     {
-      "wordId": 117,
+      "wordId": "117",
       "content": "οἰκία, ἡ",
       "gloss": "home, dwelling, family",
-      "occurances": "?"
+      "occurances": 93
     },
     {
-      "wordId": 118,
+      "wordId": "118",
       "content": "οἶκος, ὁ",
       "gloss": "house, household, family",
-      "occurances": "?"
+      "occurances": 114
     },
     {
-      "wordId": 119,
+      "wordId": "119",
       "content": "ὀφθαλμός, ὁ",
       "gloss": "eye",
-      "occurances": "?"
+      "occurances": 100
     },
     {
-      "wordId": 120,
+      "wordId": "120",
       "content": "τόπος, ὁ",
       "gloss": "place",
-      "occurances": "?"
+      "occurances": 94
     },
     {
-      "wordId": 121,
+      "wordId": "121",
       "content": "διώκω",
       "gloss": "I pursue, persecute",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 122,
+      "wordId": "122",
       "content": "δοξάζω",
       "gloss": "I glorify, praise",
-      "occurances": "?"
+      "occurances": 61
     },
     {
-      "wordId": 123,
+      "wordId": "123",
       "content": "πέμπω",
       "gloss": "I send",
-      "occurances": "?"
+      "occurances": 79
     },
     {
-      "wordId": 124,
+      "wordId": "124",
       "content": "πράσσω",
       "gloss": "I do, practice",
-      "occurances": "?"
+      "occurances": 38
     },
     {
-      "wordId": 125,
+      "wordId": "125",
       "content": "σῴζω",
       "gloss": "I save, rescue, heal",
-      "occurances": "?"
+      "occurances": 106
     },
     {
-      "wordId": 126,
+      "wordId": "126",
       "content": "τηρέω",
       "gloss": "I keep, guard, obey",
-      "occurances": "?"
+      "occurances": 70
     },
     {
-      "wordId": 127,
+      "wordId": "127",
       "content": "ἀπόστολος, ὁ",
       "gloss": "apostle, messenger",
-      "occurances": "?"
+      "occurances": 80
     },
     {
-      "wordId": 128,
+      "wordId": "128",
       "content": "ἐντολή, ἡ",
       "gloss": "command",
-      "occurances": "?"
+      "occurances": 67
     },
     {
-      "wordId": 129,
+      "wordId": "129",
       "content": "καιρός, ὁ",
       "gloss": "time, season",
-      "occurances": "?"
+      "occurances": 85
     },
     {
-      "wordId": 130,
+      "wordId": "130",
       "content": "κεφαλή, ἡ",
       "gloss": "head",
-      "occurances": "?"
+      "occurances": 75
     },
     {
-      "wordId": 131,
+      "wordId": "131",
       "content": "πρόσωπον, τό",
       "gloss": "face, appearance",
-      "occurances": "?"
+      "occurances": 76
     },
     {
-      "wordId": 132,
+      "wordId": "132",
       "content": "σάββατον, τό",
       "gloss": "Sabbath, week",
-      "occurances": "?"
+      "occurances": 68
     },
     {
-      "wordId": 133,
+      "wordId": "133",
       "content": "ἔτι",
       "gloss": "still, yet, more",
-      "occurances": "?"
+      "occurances": 93
     },
     {
-      "wordId": 134,
+      "wordId": "134",
       "content": "μᾶλλον",
       "gloss": "more, rather",
-      "occurances": "?"
+      "occurances": 81
     },
     {
-      "wordId": 135,
+      "wordId": "135",
       "content": "οὐκέτι",
       "gloss": "no longer",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 136,
+      "wordId": "136",
       "content": "ἀνοίγω",
       "gloss": "I open ",
-      "occurances": "?"
+      "occurances": 77
     },
     {
-      "wordId": 137,
+      "wordId": "137",
       "content": "ἀπολύω",
       "gloss": "I set free, dismiss, divorce",
-      "occurances": "?"
+      "occurances": 66
     },
     {
-      "wordId": 138,
+      "wordId": "138",
       "content": "ἄρχω",
       "gloss": "I rule, begin (mid)",
-      "occurances": "?"
+      "occurances": 86
     },
     {
-      "wordId": 139,
+      "wordId": "139",
       "content": "προσεύχομαι",
       "gloss": "I pray",
-      "occurances": "?"
+      "occurances": 85
     },
     {
-      "wordId": 140,
+      "wordId": "140",
       "content": "προσκυνέω",
       "gloss": "I worship",
-      "occurances": "?"
+      "occurances": 60
     },
     {
-      "wordId": 141,
+      "wordId": "141",
       "content": "συνάγω",
       "gloss": "I gather, bring together",
-      "occurances": "?"
+      "occurances": 59
     },
     {
-      "wordId": 142,
+      "wordId": "142",
       "content": "ἀρχή, ἡ",
       "gloss": "beginning ",
-      "occurances": "?"
+      "occurances": 55
     },
     {
-      "wordId": 143,
+      "wordId": "143",
       "content": "δαιμόνιον, τό",
       "gloss": "demon",
-      "occurances": "?"
+      "occurances": 63
     },
     {
-      "wordId": 144,
+      "wordId": "144",
       "content": "διδάσκαλος, ὁ",
       "gloss": "teacher",
-      "occurances": "?"
+      "occurances": 59
     },
     {
-      "wordId": 145,
+      "wordId": "145",
       "content": "θρόνος, ὁ",
       "gloss": "throne",
-      "occurances": "?"
+      "occurances": 62
     },
     {
-      "wordId": 146,
+      "wordId": "146",
       "content": "ἱμάτιον, τό",
       "gloss": "clothing, garment",
-      "occurances": "?"
+      "occurances": 60
     },
     {
-      "wordId": 147,
+      "wordId": "147",
       "content": "καρπός, ὁ",
       "gloss": "fruit, crop",
-      "occurances": "?"
+      "occurances": 66
     },
     {
-      "wordId": 148,
+      "wordId": "148",
       "content": "πλοῖον, τό",
       "gloss": "ship, boat",
-      "occurances": "?"
+      "occurances": 67
     },
     {
-      "wordId": 149,
+      "wordId": "149",
       "content": "συναγωγή, ἡ",
       "gloss": "synagogue, assembly",
-      "occurances": "?"
+      "occurances": 56
     },
     {
-      "wordId": 150,
+      "wordId": "150",
       "content": "χαρά, ἡ",
       "gloss": "joy",
-      "occurances": "?"
+      "occurances": 59
     },
     {
-      "wordId": 151,
+      "wordId": "151",
       "content": "ἀναβαίνω",
       "gloss": "I go up, ascend",
-      "occurances": "?"
+      "occurances": 82
     },
     {
-      "wordId": 152,
+      "wordId": "152",
       "content": "ἀπέρχομαι",
       "gloss": "I go away, depart",
-      "occurances": "?"
+      "occurances": 118
     },
     {
-      "wordId": 153,
+      "wordId": "153",
       "content": "ἀποθνῄσκω",
       "gloss": "I die",
-      "occurances": "?"
+      "occurances": 111
     },
     {
-      "wordId": 154,
-      "content": "βάλλω ",
+      "wordId": "154",
+      "content": "βάλλω",
       "gloss": "I throw, cast out",
-      "occurances": "?"
+      "occurances": 122
     },
     {
-      "wordId": 155,
+      "wordId": "155",
       "content": "εἰσέρχομαι",
       "gloss": "I go in, enter",
-      "occurances": "?"
+      "occurances": 194
     },
     {
-      "wordId": 156,
+      "wordId": "156",
       "content": "ἐκβάλλω",
       "gloss": "I drive/send out",
-      "occurances": "?"
+      "occurances": 81
     },
     {
-      "wordId": 157,
+      "wordId": "157",
       "content": "ἐσθίω",
       "gloss": "I eat",
-      "occurances": "?"
+      "occurances": 158
     },
     {
-      "wordId": 158,
+      "wordId": "158",
       "content": "ἐξέρχομαι",
       "gloss": "I go out, depart, leave",
-      "occurances": "?"
+      "occurances": 218
     },
     {
-      "wordId": 159,
+      "wordId": "159",
       "content": "εὑρίσκω",
       "gloss": "I find, discover",
-      "occurances": "?"
+      "occurances": 176
     },
     {
-      "wordId": 160,
+      "wordId": "160",
       "content": "καταβαίνω",
       "gloss": "I go down, descend",
-      "occurances": "?"
+      "occurances": 81
     },
     {
-      "wordId": 161,
+      "wordId": "161",
       "content": "πίνω",
       "gloss": "I drink",
-      "occurances": "?"
+      "occurances": 73
     },
     {
-      "wordId": 162,
-      "content": "πίπτω ",
+      "wordId": "162",
+      "content": "πίπτω",
       "gloss": "I fall",
-      "occurances": "?"
+      "occurances": 91
     },
     {
-      "wordId": 163,
+      "wordId": "163",
       "content": "προσέρχομαι",
       "gloss": "I go to, approach",
-      "occurances": "?"
+      "occurances": 86
     },
     {
-      "wordId": 164,
+      "wordId": "164",
       "content": "φέρω",
       "gloss": "I bear, carry",
-      "occurances": "?"
+      "occurances": 66
     },
     {
-      "wordId": 165,
+      "wordId": "165",
       "content": "ἐπαγγελία, ἡ",
       "gloss": "promise",
-      "occurances": "?"
+      "occurances": 52
     },
     {
-      "wordId": 166,
+      "wordId": "166",
       "content": "αἴρω",
       "gloss": "I take up/away",
-      "occurances": "?"
+      "occurances": 101
     },
     {
-      "wordId": 167,
+      "wordId": "167",
       "content": "ἀπαγγέλλω",
       "gloss": "I announce, report",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 168,
-      "content": "ἀποκτείνω ",
+      "wordId": "168",
+      "content": "ἀποκτείνω",
       "gloss": "I kill, put to death",
-      "occurances": "?"
+      "occurances": 74
     },
     {
-      "wordId": 169,
-      "content": "ἀποστέλλω ",
+      "wordId": "169",
+      "content": "ἀποστέλλω",
       "gloss": "I send out",
-      "occurances": "?"
+      "occurances": 131
     },
     {
-      "wordId": 170,
+      "wordId": "170",
       "content": "σπείρω",
       "gloss": "I sow, plant",
-      "occurances": "?"
+      "occurances": 52
     },
     {
-      "wordId": 171,
+      "wordId": "171",
       "content": "γλῶσσα, ἡ",
       "gloss": "language, tongue",
-      "occurances": "?"
+      "occurances": 50
     },
     {
-      "wordId": 172,
+      "wordId": "172",
       "content": "γραφή, ἡ",
       "gloss": "writing, Scripture",
-      "occurances": "?"
+      "occurances": 50
     },
     {
-      "wordId": 173,
+      "wordId": "173",
       "content": "λίθος, ὁ",
       "gloss": "stone",
-      "occurances": "?"
+      "occurances": 59
     },
     {
-      "wordId": 174,
+      "wordId": "174",
       "content": "ναός, ὁ",
       "gloss": "temple, sanctuary",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 175,
+      "wordId": "175",
       "content": "παραβολή, ἡ",
       "gloss": "parable",
-      "occurances": "?"
+      "occurances": 50
     },
     {
-      "wordId": 176,
+      "wordId": "176",
       "content": "σοφία, ἡ",
       "gloss": "wisdom",
-      "occurances": "?"
+      "occurances": 51
     },
     {
-      "wordId": 177,
+      "wordId": "177",
       "content": "σωτηρία, ἡ",
       "gloss": "salvation, deliverance",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 178,
+      "wordId": "178",
       "content": "χρόνος, ὁ",
       "gloss": "time",
-      "occurances": "?"
+      "occurances": 54
     },
     {
-      "wordId": 179,
+      "wordId": "179",
       "content": "διό",
       "gloss": "therefore, for this reason",
-      "occurances": "?"
+      "occurances": 53
     },
     {
-      "wordId": 180,
+      "wordId": "180",
       "content": "εὐθύς",
       "gloss": "immediately",
-      "occurances": "?"
+      "occurances": 51
     },
     {
-      "wordId": 181,
+      "wordId": "181",
       "content": "αἰών, -ῶνος, ὁ",
       "gloss": "eternity, age, world",
-      "occurances": "?"
+      "occurances": 122
     },
     {
-      "wordId": 182,
+      "wordId": "182",
       "content": "ἀνήρ, ἀνδρός, ὁ",
       "gloss": "man, husband",
-      "occurances": "?"
+      "occurances": 216
     },
     {
-      "wordId": 183,
+      "wordId": "183",
       "content": "ἀρχιερεύς, -έως, ὁ",
       "gloss": "high priest",
-      "occurances": "?"
+      "occurances": 122
     },
     {
-      "wordId": 184,
+      "wordId": "184",
       "content": "βασιλεύς, -έως, ὁ",
       "gloss": "king",
-      "occurances": "?"
+      "occurances": 115
     },
     {
-      "wordId": 185,
+      "wordId": "185",
       "content": "πατήρ, πατρός, ὁ",
       "gloss": "father, ancestor",
-      "occurances": "?"
+      "occurances": 413
     },
     {
-      "wordId": 186,
+      "wordId": "186",
       "content": "γυνή, γυναικός, ἡ",
       "gloss": "woman, wife",
-      "occurances": "?"
+      "occurances": 215
     },
     {
-      "wordId": 187,
+      "wordId": "187",
       "content": "μήτηρ, -τρός, ἡ",
       "gloss": "mother,",
-      "occurances": "?"
+      "occurances": 83
     },
     {
-      "wordId": 188,
+      "wordId": "188",
       "content": "πίστις, -εως, ἡ",
       "gloss": "faith, trust",
-      "occurances": "?"
+      "occurances": 243
     },
     {
-      "wordId": 189,
+      "wordId": "189",
       "content": "πόλις, -εως, ἡ",
       "gloss": "city, town",
-      "occurances": "?"
+      "occurances": 162
     },
     {
-      "wordId": 190,
+      "wordId": "190",
       "content": "σάρξ, σαρκός, ἡ",
       "gloss": "flesh, body, mortal nature",
-      "occurances": "?"
+      "occurances": 147
     },
     {
-      "wordId": 191,
+      "wordId": "191",
       "content": "χάρις, -ιτος, ἡ",
       "gloss": "grace, thanks",
-      "occurances": "?"
+      "occurances": 155
     },
     {
-      "wordId": 192,
+      "wordId": "192",
       "content": "ἔθνος, -ους, τό",
       "gloss": "nation, people; Gentiles (pl)",
-      "occurances": "?"
+      "occurances": 162
     },
     {
-      "wordId": 193,
+      "wordId": "193",
       "content": "ὄνομα, -ατος, τό",
       "gloss": "name",
-      "occurances": "?"
+      "occurances": 228
     },
     {
-      "wordId": 194,
+      "wordId": "194",
       "content": "πνεῦμα, -ατος, τό",
       "gloss": "Spirit, spirit, wind",
-      "occurances": "?"
+      "occurances": 379
     },
     {
-      "wordId": 195,
+      "wordId": "195",
       "content": "σῶμα, -ατος, τό",
       "gloss": "body",
-      "occurances": "?"
+      "occurances": 142
     },
     {
-      "wordId": 196,
+      "wordId": "196",
       "content": "ἐγγίζω",
       "gloss": "I approach, draw near",
-      "occurances": "?"
+      "occurances": 42
     },
     {
-      "wordId": 197,
+      "wordId": "197",
       "content": "ζάω",
       "gloss": "I live",
-      "occurances": "?"
+      "occurances": 140
     },
     {
-      "wordId": 198,
+      "wordId": "198",
       "content": "οἶδα",
       "gloss": "I know, understand",
-      "occurances": "?"
+      "occurances": 318
     },
     {
-      "wordId": 199,
+      "wordId": "199",
       "content": "ὁράω",
       "gloss": "I see, perceive",
-      "occurances": "?"
+      "occurances": 452
     },
     {
-      "wordId": 200,
+      "wordId": "200",
       "content": "πείθω",
       "gloss": "I persuade, convince",
-      "occurances": "?"
+      "occurances": 52
     },
     {
-      "wordId": 201,
+      "wordId": "201",
       "content": "αἷμα, -ατος, τό",
       "gloss": "blood",
-      "occurances": "?"
+      "occurances": 97
     },
     {
-      "wordId": 202,
+      "wordId": "202",
       "content": "γραμματεύς, -εως, ὁ",
       "gloss": "scribe",
-      "occurances": "?"
+      "occurances": 63
     },
     {
-      "wordId": 203,
+      "wordId": "203",
       "content": "δύναμις, -εως, ἡ",
       "gloss": "power, miracle",
-      "occurances": "?"
+      "occurances": 119
     },
     {
-      "wordId": 204,
+      "wordId": "204",
       "content": "πούς, ποδός, ὁ",
       "gloss": "foot",
-      "occurances": "?"
+      "occurances": 93
     },
     {
-      "wordId": 205,
+      "wordId": "205",
       "content": "πῦρ, -ός, τό",
       "gloss": "fire",
-      "occurances": "?"
+      "occurances": 71
     },
     {
-      "wordId": 206,
+      "wordId": "206",
       "content": "ῥῆμα, -ατος, τό",
       "gloss": "word, saying",
-      "occurances": "?"
+      "occurances": 68
     },
     {
-      "wordId": 207,
+      "wordId": "207",
       "content": "στόμα, -ατος, ἡ",
       "gloss": "mouth",
-      "occurances": "?"
+      "occurances": 78
     },
     {
-      "wordId": 208,
+      "wordId": "208",
       "content": "ὕδωρ, -ατος, τό",
       "gloss": "water",
-      "occurances": "?"
+      "occurances": 76
     },
     {
-      "wordId": 209,
+      "wordId": "209",
       "content": "φῶς, φωτός, τό",
       "gloss": "light",
-      "occurances": "?"
+      "occurances": 73
     },
     {
-      "wordId": 210,
+      "wordId": "210",
       "content": "χείρ, χειρός, ἡ",
       "gloss": "hand",
-      "occurances": "?"
+      "occurances": 177
     },
     {
-      "wordId": 211,
+      "wordId": "211",
       "content": "ἀγαθός, -ή, -όν",
       "gloss": "good",
-      "occurances": "?"
+      "occurances": 102
     },
     {
-      "wordId": 212,
+      "wordId": "212",
       "content": "ἅγιος, -α, -ον",
       "gloss": "holy; saints (pl  subst)",
-      "occurances": "?"
+      "occurances": 233
     },
     {
-      "wordId": 213,
+      "wordId": "213",
       "content": "ἄλλος, -η, -ο",
       "gloss": "other, another, different",
-      "occurances": "?"
+      "occurances": 155
     },
     {
-      "wordId": 214,
+      "wordId": "214",
       "content": "δίκαιος, -α, -ον",
       "gloss": "righteous, just",
-      "occurances": "?"
+      "occurances": 79
     },
     {
-      "wordId": 215,
+      "wordId": "215",
       "content": "ἕτερος, -α, -ον",
       "gloss": "other, another, different",
-      "occurances": "?"
+      "occurances": 98
     },
     {
-      "wordId": 216,
+      "wordId": "216",
       "content": "καλός, -ή, -όν",
       "gloss": "good, beautiful",
-      "occurances": "?"
+      "occurances": 100
     },
     {
-      "wordId": 217,
+      "wordId": "217",
       "content": "μέγας, μεγάλη, μέγα",
       "gloss": "large, great",
-      "occurances": "?"
+      "occurances": 243
     },
     {
-      "wordId": 218,
+      "wordId": "218",
       "content": "νεκρός, -ά, -όν",
       "gloss": "dead",
-      "occurances": "?"
+      "occurances": 128
     },
     {
-      "wordId": 219,
+      "wordId": "219",
       "content": "πᾶς, πᾶσα, πᾶν",
       "gloss": "every, all",
-      "occurances": "?"
+      "occurances": 1243
     },
     {
-      "wordId": 220,
+      "wordId": "220",
       "content": "πιστός, -ή, -όν",
       "gloss": "faithful, believing",
-      "occurances": "?"
+      "occurances": 67
     },
     {
-      "wordId": 221,
+      "wordId": "221",
       "content": "πολύς, πολλή, πολύ",
       "gloss": "much, many, large, great",
-      "occurances": "?"
+      "occurances": 416
     },
     {
-      "wordId": 222,
+      "wordId": "222",
       "content": "πονηρός, -ά, -όν",
       "gloss": "evil, wicked",
-      "occurances": "?"
+      "occurances": 78
     },
     {
-      "wordId": 223,
+      "wordId": "223",
       "content": "νῦν",
       "gloss": "now, at present",
-      "occurances": "?"
+      "occurances": 147
     },
     {
-      "wordId": 224,
+      "wordId": "224",
       "content": "πάλιν",
       "gloss": "again",
-      "occurances": "?"
+      "occurances": 141
     },
     {
-      "wordId": 225,
+      "wordId": "225",
       "content": "ἤ",
       "gloss": "or, than",
-      "occurances": "?"
+      "occurances": 343
     },
     {
-      "wordId": 226,
+      "wordId": "226",
       "content": "εὐαγγελίζω",
       "gloss": "I announce good news, preach",
-      "occurances": "?"
+      "occurances": 54
     },
     {
-      "wordId": 227,
+      "wordId": "227",
       "content": "θεωρέω",
       "gloss": "I gaze, behold, look at",
-      "occurances": "?"
+      "occurances": 58
     },
     {
-      "wordId": 228,
+      "wordId": "228",
       "content": "κάθημαι",
       "gloss": "I sit",
-      "occurances": "?"
+      "occurances": 91
     },
     {
-      "wordId": 229,
+      "wordId": "229",
       "content": "κηρύσσω",
       "gloss": "I herald, proclaim, preach",
-      "occurances": "?"
+      "occurances": 61
     },
     {
-      "wordId": 230,
+      "wordId": "230",
       "content": "ὑπάρχω",
       "gloss": "I exist, am",
-      "occurances": "?"
+      "occurances": 60
     },
     {
-      "wordId": 231,
+      "wordId": "231",
       "content": "αἰώνιος, -α, -ον",
       "gloss": "eternal",
-      "occurances": "?"
+      "occurances": 71
     },
     {
-      "wordId": 232,
+      "wordId": "232",
       "content": "ἕκαστος, -η, -ον",
       "gloss": "each",
-      "occurances": "?"
+      "occurances": 82
     },
     {
-      "wordId": 233,
+      "wordId": "233",
       "content": "οὐδείς, οὐδεμία, οὐδέν",
       "gloss": "no one, nothing (subst)",
-      "occurances": "?"
+      "occurances": 234
     },
     {
-      "wordId": 234,
+      "wordId": "234",
       "content": "πρεσβύτερος, -α, -ον",
       "gloss": "elder, older",
-      "occurances": "?"
+      "occurances": 66
     },
     {
-      "wordId": 235,
+      "wordId": "235",
       "content": "ἀμήν",
       "gloss": "amen, truly, so be it",
-      "occurances": "?"
+      "occurances": 129
     },
     {
-      "wordId": 236,
+      "wordId": "236",
       "content": "ἔξω",
       "gloss": "outside",
-      "occurances": "?"
+      "occurances": 63
     },
     {
-      "wordId": 237,
+      "wordId": "237",
       "content": "ἕως",
       "gloss": "until, while",
-      "occurances": "?"
+      "occurances": 146
     },
     {
-      "wordId": 238,
+      "wordId": "238",
       "content": "οὐδέ",
       "gloss": "and not, neither, nor",
-      "occurances": "?"
+      "occurances": 143
     },
     {
-      "wordId": 239,
+      "wordId": "239",
       "content": "οὔτε",
       "gloss": "and not, neither, nor",
-      "occurances": "?"
+      "occurances": 87
     },
     {
-      "wordId": 240,
+      "wordId": "240",
       "content": "τότε",
       "gloss": "then",
-      "occurances": "?"
+      "occurances": 160
     },
     {
-      "wordId": 241,
+      "wordId": "241",
       "content": "φανερόω",
       "gloss": "I reveal, make known, manifest",
-      "occurances": "?"
+      "occurances": 49
     },
     {
-      "wordId": 242,
+      "wordId": "242",
       "content": "κρατέω",
       "gloss": "I grasp, seize, arrest",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 243,
+      "wordId": "243",
       "content": "εἷς, μία, ἕν",
       "gloss": "one",
-      "occurances": "?"
+      "occurances": 345
     },
     {
-      "wordId": 244,
+      "wordId": "244",
       "content": "δύο",
       "gloss": "two",
-      "occurances": "?"
+      "occurances": 135
     },
     {
-      "wordId": 245,
+      "wordId": "245",
       "content": "τρεῖς",
       "gloss": "three",
-      "occurances": "?"
+      "occurances": 68
     },
     {
-      "wordId": 246,
+      "wordId": "246",
       "content": "τέσσαρες",
       "gloss": "four",
-      "occurances": "?"
+      "occurances": 40
     },
     {
-      "wordId": 247,
+      "wordId": "247",
       "content": "πέντε",
       "gloss": "five ",
-      "occurances": "?"
+      "occurances": 38
     },
     {
-      "wordId": 248,
+      "wordId": "248",
       "content": "ἑπτά",
       "gloss": "seven ",
-      "occurances": "?"
+      "occurances": 88
     },
     {
-      "wordId": 249,
+      "wordId": "249",
       "content": "δέκα",
       "gloss": "ten ",
-      "occurances": "?"
+      "occurances": 25
     },
     {
-      "wordId": 250,
+      "wordId": "250",
       "content": "δώδεκα",
       "gloss": "twelve ",
-      "occurances": "?"
+      "occurances": 75
     },
     {
-      "wordId": 251,
+      "wordId": "251",
       "content": "πρῶτος, -η, -ον",
       "gloss": "first",
-      "occurances": "?"
+      "occurances": 155
     },
     {
-      "wordId": 252,
+      "wordId": "252",
       "content": "δεύτερος, -α, -ον",
       "gloss": "second",
-      "occurances": "?"
+      "occurances": 44
     },
     {
-      "wordId": 253,
+      "wordId": "253",
       "content": "τρίτος, -η, -ον",
       "gloss": "third",
-      "occurances": "?"
+      "occurances": 56
     },
     {
-      "wordId": 254,
+      "wordId": "254",
       "content": "τέταρτος, -η, -ον",
       "gloss": "fourth",
-      "occurances": "?"
+      "occurances": 10
     },
     {
-      "wordId": 255,
+      "wordId": "255",
       "content": "μή",
       "gloss": "no, not",
-      "occurances": "?"
+      "occurances": 1042
     },
     {
-      "wordId": 256,
+      "wordId": "256",
       "content": "προσφέρω",
       "gloss": "I bring to, offer",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 257,
+      "wordId": "257",
       "content": "ἑτοιμάζω",
       "gloss": "I prepare",
-      "occurances": "?"
+      "occurances": 40
     },
     {
-      "wordId": 258,
+      "wordId": "258",
       "content": "δέω",
       "gloss": "I bind",
-      "occurances": "?"
+      "occurances": 43
     },
     {
-      "wordId": 259,
+      "wordId": "259",
       "content": "παιδίον, τό",
       "gloss": "child",
-      "occurances": "?"
+      "occurances": 53
     },
     {
-      "wordId": 260,
+      "wordId": "260",
       "content": "ὄρος, -ους, τό",
       "gloss": "mountain, hill",
-      "occurances": "?"
+      "occurances": 63
     },
     {
-      "wordId": 261,
+      "wordId": "261",
       "content": "ἐλπίς, -ίδος, ἡ",
       "gloss": "hope",
-      "occurances": "?"
+      "occurances": 53
     },
     {
-      "wordId": 262,
+      "wordId": "262",
       "content": "μόνος, -η, -ον",
       "gloss": "only, single, alone",
-      "occurances": "?"
+      "occurances": 114
     },
     {
-      "wordId": 263,
+      "wordId": "263",
       "content": "ὅλος, -η, -ον",
       "gloss": "whole, entire, complete",
-      "occurances": "?"
+      "occurances": 109
     },
     {
-      "wordId": 264,
+      "wordId": "264",
       "content": "ἀγαπητός, -ή, -όν",
       "gloss": "beloved",
-      "occurances": "?"
+      "occurances": 61
     },
     {
-      "wordId": 265,
+      "wordId": "265",
       "content": "μέσος, -η, - ον",
       "gloss": "middle, midst",
-      "occurances": "?"
+      "occurances": 58
     },
     {
-      "wordId": 266,
+      "wordId": "266",
       "content": "λοιπός, -ή, -όν",
       "gloss": "remaining, rest",
-      "occurances": "?"
+      "occurances": 55
     },
     {
-      "wordId": 267,
+      "wordId": "267",
       "content": "δεξιός, -ά, -όν",
       "gloss": "right",
-      "occurances": "?"
+      "occurances": 54
     },
     {
-      "wordId": 268,
+      "wordId": "268",
       "content": "ἄρα",
       "gloss": "so then",
-      "occurances": "?"
+      "occurances": 46
     },
     {
-      "wordId": 269,
+      "wordId": "269",
       "content": "ἤδη",
       "gloss": "already, now",
-      "occurances": "?"
+      "occurances": 61
     },
     {
-      "wordId": 270,
+      "wordId": "270",
       "content": "ὧδε",
       "gloss": "here",
-      "occurances": "?"
+      "occurances": 61
     },
     {
-      "wordId": 271,
+      "wordId": "271",
       "content": "ἀλλήλων",
       "gloss": "of one another (alien)",
-      "occurances": "?"
+      "occurances": 100
     },
     {
-      "wordId": 272,
+      "wordId": "272",
       "content": "ἑαυτοῦ, -ῆς, -οῦ",
       "gloss": "(of) himself, herself, itself",
-      "occurances": "?"
+      "occurances": 319
     },
     {
-      "wordId": 273,
+      "wordId": "273",
       "content": "ἐκεῖνος, -η, -ο",
       "gloss": "that; those (pl)",
-      "occurances": "?"
+      "occurances": 240
     },
     {
-      "wordId": 274,
+      "wordId": "274",
       "content": "ἐμαυτοῦ, -ῆς",
       "gloss": "myself",
-      "occurances": "?"
+      "occurances": 37
     },
     {
-      "wordId": 275,
+      "wordId": "275",
       "content": "οὗτος, αὕτη, τοῦτο",
       "gloss": "this; these (pl)",
-      "occurances": "?"
+      "occurances": 1384
     },
     {
-      "wordId": 276,
+      "wordId": "276",
       "content": "σεαυτοῦ, -ῆς",
       "gloss": "(of) yourself",
-      "occurances": "?"
+      "occurances": 43
     },
     {
-      "wordId": 277,
+      "wordId": "277",
       "content": "τις, τι",
       "gloss": "someone, certain",
-      "occurances": "?"
+      "occurances": 533
     },
     {
-      "wordId": 278,
+      "wordId": "278",
       "content": "τίς, τί",
       "gloss": "who? which? what?",
-      "occurances": "?"
+      "occurances": 554
     },
     {
-      "wordId": 279,
+      "wordId": "279",
       "content": "ἐμός, -ή, -όν",
       "gloss": "my, mine",
-      "occurances": "?"
+      "occurances": 76
     },
     {
-      "wordId": 280,
+      "wordId": "280",
       "content": "ἔσχατος, -η, - ον",
       "gloss": "last",
-      "occurances": "?"
+      "occurances": 52
     },
     {
-      "wordId": 281,
+      "wordId": "281",
       "content": "ἴδιος, -α, -ον",
       "gloss": "one’s own, peculiar",
-      "occurances": "?"
+      "occurances": 114
     },
     {
-      "wordId": 282,
+      "wordId": "282",
       "content": "κακός, -ή, -όν",
       "gloss": "bad, evil",
-      "occurances": "?"
+      "occurances": 50
     },
     {
-      "wordId": 283,
+      "wordId": "283",
       "content": "ὅσος, -η, -ον",
       "gloss": "as much as",
-      "occurances": "?"
+      "occurances": 110
     },
     {
-      "wordId": 284,
+      "wordId": "284",
       "content": "τοιοῦτος, -αύτη, οῦτον",
       "gloss": "of such a kind, such as this",
-      "occurances": "?"
+      "occurances": 57
     },
     {
-      "wordId": 285,
+      "wordId": "285",
       "content": "πῶς",
       "gloss": "how?",
-      "occurances": "?"
+      "occurances": 103
     },
     {
-      "wordId": 286,
+      "wordId": "286",
       "content": "ἁμαρτάνω",
       "gloss": "I sin (ἥμαρτον)",
-      "occurances": "?"
+      "occurances": 43
     },
     {
-      "wordId": 287,
+      "wordId": "287",
       "content": "βούλομαι",
       "gloss": "I wish, want, desire",
-      "occurances": "?"
+      "occurances": 37
     },
     {
-      "wordId": 288,
+      "wordId": "288",
       "content": "δεῖ",
       "gloss": "It is necessary, one must/should ",
-      "occurances": "?"
+      "occurances": 101
     },
     {
-      "wordId": 289,
+      "wordId": "289",
       "content": "δοκέω",
       "gloss": "I seem, suppose, think",
-      "occurances": "?"
+      "occurances": 62
     },
     {
-      "wordId": 290,
+      "wordId": "290",
       "content": "δύναμαι",
       "gloss": "I am able, can",
-      "occurances": "?"
+      "occurances": 210
     },
     {
-      "wordId": 291,
+      "wordId": "291",
       "content": "θέλω",
       "gloss": "I want, wish, desire",
-      "occurances": "?"
+      "occurances": 208
     },
     {
-      "wordId": 292,
+      "wordId": "292",
       "content": "μέλλω",
       "gloss": "I am about to, am going to",
-      "occurances": "?"
+      "occurances": 109
     },
     {
-      "wordId": 293,
+      "wordId": "293",
       "content": "θέλημα, -ατος, τό",
       "gloss": "will, wish, desire",
-      "occurances": "?"
+      "occurances": 62
     },
     {
-      "wordId": 294,
+      "wordId": "294",
       "content": "νύξ, νυκτός, ἡ",
       "gloss": "night",
-      "occurances": "?"
+      "occurances": 61
     },
     {
-      "wordId": 295,
+      "wordId": "295",
       "content": "μακάριος, -α, -ον",
       "gloss": "blessed, happy",
-      "occurances": "?"
+      "occurances": 50
     },
     {
-      "wordId": 296,
+      "wordId": "296",
       "content": "μηδείς, μηδεία, μηδέν",
       "gloss": "no one, nothing (subst)",
-      "occurances": "?"
+      "occurances": 90
     },
     {
-      "wordId": 297,
+      "wordId": "297",
       "content": "τυφλός, -ή, -όν",
       "gloss": "blind; blind person (subst)",
-      "occurances": "?"
+      "occurances": 50
     },
     {
-      "wordId": 298,
+      "wordId": "298",
       "content": "πρό",
       "gloss": "before, in front of (gen)",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 299,
+      "wordId": "299",
       "content": "μηδέ",
       "gloss": "and not, nor",
-      "occurances": "?"
+      "occurances": 56
     },
     {
-      "wordId": 300,
+      "wordId": "300",
       "content": "ὥστε",
       "gloss": "so that",
-      "occurances": "?"
+      "occurances": 83
     },
     {
-      "wordId": 301,
+      "wordId": "301",
       "content": "δέχομαι",
       "gloss": "I take, receive, welcome",
-      "occurances": "?"
+      "occurances": 56
     },
     {
-      "wordId": 302,
+      "wordId": "302",
       "content": "δικαιόω",
       "gloss": "I declare righteous, justify",
-      "occurances": "?"
+      "occurances": 39
     },
     {
-      "wordId": 303,
+      "wordId": "303",
       "content": "λογίζομαι",
       "gloss": "consider, reckon",
-      "occurances": "?"
+      "occurances": 40
     },
     {
-      "wordId": 304,
+      "wordId": "304",
       "content": "σταυρόω",
       "gloss": "I crucify",
-      "occurances": "?"
+      "occurances": 46
     },
     {
-      "wordId": 305,
+      "wordId": "305",
       "content": "ἄν",
       "gloss": "(particle of indefiniteness: untranslated)",
-      "occurances": "?"
+      "occurances": 166
     },
     {
-      "wordId": 306,
+      "wordId": "306",
       "content": "ἐάν",
       "gloss": "if, when",
-      "occurances": "?"
+      "occurances": 333
     },
     {
-      "wordId": 307,
+      "wordId": "307",
       "content": "ἐὰν μή",
       "gloss": "unless",
-      "occurances": "?"
+      "occurances": 42
     },
     {
-      "wordId": 308,
+      "wordId": "308",
       "content": "ἕως",
       "gloss": "until, while",
-      "occurances": "?"
+      "occurances": 146
     },
     {
-      "wordId": 309,
+      "wordId": "309",
       "content": "ἵνα",
       "gloss": "in order that, so that, that",
-      "occurances": "?"
+      "occurances": 663
     },
     {
-      "wordId": 310,
+      "wordId": "310",
       "content": "ὅπου",
       "gloss": "where",
-      "occurances": "?"
+      "occurances": 82
     },
     {
-      "wordId": 311,
+      "wordId": "311",
       "content": "ὅπως",
       "gloss": "in order that, that",
-      "occurances": "?"
+      "occurances": 53
     },
     {
-      "wordId": 312,
+      "wordId": "312",
       "content": "ὅστις, ἥτις, ὅ τι",
       "gloss": "whoever, whatever, who",
-      "occurances": "?"
+      "occurances": 144
     },
     {
-      "wordId": 313,
+      "wordId": "313",
       "content": "ὅταν",
       "gloss": "whenever, when (ὅτε + ἄν)",
-      "occurances": "?"
+      "occurances": 123
     },
     {
-      "wordId": 314,
+      "wordId": "314",
       "content": "ὅτε",
       "gloss": "when",
-      "occurances": "?"
+      "occurances": 103
     },
     {
-      "wordId": 315,
+      "wordId": "315",
       "content": "ποῦ",
       "gloss": "where?",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 316,
+      "wordId": "316",
       "content": "ἀσπάζομαι",
       "gloss": "I greet",
-      "occurances": "?"
+      "occurances": 60
     },
     {
-      "wordId": 317,
+      "wordId": "317",
       "content": "ἐπιγινώσκω",
       "gloss": "I know, understand",
-      "occurances": "?"
+      "occurances": 44
     },
     {
-      "wordId": 318,
+      "wordId": "318",
       "content": "ἐργάζομαι",
       "gloss": "I work, do, perform",
-      "occurances": "?"
+      "occurances": 41
     },
     {
-      "wordId": 319,
+      "wordId": "319",
       "content": "καθίζω",
       "gloss": "I sit ",
-      "occurances": "?"
+      "occurances": 46
     },
     {
-      "wordId": 320,
+      "wordId": "320",
       "content": "κατοικέω",
       "gloss": "I live, dwell",
-      "occurances": "?"
+      "occurances": 44
     },
     {
-      "wordId": 321,
+      "wordId": "321",
       "content": "χαίρω",
       "gloss": "I rejoice; greetings ",
-      "occurances": "?"
+      "occurances": 74
     },
     {
-      "wordId": 322,
+      "wordId": "322",
       "content": "ἔτος, -ους, τό",
       "gloss": "year",
-      "occurances": "?"
+      "occurances": 48
     },
     {
-      "wordId": 323,
+      "wordId": "323",
       "content": "θηρίον, τό",
       "gloss": "animal, beast",
-      "occurances": "?"
+      "occurances": 46
     },
     {
-      "wordId": 324,
+      "wordId": "324",
       "content": "θλῖψις, -εως, ἡ",
       "gloss": "tribulation, affliction",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 325,
+      "wordId": "325",
       "content": "χρεία, ἡ",
       "gloss": "need",
-      "occurances": "?"
+      "occurances": 49
     },
     {
-      "wordId": 326,
+      "wordId": "326",
       "content": "κρίσις, -εως, ἡ",
       "gloss": "judgment, condemnation",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 327,
+      "wordId": "327",
       "content": "φόβος, ὁ",
       "gloss": "fear, reverence, respect",
-      "occurances": "?"
+      "occurances": 46
     },
     {
-      "wordId": 328,
+      "wordId": "328",
       "content": "φυλακή, ἡ",
       "gloss": "watch, guard, prison",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 329,
+      "wordId": "329",
       "content": "ἔμπροσθεν",
       "gloss": "in front of, before",
-      "occurances": "?"
+      "occurances": 48
     },
     {
-      "wordId": 330,
+      "wordId": "330",
       "content": "ἰδού",
       "gloss": "behold, look, see",
-      "occurances": "?"
+      "occurances": 200
     },
     {
-      "wordId": 331,
+      "wordId": "331",
       "content": "ἀνίστημι",
       "gloss": "I stand up, arise",
-      "occurances": "?"
+      "occurances": 108
     },
     {
-      "wordId": 332,
+      "wordId": "332",
       "content": "ἀποδίδωμι",
       "gloss": "I give back, pay",
-      "occurances": "?"
+      "occurances": 48
     },
     {
-      "wordId": 333,
+      "wordId": "333",
       "content": "ἀπόλλυμι",
       "gloss": "I destroy, am lost (mid)",
-      "occurances": "?"
+      "occurances": 90
     },
     {
-      "wordId": 334,
+      "wordId": "334",
       "content": "ἀφίημι",
       "gloss": "I forgive, let go, divorce",
-      "occurances": "?"
+      "occurances": 143
     },
     {
-      "wordId": 335,
+      "wordId": "335",
       "content": "δίδωμι",
       "gloss": "I give ",
-      "occurances": "?"
+      "occurances": 415
     },
     {
-      "wordId": 336,
+      "wordId": "336",
       "content": "ἵστημι",
       "gloss": "I stand, set",
-      "occurances": "?"
+      "occurances": 155
     },
     {
-      "wordId": 337,
+      "wordId": "337",
       "content": "παραδίδωμι",
       "gloss": "I hand over, betray, entrust",
-      "occurances": "?"
+      "occurances": 119
     },
     {
-      "wordId": 338,
+      "wordId": "338",
       "content": "τίθημι",
       "gloss": "I put, place, appoint",
-      "occurances": "?"
+      "occurances": 100
     },
     {
-      "wordId": 339,
+      "wordId": "339",
       "content": "φημί",
       "gloss": "I say, affirm",
-      "occurances": "?"
+      "occurances": 66
     },
     {
-      "wordId": 340,
+      "wordId": "340",
       "content": "ἁμαρτωλός, -όν",
       "gloss": "sinful, sinner (subst)",
-      "occurances": "?"
+      "occurances": 47
     },
     {
-      "wordId": 341,
+      "wordId": "341",
       "content": "γενεά, -ᾶς, ἡ",
       "gloss": "generation, family",
-      "occurances": "?"
+      "occurances": 43
     },
     {
-      "wordId": 342,
+      "wordId": "342",
       "content": "μικρός, -ά, -όν",
       "gloss": "small",
-      "occurances": "?"
+      "occurances": 46
     },
     {
-      "wordId": 343,
+      "wordId": "343",
       "content": "ὅμοιος-α, -ον",
       "gloss": "same nature, similar",
-      "occurances": "?"
+      "occurances": 45
     },
     {
-      "wordId": 344,
+      "wordId": "344",
       "content": "ἄχρι",
       "gloss": "until",
-      "occurances": "?"
+      "occurances": 48
     },
     {
-      "wordId": 345,
+      "wordId": "345",
       "content": "οὐαί",
       "gloss": "woe",
-      "occurances": "?"
+      "occurances": 46
+    },
+    {
+      "wordId": "346",
+      "content": "ψηλαφάω",
+      "gloss": "touch, feel around for",
+      "occurances": 4
+    },
+    {
+      "wordId": "347",
+      "content": "ἀπαγγέλλω",
+      "gloss": "I announce, proclaim, report ",
+      "occurances": 45
+    },
+    {
+      "wordId": "348",
+      "content": "ἀποδίδωμι",
+      "gloss": "I give away, pay, return ",
+      "occurances": 48
+    },
+    {
+      "wordId": "349",
+      "content": "ἄρα",
+      "gloss": "so, then, consequently ",
+      "occurances": 49
+    },
+    {
+      "wordId": "350",
+      "content": "ἄφεσις, ἡ",
+      "gloss": "forgiveness ",
+      "occurances": 17
+    },
+    {
+      "wordId": "351",
+      "content": "ἄχρι",
+      "gloss": "until (conj. or prep. + gen.) ",
+      "occurances": 49
+    },
+    {
+      "wordId": "352",
+      "content": "βάπτισμα, τό",
+      "gloss": "baptism ",
+      "occurances": 19
+    },
+    {
+      "wordId": "353",
+      "content": "δεύτερος",
+      "gloss": "second ",
+      "occurances": 43
+    },
+    {
+      "wordId": "354",
+      "content": "διακονέω",
+      "gloss": "I serve ",
+      "occurances": 37
+    },
+    {
+      "wordId": "355",
+      "content": "διέρχομαι",
+      "gloss": "I go through, cross over ",
+      "occurances": 43
+    },
+    {
+      "wordId": "356",
+      "content": "ἐκπορεύομαι",
+      "gloss": "I go out, come out ",
+      "occurances": 33
+    },
+    {
+      "wordId": "357",
+      "content": "ἐνδύω",
+      "gloss": "I clothe myself, put on, wear ",
+      "occurances": 27
+    },
+    {
+      "wordId": "358",
+      "content": "ἐπιγινώσκω",
+      "gloss": "I know, understand, recognize ",
+      "occurances": 44
+    },
+    {
+      "wordId": "359",
+      "content": "ἔρημος, ἡ",
+      "gloss": "desert, wilderness ",
+      "occurances": 48
+    },
+    {
+      "wordId": "360",
+      "content": "ἑτοιμάζω",
+      "gloss": "I make ready, prepare ",
+      "occurances": 40
+    },
+    {
+      "wordId": "361",
+      "content": "ἔτος, -ους, τό",
+      "gloss": "year ",
+      "occurances": 49
+    },
+    {
+      "wordId": "362",
+      "content": "εὐδοκέω",
+      "gloss": "I am well pleased, approve ",
+      "occurances": 21
+    },
+    {
+      "wordId": "363",
+      "content": "Ἠσαΐας, ὁ",
+      "gloss": "Isaiah ",
+      "occurances": 22
+    },
+    {
+      "wordId": "364",
+      "content": "θηρίον, τό",
+      "gloss": "animal, beast ",
+      "occurances": 46
+    },
+    {
+      "wordId": "365",
+      "content": "θλῖψις, -εως, ἡ",
+      "gloss": "tribulation, affliction, oppression ",
+      "occurances": 45
+    },
+    {
+      "wordId": "366",
+      "content": "θρίξ, τριχός, ἡ",
+      "gloss": "hair ",
+      "occurances": 15
+    },
+    {
+      "wordId": "367",
+      "content": "ἱκανός",
+      "gloss": "qualified, able ",
+      "occurances": 39
+    },
+    {
+      "wordId": "368",
+      "content": "Ἰορδάνης, ὁ",
+      "gloss": "the Jordan ",
+      "occurances": 15
+    },
+    {
+      "wordId": "369",
+      "content": "ἰσχυρός",
+      "gloss": "strong, mighty, powerful ",
+      "occurances": 29
+    },
+    {
+      "wordId": "370",
+      "content": "καθίζω",
+      "gloss": "I cause to sit down, appoint ",
+      "occurances": 46
+    },
+    {
+      "wordId": "371",
+      "content": "κρατέω",
+      "gloss": "I grasp, hold (fast), arrest ",
+      "occurances": 47
+    },
+    {
+      "wordId": "372",
+      "content": "μετάνοια, ἡ",
+      "gloss": "repentance ",
+      "occurances": 22
+    },
+    {
+      "wordId": "373",
+      "content": "ναός, ὁ",
+      "gloss": "temple, sanctuary ",
+      "occurances": 45
+    },
+    {
+      "wordId": "374",
+      "content": "ὅμοιος",
+      "gloss": "like, similar ",
+      "occurances": 45
+    },
+    {
+      "wordId": "375",
+      "content": "ὀπίσω",
+      "gloss": "after, behind ",
+      "occurances": 35
+    },
+    {
+      "wordId": "376",
+      "content": "οὐαί",
+      "gloss": "woe ",
+      "occurances": 46
+    },
+    {
+      "wordId": "377",
+      "content": "οὐκέτι",
+      "gloss": "no longer ",
+      "occurances": 47
+    },
+    {
+      "wordId": "378",
+      "content": "πειράζω",
+      "gloss": "I tempt, test ",
+      "occurances": 38
+    },
+    {
+      "wordId": "379",
+      "content": "ποταμός, ὁ",
+      "gloss": "river ",
+      "occurances": 17
+    },
+    {
+      "wordId": "380",
+      "content": "πρό",
+      "gloss": "before, in front of, at (gen) ",
+      "occurances": 47
+    },
+    {
+      "wordId": "381",
+      "content": "προσφέρω",
+      "gloss": "I bring to, offer ",
+      "occurances": 47
+    },
+    {
+      "wordId": "382",
+      "content": "Σατανᾶς, ὁ",
+      "gloss": "Satan ",
+      "occurances": 36
+    },
+    {
+      "wordId": "383",
+      "content": "σταυρόω",
+      "gloss": "I crucify ",
+      "occurances": 46
+    },
+    {
+      "wordId": "384",
+      "content": "τεσσεράκοντα",
+      "gloss": "forty ",
+      "occurances": 22
+    },
+    {
+      "wordId": "385",
+      "content": "φυλακή, ἡ",
+      "gloss": "watch, guard, prison ",
+      "occurances": 47
+    },
+    {
+      "wordId": "386",
+      "content": "χώρα, ἡ",
+      "gloss": "district, region ",
+      "occurances": 28
+    },
+    {
+      "wordId": "387",
+      "content": "ἁμαρτάνω",
+      "gloss": "to sin ",
+      "occurances": 43
+    },
+    {
+      "wordId": "388",
+      "content": "ἄξιος",
+      "gloss": "worthy, fit, deserving ",
+      "occurances": 41
+    },
+    {
+      "wordId": "389",
+      "content": "ἅπτω",
+      "gloss": "I touch, take hold of ",
+      "occurances": 39
+    },
+    {
+      "wordId": "390",
+      "content": "ἄρχων, -οντος, ὁ",
+      "gloss": "ruler, authority, judge ",
+      "occurances": 37
+    },
+    {
+      "wordId": "391",
+      "content": "βούλομαι",
+      "gloss": "I wish, want, desire ",
+      "occurances": 37
+    },
+    {
+      "wordId": "392",
+      "content": "δέω",
+      "gloss": "bind, tie ",
+      "occurances": 43
+    },
+    {
+      "wordId": "393",
+      "content": "ἐγγίζω",
+      "gloss": "I draw near, approach ",
+      "occurances": 42
+    },
+    {
+      "wordId": "394",
+      "content": "ἑκατὸν",
+      "gloss": "one hundred ",
+      "occurances": 17
+    },
+    {
+      "wordId": "395",
+      "content": "ἐκεῖθεν",
+      "gloss": "from there ",
+      "occurances": 37
+    },
+    {
+      "wordId": "396",
+      "content": "ἐλέγχω",
+      "gloss": "reprove, correct ",
+      "occurances": 17
+    },
+    {
+      "wordId": "397",
+      "content": "ἐμαυτοῦ",
+      "gloss": "(of) myself ",
+      "occurances": 37
+    },
+    {
+      "wordId": "398",
+      "content": "ἔμπροσθεν",
+      "gloss": "in front of, before ",
+      "occurances": 48
+    },
+    {
+      "wordId": "399",
+      "content": "ἐπιτίθημι",
+      "gloss": "I lay upon, put upon ",
+      "occurances": 39
+    },
+    {
+      "wordId": "400",
+      "content": "ἐργάζομαι",
+      "gloss": "I work, do, perform ",
+      "occurances": 41
+    },
+    {
+      "wordId": "401",
+      "content": "εὐλογέω",
+      "gloss": "I bless, praise ",
+      "occurances": 42
+    },
+    {
+      "wordId": "402",
+      "content": "θαυμάζω",
+      "gloss": "I marvel, am amazed, wonder ",
+      "occurances": 43
+    },
+    {
+      "wordId": "403",
+      "content": "θεραπεύω",
+      "gloss": "I heal, restore, serve ",
+      "occurances": 43
+    },
+    {
+      "wordId": "404",
+      "content": "θύρα, ἡ",
+      "gloss": "door, gate, entrance ",
+      "occurances": 39
+    },
+    {
+      "wordId": "405",
+      "content": "καινός",
+      "gloss": "new, unused ",
+      "occurances": 42
+    },
+    {
+      "wordId": "406",
+      "content": "καλῶς",
+      "gloss": "well ",
+      "occurances": 37
+    },
+    {
+      "wordId": "407",
+      "content": "καυχάομαι",
+      "gloss": "I boast, glory ",
+      "occurances": 37
+    },
+    {
+      "wordId": "408",
+      "content": "κερδαίνω",
+      "gloss": "to gain ",
+      "occurances": 17
+    },
+    {
+      "wordId": "409",
+      "content": "λύω",
+      "gloss": "loose ",
+      "occurances": 42
+    },
+    {
+      "wordId": "410",
+      "content": "μαρτυρία, ἡ",
+      "gloss": "testimony, witness ",
+      "occurances": 37
+    },
+    {
+      "wordId": "411",
+      "content": "μάρτυς, ὁ",
+      "gloss": "witness ",
+      "occurances": 35
+    },
+    {
+      "wordId": "412",
+      "content": "μικρός",
+      "gloss": "small, short ",
+      "occurances": 46
+    },
+    {
+      "wordId": "413",
+      "content": "οἰκοδομέω",
+      "gloss": "I build (up), erect, edify ",
+      "occurances": 40
+    },
+    {
+      "wordId": "414",
+      "content": "οὗ",
+      "gloss": "where ",
+      "occurances": 25
+    },
+    {
+      "wordId": "415",
+      "content": "παραλαμβάνω",
+      "gloss": "take (to oneself), take with/along ",
+      "occurances": 49
+    },
+    {
+      "wordId": "416",
+      "content": "παρίστημι",
+      "gloss": "I place beside, present ",
+      "occurances": 41
+    },
+    {
+      "wordId": "417",
+      "content": "πέντε",
+      "gloss": "five ",
+      "occurances": 38
+    },
+    {
+      "wordId": "418",
+      "content": "περισσεύω",
+      "gloss": "I exceed, overflow, abound ",
+      "occurances": 39
+    },
+    {
+      "wordId": "419",
+      "content": "πλανάω",
+      "gloss": "go astray, be misled, wander about aimlessly ",
+      "occurances": 39
+    },
+    {
+      "wordId": "420",
+      "content": "πράσσω",
+      "gloss": "I do, accomplish, practice ",
+      "occurances": 39
+    },
+    {
+      "wordId": "421",
+      "content": "πρόβατον, τό",
+      "gloss": "sheep ",
+      "occurances": 39
+    },
+    {
+      "wordId": "422",
+      "content": "σπέρμα, -ατος, τό",
+      "gloss": "seed, descendants, children ",
+      "occurances": 43
+    },
+    {
+      "wordId": "423",
+      "content": "τέλος, -ους, τό",
+      "gloss": "end, goal ",
+      "occurances": 40
+    },
+    {
+      "wordId": "424",
+      "content": "τελώνης, ὁ",
+      "gloss": "tax-collector ",
+      "occurances": 21
+    },
+    {
+      "wordId": "425",
+      "content": "τέσσαρες",
+      "gloss": "four ",
+      "occurances": 41
+    },
+    {
+      "wordId": "426",
+      "content": "ὥσπερ",
+      "gloss": "(just) as, so ",
+      "occurances": 36
+    },
+    {
+      "wordId": "427",
+      "content": "ἀγρός, ὁ",
+      "gloss": "field, country ",
+      "occurances": 36
+    },
+    {
+      "wordId": "428",
+      "content": "ἀκάθαρτος",
+      "gloss": "unclean, impure ",
+      "occurances": 32
+    },
+    {
+      "wordId": "429",
+      "content": "ἀκροβυστία, ἡ",
+      "gloss": "uncircumcision ",
+      "occurances": 20
+    },
+    {
+      "wordId": "430",
+      "content": "ἀναγινώσκω",
+      "gloss": "I read (aloud) ",
+      "occurances": 32
+    },
+    {
+      "wordId": "431",
+      "content": "ἄνεμος, ὁ",
+      "gloss": "wind ",
+      "occurances": 31
+    },
+    {
+      "wordId": "432",
+      "content": "ἀρνέομαι",
+      "gloss": "I deny, reject ",
+      "occurances": 33
+    },
+    {
+      "wordId": "433",
+      "content": "βιβλίον, τό",
+      "gloss": "book, scroll ",
+      "occurances": 34
+    },
+    {
+      "wordId": "434",
+      "content": "διαθήκη, ἡ",
+      "gloss": "covenant, decree, last will and testament ",
+      "occurances": 33
+    },
+    {
+      "wordId": "435",
+      "content": "διακονία, ἡ",
+      "gloss": "service, office, ministry, deacon ",
+      "occurances": 34
+    },
+    {
+      "wordId": "436",
+      "content": "δικαιόω",
+      "gloss": "I justify, vindicate ",
+      "occurances": 39
+    },
+    {
+      "wordId": "437",
+      "content": "διότι",
+      "gloss": "for, because, therefore ",
+      "occurances": 23
+    },
+    {
+      "wordId": "438",
+      "content": "δυνατός",
+      "gloss": "powerful, strong, mighty, able ",
+      "occurances": 32
+    },
+    {
+      "wordId": "439",
+      "content": "ἐγγύς",
+      "gloss": "near, close to ",
+      "occurances": 31
+    },
+    {
+      "wordId": "440",
+      "content": "ἔξειμι",
+      "gloss": "it is lawful, permitted ",
+      "occurances": 31
+    },
+    {
+      "wordId": "441",
+      "content": "ἐπίγνωσις, -εως, ἡ",
+      "gloss": "knowledge, recognition ",
+      "occurances": 20
+    },
+    {
+      "wordId": "442",
+      "content": "εὐθέως",
+      "gloss": "immediately ",
+      "occurances": 36
+    },
+    {
+      "wordId": "443",
+      "content": "ἐχθρός",
+      "gloss": "hostile, hated ",
+      "occurances": 32
+    },
+    {
+      "wordId": "444",
+      "content": "ἥλιος, ὁ",
+      "gloss": "sun ",
+      "occurances": 32
+    },
+    {
+      "wordId": "445",
+      "content": "ἱερεύς, -εως, ὁ",
+      "gloss": "priest ",
+      "occurances": 31
+    },
+    {
+      "wordId": "446",
+      "content": "καθαρίζω",
+      "gloss": "I cleanse, purify ",
+      "occurances": 31
+    },
+    {
+      "wordId": "447",
+      "content": "καταργέω",
+      "gloss": "I cancel, nullify, make void ",
+      "occurances": 27
+    },
+    {
+      "wordId": "448",
+      "content": "λογίζομαι",
+      "gloss": "I account, reckon, conclude ",
+      "occurances": 40
+    },
+    {
+      "wordId": "449",
+      "content": "μέλος, -ους, τό",
+      "gloss": "member, part, limb ",
+      "occurances": 34
+    },
+    {
+      "wordId": "450",
+      "content": "ναί",
+      "gloss": "yes, certainly, indeed ",
+      "occurances": 33
+    },
+    {
+      "wordId": "451",
+      "content": "νυνί",
+      "gloss": "now ",
+      "occurances": 20
+    },
+    {
+      "wordId": "452",
+      "content": "ὀργή, ἡ",
+      "gloss": "anger, wrath, punishment ",
+      "occurances": 36
+    },
+    {
+      "wordId": "453",
+      "content": "οὖς, ὠτός, τό",
+      "gloss": "ear, hearing ",
+      "occurances": 36
+    },
+    {
+      "wordId": "454",
+      "content": "παραγίνομαι",
+      "gloss": "I come, arrive, appear ",
+      "occurances": 37
+    },
+    {
+      "wordId": "455",
+      "content": "παρρησία, ἡ",
+      "gloss": "confidence, boldness ",
+      "occurances": 31
+    },
+    {
+      "wordId": "456",
+      "content": "περιτομή, ἡ",
+      "gloss": "circumcision ",
+      "occurances": 36
+    },
+    {
+      "wordId": "457",
+      "content": "πλήν",
+      "gloss": "yet, however, but ",
+      "occurances": 31
+    },
+    {
+      "wordId": "458",
+      "content": "ποῖος",
+      "gloss": "of what kind? ",
+      "occurances": 33
+    },
+    {
+      "wordId": "459",
+      "content": "ποτήριον, τό",
+      "gloss": "cup ",
+      "occurances": 31
+    },
+    {
+      "wordId": "460",
+      "content": "ποῦ",
+      "gloss": "where? ",
+      "occurances": 48
+    },
+    {
+      "wordId": "461",
+      "content": "πτωχός",
+      "gloss": "poor ",
+      "occurances": 34
+    },
+    {
+      "wordId": "462",
+      "content": "ὑποστρέφω",
+      "gloss": "I turn back, return ",
+      "occurances": 35
+    },
+    {
+      "wordId": "463",
+      "content": "ὑστερέω",
+      "gloss": "I fall short of, lack ",
+      "occurances": 16
+    },
+    {
+      "wordId": "464",
+      "content": "φανερόω",
+      "gloss": "I reveal, make manifest, show ",
+      "occurances": 49
+    },
+    {
+      "wordId": "465",
+      "content": "Φίλιππος, ὁ",
+      "gloss": "Philip ",
+      "occurances": 36
+    },
+    {
+      "wordId": "466",
+      "content": "χωρίς",
+      "gloss": "without, apart from ",
+      "occurances": 41
+    },
+    {
+      "wordId": "467",
+      "content": "ἀγοράζω",
+      "gloss": "I buy, purchase ",
+      "occurances": 30
+    },
+    {
+      "wordId": "468",
+      "content": "ἀδικέω",
+      "gloss": "I do wrong, treat unjustly ",
+      "occurances": 28
+    },
+    {
+      "wordId": "469",
+      "content": "ἀληθινός",
+      "gloss": "true, real, genuine ",
+      "occurances": 28
+    },
+    {
+      "wordId": "470",
+      "content": "ἀνάγκη, ἡ",
+      "gloss": "necessity, pressure ",
+      "occurances": 17
+    },
+    {
+      "wordId": "471",
+      "content": "ἅπαξ",
+      "gloss": "once and for all ",
+      "occurances": 14
+    },
+    {
+      "wordId": "472",
+      "content": "ἀρνίον, τό",
+      "gloss": "lamb, sheep ",
+      "occurances": 30
+    },
+    {
+      "wordId": "473",
+      "content": "ἁρπάζω",
+      "gloss": "I grasp, snatch, seize ",
+      "occurances": 14
+    },
+    {
+      "wordId": "474",
+      "content": "Βαρναβᾶς, ὁ",
+      "gloss": "Barnabas ",
+      "occurances": 28
+    },
+    {
+      "wordId": "475",
+      "content": "γαμέω",
+      "gloss": "I marry ",
+      "occurances": 28
+    },
+    {
+      "wordId": "476",
+      "content": "γνῶσις, -εως, ἡ",
+      "gloss": "knowledge ",
+      "occurances": 29
+    },
+    {
+      "wordId": "477",
+      "content": "διακρίνω",
+      "gloss": "I discriminate, judge, doubt ",
+      "occurances": 19
+    },
+    {
+      "wordId": "478",
+      "content": "ἐλεέω",
+      "gloss": "I have mercy on ",
+      "occurances": 29
+    },
+    {
+      "wordId": "479",
+      "content": "ἔλεος, -ους, τό",
+      "gloss": "mercy, compassion ",
+      "occurances": 27
+    },
+    {
+      "wordId": "480",
+      "content": "ἐπιθυμία, ἡ",
+      "gloss": "lust, craving, desire ",
+      "occurances": 39
+    },
+    {
+      "wordId": "481",
+      "content": "ἐπικαλέω",
+      "gloss": "I call (upon), name ",
+      "occurances": 30
+    },
+    {
+      "wordId": "482",
+      "content": "ἐπιτιμάω",
+      "gloss": "I rebuke, reprove, warn ",
+      "occurances": 29
+    },
+    {
+      "wordId": "483",
+      "content": "ἡγέομαι",
+      "gloss": "I lead, think, consider ",
+      "occurances": 28
+    },
+    {
+      "wordId": "484",
+      "content": "θυγάτηρ, -τρός, ἡ",
+      "gloss": "daughter, girl ",
+      "occurances": 28
+    },
+    {
+      "wordId": "485",
+      "content": "θυσία, ἡ",
+      "gloss": "sacrifice, offering ",
+      "occurances": 28
+    },
+    {
+      "wordId": "486",
+      "content": "Ἰάκωβος, ὁ",
+      "gloss": "James ",
+      "occurances": 42
+    },
+    {
+      "wordId": "487",
+      "content": "ἴδε",
+      "gloss": "look, see, behold ",
+      "occurances": 29
+    },
+    {
+      "wordId": "488",
+      "content": "Ἰούδας, ὁ",
+      "gloss": "Jude, Judah, Judas ",
+      "occurances": 44
+    },
+    {
+      "wordId": "489",
+      "content": "Καῖσαρ, -αρος, ὁ",
+      "gloss": "Caesar, emperor ",
+      "occurances": 29
+    },
+    {
+      "wordId": "490",
+      "content": "μάχαιρα, ἡ",
+      "gloss": "sword ",
+      "occurances": 29
+    },
+    {
+      "wordId": "491",
+      "content": "μιμνῄσκομαι",
+      "gloss": "I remember, recollect ",
+      "occurances": 23
+    },
+    {
+      "wordId": "492",
+      "content": "μισέω",
+      "gloss": "I hate, detest ",
+      "occurances": 40
+    },
+    {
+      "wordId": "493",
+      "content": "μισθός, ὁ",
+      "gloss": "pay, wages, reward ",
+      "occurances": 29
+    },
+    {
+      "wordId": "494",
+      "content": "παράκλησις, -εως, ἡ",
+      "gloss": "encouragement, comfort ",
+      "occurances": 29
+    },
+    {
+      "wordId": "495",
+      "content": "παρέρχομαι",
+      "gloss": "I pass by, neglect, disobey ",
+      "occurances": 29
+    },
+    {
+      "wordId": "496",
+      "content": "πάσχα, τό",
+      "gloss": "Passover ",
+      "occurances": 29
+    },
+    {
+      "wordId": "497",
+      "content": "ποτέ",
+      "gloss": "once, formerly, ever ",
+      "occurances": 29
+    },
+    {
+      "wordId": "498",
+      "content": "σκανδαλίζω",
+      "gloss": "I cause to stumble ",
+      "occurances": 29
+    },
+    {
+      "wordId": "499",
+      "content": "σκότος,-ους, τό",
+      "gloss": "darkness ",
+      "occurances": 31
+    },
+    {
+      "wordId": "500",
+      "content": "συνείδησις, -εως, ἡ",
+      "gloss": "conscience ",
+      "occurances": 30
+    },
+    {
+      "wordId": "501",
+      "content": "σωτήρ, -ῆρος, ἡ",
+      "gloss": "savior, deliverer ",
+      "occurances": 24
+    },
+    {
+      "wordId": "502",
+      "content": "σωτηρία, ἡ",
+      "gloss": "salvation, deliverance ",
+      "occurances": 46
+    },
+    {
+      "wordId": "503",
+      "content": "φίλος",
+      "gloss": "beloved, friend ",
+      "occurances": 29
+    },
+    {
+      "wordId": "504",
+      "content": "φόβος, ὁ",
+      "gloss": "fear, reverence, respect ",
+      "occurances": 47
+    },
+    {
+      "wordId": "505",
+      "content": "φυλάσσω",
+      "gloss": "I guard, protect ",
+      "occurances": 31
+    },
+    {
+      "wordId": "506",
+      "content": "φυλή, ἡ",
+      "gloss": "tribe, nation, people ",
+      "occurances": 31
+    },
+    {
+      "wordId": "507",
+      "content": "ἀδικία, ἡ",
+      "gloss": "unrighteousness, injustice ",
+      "occurances": 25
+    },
+    {
+      "wordId": "508",
+      "content": "ἀληθής",
+      "gloss": "true, honest, genuine ",
+      "occurances": 26
+    },
+    {
+      "wordId": "509",
+      "content": "ἀναβλέπω",
+      "gloss": "I look up, see again, receive sight ",
+      "occurances": 25
+    },
+    {
+      "wordId": "510",
+      "content": "ἄρτι",
+      "gloss": "now ",
+      "occurances": 36
+    },
+    {
+      "wordId": "511",
+      "content": "ἀσθενής",
+      "gloss": "weak, powerless, sick ",
+      "occurances": 26
+    },
+    {
+      "wordId": "512",
+      "content": "βαστάζω",
+      "gloss": "I bear, endure ",
+      "occurances": 27
+    },
+    {
+      "wordId": "513",
+      "content": "γάμος, ὁ",
+      "gloss": "wedding, marriage ",
+      "occurances": 16
+    },
+    {
+      "wordId": "514",
+      "content": "γέ",
+      "gloss": "indeed, even ",
+      "occurances": 25
+    },
+    {
+      "wordId": "515",
+      "content": "γεύομαι",
+      "gloss": "I taste, experience ",
+      "occurances": 15
+    },
+    {
+      "wordId": "516",
+      "content": "γνωρίζω",
+      "gloss": "I make known, reveal, know ",
+      "occurances": 25
+    },
+    {
+      "wordId": "517",
+      "content": "δέκα",
+      "gloss": "ten ",
+      "occurances": 25
+    },
+    {
+      "wordId": "518",
+      "content": "δένδρον, τό",
+      "gloss": "tree ",
+      "occurances": 25
+    },
+    {
+      "wordId": "519",
+      "content": "διάκονος, ὁ",
+      "gloss": "servant, deacon ",
+      "occurances": 29
+    },
+    {
+      "wordId": "520",
+      "content": "δουλεύω",
+      "gloss": "I am a slave, serve, obey ",
+      "occurances": 25
+    },
+    {
+      "wordId": "521",
+      "content": "ἐκχέω",
+      "gloss": "I pour out, shed ",
+      "occurances": 27
+    },
+    {
+      "wordId": "522",
+      "content": "Ἕλλην, -ηνος, ὁ",
+      "gloss": "a Greek, gentile, pagan ",
+      "occurances": 25
+    },
+    {
+      "wordId": "523",
+      "content": "ἕνεκα",
+      "gloss": "because of, on account of, for the sake of ",
+      "occurances": 26
+    },
+    {
+      "wordId": "524",
+      "content": "ἥκω",
+      "gloss": "I have come ",
+      "occurances": 26
+    },
+    {
+      "wordId": "525",
+      "content": "Ἰακώβ, ὁ",
+      "gloss": "Jacob ",
+      "occurances": 27
+    },
+    {
+      "wordId": "526",
+      "content": "καθαρός",
+      "gloss": "clean, pure ",
+      "occurances": 27
+    },
+    {
+      "wordId": "527",
+      "content": "κεῖμαι",
+      "gloss": "I lie, recline ",
+      "occurances": 24
+    },
+    {
+      "wordId": "528",
+      "content": "λυπέω",
+      "gloss": "I grieve, offend ",
+      "occurances": 26
+    },
+    {
+      "wordId": "529",
+      "content": "Μαρία, ἡ",
+      "gloss": "Mary ",
+      "occurances": 27
+    },
+    {
+      "wordId": "530",
+      "content": "Μαριάμ, ἡ",
+      "gloss": "Mary ",
+      "occurances": 27
+    },
+    {
+      "wordId": "531",
+      "content": "μυστήριον, τό",
+      "gloss": "mystery, secret ",
+      "occurances": 28
+    },
+    {
+      "wordId": "532",
+      "content": "νικάω",
+      "gloss": "I conquer, overcome ",
+      "occurances": 28
+    },
+    {
+      "wordId": "533",
+      "content": "νυμφίος, ὁ",
+      "gloss": "bridegroom ",
+      "occurances": 16
+    },
+    {
+      "wordId": "534",
+      "content": "οἴνος, ὁ",
+      "gloss": "wine ",
+      "occurances": 34
+    },
+    {
+      "wordId": "535",
+      "content": "πνευματικός",
+      "gloss": "spiritual ",
+      "occurances": 26
+    },
+    {
+      "wordId": "536",
+      "content": "πόθεν",
+      "gloss": "from where? ",
+      "occurances": 29
+    },
+    {
+      "wordId": "537",
+      "content": "πόσος",
+      "gloss": "how great/much/many ? ",
+      "occurances": 27
+    },
+    {
+      "wordId": "538",
+      "content": "προφητεύω",
+      "gloss": "I prophesy ",
+      "occurances": 28
+    },
+    {
+      "wordId": "539",
+      "content": "σός",
+      "gloss": "your ",
+      "occurances": 27
+    },
+    {
+      "wordId": "540",
+      "content": "σταυρός, ὁ",
+      "gloss": "cross ",
+      "occurances": 27
+    },
+    {
+      "wordId": "541",
+      "content": "στρατιώτης, ὁ",
+      "gloss": "soldier ",
+      "occurances": 26
+    },
+    {
+      "wordId": "542",
+      "content": "συνίημι",
+      "gloss": "I understand, comprehend ",
+      "occurances": 26
+    },
+    {
+      "wordId": "543",
+      "content": "τελέω",
+      "gloss": "I finish, complete ",
+      "occurances": 28
+    },
+    {
+      "wordId": "544",
+      "content": "φρονέω",
+      "gloss": "I think, ponder ",
+      "occurances": 26
+    },
+    {
+      "wordId": "545",
+      "content": "φωνέω",
+      "gloss": "I call ",
+      "occurances": 43
+    },
+    {
+      "wordId": "546",
+      "content": "χήρα, ἡ",
+      "gloss": "widow ",
+      "occurances": 26
+    },
+    {
+      "wordId": "547",
+      "content": "ἁμαρτωλός, ὁ",
+      "gloss": "sinner ",
+      "occurances": 47
+    },
+    {
+      "wordId": "548",
+      "content": "ἀμπελών, -ῶνος, ὁ",
+      "gloss": "vineyard ",
+      "occurances": 23
+    },
+    {
+      "wordId": "549",
+      "content": "ἀνάγω",
+      "gloss": "I lead up, restore ",
+      "occurances": 23
+    },
+    {
+      "wordId": "550",
+      "content": "ἀναιρέω",
+      "gloss": "I take away, destroy, kill ",
+      "occurances": 24
+    },
+    {
+      "wordId": "551",
+      "content": "ἄπιστος",
+      "gloss": "faithless, unbelieving ",
+      "occurances": 23
+    },
+    {
+      "wordId": "552",
+      "content": "ἀσθένεια, ἡ",
+      "gloss": "weakness, sickness, disease ",
+      "occurances": 24
+    },
+    {
+      "wordId": "553",
+      "content": "ἀσθενέω",
+      "gloss": "I am weak, sick, in need ",
+      "occurances": 33
+    },
+    {
+      "wordId": "554",
+      "content": "ἀστήρ, -έρος, ὁ",
+      "gloss": "star ",
+      "occurances": 24
+    },
+    {
+      "wordId": "555",
+      "content": "αὐξάνω",
+      "gloss": "I grow, increase ",
+      "occurances": 23
+    },
+    {
+      "wordId": "556",
+      "content": "δέησις, -εως, ἡ",
+      "gloss": "prayer, entreaty, petition ",
+      "occurances": 18
+    },
+    {
+      "wordId": "557",
+      "content": "εἰκών, -όνος, ἡ",
+      "gloss": "image, likeness, form ",
+      "occurances": 23
+    },
+    {
+      "wordId": "558",
+      "content": "ἐλεύθερος",
+      "gloss": "free ",
+      "occurances": 23
+    },
+    {
+      "wordId": "559",
+      "content": "ἐνεργέω",
+      "gloss": "I work, produce ",
+      "occurances": 21
+    },
+    {
+      "wordId": "560",
+      "content": "ἑορτή, ἡ",
+      "gloss": "festival ",
+      "occurances": 25
+    },
+    {
+      "wordId": "561",
+      "content": "ἐπιστολή, ἡ",
+      "gloss": "letter, epistle ",
+      "occurances": 24
+    },
+    {
+      "wordId": "562",
+      "content": "ἐπιστρέφω",
+      "gloss": "I turn (around/back), return ",
+      "occurances": 36
+    },
+    {
+      "wordId": "563",
+      "content": "Ἠλίας, ὁ",
+      "gloss": "Elijah ",
+      "occurances": 29
+    },
+    {
+      "wordId": "564",
+      "content": "ἰάομαι",
+      "gloss": "I heal, cure, restore ",
+      "occurances": 26
+    },
+    {
+      "wordId": "565",
+      "content": "ἰσχύω",
+      "gloss": "I am strong, powerful, able ",
+      "occurances": 28
+    },
+    {
+      "wordId": "566",
+      "content": "καταλείπω",
+      "gloss": "I leave (behind), abandon, neglect ",
+      "occurances": 24
+    },
+    {
+      "wordId": "567",
+      "content": "κελεύω",
+      "gloss": "I command, order, urge ",
+      "occurances": 25
+    },
+    {
+      "wordId": "568",
+      "content": "κρίσις, -εως, ἡ",
+      "gloss": "judgment, condemnation ",
+      "occurances": 47
+    },
+    {
+      "wordId": "569",
+      "content": "λευκός",
+      "gloss": "white, bright, shining ",
+      "occurances": 25
+    },
+    {
+      "wordId": "570",
+      "content": "μανθάνω",
+      "gloss": "I learn ",
+      "occurances": 25
+    },
+    {
+      "wordId": "571",
+      "content": "μήν, -ος, ὁ",
+      "gloss": "month, new moon ",
+      "occurances": 18
+    },
+    {
+      "wordId": "572",
+      "content": "μήποτε",
+      "gloss": "never, lest ",
+      "occurances": 25
+    },
+    {
+      "wordId": "573",
+      "content": "μήτε",
+      "gloss": "and not, nor ",
+      "occurances": 34
+    },
+    {
+      "wordId": "574",
+      "content": "νεφέλη, ἡ",
+      "gloss": "cloud ",
+      "occurances": 25
+    },
+    {
+      "wordId": "575",
+      "content": "νοῦς, νοός, ὁ",
+      "gloss": "mind, understanding ",
+      "occurances": 24
+    },
+    {
+      "wordId": "576",
+      "content": "ὀμνύω",
+      "gloss": "I swear, take an oath ",
+      "occurances": 26
+    },
+    {
+      "wordId": "577",
+      "content": "παῖς, παιδός , ὁ/ἡ",
+      "gloss": "boy, child, son, servant ",
+      "occurances": 24
+    },
+    {
+      "wordId": "578",
+      "content": "πάρειμι",
+      "gloss": "I am present, have come ",
+      "occurances": 24
+    },
+    {
+      "wordId": "579",
+      "content": "παρουσία, ἡ",
+      "gloss": "coming, arrival ",
+      "occurances": 24
+    },
+    {
+      "wordId": "580",
+      "content": "πίμπλημι",
+      "gloss": "I fill, fulfill ",
+      "occurances": 24
+    },
+    {
+      "wordId": "581",
+      "content": "πλῆθος, -ους, τό",
+      "gloss": "multitude, large amount, crowd ",
+      "occurances": 31
+    },
+    {
+      "wordId": "582",
+      "content": "πορνεία, ἡ",
+      "gloss": "(sexual) immorality ",
+      "occurances": 25
+    },
+    {
+      "wordId": "583",
+      "content": "προσευχή, ἡ",
+      "gloss": "prayer ",
+      "occurances": 36
+    },
+    {
+      "wordId": "584",
+      "content": "προσέχω",
+      "gloss": "I pay attention to, devote myself to ",
+      "occurances": 24
+    },
+    {
+      "wordId": "585",
+      "content": "προσκαλέω",
+      "gloss": "I summon, call, invite ",
+      "occurances": 29
+    },
+    {
+      "wordId": "586",
+      "content": "Τιμόθεος, ὁ",
+      "gloss": "Timothy ",
+      "occurances": 24
+    },
+    {
+      "wordId": "587",
+      "content": "ἁγιάζω",
+      "gloss": "I sanctify, make holy, reverence ",
+      "occurances": 28
+    },
+    {
+      "wordId": "588",
+      "content": "ἀγνοέω",
+      "gloss": "I do not know, am ignorant ",
+      "occurances": 22
+    },
+    {
+      "wordId": "589",
+      "content": "Αἴγυπτος, ἡ",
+      "gloss": "Egypt ",
+      "occurances": 25
+    },
+    {
+      "wordId": "590",
+      "content": "ἀναχωρέω",
+      "gloss": "I go away, withdraw ",
+      "occurances": 14
+    },
+    {
+      "wordId": "591",
+      "content": "ἀντί",
+      "gloss": "instead of, for, in behalf of ",
+      "occurances": 22
+    },
+    {
+      "wordId": "592",
+      "content": "βασιλεύω",
+      "gloss": "I reign, rule ",
+      "occurances": 21
+    },
+    {
+      "wordId": "593",
+      "content": "δέομαι",
+      "gloss": "I ask, pray, beg ",
+      "occurances": 22
+    },
+    {
+      "wordId": "594",
+      "content": "δοκιμάζω",
+      "gloss": "I examine, test, prove ",
+      "occurances": 22
+    },
+    {
+      "wordId": "595",
+      "content": "ἐκλέγομαι",
+      "gloss": "I choose, elect ",
+      "occurances": 22
+    },
+    {
+      "wordId": "596",
+      "content": "ἐκλεκτός",
+      "gloss": "chosen, elect ",
+      "occurances": 22
+    },
+    {
+      "wordId": "597",
+      "content": "ζῷον, τό",
+      "gloss": "living thing/being, animal ",
+      "occurances": 23
+    },
+    {
+      "wordId": "598",
+      "content": "Ἡρῴδης, ὁ",
+      "gloss": "Herod ",
+      "occurances": 43
+    },
+    {
+      "wordId": "599",
+      "content": "θεάομαι",
+      "gloss": "I see, look at, behold ",
+      "occurances": 22
+    },
+    {
+      "wordId": "600",
+      "content": "θυσιαστήριον, τό",
+      "gloss": "altar ",
+      "occurances": 23
+    },
+    {
+      "wordId": "601",
+      "content": "Ἰουδαία, ἡ",
+      "gloss": "Judea ",
+      "occurances": 43
+    },
+    {
+      "wordId": "602",
+      "content": "Ἰωσὴφ, ὁ",
+      "gloss": "Joseph ",
+      "occurances": 35
+    },
+    {
+      "wordId": "603",
+      "content": "καθεύδω",
+      "gloss": "I sleep ",
+      "occurances": 22
+    },
+    {
+      "wordId": "604",
+      "content": "κἀκεῖνος",
+      "gloss": "and that one, he also ",
+      "occurances": 22
+    },
+    {
+      "wordId": "605",
+      "content": "κατεργάζομαι",
+      "gloss": "I do, achieve, accomplish ",
+      "occurances": 22
+    },
+    {
+      "wordId": "606",
+      "content": "κατηγορέω",
+      "gloss": "I accuse ",
+      "occurances": 23
+    },
+    {
+      "wordId": "607",
+      "content": "κατοικέω",
+      "gloss": "I live, dwell, reside ",
+      "occurances": 44
+    },
+    {
+      "wordId": "608",
+      "content": "κοιλία, ἡ",
+      "gloss": "belly, stomach, womb ",
+      "occurances": 22
+    },
+    {
+      "wordId": "609",
+      "content": "κοπιάω",
+      "gloss": "I work hard, labor ",
+      "occurances": 23
+    },
+    {
+      "wordId": "610",
+      "content": "κωλύω",
+      "gloss": "I hinder, prevent ",
+      "occurances": 23
+    },
+    {
+      "wordId": "611",
+      "content": "Μακεδονία, ἡ",
+      "gloss": "Macedonia ",
+      "occurances": 22
+    },
+    {
+      "wordId": "612",
+      "content": "μέρος, -ους, τό",
+      "gloss": "part, share, district ",
+      "occurances": 42
+    },
+    {
+      "wordId": "613",
+      "content": "μηκέτι",
+      "gloss": "no longer ",
+      "occurances": 22
+    },
+    {
+      "wordId": "614",
+      "content": "νέος",
+      "gloss": "new, fresh, young ",
+      "occurances": 23
+    },
+    {
+      "wordId": "615",
+      "content": "πεινάω",
+      "gloss": "I hunger, am hungry ",
+      "occurances": 23
+    },
+    {
+      "wordId": "616",
+      "content": "πειρασμός, ὁ",
+      "gloss": "temptation, trial, test ",
+      "occurances": 21
+    },
+    {
+      "wordId": "617",
+      "content": "πέραν",
+      "gloss": "on the other side ",
+      "occurances": 23
+    },
+    {
+      "wordId": "618",
+      "content": "περιβάλλω",
+      "gloss": "I put on, clothe, dress ",
+      "occurances": 23
+    },
+    {
+      "wordId": "619",
+      "content": "πληγή, ἡ",
+      "gloss": "blow, plague, wound ",
+      "occurances": 22
+    },
+    {
+      "wordId": "620",
+      "content": "ῥύομαι",
+      "gloss": "I rescue, deliver ",
+      "occurances": 17
+    },
+    {
+      "wordId": "621",
+      "content": "σήμερον",
+      "gloss": "today ",
+      "occurances": 41
+    },
+    {
+      "wordId": "622",
+      "content": "σκεῦος, τό",
+      "gloss": "vessel, jar, object ",
+      "occurances": 23
+    },
+    {
+      "wordId": "623",
+      "content": "τελειόω, τό",
+      "gloss": "I complete, make perfect ",
+      "occurances": 23
+    },
+    {
+      "wordId": "624",
+      "content": "φαίνω",
+      "gloss": "I shine, appear ",
+      "occurances": 31
+    },
+    {
+      "wordId": "625",
+      "content": "χαρίζομαι",
+      "gloss": "I give freely, grant ",
+      "occurances": 23
+    },
+    {
+      "wordId": "626",
+      "content": "χιλιάς, -αδος, ἡ",
+      "gloss": "a thousand ",
+      "occurances": 23
+    },
+    {
+      "wordId": "627",
+      "content": "αἰτία, ἡ",
+      "gloss": "cause, reason, accusation ",
+      "occurances": 20
+    },
+    {
+      "wordId": "628",
+      "content": "ἅπας",
+      "gloss": "all, everybody, everything ",
+      "occurances": 34
+    },
+    {
+      "wordId": "629",
+      "content": "ἀπέχω",
+      "gloss": "I have received, am distant ",
+      "occurances": 19
+    },
+    {
+      "wordId": "630",
+      "content": "ἀργύριον, τό",
+      "gloss": "silver, money ",
+      "occurances": 20
+    },
+    {
+      "wordId": "631",
+      "content": "γενεά, ἡ",
+      "gloss": "generation, family, decent ",
+      "occurances": 43
+    },
+    {
+      "wordId": "632",
+      "content": "γένος, -ους, τό",
+      "gloss": "race, descendent, family ",
+      "occurances": 20
+    },
+    {
+      "wordId": "633",
+      "content": "γεωργός, ὁ",
+      "gloss": "farmer ",
+      "occurances": 19
+    },
+    {
+      "wordId": "634",
+      "content": "γονεύς, -έως, ὁ",
+      "gloss": "parent ",
+      "occurances": 20
+    },
+    {
+      "wordId": "635",
+      "content": "διαμαρτύρομαι",
+      "gloss": "I solemnly urge, exhort, warn ",
+      "occurances": 15
+    },
+    {
+      "wordId": "636",
+      "content": "διδαχή, ἡ",
+      "gloss": "teaching [as content] ",
+      "occurances": 30
+    },
+    {
+      "wordId": "637",
+      "content": "ἑκατοντάρχης, ὁ",
+      "gloss": "centurion, captain, officer ",
+      "occurances": 20
+    },
+    {
+      "wordId": "638",
+      "content": "ἐφίστημι",
+      "gloss": "I stand by, appear ",
+      "occurances": 21
+    },
+    {
+      "wordId": "639",
+      "content": "ἡγεμών, -όνος, ὁ",
+      "gloss": "governor, ruler, leader ",
+      "occurances": 20
+    },
+    {
+      "wordId": "640",
+      "content": "θερίζω",
+      "gloss": "I reap, harvest ",
+      "occurances": 21
+    },
+    {
+      "wordId": "641",
+      "content": "Ἰσαάκ, ὁ",
+      "gloss": "Isaac ",
+      "occurances": 20
+    },
+    {
+      "wordId": "642",
+      "content": "ἰχθύς, -ύος, ὁ",
+      "gloss": "fish ",
+      "occurances": 20
+    },
+    {
+      "wordId": "643",
+      "content": "καθίστημι",
+      "gloss": "I bring, appoint ",
+      "occurances": 21
+    },
+    {
+      "wordId": "644",
+      "content": "κοινωνία, ἡ",
+      "gloss": "fellowship, communion ",
+      "occurances": 19
+    },
+    {
+      "wordId": "645",
+      "content": "λατρεύω",
+      "gloss": "I serve, worship ",
+      "occurances": 21
+    },
+    {
+      "wordId": "646",
+      "content": "μετανοέω",
+      "gloss": "I repent ",
+      "occurances": 34
+    },
+    {
+      "wordId": "647",
+      "content": "μνημονεύω",
+      "gloss": "I remember, think of, mention ",
+      "occurances": 21
+    },
+    {
+      "wordId": "648",
+      "content": "νηστεύω",
+      "gloss": "I fast ",
+      "occurances": 20
+    },
+    {
+      "wordId": "649",
+      "content": "ξύλον, τό",
+      "gloss": "wood, tree, cross ",
+      "occurances": 20
+    },
+    {
+      "wordId": "650",
+      "content": "προάγω",
+      "gloss": "I lead out ",
+      "occurances": 20
+    },
+    {
+      "wordId": "651",
+      "content": "προστίθημι",
+      "gloss": "I add (to), increase ",
+      "occurances": 18
+    },
+    {
+      "wordId": "652",
+      "content": "πωλέω",
+      "gloss": "I sell ",
+      "occurances": 22
+    },
+    {
+      "wordId": "653",
+      "content": "σκηνή, ἡ",
+      "gloss": "tent, booth, tabernacle ",
+      "occurances": 20
+    },
+    {
+      "wordId": "654",
+      "content": "σοφός",
+      "gloss": "wise, clever, skillful ",
+      "occurances": 20
+    },
+    {
+      "wordId": "655",
+      "content": "στρέφω",
+      "gloss": "I turn, return ",
+      "occurances": 21
+    },
+    {
+      "wordId": "656",
+      "content": "συνέδριον, τό",
+      "gloss": "Sanhedrin, council ",
+      "occurances": 22
+    },
+    {
+      "wordId": "657",
+      "content": "τέρας, -ατος, τό",
+      "gloss": "wonder ",
+      "occurances": 16
+    },
+    {
+      "wordId": "658",
+      "content": "τιμάω",
+      "gloss": "I honor, revere ",
+      "occurances": 21
+    },
+    {
+      "wordId": "659",
+      "content": "τοσοῦτος, -αύτη, -οῦτον",
+      "gloss": "so great, so large, so many ",
+      "occurances": 20
+    },
+    {
+      "wordId": "660",
+      "content": "τρέχω",
+      "gloss": "I run ",
+      "occurances": 20
+    },
+    {
+      "wordId": "661",
+      "content": "τροφή, ἡ",
+      "gloss": "food, nourishment ",
+      "occurances": 16
+    },
+    {
+      "wordId": "662",
+      "content": "ὑπακούω",
+      "gloss": "I obey, follow ",
+      "occurances": 21
+    },
+    {
+      "wordId": "663",
+      "content": "ὑπηρέτης, ὁ",
+      "gloss": "servant, helper, assistant ",
+      "occurances": 20
+    },
+    {
+      "wordId": "664",
+      "content": "χιλίαρχος, ὁ",
+      "gloss": "military tribune, high ranking officer ",
+      "occurances": 21
+    },
+    {
+      "wordId": "665",
+      "content": "χρεία, ἡ",
+      "gloss": "need, lack, necessity ",
+      "occurances": 49
+    },
+    {
+      "wordId": "666",
+      "content": "ὡσεί",
+      "gloss": "as, like, about ",
+      "occurances": 21
+    },
+    {
+      "wordId": "667",
+      "content": "ἀδελφή, ἡ",
+      "gloss": "sister ",
+      "occurances": 26
+    },
+    {
+      "wordId": "668",
+      "content": "ἀληθῶς",
+      "gloss": "truly, really ",
+      "occurances": 18
+    },
+    {
+      "wordId": "669",
+      "content": "Ἀντιόχεια, ἡ",
+      "gloss": "Antioch ",
+      "occurances": 18
+    },
+    {
+      "wordId": "670",
+      "content": "ἀποκάλυψις, -εως, ἡ",
+      "gloss": "revelation ",
+      "occurances": 18
+    },
+    {
+      "wordId": "671",
+      "content": "ἀπώλεια, ἡ",
+      "gloss": "destruction, ruin ",
+      "occurances": 18
+    },
+    {
+      "wordId": "672",
+      "content": "ἀριθμός, ὁ",
+      "gloss": "number, total ",
+      "occurances": 18
+    },
+    {
+      "wordId": "673",
+      "content": "Ἀσία, ἡ",
+      "gloss": "Asia ",
+      "occurances": 18
+    },
+    {
+      "wordId": "674",
+      "content": "βλασφημία, ἡ",
+      "gloss": "blasphemy, slander ",
+      "occurances": 18
+    },
+    {
+      "wordId": "675",
+      "content": "δεσμός, ὁ",
+      "gloss": "bond, chain, prison ",
+      "occurances": 18
+    },
+    {
+      "wordId": "676",
+      "content": "δῶρον, τό",
+      "gloss": "gift, present, offering ",
+      "occurances": 19
+    },
+    {
+      "wordId": "677",
+      "content": "εἰσπορεύομαι",
+      "gloss": "I go in, enter ",
+      "occurances": 18
+    },
+    {
+      "wordId": "678",
+      "content": "ἐπαίρω",
+      "gloss": "I lift up ",
+      "occurances": 19
+    },
+    {
+      "wordId": "679",
+      "content": "ἐπάνω",
+      "gloss": "above, over ",
+      "occurances": 19
+    },
+    {
+      "wordId": "680",
+      "content": "ἐπιβάλλω",
+      "gloss": "I throw over, lay on, put on ",
+      "occurances": 18
+    },
+    {
+      "wordId": "681",
+      "content": "εὐχαριστέω",
+      "gloss": "I give thanks, am thankful ",
+      "occurances": 38
+    },
+    {
+      "wordId": "682",
+      "content": "θυμός, ὁ",
+      "gloss": "passion, anger, rage ",
+      "occurances": 18
+    },
+    {
+      "wordId": "683",
+      "content": "καταγγέλλω",
+      "gloss": "I proclaim, make known ",
+      "occurances": 18
+    },
+    {
+      "wordId": "684",
+      "content": "κατακρίνω",
+      "gloss": "I condemn, pass judgment on ",
+      "occurances": 18
+    },
+    {
+      "wordId": "685",
+      "content": "κενός",
+      "gloss": "empty, vain ",
+      "occurances": 18
+    },
+    {
+      "wordId": "686",
+      "content": "κλαίω",
+      "gloss": "I weep, cry ",
+      "occurances": 40
+    },
+    {
+      "wordId": "687",
+      "content": "κληρονομέω",
+      "gloss": "I inherit, obtain ",
+      "occurances": 18
+    },
+    {
+      "wordId": "688",
+      "content": "κοιμάω",
+      "gloss": "I (fall) asleep, die ",
+      "occurances": 18
+    },
+    {
+      "wordId": "689",
+      "content": "κρείττων",
+      "gloss": "better ",
+      "occurances": 19
+    },
+    {
+      "wordId": "690",
+      "content": "κριτής, ὁ",
+      "gloss": "judge ",
+      "occurances": 19
+    },
+    {
+      "wordId": "691",
+      "content": "κτίσις, -εως, ἡ",
+      "gloss": "creation, creature ",
+      "occurances": 19
+    },
+    {
+      "wordId": "692",
+      "content": "κώμη, ἡ",
+      "gloss": "village, small town ",
+      "occurances": 27
+    },
+    {
+      "wordId": "693",
+      "content": "Λάζαρος, ὁ",
+      "gloss": "Lazarus ",
+      "occurances": 15
+    },
+    {
+      "wordId": "694",
+      "content": "μαρτύριον, τό",
+      "gloss": "testimony, witness, proof ",
+      "occurances": 19
+    },
+    {
+      "wordId": "695",
+      "content": "μεριμνάω",
+      "gloss": "I am anxious, worry ",
+      "occurances": 19
+    },
+    {
+      "wordId": "696",
+      "content": "μνημεῖον, τό",
+      "gloss": "grave, tomb ",
+      "occurances": 40
+    },
+    {
+      "wordId": "697",
+      "content": "οὔπω",
+      "gloss": "not yet ",
+      "occurances": 26
+    },
+    {
+      "wordId": "698",
+      "content": "παλαιός",
+      "gloss": "old, former ",
+      "occurances": 19
+    },
+    {
+      "wordId": "699",
+      "content": "πάντοτε",
+      "gloss": "always ",
+      "occurances": 41
+    },
+    {
+      "wordId": "700",
+      "content": "παράπτωμα, -ατος, τό",
+      "gloss": "transgression, trespass, sin ",
+      "occurances": 19
+    },
+    {
+      "wordId": "701",
+      "content": "παρατίθημι",
+      "gloss": "I place before ",
+      "occurances": 19
+    },
+    {
+      "wordId": "702",
+      "content": "πότε",
+      "gloss": "when? ",
+      "occurances": 19
+    },
+    {
+      "wordId": "703",
+      "content": "προφητεία, ἡ",
+      "gloss": "prophecy ",
+      "occurances": 19
+    },
+    {
+      "wordId": "704",
+      "content": "συνέρχομαι",
+      "gloss": "I come/travel together, go with ",
+      "occurances": 30
+    },
+    {
+      "wordId": "705",
+      "content": "ταράσσω",
+      "gloss": "I stir up, disturb, trouble ",
+      "occurances": 17
+    },
+    {
+      "wordId": "706",
+      "content": "φιλέω",
+      "gloss": "I love, like, kiss ",
+      "occurances": 25
+    },
+    {
+      "wordId": "707",
+      "content": "ἀνθίστημι",
+      "gloss": "I resist, oppose ",
+      "occurances": 14
+    },
+    {
+      "wordId": "708",
+      "content": "ἀποκαλύπτω",
+      "gloss": "I reveal, uncover ",
+      "occurances": 26
+    },
+    {
+      "wordId": "709",
+      "content": "ἀρέσκω",
+      "gloss": "I please ",
+      "occurances": 17
+    },
+    {
+      "wordId": "710",
+      "content": "βρῶμα, -ατος, τό",
+      "gloss": "food ",
+      "occurances": 17
+    },
+    {
+      "wordId": "711",
+      "content": "γρηγορέω",
+      "gloss": "I am awake alert, watchful ",
+      "occurances": 22
+    },
+    {
+      "wordId": "712",
+      "content": "διάβολος, ὁ",
+      "gloss": "devil, accuser, slanderous (adj) ",
+      "occurances": 37
+    },
+    {
+      "wordId": "713",
+      "content": "ἐξίστημι",
+      "gloss": "I amaze, confuse ",
+      "occurances": 17
+    },
+    {
+      "wordId": "714",
+      "content": "ἐπαύριον",
+      "gloss": "tomorrow ",
+      "occurances": 17
+    },
+    {
+      "wordId": "715",
+      "content": "ἕτοιμος",
+      "gloss": "ready, prepared ",
+      "occurances": 17
+    },
+    {
+      "wordId": "716",
+      "content": "θησαυρός, ὁ",
+      "gloss": "treasure, storehouse ",
+      "occurances": 17
+    },
+    {
+      "wordId": "717",
+      "content": "ἵππος, ὁ",
+      "gloss": "horse ",
+      "occurances": 17
+    },
+    {
+      "wordId": "718",
+      "content": "Καισάρεια, ἡ",
+      "gloss": "Caesarea ",
+      "occurances": 17
+    },
+    {
+      "wordId": "719",
+      "content": "κἄν",
+      "gloss": "and if, even if, if only ",
+      "occurances": 17
+    },
+    {
+      "wordId": "720",
+      "content": "καταλύω",
+      "gloss": "I thrown down, destroy, abolish ",
+      "occurances": 17
+    },
+    {
+      "wordId": "721",
+      "content": "κατέχω",
+      "gloss": "I hold back, restrain, hold fast, possess ",
+      "occurances": 17
+    },
+    {
+      "wordId": "722",
+      "content": "κόπος, ὁ",
+      "gloss": "work, labor ",
+      "occurances": 18
+    },
+    {
+      "wordId": "723",
+      "content": "κρυπτός",
+      "gloss": "hidden, secret ",
+      "occurances": 17
+    },
+    {
+      "wordId": "724",
+      "content": "κρύπτω",
+      "gloss": "I hide, conceal, cover ",
+      "occurances": 18
+    },
+    {
+      "wordId": "725",
+      "content": "μήτι",
+      "gloss": "[interrogative particle expecting an negative answer] ",
+      "occurances": 18
+    },
+    {
+      "wordId": "726",
+      "content": "νίπτω",
+      "gloss": "I wash ",
+      "occurances": 17
+    },
+    {
+      "wordId": "727",
+      "content": "οἰκοδομή, ἡ",
+      "gloss": "edification, building ",
+      "occurances": 18
+    },
+    {
+      "wordId": "728",
+      "content": "ὀλίγος",
+      "gloss": "little, few ",
+      "occurances": 40
+    },
+    {
+      "wordId": "729",
+      "content": "ὁμοίως",
+      "gloss": "likewise, similarly ",
+      "occurances": 30
+    },
+    {
+      "wordId": "730",
+      "content": "οὔ",
+      "gloss": "no ",
+      "occurances": 17
+    },
+    {
+      "wordId": "731",
+      "content": "πάθημα, -ατος, τό",
+      "gloss": "suffering ",
+      "occurances": 16
+    },
+    {
+      "wordId": "732",
+      "content": "παραχρῆμα",
+      "gloss": "at once, immediately ",
+      "occurances": 18
+    },
+    {
+      "wordId": "733",
+      "content": "πάσχω",
+      "gloss": "I suffer ",
+      "occurances": 42
+    },
+    {
+      "wordId": "734",
+      "content": "περιτέμνω",
+      "gloss": "I circumcise ",
+      "occurances": 17
+    },
+    {
+      "wordId": "735",
+      "content": "πλήρωμα, -ατος, τό",
+      "gloss": "fullness, fulfillment ",
+      "occurances": 17
+    },
+    {
+      "wordId": "736",
+      "content": "ποιμήν, ένος, ὁ",
+      "gloss": "shepherd ",
+      "occurances": 18
+    },
+    {
+      "wordId": "737",
+      "content": "πόλεμος, ὁ",
+      "gloss": "war, battle, fight ",
+      "occurances": 18
+    },
+    {
+      "wordId": "738",
+      "content": "πολλάκις",
+      "gloss": "often, frequently, many times ",
+      "occurances": 18
+    },
+    {
+      "wordId": "739",
+      "content": "πυλών, -ῶνος, ὁ",
+      "gloss": "gate, entrance ",
+      "occurances": 18
+    },
+    {
+      "wordId": "740",
+      "content": "στέφανος, ὁ",
+      "gloss": "crown, wreath, reward ",
+      "occurances": 18
+    },
+    {
+      "wordId": "741",
+      "content": "τίκτω",
+      "gloss": "I bear, give birth to, bring forth ",
+      "occurances": 18
+    },
+    {
+      "wordId": "742",
+      "content": "τύπος, ὁ",
+      "gloss": "type, example, pattern ",
+      "occurances": 15
+    },
+    {
+      "wordId": "743",
+      "content": "ὑποτάσσω",
+      "gloss": "I subject ",
+      "occurances": 38
+    },
+    {
+      "wordId": "744",
+      "content": "ὑψόω",
+      "gloss": "I exalt, lift up ",
+      "occurances": 20
+    },
+    {
+      "wordId": "745",
+      "content": "φανερός",
+      "gloss": "manifest, visible, clear ",
+      "occurances": 18
+    },
+    {
+      "wordId": "746",
+      "content": "χρυσοῦς",
+      "gloss": "golden ",
+      "occurances": 18
+    },
+    {
+      "wordId": "747",
+      "content": "ἀθετέω",
+      "gloss": "I nullify, reject, set aside ",
+      "occurances": 16
+    },
+    {
+      "wordId": "748",
+      "content": "ἀνακρίνω",
+      "gloss": "I judge, examine, call to account ",
+      "occurances": 16
+    },
+    {
+      "wordId": "749",
+      "content": "δείκνυμι",
+      "gloss": "I show ",
+      "occurances": 33
+    },
+    {
+      "wordId": "750",
+      "content": "δεῖπνον, τό",
+      "gloss": "dinner, supper, banquet ",
+      "occurances": 16
+    },
+    {
+      "wordId": "751",
+      "content": "δέσμιος, ὁ",
+      "gloss": "prisoner ",
+      "occurances": 16
+    },
+    {
+      "wordId": "752",
+      "content": "δηνάριον, τό",
+      "gloss": "denarius ",
+      "occurances": 16
+    },
+    {
+      "wordId": "753",
+      "content": "διαλογίζομαι",
+      "gloss": "I consider, ponder, reason ",
+      "occurances": 16
+    },
+    {
+      "wordId": "754",
+      "content": "διατάσσω",
+      "gloss": "I order, direct, command ",
+      "occurances": 16
+    },
+    {
+      "wordId": "755",
+      "content": "διψάω",
+      "gloss": "I am thirsty, long for ",
+      "occurances": 16
+    },
+    {
+      "wordId": "756",
+      "content": "διώκω",
+      "gloss": "I pursue ",
+      "occurances": 45
+    },
+    {
+      "wordId": "757",
+      "content": "ἐκτείνω",
+      "gloss": "I stretch out ",
+      "occurances": 16
+    },
+    {
+      "wordId": "758",
+      "content": "ἐλπίζω",
+      "gloss": "I hope ",
+      "occurances": 31
+    },
+    {
+      "wordId": "759",
+      "content": "ἐμβαίνω",
+      "gloss": "I go in, step in, embark ",
+      "occurances": 16
+    },
+    {
+      "wordId": "760",
+      "content": "ἔπειτα",
+      "gloss": "then, next ",
+      "occurances": 16
+    },
+    {
+      "wordId": "761",
+      "content": "ἐπιθυμέω",
+      "gloss": "I desire, long for, lust for ",
+      "occurances": 16
+    },
+    {
+      "wordId": "762",
+      "content": "ἐπιλαμβάνομαι",
+      "gloss": "I take hold of, catch, arrest ",
+      "occurances": 19
+    },
+    {
+      "wordId": "763",
+      "content": "ἐπιμένω",
+      "gloss": "I stay, remain, persevere ",
+      "occurances": 16
+    },
+    {
+      "wordId": "764",
+      "content": "ἐργάτης, ὁ",
+      "gloss": "laborer, worker ",
+      "occurances": 16
+    },
+    {
+      "wordId": "765",
+      "content": "εὐλογία, ἡ",
+      "gloss": "blessing, praise ",
+      "occurances": 16
+    },
+    {
+      "wordId": "766",
+      "content": "εὐσέβεια, ἡ",
+      "gloss": "godliness, piety ",
+      "occurances": 15
+    },
+    {
+      "wordId": "767",
+      "content": "Ἔφεσος, ἡ",
+      "gloss": "Ephesus ",
+      "occurances": 16
+    },
+    {
+      "wordId": "768",
+      "content": "ζῆλος, ὁ/τό",
+      "gloss": "jealousy, envy ",
+      "occurances": 16
+    },
+    {
+      "wordId": "769",
+      "content": "θεμέλιος, ὁ",
+      "gloss": "foundation ",
+      "occurances": 15
+    },
+    {
+      "wordId": "770",
+      "content": "κακῶς",
+      "gloss": "badly, wrongly, wickedly ",
+      "occurances": 16
+    },
+    {
+      "wordId": "771",
+      "content": "κατέρχομαι",
+      "gloss": "I come down, arrive, put in ",
+      "occurances": 16
+    },
+    {
+      "wordId": "772",
+      "content": "μέχρι",
+      "gloss": "until ",
+      "occurances": 17
+    },
+    {
+      "wordId": "773",
+      "content": "ὁμολογέω",
+      "gloss": "I confess, profess ",
+      "occurances": 26
+    },
+    {
+      "wordId": "774",
+      "content": "παραγγέλλω",
+      "gloss": "I command, charge ",
+      "occurances": 32
+    },
+    {
+      "wordId": "775",
+      "content": "παρέχω",
+      "gloss": "I offer, grant ",
+      "occurances": 16
+    },
+    {
+      "wordId": "776",
+      "content": "πλησίον",
+      "gloss": "neighbor ",
+      "occurances": 17
+    },
+    {
+      "wordId": "777",
+      "content": "πλούσιος",
+      "gloss": "rich, wealthy ",
+      "occurances": 28
+    },
+    {
+      "wordId": "778",
+      "content": "πλοῦτος, ὁ/τό",
+      "gloss": "wealth, riches ",
+      "occurances": 22
+    },
+    {
+      "wordId": "779",
+      "content": "ῥίζα, ἡ",
+      "gloss": "root, source, shoot, descendent ",
+      "occurances": 17
+    },
+    {
+      "wordId": "780",
+      "content": "τιμή, ἡ",
+      "gloss": "honor, value, price ",
+      "occurances": 41
+    },
+    {
+      "wordId": "781",
+      "content": "ὑποκριτής, ὁ",
+      "gloss": "hypocrite, pretender ",
+      "occurances": 17
+    },
+    {
+      "wordId": "782",
+      "content": "ὑπομένω",
+      "gloss": "I remain, endure ",
+      "occurances": 17
+    },
+    {
+      "wordId": "783",
+      "content": "ὑπομονή, ἡ",
+      "gloss": "endurance, perseverance, patience ",
+      "occurances": 32
+    },
+    {
+      "wordId": "784",
+      "content": "φεύγω",
+      "gloss": "I flee, avoid ",
+      "occurances": 29
+    },
+    {
+      "wordId": "785",
+      "content": "χάρισμα, -ατος, τό",
+      "gloss": "gift, favor ",
+      "occurances": 17
+    },
+    {
+      "wordId": "786",
+      "content": "ὦ",
+      "gloss": "O (direct address) ",
+      "occurances": 17
+    },
+    {
+      "wordId": "787",
+      "content": "ἀνέχω",
+      "gloss": "I endure, bear with ",
+      "occurances": 15
+    },
+    {
+      "wordId": "788",
+      "content": "ἀνομία, ἡ",
+      "gloss": "lawlessness ",
+      "occurances": 15
+    },
+    {
+      "wordId": "789",
+      "content": "ἀπάγω",
+      "gloss": "I lead away, bring before ",
+      "occurances": 15
+    },
+    {
+      "wordId": "790",
+      "content": "βλασφημέω",
+      "gloss": "I blaspheme, defame, slander ",
+      "occurances": 34
+    },
+    {
+      "wordId": "791",
+      "content": "γνωστός",
+      "gloss": "known, notable ",
+      "occurances": 15
+    },
+    {
+      "wordId": "792",
+      "content": "γυμνός",
+      "gloss": "naked, poorly dressed ",
+      "occurances": 15
+    },
+    {
+      "wordId": "793",
+      "content": "∆αμασκός, ἡ",
+      "gloss": "Damascus ",
+      "occurances": 15
+    },
+    {
+      "wordId": "794",
+      "content": "δέρω",
+      "gloss": "I skin, beat ",
+      "occurances": 15
+    },
+    {
+      "wordId": "795",
+      "content": "διδασκαλία, ἡ",
+      "gloss": "teaching, instruction ",
+      "occurances": 21
+    },
+    {
+      "wordId": "796",
+      "content": "εἶτα",
+      "gloss": "then, furthermore ",
+      "occurances": 15
+    },
+    {
+      "wordId": "797",
+      "content": "ἐντέλλομαι",
+      "gloss": "I command ",
+      "occurances": 15
+    },
+    {
+      "wordId": "798",
+      "content": "ἐπαγγέλλομαι",
+      "gloss": "I announce, proclaim, promise ",
+      "occurances": 15
+    },
+    {
+      "wordId": "799",
+      "content": "εὐχαριστία, ἡ",
+      "gloss": "thankfulness, thanksgiving ",
+      "occurances": 15
+    },
+    {
+      "wordId": "800",
+      "content": "καταλαμβάνω",
+      "gloss": "I seize, attain, overtake ",
+      "occurances": 15
+    },
+    {
+      "wordId": "801",
+      "content": "Καφαρναούμ, ἡ",
+      "gloss": "Capernaum ",
+      "occurances": 16
+    },
+    {
+      "wordId": "802",
+      "content": "κλείω",
+      "gloss": "I shut, close, lock ",
+      "occurances": 16
+    },
+    {
+      "wordId": "803",
+      "content": "κλέπτης, ὁ",
+      "gloss": "thief ",
+      "occurances": 16
+    },
+    {
+      "wordId": "804",
+      "content": "κληρονόμος, ὁ",
+      "gloss": "heir ",
+      "occurances": 15
+    },
+    {
+      "wordId": "805",
+      "content": "κτίζω",
+      "gloss": "I create, make ",
+      "occurances": 15
+    },
+    {
+      "wordId": "806",
+      "content": "λῃστής, ὁ",
+      "gloss": "robber, bandit, revolutionary ",
+      "occurances": 15
+    },
+    {
+      "wordId": "807",
+      "content": "λύπη, ἡ",
+      "gloss": "grief, sorrow, pain ",
+      "occurances": 16
+    },
+    {
+      "wordId": "808",
+      "content": "μοιχεύω",
+      "gloss": "I commit adultery ",
+      "occurances": 15
+    },
+    {
+      "wordId": "809",
+      "content": "νομίζω",
+      "gloss": "I think, suppose ",
+      "occurances": 15
+    },
+    {
+      "wordId": "810",
+      "content": "ξηραίνω",
+      "gloss": "I dry (up), wither ",
+      "occurances": 15
+    },
+    {
+      "wordId": "811",
+      "content": "ὅθεν",
+      "gloss": "from where ",
+      "occurances": 15
+    },
+    {
+      "wordId": "812",
+      "content": "οἰκουμένη, ἡ",
+      "gloss": "world, inhabited earth, humankind ",
+      "occurances": 15
+    },
+    {
+      "wordId": "813",
+      "content": "ὁμοιόω",
+      "gloss": "I compare, make like ",
+      "occurances": 15
+    },
+    {
+      "wordId": "814",
+      "content": "οὐδέποτε",
+      "gloss": "never ",
+      "occurances": 16
+    },
+    {
+      "wordId": "815",
+      "content": "περισσότερος",
+      "gloss": "greater, more ",
+      "occurances": 16
+    },
+    {
+      "wordId": "816",
+      "content": "πλήρης",
+      "gloss": "filled, full, complete ",
+      "occurances": 16
+    },
+    {
+      "wordId": "817",
+      "content": "προσδοκάω",
+      "gloss": "I wait for, look for, expect ",
+      "occurances": 16
+    },
+    {
+      "wordId": "818",
+      "content": "σεαυτοῦ",
+      "gloss": "yourself ",
+      "occurances": 43
+    },
+    {
+      "wordId": "819",
+      "content": "σκοτία, ἡ",
+      "gloss": "darkness ",
+      "occurances": 16
+    },
+    {
+      "wordId": "820",
+      "content": "συκῆ, ἡ",
+      "gloss": "fig tree ",
+      "occurances": 16
+    },
+    {
+      "wordId": "821",
+      "content": "συλλαμβάνω",
+      "gloss": "I arrest, catch, become pregnant ",
+      "occurances": 16
+    },
+    {
+      "wordId": "822",
+      "content": "συνίστημι",
+      "gloss": "I recommend, commend ",
+      "occurances": 16
+    },
+    {
+      "wordId": "823",
+      "content": "σφραγίς, -ῖδος, ἡ",
+      "gloss": "seal, mark, inscription ",
+      "occurances": 16
+    },
+    {
+      "wordId": "824",
+      "content": "τολμάω",
+      "gloss": "I dare, am courageous ",
+      "occurances": 16
+    },
+    {
+      "wordId": "825",
+      "content": "χορτάζω",
+      "gloss": "I feed, satisfy ",
+      "occurances": 16
+    },
+    {
+      "wordId": "826",
+      "content": "ὡσαύτως",
+      "gloss": "likewise, similarly ",
+      "occurances": 17
+    },
+    {
+      "wordId": "827",
+      "content": "ἄκανθα, ἡ",
+      "gloss": "thorn ",
+      "occurances": 14
+    },
+    {
+      "wordId": "828",
+      "content": "ἀκοή, ἡ",
+      "gloss": "hearing, report, ear ",
+      "occurances": 24
+    },
+    {
+      "wordId": "829",
+      "content": "ἀλλότριος",
+      "gloss": "strange, foreign ",
+      "occurances": 14
+    },
+    {
+      "wordId": "830",
+      "content": "ἀμφότεροι",
+      "gloss": "both, all ",
+      "occurances": 14
+    },
+    {
+      "wordId": "831",
+      "content": "ἀναγγέλλω",
+      "gloss": "I report, announce, proclaim ",
+      "occurances": 14
+    },
+    {
+      "wordId": "832",
+      "content": "ἀνάκειμαι",
+      "gloss": "I lie, recline ",
+      "occurances": 14
+    },
+    {
+      "wordId": "833",
+      "content": "ἀνάστασις, -εως, ἡ",
+      "gloss": "resurrection ",
+      "occurances": 42
+    },
+    {
+      "wordId": "834",
+      "content": "ἀπειθέω",
+      "gloss": "I disobey ",
+      "occurances": 14
+    },
+    {
+      "wordId": "835",
+      "content": "ἀτενίζω",
+      "gloss": "I look intently ",
+      "occurances": 14
+    },
+    {
+      "wordId": "836",
+      "content": "αὔριον",
+      "gloss": "tomorrow, soon ",
+      "occurances": 14
+    },
+    {
+      "wordId": "837",
+      "content": "ἀφίστημι",
+      "gloss": "I mislead, go away, fall away ",
+      "occurances": 14
+    },
+    {
+      "wordId": "838",
+      "content": "γράμμα, -ατος, τό",
+      "gloss": "letter (of alphabet), document ",
+      "occurances": 14
+    },
+    {
+      "wordId": "839",
+      "content": "διαλογισμός, ὁ",
+      "gloss": "thought, opinion, dispute ",
+      "occurances": 14
+    },
+    {
+      "wordId": "840",
+      "content": "ἕκτος",
+      "gloss": "sixth ",
+      "occurances": 14
+    },
+    {
+      "wordId": "841",
+      "content": "ἐλάχιστος",
+      "gloss": "smallest, least, insignificant ",
+      "occurances": 14
+    },
+    {
+      "wordId": "842",
+      "content": "ἐπεί",
+      "gloss": "because, since, for ",
+      "occurances": 25
+    },
+    {
+      "wordId": "843",
+      "content": "ἐπιτρέπω",
+      "gloss": "I allow, permit ",
+      "occurances": 18
+    },
+    {
+      "wordId": "844",
+      "content": "ἐπουράνιος",
+      "gloss": "heavenly, in heaven ",
+      "occurances": 19
+    },
+    {
+      "wordId": "845",
+      "content": "κρίμα, -ατος, τό",
+      "gloss": "judging, judgment ",
+      "occurances": 27
+    },
+    {
+      "wordId": "846",
+      "content": "νήπιος, ὁ",
+      "gloss": "infant, child ",
+      "occurances": 15
+    },
+    {
+      "wordId": "847",
+      "content": "ὀφείλω",
+      "gloss": "I owe, ought ",
+      "occurances": 35
+    },
+    {
+      "wordId": "848",
+      "content": "ὀψία",
+      "gloss": "late, evening ",
+      "occurances": 15
+    },
+    {
+      "wordId": "849",
+      "content": "παρθένος, ἡ/ὁ",
+      "gloss": "virgin ",
+      "occurances": 15
+    },
+    {
+      "wordId": "850",
+      "content": "παύω",
+      "gloss": "I stop, cease ",
+      "occurances": 15
+    },
+    {
+      "wordId": "851",
+      "content": "πέτρα, ἡ",
+      "gloss": "rock, stone ",
+      "occurances": 15
+    },
+    {
+      "wordId": "852",
+      "content": "ποτίζω",
+      "gloss": "I water, give to drink ",
+      "occurances": 15
+    },
+    {
+      "wordId": "853",
+      "content": "προλέγω",
+      "gloss": "I tell beforehand ",
+      "occurances": 15
+    },
+    {
+      "wordId": "854",
+      "content": "πώς",
+      "gloss": "somehow, perhaps ",
+      "occurances": 15
+    },
+    {
+      "wordId": "855",
+      "content": "ῥαββί",
+      "gloss": "rabbi, master, teacher ",
+      "occurances": 15
+    },
+    {
+      "wordId": "856",
+      "content": "σαλεύω",
+      "gloss": "I shake ",
+      "occurances": 15
+    },
+    {
+      "wordId": "857",
+      "content": "Σαῦλος, ὁ",
+      "gloss": "Saul ",
+      "occurances": 15
+    },
+    {
+      "wordId": "858",
+      "content": "σκάνδαλον, τό",
+      "gloss": "stumbling block, trap, temptation ",
+      "occurances": 15
+    },
+    {
+      "wordId": "859",
+      "content": "συμφέρω",
+      "gloss": "I bring together ",
+      "occurances": 15
+    },
+    {
+      "wordId": "860",
+      "content": "σφραγίζω",
+      "gloss": "I seal, mark, certify ",
+      "occurances": 15
+    },
+    {
+      "wordId": "861",
+      "content": "ταχέως",
+      "gloss": "quickly, soon, hastily ",
+      "occurances": 15
+    },
+    {
+      "wordId": "862",
+      "content": "τέλειος",
+      "gloss": "perfect, complete, mature, adult ",
+      "occurances": 19
+    },
+    {
+      "wordId": "863",
+      "content": "τράπεζα, ἡ",
+      "gloss": "table, meal, food ",
+      "occurances": 15
+    },
+    {
+      "wordId": "864",
+      "content": "ὑπακοή, ἡ",
+      "gloss": "obedience ",
+      "occurances": 15
+    },
+    {
+      "wordId": "865",
+      "content": "χόρτος, ὁ",
+      "gloss": "grass, hay ",
+      "occurances": 15
+    },
+    {
+      "wordId": "866",
+      "content": "ὠφελέω",
+      "gloss": "I help, aid, benefit ",
+      "occurances": 15
+    },
+    {
+      "wordId": "867",
+      "content": "Ἰησοῦς",
+      "gloss": "Jesus",
+      "occurances": 317
+    },
+    {
+      "wordId": "868",
+      "content": "ἀγγελία, ἡ",
+      "gloss": "message",
+      "occurances": 2
+    },
+    {
+      "wordId": "869",
+      "content": "ψεύδομαι",
+      "gloss": "lie, tell lies",
+      "occurances": 12
+    },
+    {
+      "wordId": "870",
+      "content": "ψεύστης",
+      "gloss": "liar",
+      "occurances": 10
     }
   ]
 }

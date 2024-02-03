@@ -48,12 +48,12 @@ const fetchDeclensionDetails = (declension: Declension) : DeclensionDetails => {
   });
 };
 
-function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: number }) {
+function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: string }) {
   const { user } = useContext(UserContext);
   const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
 
-  const unitForm = declensions.declensions.filter(
-    ({ declensionId }) => declensionId === activeDeclensionId,
+  const unitForm = declensions.filter(
+    ({ morphId }) => morphId === activeDeclensionId,
   );
   if (!unitForm) {
     return <span>No active Declension</span>;

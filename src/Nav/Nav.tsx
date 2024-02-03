@@ -9,20 +9,17 @@ function Nav({
   activeTabIndex,
   setActiveTabIndex,
   activeDeclensionId,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setActiveDeclensionId,
 } : {
   tabs: Tab[],
   activeTabIndex: number,
   setActiveTabIndex: Function,
-  activeDeclensionId: number,
-  setActiveDeclensionId: Function,
+  activeDeclensionId: string,
 }) {
   return (
     <nav className="Navbar">
       <div className="NavButtons">
         {/* <div className="NavLogo">
-          <img src="/public/favicon.ico" alt="Scriptura Logo" />
+          <img src="/static/img/icon-500x500.png." alt="Scriptura Logo" />
         </div> */}
         {
           tabs.map(({ title, iconName }, i) => (
@@ -42,7 +39,7 @@ function Nav({
           : (
             <SettingsMenu
               tab={tabs[activeTabIndex]}
-              activeDeclensionId={activeDeclensionId}
+              activemorphologyId={activeDeclensionId}
             />
           )
       }

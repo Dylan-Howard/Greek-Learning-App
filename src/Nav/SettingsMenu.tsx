@@ -16,7 +16,7 @@ import OptionCheckbox from './OptionCheckbox';
 const LANGUAGE = 'gk';
 
 function SettingsMenu(
-  { tab: { title }, activeDeclensionId } : { tab: Tab, activeDeclensionId: number },
+  { tab: { title }, activemorphologyId } : { tab: Tab, activemorphologyId: string },
 ) {
   const { user, setUser } = useContext(UserContext);
   const [filter, setFilter] = useState('');
@@ -25,7 +25,7 @@ function SettingsMenu(
 
   if (title === 'Home') { return <span />; }
   const options : {
-    id: number,
+    id: string,
     name: string,
     type: string,
     isActive: boolean,
@@ -80,7 +80,7 @@ function SettingsMenu(
             filter === set.substring(0, filter.length)
           ))
           .map((set: string) => ({
-            id: keys.indexOf(set),
+            id: keys.indexOf(set).toString(),
             name: set,
             type: 'setting',
             isActive: settings[set],
@@ -91,9 +91,9 @@ function SettingsMenu(
 
   if (title === 'Details') {
     options.push({
-      id: 1,
+      id: '1',
       type: 'Details',
-      name: activeDeclensionId.toString(),
+      name: activemorphologyId.toString(),
       isActive: true,
     });
   }
@@ -104,7 +104,7 @@ function SettingsMenu(
 
   const handleCheckboxChange = (
     e: ChangeEvent<HTMLInputElement>,
-    settingId: number,
+    settingId: string,
     settingType: string,
   ) => {
     /* Guards if no active user is set */
@@ -148,7 +148,7 @@ function SettingsMenu(
 
   const handleSettingChange = (
     e: ChangeEvent<HTMLInputElement>,
-    settingId: number,
+    settingId: string,
   ) => {
     /* Guards if no active user is set */
     if (!user) { return; }
@@ -162,10 +162,10 @@ function SettingsMenu(
     };
     /* Guards from non-existant settings */
     const { settings } = updatedUser;
-    const keys = Object.keys(settings);
-    if (!keys || !keys[settingId]) { return; }
+    // const keys = Object.keys(settings);
+    if (!(settingId in settings)) { return; }
     /* Updates the setting */
-    settings[keys[settingId]] = e.target.checked;
+    settings[settingId] = e.target.checked;
 
     setUser(updatedUser);
   };

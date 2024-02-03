@@ -15,7 +15,7 @@ function App() {
     fetchUser(TEST_USER_ID),
   );
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [activeDeclensionId, setActiveDeclensionId] = useState(0);
+  const [activeDeclensionId, setActiveDeclensionId] = useState('0');
 
   const tabs = [
     { title: 'Home', iconName: 'home' },
@@ -24,13 +24,13 @@ function App() {
     { title: 'Settings', iconName: 'settings' },
   ];
 
-  const changeActiveDeclension = (declensionId: number) => {
+  const changeActiveDeclension = (declensionId: string) => {
     setActiveDeclensionId(declensionId);
     if (!declensionId) { setActiveTabIndex(0); }
     if (declensionId && activeTabIndex !== 4) { setActiveTabIndex(4); }
   };
 
-  if (activeDeclensionId) {
+  if (activeDeclensionId! !== '0') {
     tabs.push({ title: 'Details', iconName: 'chat_info' });
   }
 
@@ -43,7 +43,6 @@ function App() {
           activeTabIndex={activeTabIndex}
           setActiveTabIndex={setActiveTabIndex}
           activeDeclensionId={activeDeclensionId}
-          setActiveDeclensionId={setActiveDeclensionId}
         />
         <TextRenderer changeActiveDeclension={changeActiveDeclension} />
       </div>
