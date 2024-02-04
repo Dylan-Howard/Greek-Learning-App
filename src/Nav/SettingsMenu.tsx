@@ -83,7 +83,7 @@ function SettingsMenu(
             id: keys.indexOf(set).toString(),
             name: set,
             type: 'setting',
-            isActive: settings[set],
+            isActive: !!settings[set],
           })),
       );
     }
@@ -162,10 +162,11 @@ function SettingsMenu(
     };
     /* Guards from non-existant settings */
     const { settings } = updatedUser;
-    // const keys = Object.keys(settings);
-    if (!(settingId in settings)) { return; }
+
+    const keys = Object.keys(settings);
+    if (!keys[parseInt(settingId, 10)]) { return; }
     /* Updates the setting */
-    settings[settingId] = e.target.checked;
+    settings[keys[parseInt(settingId, 10)]] = e.target.checked;
 
     setUser(updatedUser);
   };

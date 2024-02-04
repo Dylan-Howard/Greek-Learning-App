@@ -1,8 +1,10 @@
 import './Nav.css';
+import { useContext } from 'react';
 import SettingsMenu from './SettingsMenu';
 import { Tab } from '../Common/Tab';
 import { NavButton } from './NavButton';
 import DetailsMenu from './DetailsMenu';
+import { UserContext } from '../User/User';
 
 function Nav({
   tabs,
@@ -15,8 +17,11 @@ function Nav({
   setActiveTabIndex: Function,
   activeDeclensionId: string,
 }) {
+  const { user } = useContext(UserContext);
+  const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
+
   return (
-    <nav className="Navbar">
+    <nav className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}>
       <div className="NavButtons">
         {/* <div className="NavLogo">
           <img src="/static/img/icon-500x500.png." alt="Scriptura Logo" />

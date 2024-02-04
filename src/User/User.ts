@@ -23,7 +23,7 @@ type UserProgress = {
 interface UserSettings {
   alwaysShowFullDetails: boolean,
   prefersDarkMode: boolean,
-  [key: string]: any,
+  [key: string]: boolean | undefined,
 }
 
 type User = {

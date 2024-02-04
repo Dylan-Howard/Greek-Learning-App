@@ -47,7 +47,6 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   };
 
   const handleUnitClick = (e: any, morphologyId: string | undefined) => {
-    console.log(morphologyId);
     changeActiveDeclension(morphologyId || 0);
   };
 

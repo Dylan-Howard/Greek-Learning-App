@@ -4,6 +4,13 @@
   flex-direction: column-reverse;
 }
 
+.Navbar.NavDark {
+  background: #252B2D;
+}
+.Navbar.NavLight {
+  background: #FAFAFA;
+}
+
 .NavButtons {
   display: flex;
   justify-content: space-around;
@@ -26,14 +33,23 @@
 
 .NavButtons > .NavIcon,
 .NavButtons > .NavLogo {
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   padding: 16px 8px;
-  width: 64px;
+  /* min-width: 64px; */
+  width: 20%;
 
   background: #1B2021;
   border: none;
   color: #FAFAFA;
   cursor: pointer;
+}
+.NavIcon > .NavIconTitle {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  text-align: center;
 }
 
 .NavButtons > .NavIcon.NavActive {
@@ -72,5 +88,8 @@
     align-items: center;
     padding: 8px 0;
     width: auto;
+  }
+  .NavIcon > .NavIconTitle {
+    display: none;
   }
 }
