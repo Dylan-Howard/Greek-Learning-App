@@ -81,13 +81,15 @@
   .Navbar {
     flex-direction: row;
   }
-  
   .NavButtons {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     padding: 8px 0;
     width: auto;
+  }
+  .NavButtons > .NavIcon {
+    width: 64px;
   }
   .NavIcon > .NavIconTitle {
     display: none;

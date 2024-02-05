@@ -46,7 +46,7 @@ function TextSelect({
                 type="radio"
                 id={`opt-${opt}`}
                 name="social-account"
-                onClick={() => handleOptionClick(i)}
+                onClick={() => handleOptionClick(i + 1)}
               />
               <label htmlFor={`opt-${opt}`}>{opt}</label>
             </li>

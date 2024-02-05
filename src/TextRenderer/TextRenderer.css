@@ -88,7 +88,23 @@
   color: #4A89BF;
   cursor: pointer;
 }
+.TextControls {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  min-width: 200px;
+  margin-bottom: 2rem;
+}
 
+.TextControlButton {
+  outline: none;
+  border: #fff;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+}
+.TextControlButton.ButtonLeft { margin-left: 2rem; }
+.TextControlButton.ButtonRight { margin-right: 2rem; }
 /*
  * @TODO - Break Text Details into sidebar
  * @TODO - Use DetailsSection for each info unit 
@@ -97,12 +113,18 @@
 
 @media screen and (min-width: 800px) {
   .TextDisplay {
-    padding: 4rem;
+    padding: 4rem 4rem 2rem;
   }
   #RenderedText {
     height: 100%;
     width: 80%;
     padding: 6rem 0 0;
     max-width: 650px;
+  }
+  .NavButtons > .NavIcon {
+    display: block;
+  }
+  .TextControls {
+    width: 500px;
   }
 }
