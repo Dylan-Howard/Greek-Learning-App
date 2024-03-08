@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/GraduatedInterlinear/static/css/main.52aa8258.css",
-    "main.js": "/GraduatedInterlinear/static/js/main.5b2d4d64.js",
-    "static/js/787.e1cea973.chunk.js": "/GraduatedInterlinear/static/js/787.e1cea973.chunk.js",
-    "index.html": "/GraduatedInterlinear/index.html",
-    "main.52aa8258.css.map": "/GraduatedInterlinear/static/css/main.52aa8258.css.map",
-    "main.5b2d4d64.js.map": "/GraduatedInterlinear/static/js/main.5b2d4d64.js.map",
-    "787.e1cea973.chunk.js.map": "/GraduatedInterlinear/static/js/787.e1cea973.chunk.js.map"
+    "main.css": "/DynamicInterlinear/static/css/main.288a28ed.css",
+    "main.js": "/DynamicInterlinear/static/js/main.35d32275.js",
+    "static/js/787.e1cea973.chunk.js": "/DynamicInterlinear/static/js/787.e1cea973.chunk.js",
+    "index.html": "/DynamicInterlinear/index.html",
+    "main.288a28ed.css.map": "/DynamicInterlinear/static/css/main.288a28ed.css.map",
+    "main.35d32275.js.map": "/DynamicInterlinear/static/js/main.35d32275.js.map",
+    "787.e1cea973.chunk.js.map": "/DynamicInterlinear/static/js/787.e1cea973.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52aa8258.css",
-    "static/js/main.5b2d4d64.js"
+    "static/css/main.288a28ed.css",
+    "static/js/main.35d32275.js"
   ]
 }
