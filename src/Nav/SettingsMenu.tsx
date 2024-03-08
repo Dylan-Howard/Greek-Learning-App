@@ -5,7 +5,8 @@ import {
   useContext,
   useState,
 } from 'react';
-import { fetchLessons, fetchVocabulary } from '../LanguageData/LanguageData';
+import { fetchLessons, fetchVocabulary, fetchVocabularyByChapter } from '../LanguageData/LanguageData';
+// import texts from '../data/texts.json';
 import { UserContext } from '../User/User';
 import { Tab } from '../Common/Tab';
 import { Lesson } from '../Common/Lesson';
@@ -16,10 +17,21 @@ import OptionCheckbox from './OptionCheckbox';
 const LANGUAGE = 'gk';
 
 function SettingsMenu(
-  { tab: { title }, activemorphologyId } : { tab: Tab, activemorphologyId: string },
+  {
+    tab: { title },
+    activemorphologyId,
+    activeTextIndex,
+    activeChapterIndex,
+  } : {
+    tab: Tab,
+    activemorphologyId: string,
+    activeTextIndex: number,
+    activeChapterIndex: string,
+  },
 ) {
   const { user, setUser } = useContext(UserContext);
   const [filter, setFilter] = useState('');
+  const [showOnlyActive, setShowOnlyActive] = useState(true);
 
   const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
 
@@ -50,14 +62,19 @@ function SettingsMenu(
     );
   }
   if (title === 'Dictionary') {
-    const vocabulary = fetchVocabulary(LANGUAGE);
+    let vocabulary;
+    if (showOnlyActive) {
+      vocabulary = fetchVocabularyByChapter('gk', activeTextIndex, activeChapterIndex);
+    } else {
+      vocabulary = fetchVocabulary(LANGUAGE);
+    }
 
     options.push(
       ...vocabulary
         .filter((vcb: Word) => (
-          filter === transliterateGreek(
+          (filter === transliterateGreek(
             vcb.content.substring(0, filter.length),
-          )))
+          ))))
         .map((vcb : Word) => ({
           id: vcb.wordId,
           name: vcb.content,
@@ -97,6 +114,10 @@ function SettingsMenu(
       isActive: true,
     });
   }
+
+  const handleButtonClick = () => {
+    setShowOnlyActive(!showOnlyActive);
+  };
 
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFilter(e.target.value);
@@ -175,6 +196,21 @@ function SettingsMenu(
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
         <h1 className="MenuTabTitle">{title}</h1>
+        {
+          title === 'Dictionary'
+            ? (
+              <button
+                className="SettingsButton"
+                type="button"
+                onClick={() => handleButtonClick()}
+              >
+                {
+                  showOnlyActive ? 'Show all vocabulary?' : 'Only show current chapter\'s vocabulary?'
+                }
+              </button>
+            )
+            : ''
+        }
         <input
           className="SettingsSearchBox"
           placeholder="Search"

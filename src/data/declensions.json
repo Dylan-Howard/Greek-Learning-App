@@ -846,7 +846,7 @@
     "dupId": "81",
     "vocabId": "60",
     "grammerId": "?",
-    "FIELD14": "adverb"
+    "role": "adverb"
   },
   {
     "morphId": "82",
@@ -924,7 +924,7 @@
     "personId": "23",
     "countId": "2",
     "grammerId": "",
-    "FIELD14": "pronoun"
+    "role": "pronoun"
   },
   {
     "morphId": "89",
@@ -932,7 +932,7 @@
     "dupId": "89",
     "vocabId": "91",
     "grammerId": "",
-    "FIELD14": "preposition"
+    "role": "preposition"
   },
   {
     "morphId": "90",
@@ -944,7 +944,7 @@
     "caseId": "26",
     "countId": "1",
     "grammerId": "",
-    "FIELD14": "adjective"
+    "role": "adjective"
   },
   {
     "morphId": "91",
@@ -956,7 +956,7 @@
     "caseId": "26",
     "countId": "1",
     "grammerId": "",
-    "FIELD14": "noun"
+    "role": "noun"
   },
   {
     "morphId": "92",
@@ -980,7 +980,7 @@
     "personId": "23",
     "countId": "2",
     "grammerId": "",
-    "FIELD14": "pronoun"
+    "role": "pronoun"
   },
   {
     "morphId": "94",
@@ -1038,7 +1038,7 @@
     "caseId": "25",
     "countId": "1",
     "grammerId": "",
-    "FIELD14": "adj"
+    "role": "adj"
   },
   {
     "morphId": "99",
@@ -1092,7 +1092,7 @@
     "dupId": "103",
     "vocabId": "74",
     "grammerId": "",
-    "FIELD14": "adverb"
+    "role": "adverb"
   },
   {
     "morphId": "104",

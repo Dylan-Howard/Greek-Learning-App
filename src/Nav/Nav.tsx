@@ -10,11 +10,15 @@ function Nav({
   tabs,
   activeTabIndex,
   setActiveTabIndex,
+  activeTextIndex,
+  activeChapterIndex,
   activeDeclensionId,
 } : {
   tabs: Tab[],
   activeTabIndex: number,
   setActiveTabIndex: Function,
+  activeTextIndex: number,
+  activeChapterIndex: string,
   activeDeclensionId: string,
 }) {
   const { user } = useContext(UserContext);
@@ -45,6 +49,8 @@ function Nav({
             <SettingsMenu
               tab={tabs[activeTabIndex]}
               activemorphologyId={activeDeclensionId}
+              activeTextIndex={activeTextIndex}
+              activeChapterIndex={activeChapterIndex}
             />
           )
       }

@@ -97,11 +97,13 @@
 }
 
 .TextControlButton {
+  cursor: pointer;
   outline: none;
   border: #fff;
   border-radius: 50%;
   height: 64px;
   width: 64px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .TextControlButton.ButtonLeft { margin-left: 2rem; }
 .TextControlButton.ButtonRight { margin-right: 2rem; }

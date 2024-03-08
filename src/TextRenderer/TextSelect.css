@@ -50,7 +50,7 @@
   margin-top: 10px;
   max-height: 200px;
   overflow-y: auto;
-  transition: 0.5s ease;
+  transition: 0.2s ease;
   transform: translate(0, -10%);
   opacity: 0;
   visibility: hidden;

@@ -56,6 +56,27 @@
   transform: translate(0, 0); */
 }
 
+.SettingsMenuTab .SettingsButton {
+  border: none;
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: 100ms;
+}
+
+.SettingsMenu.MenuLight .SettingsButton {
+  background: #EDF2F4;
+  color: #1B2021;
+}
+.SettingsMenu.MenuDark .SettingsButton {
+  background: #1B2021;
+  color: #FAFAFA;
+}
+
+.SettingsMenu.MenuDark .SettingsButton:hover,
+.SettingsMenu.MenuLight .SettingsButton:hover {
+  color: #4A89BF;
+}
+
 .SettingsMenuTab .SettingsSearchBox {
   display: block;
   box-sizing: border-box;

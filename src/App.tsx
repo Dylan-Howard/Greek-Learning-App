@@ -6,16 +6,23 @@ import Nav from './Nav/Nav';
 
 // const TEST_USER_ID = 'user1';
 const TEST_USER_ID = 'user2';
+const DEFAULT_TEXT_ID = 0;
 
 // eslint-disable-next-line no-console, @typescript-eslint/no-unused-vars
 const log = (message: any) => console.log(message);
 
 function App() {
+  /* State for user details */
   const [activeUser, setActiveUser] = useState(
     fetchUser(TEST_USER_ID),
   );
+  /* States for side bar */
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [activeDeclensionId, setActiveDeclensionId] = useState('0');
+
+  /* States primarily for text rendering */
+  const [activeTextIndex, setActiveTextIndex] = useState(DEFAULT_TEXT_ID);
+  const [activeChapterIndex, setActiveChapterIndex] = useState('1');
 
   const tabs = [
     { title: 'Home', iconName: 'home' },
@@ -42,9 +49,17 @@ function App() {
           tabs={tabs}
           activeTabIndex={activeTabIndex}
           setActiveTabIndex={setActiveTabIndex}
+          activeTextIndex={activeTextIndex}
+          activeChapterIndex={activeChapterIndex}
           activeDeclensionId={activeDeclensionId}
         />
-        <TextRenderer changeActiveDeclension={changeActiveDeclension} />
+        <TextRenderer
+          activeTextIndex={activeTextIndex}
+          setActiveTextIndex={setActiveTextIndex}
+          activeChapterIndex={activeChapterIndex}
+          setActiveChapterIndex={setActiveChapterIndex}
+          changeActiveDeclension={changeActiveDeclension}
+        />
       </div>
     </UserContext.Provider>
   );

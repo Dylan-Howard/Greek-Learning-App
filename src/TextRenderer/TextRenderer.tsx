@@ -19,10 +19,22 @@ const log = (message: any) => {
   console.log(message);
 };
 
-function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Function }) {
+function TextRenderer(
+  {
+    activeTextIndex,
+    setActiveTextIndex,
+    activeChapterIndex,
+    setActiveChapterIndex,
+    changeActiveDeclension,
+  } : {
+    activeTextIndex: number,
+    setActiveTextIndex: Function,
+    activeChapterIndex: string,
+    setActiveChapterIndex: Function,
+    changeActiveDeclension: Function,
+  },
+) {
   const { user } = useContext(UserContext);
-  const [activeTextIndex, setActiveTextIndex] = useState(DEFAULT_TEXT_ID);
-  const [activeChapterIndex, setActiveChapterIndex] = useState('1');
 
   /* Sets the theme based on the user setting */
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';

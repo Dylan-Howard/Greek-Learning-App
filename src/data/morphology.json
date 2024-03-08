@@ -1,7 +1,7 @@
 [
   {
-    "morphId": "ὃ",
-    "content": "1",
+    "morphId": "1",
+    "content": "ὃ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -14,8 +14,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἦν",
-    "content": "2",
+    "morphId": "2",
+    "content": "ἦν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -28,8 +28,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀπʼ",
-    "content": "3",
+    "morphId": "3",
+    "content": "ἀπʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -42,8 +42,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀρχῆς",
-    "content": "4",
+    "morphId": "4",
+    "content": "ἀρχῆς",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -56,8 +56,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀκηκόαμεν",
-    "content": "5",
+    "morphId": "5",
+    "content": "ἀκηκόαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -70,8 +70,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἑωράκαμεν",
-    "content": "6",
+    "morphId": "6",
+    "content": "ἑωράκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -84,8 +84,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τοῖς",
-    "content": "7",
+    "morphId": "7",
+    "content": "τοῖς",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "28",
@@ -98,8 +98,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀφθαλμοῖς",
-    "content": "8",
+    "morphId": "8",
+    "content": "ὀφθαλμοῖς",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "28",
@@ -112,8 +112,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμῶν",
-    "content": "9",
+    "morphId": "9",
+    "content": "ἡμῶν",
     "vocabId": "",
     "genderId": "6",
     "patternId": "27",
@@ -126,8 +126,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐθεασάμεθα",
-    "content": "10",
+    "morphId": "10",
+    "content": "ἐθεασάμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -140,8 +140,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καὶ",
-    "content": "11",
+    "morphId": "11",
+    "content": "καὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -154,8 +154,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἱ",
-    "content": "12",
+    "morphId": "12",
+    "content": "αἱ",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -168,8 +168,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χεῖρες",
-    "content": "13",
+    "morphId": "13",
+    "content": "χεῖρες",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -182,8 +182,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐψηλάφησαν",
-    "content": "14",
+    "morphId": "14",
+    "content": "ἐψηλάφησαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -196,8 +196,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "περὶ",
-    "content": "15",
+    "morphId": "15",
+    "content": "περὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -210,8 +210,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τοῦ",
-    "content": "16",
+    "morphId": "16",
+    "content": "τοῦ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "27",
@@ -224,8 +224,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λόγου",
-    "content": "17",
+    "morphId": "17",
+    "content": "λόγου",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "27",
@@ -238,8 +238,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τῆς",
-    "content": "18",
+    "morphId": "18",
+    "content": "τῆς",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -252,8 +252,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ζωῆς",
-    "content": "19",
+    "morphId": "19",
+    "content": "ζωῆς",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -266,8 +266,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡ",
-    "content": "20",
+    "morphId": "20",
+    "content": "ἡ",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -280,8 +280,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ζωὴ",
-    "content": "21",
+    "morphId": "21",
+    "content": "ζωὴ",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -294,8 +294,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐφανερώθη",
-    "content": "22",
+    "morphId": "22",
+    "content": "ἐφανερώθη",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -308,8 +308,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μαρτυροῦμεν",
-    "content": "23",
+    "morphId": "23",
+    "content": "μαρτυροῦμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -322,8 +322,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀπαγγέλλομεν",
-    "content": "24",
+    "morphId": "24",
+    "content": "ἀπαγγέλλομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -336,8 +336,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὑμῖν",
-    "content": "25",
+    "morphId": "25",
+    "content": "ὑμῖν",
     "vocabId": "",
     "genderId": "",
     "patternId": "28",
@@ -350,8 +350,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τὴν",
-    "content": "26",
+    "morphId": "26",
+    "content": "τὴν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -364,8 +364,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ζωὴν",
-    "content": "27",
+    "morphId": "27",
+    "content": "ζωὴν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -378,8 +378,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰώνιον",
-    "content": "28",
+    "morphId": "28",
+    "content": "αἰώνιον",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -392,8 +392,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἥτις",
-    "content": "29",
+    "morphId": "29",
+    "content": "ἥτις",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -406,8 +406,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πρὸς",
-    "content": "30",
+    "morphId": "30",
+    "content": "πρὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -420,8 +420,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τὸν",
-    "content": "31",
+    "morphId": "31",
+    "content": "τὸν",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "29",
@@ -434,8 +434,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πατέρα",
-    "content": "32",
+    "morphId": "32",
+    "content": "πατέρα",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "29",
@@ -448,8 +448,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμῖν",
-    "content": "33",
+    "morphId": "33",
+    "content": "ἡμῖν",
     "vocabId": "",
     "genderId": "",
     "patternId": "28",
@@ -462,8 +462,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἵνα",
-    "content": "34",
+    "morphId": "34",
+    "content": "ἵνα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -476,8 +476,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὑμεῖς",
-    "content": "35",
+    "morphId": "35",
+    "content": "ὑμεῖς",
     "vocabId": "",
     "genderId": "",
     "patternId": "26",
@@ -490,8 +490,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κοινωνίαν",
-    "content": "36",
+    "morphId": "36",
+    "content": "κοινωνίαν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -504,8 +504,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχητε",
-    "content": "37",
+    "morphId": "37",
+    "content": "ἔχητε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -518,8 +518,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μεθʼ",
-    "content": "38",
+    "morphId": "38",
+    "content": "μεθʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -532,8 +532,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κοινωνία",
-    "content": "39",
+    "morphId": "39",
+    "content": "κοινωνία",
     "vocabId": "4",
     "genderId": "6",
     "patternId": "26",
@@ -546,8 +546,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δὲ",
-    "content": "40",
+    "morphId": "40",
+    "content": "δὲ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -560,8 +560,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμετέρα",
-    "content": "41",
+    "morphId": "41",
+    "content": "ἡμετέρα",
     "vocabId": "4",
     "genderId": "6",
     "patternId": "26",
@@ -574,8 +574,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μετὰ",
-    "content": "42",
+    "morphId": "42",
+    "content": "μετὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -588,8 +588,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πατρὸς",
-    "content": "43",
+    "morphId": "43",
+    "content": "πατρὸς",
     "vocabId": "3",
     "genderId": "8",
     "patternId": "27",
@@ -602,8 +602,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "υἱοῦ",
-    "content": "44",
+    "morphId": "44",
+    "content": "υἱοῦ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "27",
@@ -616,8 +616,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτοῦ",
-    "content": "45",
+    "morphId": "45",
+    "content": "αὐτοῦ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "27",
@@ -630,8 +630,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Ἰησοῦ",
-    "content": "46",
+    "morphId": "46",
+    "content": "Ἰησοῦ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "27",
@@ -644,8 +644,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Χριστοῦ",
-    "content": "47",
+    "morphId": "47",
+    "content": "Χριστοῦ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "27",
@@ -658,8 +658,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ταῦτα",
-    "content": "48",
+    "morphId": "48",
+    "content": "ταῦτα",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "29",
@@ -672,8 +672,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γράφομεν",
-    "content": "49",
+    "morphId": "49",
+    "content": "γράφομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -686,8 +686,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμεῖς",
-    "content": "50",
+    "morphId": "50",
+    "content": "ἡμεῖς",
     "vocabId": "",
     "genderId": "",
     "patternId": "26",
@@ -700,8 +700,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χαρὰ",
-    "content": "51",
+    "morphId": "51",
+    "content": "χαρὰ",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -714,8 +714,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ᾖ",
-    "content": "52",
+    "morphId": "52",
+    "content": "ᾖ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -728,8 +728,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πεπληρωμένη",
-    "content": "53",
+    "morphId": "53",
+    "content": "πεπληρωμένη",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -742,8 +742,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔστιν",
-    "content": "54",
+    "morphId": "54",
+    "content": "ἔστιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -756,8 +756,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὕτη",
-    "content": "55",
+    "morphId": "55",
+    "content": "αὕτη",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -770,8 +770,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγγελία",
-    "content": "56",
+    "morphId": "56",
+    "content": "ἀγγελία",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -784,8 +784,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἣν",
-    "content": "57",
+    "morphId": "57",
+    "content": "ἣν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -798,8 +798,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀναγγέλλομεν",
-    "content": "58",
+    "morphId": "58",
+    "content": "ἀναγγέλλομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -812,8 +812,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅτι",
-    "content": "59",
+    "morphId": "59",
+    "content": "ὅτι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -826,8 +826,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὁ",
-    "content": "60",
+    "morphId": "60",
+    "content": "ὁ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -840,8 +840,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεὸς",
-    "content": "61",
+    "morphId": "61",
+    "content": "θεὸς",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -854,8 +854,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φῶς",
-    "content": "62",
+    "morphId": "62",
+    "content": "φῶς",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "26",
@@ -868,8 +868,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐστιν",
-    "content": "63",
+    "morphId": "63",
+    "content": "ἐστιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -882,8 +882,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σκοτία",
-    "content": "64",
+    "morphId": "64",
+    "content": "σκοτία",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -896,8 +896,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐν",
-    "content": "65",
+    "morphId": "65",
+    "content": "ἐν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -910,8 +910,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτῷ",
-    "content": "66",
+    "morphId": "66",
+    "content": "αὐτῷ",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "28",
@@ -924,8 +924,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὐκ",
-    "content": "67",
+    "morphId": "67",
+    "content": "οὐκ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -938,8 +938,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὐδεμία",
-    "content": "68",
+    "morphId": "68",
+    "content": "οὐδεμία",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -952,8 +952,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐὰν",
-    "content": "69",
+    "morphId": "69",
+    "content": "ἐὰν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -966,8 +966,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἴπωμεν",
-    "content": "70",
+    "morphId": "70",
+    "content": "εἴπωμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -980,8 +980,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχομεν",
-    "content": "71",
+    "morphId": "71",
+    "content": "ἔχομεν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -994,8 +994,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μετʼ",
-    "content": "72",
+    "morphId": "72",
+    "content": "μετʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1008,8 +1008,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τῷ",
-    "content": "73",
+    "morphId": "73",
+    "content": "τῷ",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "28",
@@ -1022,8 +1022,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σκότει",
-    "content": "74",
+    "morphId": "74",
+    "content": "σκότει",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "28",
@@ -1036,8 +1036,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "περιπατῶμεν",
-    "content": "75",
+    "morphId": "75",
+    "content": "περιπατῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1050,8 +1050,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψευδόμεθα",
-    "content": "76",
+    "morphId": "76",
+    "content": "ψευδόμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1064,8 +1064,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὐ",
-    "content": "77",
+    "morphId": "77",
+    "content": "οὐ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1078,8 +1078,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ποιοῦμεν",
-    "content": "78",
+    "morphId": "78",
+    "content": "ποιοῦμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1092,8 +1092,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλήθειαν",
-    "content": "79",
+    "morphId": "79",
+    "content": "ἀλήθειαν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -1106,8 +1106,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φωτὶ",
-    "content": "80",
+    "morphId": "80",
+    "content": "φωτὶ",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "28",
@@ -1120,8 +1120,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὡς",
-    "content": "81",
+    "morphId": "81",
+    "content": "ὡς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1134,8 +1134,8 @@
     "grammerId": "adverb"
   },
   {
-    "morphId": "αὐτός",
-    "content": "82",
+    "morphId": "82",
+    "content": "αὐτός",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -1148,8 +1148,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φωτί",
-    "content": "83",
+    "morphId": "83",
+    "content": "φωτί",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "26",
@@ -1162,8 +1162,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλλήλων",
-    "content": "84",
+    "morphId": "84",
+    "content": "ἀλλήλων",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -1176,8 +1176,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τὸ",
-    "content": "85",
+    "morphId": "85",
+    "content": "τὸ",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "26",
@@ -1190,8 +1190,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἷμα",
-    "content": "86",
+    "morphId": "86",
+    "content": "αἷμα",
     "vocabId": "5",
     "genderId": "8",
     "patternId": "26",
@@ -1204,8 +1204,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καθαρίζει",
-    "content": "87",
+    "morphId": "87",
+    "content": "καθαρίζει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1218,8 +1218,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμᾶς",
-    "content": "88",
+    "morphId": "88",
+    "content": "ἡμᾶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "29",
@@ -1232,8 +1232,8 @@
     "grammerId": "pronoun"
   },
   {
-    "morphId": "ἀπὸ",
-    "content": "89",
+    "morphId": "89",
+    "content": "ἀπὸ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1246,8 +1246,8 @@
     "grammerId": "preposition"
   },
   {
-    "morphId": "πάσης",
-    "content": "90",
+    "morphId": "90",
+    "content": "πάσης",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -1260,8 +1260,8 @@
     "grammerId": "adjective"
   },
   {
-    "morphId": "ἁμαρτίας",
-    "content": "91",
+    "morphId": "91",
+    "content": "ἁμαρτίας",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -1274,8 +1274,8 @@
     "grammerId": "noun"
   },
   {
-    "morphId": "ἁμαρτίαν",
-    "content": "92",
+    "morphId": "92",
+    "content": "ἁμαρτίαν",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "29",
@@ -1288,8 +1288,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἑαυτοὺς",
-    "content": "93",
+    "morphId": "93",
+    "content": "ἑαυτοὺς",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "29",
@@ -1302,8 +1302,8 @@
     "grammerId": "pronoun"
   },
   {
-    "morphId": "πλανῶμεν",
-    "content": "94",
+    "morphId": "94",
+    "content": "πλανῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1316,8 +1316,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλήθεια",
-    "content": "95",
+    "morphId": "95",
+    "content": "ἀλήθεια",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "26",
@@ -1330,8 +1330,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὁμολογῶμεν",
-    "content": "96",
+    "morphId": "96",
+    "content": "ὁμολογῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1344,8 +1344,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τὰς",
-    "content": "97",
+    "morphId": "97",
+    "content": "τὰς",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -1358,8 +1358,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πιστός",
-    "content": "98",
+    "morphId": "98",
+    "content": "πιστός",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -1372,8 +1372,8 @@
     "grammerId": "adj"
   },
   {
-    "morphId": "δίκαιος",
-    "content": "99",
+    "morphId": "99",
+    "content": "δίκαιος",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -1386,8 +1386,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀφῇ",
-    "content": "100",
+    "morphId": "100",
+    "content": "ἀφῇ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1400,8 +1400,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καθαρίσῃ",
-    "content": "101",
+    "morphId": "101",
+    "content": "καθαρίσῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1414,8 +1414,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδικίας",
-    "content": "102",
+    "morphId": "102",
+    "content": "ἀδικίας",
     "vocabId": "4",
     "genderId": "7",
     "patternId": "27",
@@ -1428,8 +1428,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὐχ",
-    "content": "103",
+    "morphId": "103",
+    "content": "οὐχ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1442,8 +1442,8 @@
     "grammerId": "adverb"
   },
   {
-    "morphId": "ἡμαρτήκαμεν",
-    "content": "104",
+    "morphId": "104",
+    "content": "ἡμαρτήκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1456,8 +1456,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψεύστην",
-    "content": "105",
+    "morphId": "105",
+    "content": "ψεύστην",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "29",
@@ -1470,8 +1470,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτὸν",
-    "content": "106",
+    "morphId": "106",
+    "content": "αὐτὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "29",
@@ -1484,8 +1484,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λόγος",
-    "content": "107",
+    "morphId": "107",
+    "content": "λόγος",
     "vocabId": "3",
     "genderId": "6",
     "patternId": "26",
@@ -1498,8 +1498,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Τεκνία",
-    "content": "108",
+    "morphId": "108",
+    "content": "Τεκνία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1512,8 +1512,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μου",
-    "content": "109",
+    "morphId": "109",
+    "content": "μου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1526,8 +1526,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γράφω",
-    "content": "110",
+    "morphId": "110",
+    "content": "γράφω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1540,8 +1540,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μὴ",
-    "content": "111",
+    "morphId": "111",
+    "content": "μὴ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1554,8 +1554,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμάρτητε",
-    "content": "112",
+    "morphId": "112",
+    "content": "ἁμάρτητε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1568,8 +1568,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐάν",
-    "content": "113",
+    "morphId": "113",
+    "content": "ἐάν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1582,8 +1582,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τις",
-    "content": "114",
+    "morphId": "114",
+    "content": "τις",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1596,8 +1596,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμάρτῃ",
-    "content": "115",
+    "morphId": "115",
+    "content": "ἁμάρτῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1610,8 +1610,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παράκλητον",
-    "content": "116",
+    "morphId": "116",
+    "content": "παράκλητον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1624,8 +1624,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Ἰησοῦν",
-    "content": "117",
+    "morphId": "117",
+    "content": "Ἰησοῦν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1638,8 +1638,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Χριστὸν",
-    "content": "118",
+    "morphId": "118",
+    "content": "Χριστὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1652,8 +1652,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δίκαιον",
-    "content": "119",
+    "morphId": "119",
+    "content": "δίκαιον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1666,8 +1666,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτὸς",
-    "content": "120",
+    "morphId": "120",
+    "content": "αὐτὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1680,8 +1680,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἱλασμός",
-    "content": "121",
+    "morphId": "121",
+    "content": "ἱλασμός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1694,8 +1694,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τῶν",
-    "content": "122",
+    "morphId": "122",
+    "content": "τῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1708,8 +1708,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτιῶν",
-    "content": "123",
+    "morphId": "123",
+    "content": "ἁμαρτιῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1722,8 +1722,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμετέρων",
-    "content": "124",
+    "morphId": "124",
+    "content": "ἡμετέρων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1736,8 +1736,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μόνον",
-    "content": "125",
+    "morphId": "125",
+    "content": "μόνον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1750,8 +1750,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλλὰ",
-    "content": "126",
+    "morphId": "126",
+    "content": "ἀλλὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1764,8 +1764,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅλου",
-    "content": "127",
+    "morphId": "127",
+    "content": "ὅλου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1778,8 +1778,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κόσμου",
-    "content": "128",
+    "morphId": "128",
+    "content": "κόσμου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1792,8 +1792,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τούτῳ",
-    "content": "129",
+    "morphId": "129",
+    "content": "τούτῳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1806,8 +1806,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γινώσκομεν",
-    "content": "130",
+    "morphId": "130",
+    "content": "γινώσκομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1820,8 +1820,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐγνώκαμεν",
-    "content": "131",
+    "morphId": "131",
+    "content": "ἐγνώκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1834,8 +1834,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτόν",
-    "content": "132",
+    "morphId": "132",
+    "content": "αὐτόν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1848,8 +1848,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐντολὰς",
-    "content": "133",
+    "morphId": "133",
+    "content": "ἐντολὰς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1862,8 +1862,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τηρῶμεν",
-    "content": "134",
+    "morphId": "134",
+    "content": "τηρῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1876,8 +1876,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λέγων",
-    "content": "135",
+    "morphId": "135",
+    "content": "λέγων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1890,8 +1890,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Ἔγνωκα",
-    "content": "136",
+    "morphId": "136",
+    "content": "Ἔγνωκα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1904,8 +1904,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τηρῶν",
-    "content": "137",
+    "morphId": "137",
+    "content": "τηρῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1918,8 +1918,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψεύστης",
-    "content": "138",
+    "morphId": "138",
+    "content": "ψεύστης",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1932,8 +1932,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐστίν",
-    "content": "139",
+    "morphId": "139",
+    "content": "ἐστίν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1946,8 +1946,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὃς",
-    "content": "140",
+    "morphId": "140",
+    "content": "ὃς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1960,8 +1960,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δʼ",
-    "content": "141",
+    "morphId": "141",
+    "content": "δʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1974,8 +1974,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἂν",
-    "content": "142",
+    "morphId": "142",
+    "content": "ἂν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -1988,8 +1988,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τηρῇ",
-    "content": "143",
+    "morphId": "143",
+    "content": "τηρῇ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2002,8 +2002,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λόγον",
-    "content": "144",
+    "morphId": "144",
+    "content": "λόγον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2016,8 +2016,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθῶς",
-    "content": "145",
+    "morphId": "145",
+    "content": "ἀληθῶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2030,8 +2030,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγάπη",
-    "content": "146",
+    "morphId": "146",
+    "content": "ἀγάπη",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2044,8 +2044,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεοῦ",
-    "content": "147",
+    "morphId": "147",
+    "content": "θεοῦ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2058,8 +2058,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τετελείωται",
-    "content": "148",
+    "morphId": "148",
+    "content": "τετελείωται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2072,8 +2072,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐσμεν",
-    "content": "149",
+    "morphId": "149",
+    "content": "ἐσμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2086,8 +2086,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μένειν",
-    "content": "150",
+    "morphId": "150",
+    "content": "μένειν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2100,8 +2100,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀφείλει",
-    "content": "151",
+    "morphId": "151",
+    "content": "ὀφείλει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2114,8 +2114,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καθὼς",
-    "content": "152",
+    "morphId": "152",
+    "content": "καθὼς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2128,8 +2128,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐκεῖνος",
-    "content": "153",
+    "morphId": "153",
+    "content": "ἐκεῖνος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2142,8 +2142,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "περιεπάτησεν",
-    "content": "154",
+    "morphId": "154",
+    "content": "περιεπάτησεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2156,8 +2156,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "περιπατεῖν",
-    "content": "155",
+    "morphId": "155",
+    "content": "περιπατεῖν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2170,8 +2170,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Ἀγαπητοί",
-    "content": "156",
+    "morphId": "156",
+    "content": "Ἀγαπητοί",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2184,8 +2184,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐντολὴν",
-    "content": "157",
+    "morphId": "157",
+    "content": "ἐντολὴν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2198,8 +2198,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καινὴν",
-    "content": "158",
+    "morphId": "158",
+    "content": "καινὴν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2212,8 +2212,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλλʼ",
-    "content": "159",
+    "morphId": "159",
+    "content": "ἀλλʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2226,8 +2226,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παλαιὰν",
-    "content": "160",
+    "morphId": "160",
+    "content": "παλαιὰν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2240,8 +2240,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἴχετε",
-    "content": "161",
+    "morphId": "161",
+    "content": "εἴχετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2254,8 +2254,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐντολὴ",
-    "content": "162",
+    "morphId": "162",
+    "content": "ἐντολὴ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2268,8 +2268,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παλαιά",
-    "content": "163",
+    "morphId": "163",
+    "content": "παλαιά",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2282,8 +2282,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὃν",
-    "content": "164",
+    "morphId": "164",
+    "content": "ὃν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2296,8 +2296,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἠκούσατε",
-    "content": "165",
+    "morphId": "165",
+    "content": "ἠκούσατε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2310,8 +2310,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πάλιν",
-    "content": "166",
+    "morphId": "166",
+    "content": "πάλιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2324,8 +2324,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅ",
-    "content": "167",
+    "morphId": "167",
+    "content": "ὅ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2338,8 +2338,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθὲς",
-    "content": "168",
+    "morphId": "168",
+    "content": "ἀληθὲς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2352,8 +2352,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παράγεται",
-    "content": "169",
+    "morphId": "169",
+    "content": "παράγεται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2366,8 +2366,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθινὸν",
-    "content": "170",
+    "morphId": "170",
+    "content": "ἀληθινὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2380,8 +2380,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἤδη",
-    "content": "171",
+    "morphId": "171",
+    "content": "ἤδη",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2394,8 +2394,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φαίνει",
-    "content": "172",
+    "morphId": "172",
+    "content": "φαίνει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2408,8 +2408,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἶναι",
-    "content": "173",
+    "morphId": "173",
+    "content": "εἶναι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2422,8 +2422,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδελφὸν",
-    "content": "174",
+    "morphId": "174",
+    "content": "ἀδελφὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2436,8 +2436,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μισῶν",
-    "content": "175",
+    "morphId": "175",
+    "content": "μισῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2450,8 +2450,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τῇ",
-    "content": "176",
+    "morphId": "176",
+    "content": "τῇ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2464,8 +2464,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σκοτίᾳ",
-    "content": "177",
+    "morphId": "177",
+    "content": "σκοτίᾳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2478,8 +2478,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐστὶν",
-    "content": "178",
+    "morphId": "178",
+    "content": "ἐστὶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2492,8 +2492,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἕως",
-    "content": "179",
+    "morphId": "179",
+    "content": "ἕως",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2506,8 +2506,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἄρτι",
-    "content": "180",
+    "morphId": "180",
+    "content": "ἄρτι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2520,8 +2520,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγαπῶν",
-    "content": "181",
+    "morphId": "181",
+    "content": "ἀγαπῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2534,8 +2534,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μένει",
-    "content": "182",
+    "morphId": "182",
+    "content": "μένει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2548,8 +2548,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σκάνδαλον",
-    "content": "183",
+    "morphId": "183",
+    "content": "σκάνδαλον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2562,8 +2562,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "περιπατεῖ",
-    "content": "184",
+    "morphId": "184",
+    "content": "περιπατεῖ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2576,8 +2576,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οἶδεν",
-    "content": "185",
+    "morphId": "185",
+    "content": "οἶδεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2590,8 +2590,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ποῦ",
-    "content": "186",
+    "morphId": "186",
+    "content": "ποῦ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2604,8 +2604,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὑπάγει",
-    "content": "187",
+    "morphId": "187",
+    "content": "ὑπάγει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2618,8 +2618,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐτύφλωσεν",
-    "content": "188",
+    "morphId": "188",
+    "content": "ἐτύφλωσεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2632,8 +2632,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τοὺς",
-    "content": "189",
+    "morphId": "189",
+    "content": "τοὺς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2646,8 +2646,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀφθαλμοὺς",
-    "content": "190",
+    "morphId": "190",
+    "content": "ὀφθαλμοὺς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2660,8 +2660,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀφέωνται",
-    "content": "191",
+    "morphId": "191",
+    "content": "ἀφέωνται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2674,8 +2674,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτίαι",
-    "content": "192",
+    "morphId": "192",
+    "content": "ἁμαρτίαι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2688,8 +2688,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διὰ",
-    "content": "193",
+    "morphId": "193",
+    "content": "διὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2702,8 +2702,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὄνομα",
-    "content": "194",
+    "morphId": "194",
+    "content": "ὄνομα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2716,8 +2716,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πατέρες",
-    "content": "195",
+    "morphId": "195",
+    "content": "πατέρες",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2730,8 +2730,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐγνώκατε",
-    "content": "196",
+    "morphId": "196",
+    "content": "ἐγνώκατε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2744,8 +2744,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νεανίσκοι",
-    "content": "197",
+    "morphId": "197",
+    "content": "νεανίσκοι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2758,8 +2758,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νενικήκατε",
-    "content": "198",
+    "morphId": "198",
+    "content": "νενικήκατε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2772,8 +2772,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πονηρόν",
-    "content": "199",
+    "morphId": "199",
+    "content": "πονηρόν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2786,8 +2786,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔγραψα",
-    "content": "200",
+    "morphId": "200",
+    "content": "ἔγραψα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2800,8 +2800,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παιδία",
-    "content": "201",
+    "morphId": "201",
+    "content": "παιδία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2814,8 +2814,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἰσχυροί",
-    "content": "202",
+    "morphId": "202",
+    "content": "ἰσχυροί",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2828,8 +2828,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐστε",
-    "content": "203",
+    "morphId": "203",
+    "content": "ἐστε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2842,8 +2842,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγαπᾶτε",
-    "content": "204",
+    "morphId": "204",
+    "content": "ἀγαπᾶτε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2856,8 +2856,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κόσμον",
-    "content": "205",
+    "morphId": "205",
+    "content": "κόσμον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2870,8 +2870,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μηδὲ",
-    "content": "206",
+    "morphId": "206",
+    "content": "μηδὲ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2884,8 +2884,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τὰ",
-    "content": "207",
+    "morphId": "207",
+    "content": "τὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2898,8 +2898,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κόσμῳ",
-    "content": "208",
+    "morphId": "208",
+    "content": "κόσμῳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2912,8 +2912,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγαπᾷ",
-    "content": "209",
+    "morphId": "209",
+    "content": "ἀγαπᾷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2926,8 +2926,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πᾶν",
-    "content": "210",
+    "morphId": "210",
+    "content": "πᾶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2940,8 +2940,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐπιθυμία",
-    "content": "211",
+    "morphId": "211",
+    "content": "ἐπιθυμία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2954,8 +2954,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σαρκὸς",
-    "content": "212",
+    "morphId": "212",
+    "content": "σαρκὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2968,8 +2968,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀφθαλμῶν",
-    "content": "213",
+    "morphId": "213",
+    "content": "ὀφθαλμῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2982,8 +2982,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλαζονεία",
-    "content": "214",
+    "morphId": "214",
+    "content": "ἀλαζονεία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -2996,8 +2996,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "βίου",
-    "content": "215",
+    "morphId": "215",
+    "content": "βίου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3010,8 +3010,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐκ",
-    "content": "216",
+    "morphId": "216",
+    "content": "ἐκ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3024,8 +3024,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πατρός",
-    "content": "217",
+    "morphId": "217",
+    "content": "πατρός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3038,8 +3038,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κόσμος",
-    "content": "218",
+    "morphId": "218",
+    "content": "κόσμος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3052,8 +3052,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ποιῶν",
-    "content": "219",
+    "morphId": "219",
+    "content": "ποιῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3066,8 +3066,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θέλημα",
-    "content": "220",
+    "morphId": "220",
+    "content": "θέλημα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3080,8 +3080,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰς",
-    "content": "221",
+    "morphId": "221",
+    "content": "εἰς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3094,8 +3094,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰῶνα",
-    "content": "222",
+    "morphId": "222",
+    "content": "αἰῶνα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3108,8 +3108,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐσχάτη",
-    "content": "223",
+    "morphId": "223",
+    "content": "ἐσχάτη",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3122,8 +3122,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὥρα",
-    "content": "224",
+    "morphId": "224",
+    "content": "ὥρα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3136,8 +3136,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀντίχριστος",
-    "content": "225",
+    "morphId": "225",
+    "content": "ἀντίχριστος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3150,8 +3150,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔρχεται",
-    "content": "226",
+    "morphId": "226",
+    "content": "ἔρχεται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3164,8 +3164,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νῦν",
-    "content": "227",
+    "morphId": "227",
+    "content": "νῦν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3178,8 +3178,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀντίχριστοι",
-    "content": "228",
+    "morphId": "228",
+    "content": "ἀντίχριστοι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3192,8 +3192,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πολλοὶ",
-    "content": "229",
+    "morphId": "229",
+    "content": "πολλοὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3206,8 +3206,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γεγόνασιν",
-    "content": "230",
+    "morphId": "230",
+    "content": "γεγόνασιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3220,8 +3220,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅθεν",
-    "content": "231",
+    "morphId": "231",
+    "content": "ὅθεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3234,8 +3234,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐξ",
-    "content": "232",
+    "morphId": "232",
+    "content": "ἐξ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3248,8 +3248,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐξῆλθαν",
-    "content": "233",
+    "morphId": "233",
+    "content": "ἐξῆλθαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3262,8 +3262,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἦσαν",
-    "content": "234",
+    "morphId": "234",
+    "content": "ἦσαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3276,8 +3276,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰ",
-    "content": "235",
+    "morphId": "235",
+    "content": "εἰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3290,8 +3290,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γὰρ",
-    "content": "236",
+    "morphId": "236",
+    "content": "γὰρ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3304,8 +3304,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μεμενήκεισαν",
-    "content": "237",
+    "morphId": "237",
+    "content": "μεμενήκεισαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3318,8 +3318,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φανερωθῶσιν",
-    "content": "238",
+    "morphId": "238",
+    "content": "φανερωθῶσιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3332,8 +3332,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰσὶν",
-    "content": "239",
+    "morphId": "239",
+    "content": "εἰσὶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3346,8 +3346,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πάντες",
-    "content": "240",
+    "morphId": "240",
+    "content": "πάντες",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3360,8 +3360,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χρῖσμα",
-    "content": "241",
+    "morphId": "241",
+    "content": "χρῖσμα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3374,8 +3374,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχετε",
-    "content": "242",
+    "morphId": "242",
+    "content": "ἔχετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3388,8 +3388,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁγίου",
-    "content": "243",
+    "morphId": "243",
+    "content": "ἁγίου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3402,8 +3402,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οἴδατε",
-    "content": "244",
+    "morphId": "244",
+    "content": "οἴδατε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3416,8 +3416,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτήν",
-    "content": "245",
+    "morphId": "245",
+    "content": "αὐτήν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3430,8 +3430,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψεῦδος",
-    "content": "246",
+    "morphId": "246",
+    "content": "ψεῦδος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3444,8 +3444,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθείας",
-    "content": "247",
+    "morphId": "247",
+    "content": "ἀληθείας",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3458,8 +3458,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τίς",
-    "content": "248",
+    "morphId": "248",
+    "content": "τίς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3472,8 +3472,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀρνούμενος",
-    "content": "249",
+    "morphId": "249",
+    "content": "ἀρνούμενος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3486,8 +3486,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Ἰησοῦς",
-    "content": "250",
+    "morphId": "250",
+    "content": "Ἰησοῦς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3500,8 +3500,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χριστός;",
-    "content": "251",
+    "morphId": "251",
+    "content": "χριστός;",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3514,8 +3514,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὗτός",
-    "content": "252",
+    "morphId": "252",
+    "content": "οὗτός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3528,8 +3528,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "υἱόν",
-    "content": "253",
+    "morphId": "253",
+    "content": "υἱόν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3542,8 +3542,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πᾶς",
-    "content": "254",
+    "morphId": "254",
+    "content": "πᾶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3556,8 +3556,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "υἱὸν",
-    "content": "255",
+    "morphId": "255",
+    "content": "υἱὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3570,8 +3570,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὐδὲ",
-    "content": "256",
+    "morphId": "256",
+    "content": "οὐδὲ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3584,8 +3584,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχει",
-    "content": "257",
+    "morphId": "257",
+    "content": "ἔχει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3598,8 +3598,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὁμολογῶν",
-    "content": "258",
+    "morphId": "258",
+    "content": "ὁμολογῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3612,8 +3612,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μενέτω",
-    "content": "259",
+    "morphId": "259",
+    "content": "μενέτω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3626,8 +3626,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μείνῃ",
-    "content": "260",
+    "morphId": "260",
+    "content": "μείνῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3640,8 +3640,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "υἱῷ",
-    "content": "261",
+    "morphId": "261",
+    "content": "υἱῷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3654,8 +3654,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πατρὶ",
-    "content": "262",
+    "morphId": "262",
+    "content": "πατρὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3668,8 +3668,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μενεῖτε",
-    "content": "263",
+    "morphId": "263",
+    "content": "μενεῖτε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3682,8 +3682,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐπαγγελία",
-    "content": "264",
+    "morphId": "264",
+    "content": "ἐπαγγελία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3696,8 +3696,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐπηγγείλατο",
-    "content": "265",
+    "morphId": "265",
+    "content": "ἐπηγγείλατο",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3710,8 +3710,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πλανώντων",
-    "content": "266",
+    "morphId": "266",
+    "content": "πλανώντων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3724,8 +3724,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὑμᾶς",
-    "content": "267",
+    "morphId": "267",
+    "content": "ὑμᾶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3738,8 +3738,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐλάβετε",
-    "content": "268",
+    "morphId": "268",
+    "content": "ἐλάβετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3752,8 +3752,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χρείαν",
-    "content": "269",
+    "morphId": "269",
+    "content": "χρείαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3766,8 +3766,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διδάσκῃ",
-    "content": "270",
+    "morphId": "270",
+    "content": "διδάσκῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3780,8 +3780,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διδάσκει",
-    "content": "271",
+    "morphId": "271",
+    "content": "διδάσκει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3794,8 +3794,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πάντων",
-    "content": "272",
+    "morphId": "272",
+    "content": "πάντων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3808,8 +3808,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθές",
-    "content": "273",
+    "morphId": "273",
+    "content": "ἀληθές",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3822,8 +3822,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐδίδαξεν",
-    "content": "274",
+    "morphId": "274",
+    "content": "ἐδίδαξεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3836,8 +3836,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μένετε",
-    "content": "275",
+    "morphId": "275",
+    "content": "μένετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3850,8 +3850,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φανερωθῇ",
-    "content": "276",
+    "morphId": "276",
+    "content": "φανερωθῇ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3864,8 +3864,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σχῶμεν",
-    "content": "277",
+    "morphId": "277",
+    "content": "σχῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3878,8 +3878,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παρρησίαν",
-    "content": "278",
+    "morphId": "278",
+    "content": "παρρησίαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3892,8 +3892,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰσχυνθῶμεν",
-    "content": "279",
+    "morphId": "279",
+    "content": "αἰσχυνθῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3906,8 +3906,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παρουσίᾳ",
-    "content": "280",
+    "morphId": "280",
+    "content": "παρουσίᾳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3920,8 +3920,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰδῆτε",
-    "content": "281",
+    "morphId": "281",
+    "content": "εἰδῆτε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3934,8 +3934,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δίκαιός",
-    "content": "282",
+    "morphId": "282",
+    "content": "δίκαιός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3948,8 +3948,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γινώσκετε",
-    "content": "283",
+    "morphId": "283",
+    "content": "γινώσκετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3962,8 +3962,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δικαιοσύνην",
-    "content": "284",
+    "morphId": "284",
+    "content": "δικαιοσύνην",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3976,8 +3976,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γεγέννηται",
-    "content": "285",
+    "morphId": "285",
+    "content": "γεγέννηται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -3990,8 +3990,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἴδετε",
-    "content": "286",
+    "morphId": "286",
+    "content": "ἴδετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4004,8 +4004,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ποταπὴν",
-    "content": "287",
+    "morphId": "287",
+    "content": "ποταπὴν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4018,8 +4018,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγάπην",
-    "content": "288",
+    "morphId": "288",
+    "content": "ἀγάπην",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4032,8 +4032,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δέδωκεν",
-    "content": "289",
+    "morphId": "289",
+    "content": "δέδωκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4046,8 +4046,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πατὴρ",
-    "content": "290",
+    "morphId": "290",
+    "content": "πατὴρ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4060,8 +4060,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τέκνα",
-    "content": "291",
+    "morphId": "291",
+    "content": "τέκνα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4074,8 +4074,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κληθῶμεν",
-    "content": "292",
+    "morphId": "292",
+    "content": "κληθῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4088,8 +4088,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐσμέν",
-    "content": "293",
+    "morphId": "293",
+    "content": "ἐσμέν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4102,8 +4102,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τοῦτο",
-    "content": "294",
+    "morphId": "294",
+    "content": "τοῦτο",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4116,8 +4116,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γινώσκει",
-    "content": "295",
+    "morphId": "295",
+    "content": "γινώσκει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4130,8 +4130,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔγνω",
-    "content": "296",
+    "morphId": "296",
+    "content": "ἔγνω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4144,8 +4144,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὔπω",
-    "content": "297",
+    "morphId": "297",
+    "content": "οὔπω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4158,8 +4158,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τί",
-    "content": "298",
+    "morphId": "298",
+    "content": "τί",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4172,8 +4172,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐσόμεθα",
-    "content": "299",
+    "morphId": "299",
+    "content": "ἐσόμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4186,8 +4186,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οἴδαμεν",
-    "content": "300",
+    "morphId": "300",
+    "content": "οἴδαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4200,8 +4200,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅμοιοι",
-    "content": "301",
+    "morphId": "301",
+    "content": "ὅμοιοι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4214,8 +4214,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀψόμεθα",
-    "content": "302",
+    "morphId": "302",
+    "content": "ὀψόμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4228,8 +4228,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καθώς",
-    "content": "303",
+    "morphId": "303",
+    "content": "καθώς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4242,8 +4242,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχων",
-    "content": "304",
+    "morphId": "304",
+    "content": "ἔχων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4256,8 +4256,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐλπίδα",
-    "content": "305",
+    "morphId": "305",
+    "content": "ἐλπίδα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4270,8 +4270,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ταύτην",
-    "content": "306",
+    "morphId": "306",
+    "content": "ταύτην",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4284,8 +4284,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐπʼ",
-    "content": "307",
+    "morphId": "307",
+    "content": "ἐπʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4298,8 +4298,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁγνίζει",
-    "content": "308",
+    "morphId": "308",
+    "content": "ἁγνίζει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4312,8 +4312,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἑαυτὸν",
-    "content": "309",
+    "morphId": "309",
+    "content": "ἑαυτὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4326,8 +4326,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁγνός",
-    "content": "310",
+    "morphId": "310",
+    "content": "ἁγνός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4340,8 +4340,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀνομίαν",
-    "content": "311",
+    "morphId": "311",
+    "content": "ἀνομίαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4354,8 +4354,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ποιεῖ",
-    "content": "312",
+    "morphId": "312",
+    "content": "ποιεῖ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4368,8 +4368,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτία",
-    "content": "313",
+    "morphId": "313",
+    "content": "ἁμαρτία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4382,8 +4382,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀνομία",
-    "content": "314",
+    "morphId": "314",
+    "content": "ἀνομία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4396,8 +4396,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἄρῃ",
-    "content": "315",
+    "morphId": "315",
+    "content": "ἄρῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4410,8 +4410,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μένων",
-    "content": "316",
+    "morphId": "316",
+    "content": "μένων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4424,8 +4424,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτάνει",
-    "content": "317",
+    "morphId": "317",
+    "content": "ἁμαρτάνει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4438,8 +4438,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτάνων",
-    "content": "318",
+    "morphId": "318",
+    "content": "ἁμαρτάνων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4452,8 +4452,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἑώρακεν",
-    "content": "319",
+    "morphId": "319",
+    "content": "ἑώρακεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4466,8 +4466,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔγνωκεν",
-    "content": "320",
+    "morphId": "320",
+    "content": "ἔγνωκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4480,8 +4480,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μηδεὶς",
-    "content": "321",
+    "morphId": "321",
+    "content": "μηδεὶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4494,8 +4494,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πλανάτω",
-    "content": "322",
+    "morphId": "322",
+    "content": "πλανάτω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4508,8 +4508,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διαβόλου",
-    "content": "323",
+    "morphId": "323",
+    "content": "διαβόλου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4522,8 +4522,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διάβολος",
-    "content": "324",
+    "morphId": "324",
+    "content": "διάβολος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4536,8 +4536,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "υἱὸς",
-    "content": "325",
+    "morphId": "325",
+    "content": "υἱὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4550,8 +4550,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λύσῃ",
-    "content": "326",
+    "morphId": "326",
+    "content": "λύσῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4564,8 +4564,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔργα",
-    "content": "327",
+    "morphId": "327",
+    "content": "ἔργα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4578,8 +4578,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γεγεννημένος",
-    "content": "328",
+    "morphId": "328",
+    "content": "γεγεννημένος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4592,8 +4592,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σπέρμα",
-    "content": "329",
+    "morphId": "329",
+    "content": "σπέρμα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4606,8 +4606,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δύναται",
-    "content": "330",
+    "morphId": "330",
+    "content": "δύναται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4620,8 +4620,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτάνειν",
-    "content": "331",
+    "morphId": "331",
+    "content": "ἁμαρτάνειν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4634,8 +4634,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φανερά",
-    "content": "332",
+    "morphId": "332",
+    "content": "φανερά",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4648,8 +4648,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγαπῶμεν",
-    "content": "333",
+    "morphId": "333",
+    "content": "ἀγαπῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4662,8 +4662,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀλλήλους",
-    "content": "334",
+    "morphId": "334",
+    "content": "ἀλλήλους",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4676,8 +4676,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Κάϊν",
-    "content": "335",
+    "morphId": "335",
+    "content": "Κάϊν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4690,8 +4690,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πονηροῦ",
-    "content": "336",
+    "morphId": "336",
+    "content": "πονηροῦ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4704,8 +4704,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔσφαξεν",
-    "content": "337",
+    "morphId": "337",
+    "content": "ἔσφαξεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4718,8 +4718,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χάριν",
-    "content": "338",
+    "morphId": "338",
+    "content": "χάριν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4732,8 +4732,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τίνος",
-    "content": "339",
+    "morphId": "339",
+    "content": "τίνος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4746,8 +4746,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτόν;",
-    "content": "340",
+    "morphId": "340",
+    "content": "αὐτόν;",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4760,8 +4760,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πονηρὰ",
-    "content": "341",
+    "morphId": "341",
+    "content": "πονηρὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4774,8 +4774,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδελφοῦ",
-    "content": "342",
+    "morphId": "342",
+    "content": "ἀδελφοῦ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4788,8 +4788,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δίκαια",
-    "content": "343",
+    "morphId": "343",
+    "content": "δίκαια",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4802,8 +4802,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θαυμάζετε",
-    "content": "344",
+    "morphId": "344",
+    "content": "θαυμάζετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4816,8 +4816,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδελφοί",
-    "content": "345",
+    "morphId": "345",
+    "content": "ἀδελφοί",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4830,8 +4830,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μισεῖ",
-    "content": "346",
+    "morphId": "346",
+    "content": "μισεῖ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4844,8 +4844,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μεταβεβήκαμεν",
-    "content": "347",
+    "morphId": "347",
+    "content": "μεταβεβήκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4858,8 +4858,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θανάτου",
-    "content": "348",
+    "morphId": "348",
+    "content": "θανάτου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4872,8 +4872,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ζωήν",
-    "content": "349",
+    "morphId": "349",
+    "content": "ζωήν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4886,8 +4886,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδελφούς",
-    "content": "350",
+    "morphId": "350",
+    "content": "ἀδελφούς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4900,8 +4900,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θανάτῳ",
-    "content": "351",
+    "morphId": "351",
+    "content": "θανάτῳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4914,8 +4914,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀνθρωποκτόνος",
-    "content": "352",
+    "morphId": "352",
+    "content": "ἀνθρωποκτόνος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4928,8 +4928,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μένουσαν",
-    "content": "353",
+    "morphId": "353",
+    "content": "μένουσαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4942,8 +4942,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὑπὲρ",
-    "content": "354",
+    "morphId": "354",
+    "content": "ὑπὲρ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4956,8 +4956,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψυχὴν",
-    "content": "355",
+    "morphId": "355",
+    "content": "ψυχὴν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4970,8 +4970,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔθηκεν",
-    "content": "356",
+    "morphId": "356",
+    "content": "ἔθηκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4984,8 +4984,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀφείλομεν",
-    "content": "357",
+    "morphId": "357",
+    "content": "ὀφείλομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -4998,8 +4998,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδελφῶν",
-    "content": "358",
+    "morphId": "358",
+    "content": "ἀδελφῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5012,8 +5012,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψυχὰς",
-    "content": "359",
+    "morphId": "359",
+    "content": "ψυχὰς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5026,8 +5026,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεῖναι",
-    "content": "360",
+    "morphId": "360",
+    "content": "θεῖναι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5040,8 +5040,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχῃ",
-    "content": "361",
+    "morphId": "361",
+    "content": "ἔχῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5054,8 +5054,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "βίον",
-    "content": "362",
+    "morphId": "362",
+    "content": "βίον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5068,8 +5068,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεωρῇ",
-    "content": "363",
+    "morphId": "363",
+    "content": "θεωρῇ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5082,8 +5082,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχοντα",
-    "content": "364",
+    "morphId": "364",
+    "content": "ἔχοντα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5096,8 +5096,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κλείσῃ",
-    "content": "365",
+    "morphId": "365",
+    "content": "κλείσῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5110,8 +5110,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σπλάγχνα",
-    "content": "366",
+    "morphId": "366",
+    "content": "σπλάγχνα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5124,8 +5124,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πῶς",
-    "content": "367",
+    "morphId": "367",
+    "content": "πῶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5138,8 +5138,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτῷ;",
-    "content": "368",
+    "morphId": "368",
+    "content": "αὐτῷ;",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5152,8 +5152,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λόγῳ",
-    "content": "369",
+    "morphId": "369",
+    "content": "λόγῳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5166,8 +5166,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γλώσσῃ",
-    "content": "370",
+    "morphId": "370",
+    "content": "γλώσσῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5180,8 +5180,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔργῳ",
-    "content": "371",
+    "morphId": "371",
+    "content": "ἔργῳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5194,8 +5194,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθείᾳ",
-    "content": "372",
+    "morphId": "372",
+    "content": "ἀληθείᾳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5208,8 +5208,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γνωσόμεθα",
-    "content": "373",
+    "morphId": "373",
+    "content": "γνωσόμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5222,8 +5222,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔμπροσθεν",
-    "content": "374",
+    "morphId": "374",
+    "content": "ἔμπροσθεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5236,8 +5236,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πείσομεν",
-    "content": "375",
+    "morphId": "375",
+    "content": "πείσομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5250,8 +5250,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καρδίαν",
-    "content": "376",
+    "morphId": "376",
+    "content": "καρδίαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5264,8 +5264,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καταγινώσκῃ",
-    "content": "377",
+    "morphId": "377",
+    "content": "καταγινώσκῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5278,8 +5278,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καρδία",
-    "content": "378",
+    "morphId": "378",
+    "content": "καρδία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5292,8 +5292,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μείζων",
-    "content": "379",
+    "morphId": "379",
+    "content": "μείζων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5306,8 +5306,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "καρδίας",
-    "content": "380",
+    "morphId": "380",
+    "content": "καρδίας",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5320,8 +5320,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πάντα",
-    "content": "381",
+    "morphId": "381",
+    "content": "πάντα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5334,8 +5334,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεόν",
-    "content": "382",
+    "morphId": "382",
+    "content": "θεόν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5348,8 +5348,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰτῶμεν",
-    "content": "383",
+    "morphId": "383",
+    "content": "αἰτῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5362,8 +5362,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λαμβάνομεν",
-    "content": "384",
+    "morphId": "384",
+    "content": "λαμβάνομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5376,8 +5376,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τηροῦμεν",
-    "content": "385",
+    "morphId": "385",
+    "content": "τηροῦμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5390,8 +5390,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀρεστὰ",
-    "content": "386",
+    "morphId": "386",
+    "content": "ἀρεστὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5404,8 +5404,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐνώπιον",
-    "content": "387",
+    "morphId": "387",
+    "content": "ἐνώπιον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5418,8 +5418,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πιστεύσωμεν",
-    "content": "388",
+    "morphId": "388",
+    "content": "πιστεύσωμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5432,8 +5432,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὀνόματι",
-    "content": "389",
+    "morphId": "389",
+    "content": "ὀνόματι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5446,8 +5446,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔδωκεν",
-    "content": "390",
+    "morphId": "390",
+    "content": "ἔδωκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5460,8 +5460,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πνεύματος",
-    "content": "391",
+    "morphId": "391",
+    "content": "πνεύματος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5474,8 +5474,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὗ",
-    "content": "392",
+    "morphId": "392",
+    "content": "οὗ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5488,8 +5488,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παντὶ",
-    "content": "393",
+    "morphId": "393",
+    "content": "παντὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5502,8 +5502,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πνεύματι",
-    "content": "394",
+    "morphId": "394",
+    "content": "πνεύματι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5516,8 +5516,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πιστεύετε",
-    "content": "395",
+    "morphId": "395",
+    "content": "πιστεύετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5530,8 +5530,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δοκιμάζετε",
-    "content": "396",
+    "morphId": "396",
+    "content": "δοκιμάζετε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5544,8 +5544,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πνεύματα",
-    "content": "397",
+    "morphId": "397",
+    "content": "πνεύματα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5558,8 +5558,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ψευδοπροφῆται",
-    "content": "398",
+    "morphId": "398",
+    "content": "ψευδοπροφῆται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5572,8 +5572,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐξεληλύθασιν",
-    "content": "399",
+    "morphId": "399",
+    "content": "ἐξεληλύθασιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5586,8 +5586,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πνεῦμα",
-    "content": "400",
+    "morphId": "400",
+    "content": "πνεῦμα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5600,8 +5600,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὁμολογεῖ",
-    "content": "401",
+    "morphId": "401",
+    "content": "ὁμολογεῖ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5614,8 +5614,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σαρκὶ",
-    "content": "402",
+    "morphId": "402",
+    "content": "σαρκὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5628,8 +5628,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐληλυθότα",
-    "content": "403",
+    "morphId": "403",
+    "content": "ἐληλυθότα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5642,8 +5642,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τοῦτό",
-    "content": "404",
+    "morphId": "404",
+    "content": "τοῦτό",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5656,8 +5656,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀντιχρίστου",
-    "content": "405",
+    "morphId": "405",
+    "content": "ἀντιχρίστου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5670,8 +5670,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀκηκόατε",
-    "content": "406",
+    "morphId": "406",
+    "content": "ἀκηκόατε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5684,8 +5684,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτούς",
-    "content": "407",
+    "morphId": "407",
+    "content": "αὐτούς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5698,8 +5698,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἢ",
-    "content": "408",
+    "morphId": "408",
+    "content": "ἢ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5712,8 +5712,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτοὶ",
-    "content": "409",
+    "morphId": "409",
+    "content": "αὐτοὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5726,8 +5726,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰσίν",
-    "content": "410",
+    "morphId": "410",
+    "content": "εἰσίν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5740,8 +5740,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λαλοῦσιν",
-    "content": "411",
+    "morphId": "411",
+    "content": "λαλοῦσιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5754,8 +5754,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὐτῶν",
-    "content": "412",
+    "morphId": "412",
+    "content": "αὐτῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5768,8 +5768,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀκούει",
-    "content": "413",
+    "morphId": "413",
+    "content": "ἀκούει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5782,8 +5782,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γινώσκων",
-    "content": "414",
+    "morphId": "414",
+    "content": "γινώσκων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5796,8 +5796,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεὸν",
-    "content": "415",
+    "morphId": "415",
+    "content": "θεὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5810,8 +5810,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τούτου",
-    "content": "416",
+    "morphId": "416",
+    "content": "τούτου",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5824,8 +5824,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πλάνης",
-    "content": "417",
+    "morphId": "417",
+    "content": "πλάνης",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5838,8 +5838,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μονογενῆ",
-    "content": "418",
+    "morphId": "418",
+    "content": "μονογενῆ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5852,8 +5852,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀπέσταλκεν",
-    "content": "419",
+    "morphId": "419",
+    "content": "ἀπέσταλκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5866,8 +5866,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ζήσωμεν",
-    "content": "420",
+    "morphId": "420",
+    "content": "ζήσωμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5880,8 +5880,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διʼ",
-    "content": "421",
+    "morphId": "421",
+    "content": "διʼ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5894,8 +5894,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἠγαπήκαμεν",
-    "content": "422",
+    "morphId": "422",
+    "content": "ἠγαπήκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5908,8 +5908,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἠγάπησεν",
-    "content": "423",
+    "morphId": "423",
+    "content": "ἠγάπησεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5922,8 +5922,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀπέστειλεν",
-    "content": "424",
+    "morphId": "424",
+    "content": "ἀπέστειλεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5936,8 +5936,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἱλασμὸν",
-    "content": "425",
+    "morphId": "425",
+    "content": "ἱλασμὸν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5950,8 +5950,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὕτως",
-    "content": "426",
+    "morphId": "426",
+    "content": "οὕτως",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5964,8 +5964,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγαπᾶν",
-    "content": "427",
+    "morphId": "427",
+    "content": "ἀγαπᾶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5978,8 +5978,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οὐδεὶς",
-    "content": "428",
+    "morphId": "428",
+    "content": "οὐδεὶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -5992,8 +5992,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πώποτε",
-    "content": "429",
+    "morphId": "429",
+    "content": "πώποτε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6006,8 +6006,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τεθέαται",
-    "content": "430",
+    "morphId": "430",
+    "content": "τεθέαται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6020,8 +6020,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τετελειωμένη",
-    "content": "431",
+    "morphId": "431",
+    "content": "τετελειωμένη",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6034,8 +6034,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μένομεν",
-    "content": "432",
+    "morphId": "432",
+    "content": "μένομεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6048,8 +6048,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τεθεάμεθα",
-    "content": "433",
+    "morphId": "433",
+    "content": "τεθεάμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6062,8 +6062,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "σωτῆρα",
-    "content": "434",
+    "morphId": "434",
+    "content": "σωτῆρα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6076,8 +6076,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὁμολογήσῃ",
-    "content": "435",
+    "morphId": "435",
+    "content": "ὁμολογήσῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6090,8 +6090,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεῷ",
-    "content": "436",
+    "morphId": "436",
+    "content": "θεῷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6104,8 +6104,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πεπιστεύκαμεν",
-    "content": "437",
+    "morphId": "437",
+    "content": "πεπιστεύκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6118,8 +6118,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀγάπῃ",
-    "content": "438",
+    "morphId": "438",
+    "content": "ἀγάπῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6132,8 +6132,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔχωμεν",
-    "content": "439",
+    "morphId": "439",
+    "content": "ἔχωμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6146,8 +6146,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἡμέρᾳ",
-    "content": "440",
+    "morphId": "440",
+    "content": "ἡμέρᾳ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6160,8 +6160,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κρίσεως",
-    "content": "441",
+    "morphId": "441",
+    "content": "κρίσεως",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6174,8 +6174,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐκεῖνός",
-    "content": "442",
+    "morphId": "442",
+    "content": "ἐκεῖνός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6188,8 +6188,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φόβος",
-    "content": "443",
+    "morphId": "443",
+    "content": "φόβος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6202,8 +6202,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τελεία",
-    "content": "444",
+    "morphId": "444",
+    "content": "τελεία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6216,8 +6216,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἔξω",
-    "content": "445",
+    "morphId": "445",
+    "content": "ἔξω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6230,8 +6230,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "βάλλει",
-    "content": "446",
+    "morphId": "446",
+    "content": "βάλλει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6244,8 +6244,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φόβον",
-    "content": "447",
+    "morphId": "447",
+    "content": "φόβον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6258,8 +6258,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κόλασιν",
-    "content": "448",
+    "morphId": "448",
+    "content": "κόλασιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6272,8 +6272,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φοβούμενος",
-    "content": "449",
+    "morphId": "449",
+    "content": "φοβούμενος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6286,8 +6286,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πρῶτος",
-    "content": "450",
+    "morphId": "450",
+    "content": "πρῶτος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6300,8 +6300,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἴπῃ",
-    "content": "451",
+    "morphId": "451",
+    "content": "εἴπῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6314,8 +6314,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Ἀγαπῶ",
-    "content": "452",
+    "morphId": "452",
+    "content": "Ἀγαπῶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6328,8 +6328,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μισῇ",
-    "content": "453",
+    "morphId": "453",
+    "content": "μισῇ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6342,8 +6342,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πιστεύων",
-    "content": "454",
+    "morphId": "454",
+    "content": "πιστεύων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6356,8 +6356,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "χριστὸς",
-    "content": "455",
+    "morphId": "455",
+    "content": "χριστὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6370,8 +6370,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γεννήσαντα",
-    "content": "456",
+    "morphId": "456",
+    "content": "γεννήσαντα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6384,8 +6384,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γεγεννημένον",
-    "content": "457",
+    "morphId": "457",
+    "content": "γεγεννημένον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6398,8 +6398,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅταν",
-    "content": "458",
+    "morphId": "458",
+    "content": "ὅταν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6412,8 +6412,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ποιῶμεν",
-    "content": "459",
+    "morphId": "459",
+    "content": "ποιῶμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6426,8 +6426,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γάρ",
-    "content": "460",
+    "morphId": "460",
+    "content": "γάρ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6440,8 +6440,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐντολαὶ",
-    "content": "461",
+    "morphId": "461",
+    "content": "ἐντολαὶ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6454,8 +6454,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "βαρεῖαι",
-    "content": "462",
+    "morphId": "462",
+    "content": "βαρεῖαι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6468,8 +6468,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νικᾷ",
-    "content": "463",
+    "morphId": "463",
+    "content": "νικᾷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6482,8 +6482,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νίκη",
-    "content": "464",
+    "morphId": "464",
+    "content": "νίκη",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6496,8 +6496,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νικήσασα",
-    "content": "465",
+    "morphId": "465",
+    "content": "νικήσασα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6510,8 +6510,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πίστις",
-    "content": "466",
+    "morphId": "466",
+    "content": "πίστις",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6524,8 +6524,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δέ",
-    "content": "467",
+    "morphId": "467",
+    "content": "δέ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6538,8 +6538,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "νικῶν",
-    "content": "468",
+    "morphId": "468",
+    "content": "νικῶν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6552,8 +6552,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θεοῦ;",
-    "content": "469",
+    "morphId": "469",
+    "content": "θεοῦ;",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6566,8 +6566,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐλθὼν",
-    "content": "470",
+    "morphId": "470",
+    "content": "ἐλθὼν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6580,8 +6580,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὕδατος",
-    "content": "471",
+    "morphId": "471",
+    "content": "ὕδατος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6594,8 +6594,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἵματος",
-    "content": "472",
+    "morphId": "472",
+    "content": "αἵματος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6608,8 +6608,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Χριστός",
-    "content": "473",
+    "morphId": "473",
+    "content": "Χριστός",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6622,8 +6622,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὕδατι",
-    "content": "474",
+    "morphId": "474",
+    "content": "ὕδατι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6636,8 +6636,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἵματι",
-    "content": "475",
+    "morphId": "475",
+    "content": "αἵματι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6650,8 +6650,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πνεῦμά",
-    "content": "476",
+    "morphId": "476",
+    "content": "πνεῦμά",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6664,8 +6664,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μαρτυροῦν",
-    "content": "477",
+    "morphId": "477",
+    "content": "μαρτυροῦν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6678,8 +6678,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τρεῖς",
-    "content": "478",
+    "morphId": "478",
+    "content": "τρεῖς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6692,8 +6692,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰσιν",
-    "content": "479",
+    "morphId": "479",
+    "content": "εἰσιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6706,8 +6706,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "οἱ",
-    "content": "480",
+    "morphId": "480",
+    "content": "οἱ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6720,8 +6720,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μαρτυροῦντες",
-    "content": "481",
+    "morphId": "481",
+    "content": "μαρτυροῦντες",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6734,8 +6734,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὕδωρ",
-    "content": "482",
+    "morphId": "482",
+    "content": "ὕδωρ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6748,8 +6748,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἕν",
-    "content": "483",
+    "morphId": "483",
+    "content": "ἕν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6762,8 +6762,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μαρτυρίαν",
-    "content": "484",
+    "morphId": "484",
+    "content": "μαρτυρίαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6776,8 +6776,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀνθρώπων",
-    "content": "485",
+    "morphId": "485",
+    "content": "ἀνθρώπων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6790,8 +6790,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μαρτυρία",
-    "content": "486",
+    "morphId": "486",
+    "content": "μαρτυρία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6804,8 +6804,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "μεμαρτύρηκεν",
-    "content": "487",
+    "morphId": "487",
+    "content": "μεμαρτύρηκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6818,8 +6818,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αὑτῷ",
-    "content": "488",
+    "morphId": "488",
+    "content": "αὑτῷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6832,8 +6832,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πεποίηκεν",
-    "content": "489",
+    "morphId": "489",
+    "content": "πεποίηκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6846,8 +6846,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πεπίστευκεν",
-    "content": "490",
+    "morphId": "490",
+    "content": "πεπίστευκεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6860,8 +6860,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πιστεύουσιν",
-    "content": "491",
+    "morphId": "491",
+    "content": "πιστεύουσιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6874,8 +6874,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "παρρησία",
-    "content": "492",
+    "morphId": "492",
+    "content": "παρρησία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6888,8 +6888,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τι",
-    "content": "493",
+    "morphId": "493",
+    "content": "τι",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6902,8 +6902,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰτώμεθα",
-    "content": "494",
+    "morphId": "494",
+    "content": "αἰτώμεθα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6916,8 +6916,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κατὰ",
-    "content": "495",
+    "morphId": "495",
+    "content": "κατὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6930,8 +6930,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰτήματα",
-    "content": "496",
+    "morphId": "496",
+    "content": "αἰτήματα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6944,8 +6944,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἃ",
-    "content": "497",
+    "morphId": "497",
+    "content": "ἃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6958,8 +6958,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ᾐτήκαμεν",
-    "content": "498",
+    "morphId": "498",
+    "content": "ᾐτήκαμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6972,8 +6972,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἴδῃ",
-    "content": "499",
+    "morphId": "499",
+    "content": "ἴδῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -6986,8 +6986,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτάνοντα",
-    "content": "500",
+    "morphId": "500",
+    "content": "ἁμαρτάνοντα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7000,8 +7000,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "θάνατον",
-    "content": "501",
+    "morphId": "501",
+    "content": "θάνατον",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7014,8 +7014,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰτήσει",
-    "content": "502",
+    "morphId": "502",
+    "content": "αἰτήσει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7028,8 +7028,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "δώσει",
-    "content": "503",
+    "morphId": "503",
+    "content": "δώσει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7042,8 +7042,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἁμαρτάνουσιν",
-    "content": "504",
+    "morphId": "504",
+    "content": "ἁμαρτάνουσιν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7056,8 +7056,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐκείνης",
-    "content": "505",
+    "morphId": "505",
+    "content": "ἐκείνης",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7070,8 +7070,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "λέγω",
-    "content": "506",
+    "morphId": "506",
+    "content": "λέγω",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7084,8 +7084,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐρωτήσῃ",
-    "content": "507",
+    "morphId": "507",
+    "content": "ἐρωτήσῃ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7098,8 +7098,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πᾶσα",
-    "content": "508",
+    "morphId": "508",
+    "content": "πᾶσα",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7112,8 +7112,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀδικία",
-    "content": "509",
+    "morphId": "509",
+    "content": "ἀδικία",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7126,8 +7126,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γεννηθεὶς",
-    "content": "510",
+    "morphId": "510",
+    "content": "γεννηθεὶς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7140,8 +7140,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "τηρεῖ",
-    "content": "511",
+    "morphId": "511",
+    "content": "τηρεῖ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7154,8 +7154,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πονηρὸς",
-    "content": "512",
+    "morphId": "512",
+    "content": "πονηρὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7168,8 +7168,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἅπτεται",
-    "content": "513",
+    "morphId": "513",
+    "content": "ἅπτεται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7182,8 +7182,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ὅλος",
-    "content": "514",
+    "morphId": "514",
+    "content": "ὅλος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7196,8 +7196,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "πονηρῷ",
-    "content": "515",
+    "morphId": "515",
+    "content": "πονηρῷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7210,8 +7210,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "κεῖται",
-    "content": "516",
+    "morphId": "516",
+    "content": "κεῖται",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7224,8 +7224,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἥκει",
-    "content": "517",
+    "morphId": "517",
+    "content": "ἥκει",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7238,8 +7238,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "διάνοιαν",
-    "content": "518",
+    "morphId": "518",
+    "content": "διάνοιαν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7252,8 +7252,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "γινώσκωμεν",
-    "content": "519",
+    "morphId": "519",
+    "content": "γινώσκωμεν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7266,8 +7266,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθινόν",
-    "content": "520",
+    "morphId": "520",
+    "content": "ἀληθινόν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7280,8 +7280,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἐσμὲν",
-    "content": "521",
+    "morphId": "521",
+    "content": "ἐσμὲν",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7294,8 +7294,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθινῷ",
-    "content": "522",
+    "morphId": "522",
+    "content": "ἀληθινῷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7308,8 +7308,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "Χριστῷ",
-    "content": "523",
+    "morphId": "523",
+    "content": "Χριστῷ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7322,8 +7322,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἀληθινὸς",
-    "content": "524",
+    "morphId": "524",
+    "content": "ἀληθινὸς",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7336,8 +7336,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "αἰώνιος",
-    "content": "525",
+    "morphId": "525",
+    "content": "αἰώνιος",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7350,8 +7350,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "φυλάξατε",
-    "content": "526",
+    "morphId": "526",
+    "content": "φυλάξατε",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7364,8 +7364,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "ἑαυτὰ",
-    "content": "527",
+    "morphId": "527",
+    "content": "ἑαυτὰ",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7378,8 +7378,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "εἰδώλων",
-    "content": "528",
+    "morphId": "528",
+    "content": "εἰδώλων",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7392,8 +7392,8 @@
     "grammerId": ""
   },
   {
-    "morphId": ".",
-    "content": "0",
+    "morphId": "0",
+    "content": ".",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7420,8 +7420,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "·",
-    "content": "0",
+    "morphId": "0",
+    "content": "·",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7434,8 +7434,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "—",
-    "content": "0",
+    "morphId": "0",
+    "content": "—",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7448,8 +7448,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "1",
-    "content": "0",
+    "morphId": "0",
+    "content": "1",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7462,8 +7462,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "2",
-    "content": "0",
+    "morphId": "0",
+    "content": "2",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7476,8 +7476,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "3",
-    "content": "0",
+    "morphId": "0",
+    "content": "3",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7490,8 +7490,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "4",
-    "content": "0",
+    "morphId": "0",
+    "content": "4",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7504,8 +7504,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "5",
-    "content": "0",
+    "morphId": "0",
+    "content": "5",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7518,8 +7518,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "6",
-    "content": "0",
+    "morphId": "0",
+    "content": "6",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7532,8 +7532,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "7",
-    "content": "0",
+    "morphId": "0",
+    "content": "7",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7546,8 +7546,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "8",
-    "content": "0",
+    "morphId": "0",
+    "content": "8",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7560,8 +7560,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "9",
-    "content": "0",
+    "morphId": "0",
+    "content": "9",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7574,8 +7574,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "10",
-    "content": "0",
+    "morphId": "0",
+    "content": "10",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7588,8 +7588,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "11",
-    "content": "0",
+    "morphId": "0",
+    "content": "11",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7602,8 +7602,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "12",
-    "content": "0",
+    "morphId": "0",
+    "content": "12",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7616,8 +7616,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "13",
-    "content": "0",
+    "morphId": "0",
+    "content": "13",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7630,8 +7630,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "14",
-    "content": "0",
+    "morphId": "0",
+    "content": "14",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7644,8 +7644,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "15",
-    "content": "0",
+    "morphId": "0",
+    "content": "15",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7658,8 +7658,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "16",
-    "content": "0",
+    "morphId": "0",
+    "content": "16",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7672,8 +7672,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "17",
-    "content": "0",
+    "morphId": "0",
+    "content": "17",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7686,8 +7686,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "18",
-    "content": "0",
+    "morphId": "0",
+    "content": "18",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7700,8 +7700,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "19",
-    "content": "0",
+    "morphId": "0",
+    "content": "19",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7714,8 +7714,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "20",
-    "content": "0",
+    "morphId": "0",
+    "content": "20",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7728,8 +7728,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "21",
-    "content": "0",
+    "morphId": "0",
+    "content": "21",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7742,8 +7742,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "22",
-    "content": "0",
+    "morphId": "0",
+    "content": "22",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7756,8 +7756,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "23",
-    "content": "0",
+    "morphId": "0",
+    "content": "23",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7770,8 +7770,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "24",
-    "content": "0",
+    "morphId": "0",
+    "content": "24",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7784,8 +7784,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "25",
-    "content": "0",
+    "morphId": "0",
+    "content": "25",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7798,8 +7798,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "26",
-    "content": "0",
+    "morphId": "0",
+    "content": "26",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7812,8 +7812,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "27",
-    "content": "0",
+    "morphId": "0",
+    "content": "27",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7826,8 +7826,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "28",
-    "content": "0",
+    "morphId": "0",
+    "content": "28",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7840,8 +7840,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "29",
-    "content": "0",
+    "morphId": "0",
+    "content": "29",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7854,8 +7854,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "30",
-    "content": "0",
+    "morphId": "0",
+    "content": "30",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7868,8 +7868,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "31",
-    "content": "0",
+    "morphId": "0",
+    "content": "31",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7882,8 +7882,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "32",
-    "content": "0",
+    "morphId": "0",
+    "content": "32",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7896,8 +7896,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "33",
-    "content": "0",
+    "morphId": "0",
+    "content": "33",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7910,8 +7910,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "34",
-    "content": "0",
+    "morphId": "0",
+    "content": "34",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7924,8 +7924,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "35",
-    "content": "0",
+    "morphId": "0",
+    "content": "35",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7938,8 +7938,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "36",
-    "content": "0",
+    "morphId": "0",
+    "content": "36",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7952,8 +7952,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "37",
-    "content": "0",
+    "morphId": "0",
+    "content": "37",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7966,8 +7966,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "38",
-    "content": "0",
+    "morphId": "0",
+    "content": "38",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7980,8 +7980,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "39",
-    "content": "0",
+    "morphId": "0",
+    "content": "39",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -7994,8 +7994,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "40",
-    "content": "0",
+    "morphId": "0",
+    "content": "40",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8008,8 +8008,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "41",
-    "content": "0",
+    "morphId": "0",
+    "content": "41",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8022,8 +8022,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "42",
-    "content": "0",
+    "morphId": "0",
+    "content": "42",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8036,8 +8036,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "43",
-    "content": "0",
+    "morphId": "0",
+    "content": "43",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8050,8 +8050,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "44",
-    "content": "0",
+    "morphId": "0",
+    "content": "44",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8064,8 +8064,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "45",
-    "content": "0",
+    "morphId": "0",
+    "content": "45",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8078,8 +8078,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "46",
-    "content": "0",
+    "morphId": "0",
+    "content": "46",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8092,8 +8092,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "47",
-    "content": "0",
+    "morphId": "0",
+    "content": "47",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8106,8 +8106,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "48",
-    "content": "0",
+    "morphId": "0",
+    "content": "48",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8120,8 +8120,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "49",
-    "content": "0",
+    "morphId": "0",
+    "content": "49",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8134,8 +8134,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "50",
-    "content": "0",
+    "morphId": "0",
+    "content": "50",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8148,8 +8148,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "51",
-    "content": "0",
+    "morphId": "0",
+    "content": "51",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8162,8 +8162,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "52",
-    "content": "0",
+    "morphId": "0",
+    "content": "52",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8176,8 +8176,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "53",
-    "content": "0",
+    "morphId": "0",
+    "content": "53",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8190,8 +8190,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "54",
-    "content": "0",
+    "morphId": "0",
+    "content": "54",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8204,8 +8204,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "55",
-    "content": "0",
+    "morphId": "0",
+    "content": "55",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8218,8 +8218,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "56",
-    "content": "0",
+    "morphId": "0",
+    "content": "56",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8232,8 +8232,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "57",
-    "content": "0",
+    "morphId": "0",
+    "content": "57",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8246,8 +8246,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "58",
-    "content": "0",
+    "morphId": "0",
+    "content": "58",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8260,8 +8260,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "59",
-    "content": "0",
+    "morphId": "0",
+    "content": "59",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8274,8 +8274,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "60",
-    "content": "0",
+    "morphId": "0",
+    "content": "60",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8288,8 +8288,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "61",
-    "content": "0",
+    "morphId": "0",
+    "content": "61",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8302,8 +8302,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "62",
-    "content": "0",
+    "morphId": "0",
+    "content": "62",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8316,8 +8316,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "63",
-    "content": "0",
+    "morphId": "0",
+    "content": "63",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8330,8 +8330,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "64",
-    "content": "0",
+    "morphId": "0",
+    "content": "64",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8344,8 +8344,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "65",
-    "content": "0",
+    "morphId": "0",
+    "content": "65",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8358,8 +8358,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "66",
-    "content": "0",
+    "morphId": "0",
+    "content": "66",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8372,8 +8372,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "67",
-    "content": "0",
+    "morphId": "0",
+    "content": "67",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8386,8 +8386,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "68",
-    "content": "0",
+    "morphId": "0",
+    "content": "68",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8400,8 +8400,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "69",
-    "content": "0",
+    "morphId": "0",
+    "content": "69",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8414,8 +8414,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "70",
-    "content": "0",
+    "morphId": "0",
+    "content": "70",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8428,8 +8428,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "71",
-    "content": "0",
+    "morphId": "0",
+    "content": "71",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8442,8 +8442,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "72",
-    "content": "0",
+    "morphId": "0",
+    "content": "72",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8456,8 +8456,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "73",
-    "content": "0",
+    "morphId": "0",
+    "content": "73",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8470,8 +8470,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "74",
-    "content": "0",
+    "morphId": "0",
+    "content": "74",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8484,8 +8484,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "75",
-    "content": "0",
+    "morphId": "0",
+    "content": "75",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8498,8 +8498,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "76",
-    "content": "0",
+    "morphId": "0",
+    "content": "76",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8512,8 +8512,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "77",
-    "content": "0",
+    "morphId": "0",
+    "content": "77",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8526,8 +8526,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "78",
-    "content": "0",
+    "morphId": "0",
+    "content": "78",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8540,8 +8540,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "79",
-    "content": "0",
+    "morphId": "0",
+    "content": "79",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8554,8 +8554,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "80",
-    "content": "0",
+    "morphId": "0",
+    "content": "80",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8568,8 +8568,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "81",
-    "content": "0",
+    "morphId": "0",
+    "content": "81",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8582,8 +8582,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "82",
-    "content": "0",
+    "morphId": "0",
+    "content": "82",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8596,8 +8596,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "83",
-    "content": "0",
+    "morphId": "0",
+    "content": "83",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8610,8 +8610,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "84",
-    "content": "0",
+    "morphId": "0",
+    "content": "84",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8624,8 +8624,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "85",
-    "content": "0",
+    "morphId": "0",
+    "content": "85",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8638,8 +8638,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "86",
-    "content": "0",
+    "morphId": "0",
+    "content": "86",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8652,8 +8652,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "87",
-    "content": "0",
+    "morphId": "0",
+    "content": "87",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8666,8 +8666,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "88",
-    "content": "0",
+    "morphId": "0",
+    "content": "88",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8680,8 +8680,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "89",
-    "content": "0",
+    "morphId": "0",
+    "content": "89",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8694,8 +8694,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "90",
-    "content": "0",
+    "morphId": "0",
+    "content": "90",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8708,8 +8708,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "91",
-    "content": "0",
+    "morphId": "0",
+    "content": "91",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8722,8 +8722,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "92",
-    "content": "0",
+    "morphId": "0",
+    "content": "92",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8736,8 +8736,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "93",
-    "content": "0",
+    "morphId": "0",
+    "content": "93",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8750,8 +8750,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "94",
-    "content": "0",
+    "morphId": "0",
+    "content": "94",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8764,8 +8764,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "95",
-    "content": "0",
+    "morphId": "0",
+    "content": "95",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8778,8 +8778,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "96",
-    "content": "0",
+    "morphId": "0",
+    "content": "96",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8792,8 +8792,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "97",
-    "content": "0",
+    "morphId": "0",
+    "content": "97",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8806,8 +8806,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "98",
-    "content": "0",
+    "morphId": "0",
+    "content": "98",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8820,8 +8820,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "99",
-    "content": "0",
+    "morphId": "0",
+    "content": "99",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8834,8 +8834,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "100",
-    "content": "0",
+    "morphId": "0",
+    "content": "100",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8848,8 +8848,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "101",
-    "content": "0",
+    "morphId": "0",
+    "content": "101",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8862,8 +8862,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "102",
-    "content": "0",
+    "morphId": "0",
+    "content": "102",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8876,8 +8876,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "103",
-    "content": "0",
+    "morphId": "0",
+    "content": "103",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8890,8 +8890,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "104",
-    "content": "0",
+    "morphId": "0",
+    "content": "104",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8904,8 +8904,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "105",
-    "content": "0",
+    "morphId": "0",
+    "content": "105",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8918,8 +8918,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "106",
-    "content": "0",
+    "morphId": "0",
+    "content": "106",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8932,8 +8932,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "107",
-    "content": "0",
+    "morphId": "0",
+    "content": "107",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8946,8 +8946,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "108",
-    "content": "0",
+    "morphId": "0",
+    "content": "108",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8960,8 +8960,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "109",
-    "content": "0",
+    "morphId": "0",
+    "content": "109",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8974,8 +8974,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "110",
-    "content": "0",
+    "morphId": "0",
+    "content": "110",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -8988,8 +8988,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "111",
-    "content": "0",
+    "morphId": "0",
+    "content": "111",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9002,8 +9002,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "112",
-    "content": "0",
+    "morphId": "0",
+    "content": "112",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9016,8 +9016,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "113",
-    "content": "0",
+    "morphId": "0",
+    "content": "113",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9030,8 +9030,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "114",
-    "content": "0",
+    "morphId": "0",
+    "content": "114",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9044,8 +9044,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "115",
-    "content": "0",
+    "morphId": "0",
+    "content": "115",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9058,8 +9058,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "116",
-    "content": "0",
+    "morphId": "0",
+    "content": "116",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9072,8 +9072,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "117",
-    "content": "0",
+    "morphId": "0",
+    "content": "117",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9086,8 +9086,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "118",
-    "content": "0",
+    "morphId": "0",
+    "content": "118",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9100,8 +9100,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "119",
-    "content": "0",
+    "morphId": "0",
+    "content": "119",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9114,8 +9114,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "120",
-    "content": "0",
+    "morphId": "0",
+    "content": "120",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9128,8 +9128,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "121",
-    "content": "0",
+    "morphId": "0",
+    "content": "121",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9142,8 +9142,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "122",
-    "content": "0",
+    "morphId": "0",
+    "content": "122",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9156,8 +9156,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "123",
-    "content": "0",
+    "morphId": "0",
+    "content": "123",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9170,8 +9170,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "124",
-    "content": "0",
+    "morphId": "0",
+    "content": "124",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9184,8 +9184,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "125",
-    "content": "0",
+    "morphId": "0",
+    "content": "125",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9198,8 +9198,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "126",
-    "content": "0",
+    "morphId": "0",
+    "content": "126",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9212,8 +9212,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "127",
-    "content": "0",
+    "morphId": "0",
+    "content": "127",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9226,8 +9226,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "128",
-    "content": "0",
+    "morphId": "0",
+    "content": "128",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9240,8 +9240,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "129",
-    "content": "0",
+    "morphId": "0",
+    "content": "129",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9254,8 +9254,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "130",
-    "content": "0",
+    "morphId": "0",
+    "content": "130",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9268,8 +9268,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "131",
-    "content": "0",
+    "morphId": "0",
+    "content": "131",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9282,8 +9282,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "132",
-    "content": "0",
+    "morphId": "0",
+    "content": "132",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9296,8 +9296,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "133",
-    "content": "0",
+    "morphId": "0",
+    "content": "133",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9310,8 +9310,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "134",
-    "content": "0",
+    "morphId": "0",
+    "content": "134",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9324,8 +9324,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "135",
-    "content": "0",
+    "morphId": "0",
+    "content": "135",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9338,8 +9338,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "136",
-    "content": "0",
+    "morphId": "0",
+    "content": "136",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9352,8 +9352,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "137",
-    "content": "0",
+    "morphId": "0",
+    "content": "137",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9366,8 +9366,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "138",
-    "content": "0",
+    "morphId": "0",
+    "content": "138",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9380,8 +9380,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "139",
-    "content": "0",
+    "morphId": "0",
+    "content": "139",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9394,8 +9394,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "140",
-    "content": "0",
+    "morphId": "0",
+    "content": "140",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9408,8 +9408,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "141",
-    "content": "0",
+    "morphId": "0",
+    "content": "141",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9422,8 +9422,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "142",
-    "content": "0",
+    "morphId": "0",
+    "content": "142",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9436,8 +9436,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "143",
-    "content": "0",
+    "morphId": "0",
+    "content": "143",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9450,8 +9450,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "144",
-    "content": "0",
+    "morphId": "0",
+    "content": "144",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9464,8 +9464,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "145",
-    "content": "0",
+    "morphId": "0",
+    "content": "145",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9478,8 +9478,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "146",
-    "content": "0",
+    "morphId": "0",
+    "content": "146",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9492,8 +9492,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "147",
-    "content": "0",
+    "morphId": "0",
+    "content": "147",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9506,8 +9506,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "148",
-    "content": "0",
+    "morphId": "0",
+    "content": "148",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9520,8 +9520,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "149",
-    "content": "0",
+    "morphId": "0",
+    "content": "149",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
@@ -9534,8 +9534,8 @@
     "grammerId": ""
   },
   {
-    "morphId": "150",
-    "content": "0",
+    "morphId": "0",
+    "content": "150",
     "vocabId": "",
     "genderId": "",
     "patternId": "",
