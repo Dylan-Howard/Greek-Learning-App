@@ -6,21 +6,33 @@ import userData from '../data/userData.json';
 
 type UserProgress = {
   lessons: {
-    id: number,
+    id: string,
     isComplete: boolean,
   }[] | undefined,
   vocabulary: {
-    id: number,
+    id: string,
     isComplete: boolean,
   }[] | undefined,
 };
 
+// type UserSettings = {
+//   alwaysShowFullDetails: boolean,
+//   prefersDarkMode: boolean,
+// };
+
+interface UserSettings {
+  alwaysShowFullDetails: boolean,
+  prefersDarkMode: boolean,
+  [key: string]: boolean | undefined,
+}
+
 type User = {
   progress: UserProgress,
+  settings: UserSettings,
 };
 
 function fetchUserProgressData(userId: string, progressArea: string):
-{ id: number, isComplete: boolean }[] | undefined {
+{ id: string, isComplete: boolean }[] | undefined {
   const userProgress = userData.users.find(({ id }: { id: string }) => id === userId)?.progress;
 
   if (!userProgress) {
@@ -35,12 +47,20 @@ function fetchUserProgressData(userId: string, progressArea: string):
   return undefined;
 }
 
+function fetchUserSettings(userId: string): UserSettings | undefined {
+  return userData.users.find(({ id }: { id: string }) => id === userId)?.settings;
+}
+
 const fetchUser = (userId: string) : User => {
   const progress: UserProgress = {
     lessons: fetchUserProgressData(userId, 'lessons'),
     vocabulary: fetchUserProgressData(userId, 'vocabulary'),
   };
-  return { progress };
+  const settings: UserSettings = fetchUserSettings(userId) || {
+    alwaysShowFullDetails: false,
+    prefersDarkMode: true,
+  };
+  return { progress, settings };
 };
 
 export const UserContext = createContext<{ user: User | undefined, setUser: Function }>({

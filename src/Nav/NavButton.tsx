@@ -23,6 +23,7 @@ export function NavButton(
       onClick={onShow}
     >
       <span className="material-symbols-outlined">{iconName}</span>
+      <span className="NavIconTitle">{title}</span>
     </button>
   );
 }

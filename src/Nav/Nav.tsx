@@ -1,26 +1,35 @@
 import './Nav.css';
+import { useContext } from 'react';
 import SettingsMenu from './SettingsMenu';
 import { Tab } from '../Common/Tab';
 import { NavButton } from './NavButton';
 import DetailsMenu from './DetailsMenu';
+import { UserContext } from '../User/User';
 
 function Nav({
   tabs,
   activeTabIndex,
   setActiveTabIndex,
+  activeTextIndex,
+  activeChapterIndex,
   activeDeclensionId,
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  setActiveDeclensionId,
 } : {
   tabs: Tab[],
   activeTabIndex: number,
   setActiveTabIndex: Function,
-  activeDeclensionId: number,
-  setActiveDeclensionId: Function,
+  activeTextIndex: number,
+  activeChapterIndex: string,
+  activeDeclensionId: string,
 }) {
+  const { user } = useContext(UserContext);
+  const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
+
   return (
-    <nav className="Navbar">
+    <nav className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}>
       <div className="NavButtons">
+        {/* <div className="NavLogo">
+          <img src="/static/img/icon-500x500.png." alt="Scriptura Logo" />
+        </div> */}
         {
           tabs.map(({ title, iconName }, i) => (
             <NavButton
@@ -39,7 +48,9 @@ function Nav({
           : (
             <SettingsMenu
               tab={tabs[activeTabIndex]}
-              activeDeclensionId={activeDeclensionId}
+              activemorphologyId={activeDeclensionId}
+              activeTextIndex={activeTextIndex}
+              activeChapterIndex={activeChapterIndex}
             />
           )
       }

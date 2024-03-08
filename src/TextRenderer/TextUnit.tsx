@@ -58,21 +58,21 @@ const stringifyShorthandDetails = (details: DeclensionDetails | undefined) => {
   const shorthand = [];
   if (root) { shorthand.push(`[${root.name}: `); }
   /* Verb Details */
-  if (tense) { shorthand.push(`${tense.short}`); }
-  if (voice) { shorthand.push(`${voice.short}`); }
-  if (mood) { shorthand.push(`${mood.short}`); }
-  if (person) { shorthand.push(`${person.short}`); }
+  if (tense) { shorthand.push(`${tense.abreviation}`); }
+  if (voice) { shorthand.push(`${voice.abreviation}`); }
+  if (mood) { shorthand.push(`${mood.abreviation}`); }
+  if (person) { shorthand.push(`${person.abreviation}`); }
   if (tense && person) { shorthand.push(']'); }
   /* Noun Details */
-  if (count) { shorthand.push(`${count.short}`); }
-  if (gender) { shorthand.push(`${gender.short}`); }
-  if (pattern) { shorthand.push(`${pattern.short}]`); }
+  if (count) { shorthand.push(`${count.abreviation}`); }
+  if (gender) { shorthand.push(`${gender.abreviation}`); }
+  if (pattern) { shorthand.push(`${pattern.abreviation}]`); }
 
   return shorthand.join('');
 };
 
-const fetchDeclension = ({ declensionId }: Unit) => (
-  declensions.declensions.find((dcl) => dcl.declensionId === declensionId)
+const fetchDeclension = ({ morphologyId }: Unit) => (
+  declensions.find((dcl) => dcl.morphId === morphologyId)
 );
 
 function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {

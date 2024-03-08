@@ -4,6 +4,13 @@
   flex-direction: column-reverse;
 }
 
+.Navbar.NavDark {
+  background: #252B2D;
+}
+.Navbar.NavLight {
+  background: #FAFAFA;
+}
+
 .NavButtons {
   display: flex;
   justify-content: space-around;
@@ -13,28 +20,39 @@
   color: #FAFAFA;
   width: 100%;
   padding-bottom: env(safe-area-inset-bottom);
+
+  position: relative;
+  z-index: 2;
 }
 .NavButtons ::selection {
-  /* color: inherit; */
   background-color: transparent;
 }
 .NavButtons ::-moz-selection {
-  /* color: inherit; */
   background-color: transparent;
 }
 
-.NavButtons > .NavIcon {
-  display: block;
+.NavButtons > .NavIcon,
+.NavButtons > .NavLogo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px 8px;
+  /* min-width: 64px; */
+  width: 20%;
+
   background: #1B2021;
   border: none;
   color: #FAFAFA;
   cursor: pointer;
-  padding: 16px 8px;
-  width: 64px;
+}
+.NavIcon > .NavIconTitle {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  text-align: center;
 }
 
 .NavButtons > .NavIcon.NavActive {
-  /* background: #252B2D; */
   background: #4A89BF;
 }
 
@@ -63,12 +81,17 @@
   .Navbar {
     flex-direction: row;
   }
-  
   .NavButtons {
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     padding: 8px 0;
     width: auto;
+  }
+  .NavButtons > .NavIcon {
+    width: 64px;
+  }
+  .NavIcon > .NavIconTitle {
+    display: none;
   }
 }

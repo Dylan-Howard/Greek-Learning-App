@@ -2,11 +2,16 @@
   font-family: 'Noto Serif', serif;
 }
 
+.HebrewText {
+  direction: rtl;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+}
+
 .TextContainer {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  background: #FAFAFA;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -16,6 +21,15 @@
 
   position: relative;
   top: 0;
+}
+
+.TextContainer.TextLight {
+  background: #FAFAFA;
+  color: #1B2021;
+}
+.TextContainer.TextDark {
+  background: #252B2D;
+  color: #FAFAFA;
 }
 
 .TextContainer ::selection {
@@ -35,22 +49,7 @@
 .TextRendererRow.SpaceBetween { justify-content: space-between; }
 
 .TextForm {
-  background-color: #FAFAFA;
   padding: .6rem 0 .4rem;
-}
-
-.TextForm .TextSelect {
-  font-size: .8rem;
-  padding: .6rem 1rem;
-  background-color: #FAFAFA;
-  border: 1px solid #CACDE1;
-  border-radius: 8px;
-  cursor: pointer;
-
-  appearance: none;
-  outline: none;
-  /* safari */
-  -webkit-appearance: none;
 }
 
 .TextContainer .TextRendererRow .TextRendererColumn {
@@ -60,19 +59,24 @@
 }
 
 .TextDisplay {
-  /* width: calc(100% - 8rem); */
-  padding: 2rem;
-
-  color: #1B2021;
   font-family: 'Noto Serif', serif;
+  padding: 2rem;
 }
 
-.TextContainer .TextHeading {
+.TextDisplay .TextHeading {
   display: block;
   font-size: 3.2rem;
   line-height: 3.6rem;
   text-align: center;
   margin: 0 0 2rem;
+}
+
+.TextDisplay.TextLight .TextHeading {
+  color: #1B2021;
+}
+
+.TextDisplay.TextLight .TextHeading {
+  color: #1B2021;
 }
 
 .TextContainer .TextUnit.HiglightOnHover {
@@ -84,7 +88,25 @@
   color: #4A89BF;
   cursor: pointer;
 }
+.TextControls {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  min-width: 200px;
+  margin-bottom: 2rem;
+}
 
+.TextControlButton {
+  cursor: pointer;
+  outline: none;
+  border: #fff;
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.TextControlButton.ButtonLeft { margin-left: 2rem; }
+.TextControlButton.ButtonRight { margin-right: 2rem; }
 /*
  * @TODO - Break Text Details into sidebar
  * @TODO - Use DetailsSection for each info unit 
@@ -93,12 +115,18 @@
 
 @media screen and (min-width: 800px) {
   .TextDisplay {
-    padding: 4rem;
+    padding: 4rem 4rem 2rem;
   }
   #RenderedText {
     height: 100%;
     width: 80%;
     padding: 6rem 0 0;
     max-width: 650px;
+  }
+  .NavButtons > .NavIcon {
+    display: block;
+  }
+  .TextControls {
+    width: 500px;
   }
 }

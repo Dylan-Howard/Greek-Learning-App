@@ -1,25 +1,41 @@
+/**
+ * Types used for Text Rendering
+ */
+
 export type Unit = {
-  unitId: number,
+  unitId: string,
   content: string;
-  declensionId?: number,
-  en?: string,
+  morphologyId: string,
+  en: string,
 };
 
-export type Verse = {
-  verseNumber: number;
+export interface Verse {
+  [key: string]: Unit[] | string | null;
+  verseNumber: string;
   content: string;
   units: Unit[] | null;
+}
+
+type VerseCollection = {
+  [key: string]: Verse | undefined;
 };
 
-export type Chapter = {
-  chapterNumber: number;
-  verses: Verse[];
+export interface Chapter {
+  [key: string]: VerseCollection | string;
+  chapterNumber: string;
+  verses: VerseCollection;
+}
+
+type ChapterCollection = {
+  [key: string]: Chapter | undefined;
 };
 
-export type Text = {
+export interface Text {
+  [key: string]: ChapterCollection | string;
   title: string;
-  chapters: Chapter[];
-};
+  label: string;
+  chapters: ChapterCollection;
+}
 
 export type Vocab = {
   wordId: number;
@@ -28,58 +44,36 @@ export type Vocab = {
   occurances: string | number;
 };
 
-// type DeclensionKey = keyof Declension;
+type MorphologicalForm = {
+  grammarId: number;
+  name: string;
+  abreviation: string;
+  lessonId: number;
+};
 
 export type Declension = {
-  tenseId?: number;
-  voiceId?: number;
-  moodId?: number;
-  personId?: number;
-  countId?: number;
-  genderId?: number;
-  patternId?: number;
-  vocabId: number;
+  morphId: string;
+  tenseId?: string;
+  voiceId?: string;
+  moodId?: string;
+  personId?: string;
+  countId?: string;
+  genderId?: string;
+  patternId?: string;
+  vocabId: string;
 };
 
 export type DeclensionDetails = {
   type: {
     name: string;
   } | undefined,
-  tense: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
-  voice: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
-  mood: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
-  person: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
-  count: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
-  gender: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
-  pattern: {
-    name: string;
-    short: string;
-    lessonId: number;
-  } | undefined,
+  tense: MorphologicalForm | undefined | null,
+  voice: MorphologicalForm | undefined | null,
+  mood: MorphologicalForm | undefined | null,
+  person: MorphologicalForm | undefined | null,
+  count: MorphologicalForm | undefined | null,
+  gender: MorphologicalForm | undefined | null,
+  pattern: MorphologicalForm | undefined | null,
   root: {
     name: string
   } | undefined,
@@ -91,10 +85,10 @@ export type DeclensionDetails = {
 type FormKey = keyof Form;
 
 type Form = {
-  formId: FormKey,
-  name: string,
-  short: string,
-  lessonId: LessonKey
+  formId: FormKey;
+  name: string;
+  abreviation: string;
+  lessonId: LessonKey;
 };
 
 type LessonKey = keyof Lesson;
