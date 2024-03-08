@@ -49,19 +49,61 @@ const fetchDeclensionDetails = (declension: Declension) : DeclensionDetails => {
 };
 
 function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: string }) {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
   const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
 
   const unitForm = declensions.filter(
     ({ morphId }) => morphId === activeDeclensionId,
   );
   if (!unitForm) {
-    return <span>No active Declension</span>;
+    return <span>No active declension</span>;
   }
 
   const details = fetchDeclensionDetails(unitForm[0]);
-
   const keys = Object.keys(details);
+  const isComplete = user?.progress
+    .vocabulary?.find((vcb) => vcb.id === unitForm[0].vocabId)?.isComplete;
+
+  const handleButtonClick = (settingId: string, settingType: string) => {
+    console.log(settingId);
+
+    /* Guards if no active user is set */
+    if (!user) { return; }
+    const updatedUser = {
+      progress: {
+        ...user.progress,
+      },
+      settings: {
+        ...user.settings,
+      },
+    };
+    /* Guards from non-existant settings */
+    if (settingType !== 'Word') { return; }
+    const settingsTypeMap = { Lesson: 'lessons', Word: 'vocabulary' };
+    const targetSettingType = settingsTypeMap[settingType];
+
+    /* Selects the target list */
+    if (
+      targetSettingType !== 'lessons'
+      && targetSettingType !== 'vocabulary'
+    ) { return; }
+    const targetProgressList = updatedUser.progress[targetSettingType];
+    if (!targetProgressList) { return; }
+
+    const targetProgressItem = targetProgressList.find((prg) => prg.id === settingId);
+    if (!targetProgressItem) {
+      targetProgressList.push({
+        id: settingId,
+        isComplete: !isComplete,
+      });
+    } else {
+      targetProgressItem.isComplete = !isComplete;
+    }
+
+    setUser(updatedUser);
+  };
+
   return (
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id="details-menu" className="SettingsMenuTab MenuActive">
@@ -86,6 +128,15 @@ function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: string }) {
           }
         </div>
         <div className="DetailsSection">
+          <button
+            className="SettingsButton"
+            type="button"
+            onClick={() => handleButtonClick(unitForm[0].vocabId, 'Word')}
+          >
+            {
+              isComplete ? 'I don’t know this word' : 'Don’t translate this word anymore?'
+            }
+          </button>
           {/* <h2>Relevant Links</h2> */}
         </div>
       </div>

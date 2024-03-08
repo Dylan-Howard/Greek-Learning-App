@@ -105,7 +105,6 @@ function SettingsMenu(
       );
     }
   }
-
   if (title === 'Details') {
     options.push({
       id: '1',
