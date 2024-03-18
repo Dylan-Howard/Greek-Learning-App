@@ -1,5 +1,6 @@
 import './Nav.css';
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import SettingsMenu from './SettingsMenu';
 import { Tab } from '../Common/Tab';
 import { NavButton } from './NavButton';
@@ -39,18 +40,25 @@ function Nav({
             />
           ))
         }
+        <Link
+          to="/about"
+          className="NavIcon"
+        >
+          <span className="material-symbols-outlined">info</span>
+          <span className="NavIconTitle">About</span>
+        </Link>
       </div>
       {
-        tabs[activeTabIndex].title === 'Details'
-          ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
-          : (
-            <SettingsMenu
-              tab={tabs[activeTabIndex]}
-              activeMorphologyId={activeMorphologyId}
-              activeChapterId={activeChapterId}
-            />
-          )
-      }
+          tabs[activeTabIndex].title === 'Details'
+            ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
+            : (
+              <SettingsMenu
+                tab={tabs[activeTabIndex]}
+                activeMorphologyId={activeMorphologyId}
+                activeChapterId={activeChapterId}
+              />
+            )
+        }
     </nav>
   );
 }

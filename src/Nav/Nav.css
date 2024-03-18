@@ -36,6 +36,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
   padding: 16px 8px;
   /* min-width: 64px; */
   width: 20%;
@@ -44,6 +45,8 @@
   border: none;
   color: #FAFAFA;
   cursor: pointer;
+  font-size: 13.3px;
+  text-decoration: none;
 }
 .NavIcon > .NavIconTitle {
   display: block;
