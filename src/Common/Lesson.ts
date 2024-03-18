@@ -1,5 +1,5 @@
 export type Lesson = {
-  lessonId: string;
+  lessonId: number;
   title: string;
   grammarId?: number;
   tag?: string;

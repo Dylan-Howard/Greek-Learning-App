@@ -10,16 +10,14 @@ function Nav({
   tabs,
   activeTabIndex,
   setActiveTabIndex,
-  activeTextIndex,
-  activeChapterIndex,
-  activeDeclensionId,
+  activeChapterId,
+  activeMorphologyId,
 } : {
   tabs: Tab[],
   activeTabIndex: number,
   setActiveTabIndex: Function,
-  activeTextIndex: number,
-  activeChapterIndex: string,
-  activeDeclensionId: string,
+  activeChapterId: number,
+  activeMorphologyId: number,
 }) {
   const { user } = useContext(UserContext);
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
@@ -44,13 +42,12 @@ function Nav({
       </div>
       {
         tabs[activeTabIndex].title === 'Details'
-          ? <DetailsMenu activeDeclensionId={activeDeclensionId} />
+          ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
           : (
             <SettingsMenu
               tab={tabs[activeTabIndex]}
-              activemorphologyId={activeDeclensionId}
-              activeTextIndex={activeTextIndex}
-              activeChapterIndex={activeChapterIndex}
+              activeMorphologyId={activeMorphologyId}
+              activeChapterId={activeChapterId}
             />
           )
       }

@@ -6,11 +6,11 @@ import userData from '../data/userData.json';
 
 type UserProgress = {
   lessons: {
-    id: string,
+    id: number,
     isComplete: boolean,
   }[] | undefined,
   vocabulary: {
-    id: string,
+    id: number,
     isComplete: boolean,
   }[] | undefined,
 };
@@ -26,13 +26,13 @@ interface UserSettings {
   [key: string]: boolean | undefined,
 }
 
-type User = {
+export type User = {
   progress: UserProgress,
   settings: UserSettings,
 };
 
-function fetchUserProgressData(userId: string, progressArea: string):
-{ id: string, isComplete: boolean }[] | undefined {
+function fetchUserProgressData(userId: string, progressArea: string) :
+{ id: number, isComplete: boolean }[] | undefined {
   const userProgress = userData.users.find(({ id }: { id: string }) => id === userId)?.progress;
 
   if (!userProgress) {

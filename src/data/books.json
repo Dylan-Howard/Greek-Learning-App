@@ -1,0 +1,245 @@
+{
+  "0": {
+    "bookId": 0,
+    "bookNumber": 40,
+    "title": "Matthew",
+    "chapterIndicies": {
+      "start": 0,
+      "end": 27
+    }
+  },
+  "1": {
+    "bookId": 1,
+    "bookNumber": 41,
+    "title": "Mark",
+    "chapterIndicies": {
+      "start": 28,
+      "end": 43
+    }
+  },
+  "2": {
+    "bookId": 2,
+    "bookNumber": 42,
+    "title": "Luke",
+    "chapterIndicies": {
+      "start": 44,
+      "end": 67
+    }
+  },
+  "3": {
+    "bookId": 3,
+    "bookNumber": 43,
+    "title": "John",
+    "chapterIndicies": {
+      "start": 68,
+      "end": 88
+    }
+  },
+  "4": {
+    "bookId": 4,
+    "bookNumber": 44,
+    "title": "Acts",
+    "chapterIndicies": {
+      "start": 89,
+      "end": 116
+    }
+  },
+  "5": {
+    "bookId": 5,
+    "bookNumber": 45,
+    "title": "Romans",
+    "chapterIndicies": {
+      "start": 117,
+      "end": 132
+    }
+  },
+  "6": {
+    "bookId": 6,
+    "bookNumber": 46,
+    "title": "1 Corinthians",
+    "chapterIndicies": {
+      "start": 133,
+      "end": 148
+    }
+  },
+  "7": {
+    "bookId": 7,
+    "bookNumber": 47,
+    "title": "2 Corinthians",
+    "chapterIndicies": {
+      "start": 149,
+      "end": 161
+    }
+  },
+  "8": {
+    "bookId": 8,
+    "bookNumber": 48,
+    "title": "Galatians",
+    "chapterIndicies": {
+      "start": 162,
+      "end": 167
+    }
+  },
+  "9": {
+    "bookId": 9,
+    "bookNumber": 49,
+    "title": "Ephesians",
+    "chapterIndicies": {
+      "start": 168,
+      "end": 173
+    }
+  },
+  "10": {
+    "bookId": 10,
+    "bookNumber": 50,
+    "title": "Philipians",
+    "chapterIndicies": {
+      "start": 174,
+      "end": 177
+    }
+  },
+  "11": {
+    "bookId": 11,
+    "bookNumber": 51,
+    "title": "Colossians",
+    "chapterIndicies": {
+      "start": 178,
+      "end": 181
+    }
+  },
+  "12": {
+    "bookId": 12,
+    "bookNumber": 52,
+    "title": "1 Thessolonians",
+    "chapterIndicies": {
+      "start": 182,
+      "end": 186
+    }
+  },
+  "13": {
+    "bookId": 13,
+    "bookNumber": 53,
+    "title": "2 Thessolonians",
+    "chapterIndicies": {
+      "start": 187,
+      "end": 189
+    }
+  },
+  "14": {
+    "bookId": 14,
+    "bookNumber": 54,
+    "title": "1 Timothy",
+    "chapterIndicies": {
+      "start": 190,
+      "end": 195
+    }
+  },
+  "15": {
+    "bookId": 15,
+    "bookNumber": 55,
+    "title": "2 Timothy",
+    "chapterIndicies": {
+      "start": 196,
+      "end": 199
+    }
+  },
+  "16": {
+    "bookId": 16,
+    "bookNumber": 56,
+    "title": "Titus",
+    "chapterIndicies": {
+      "start": 200,
+      "end": 202
+    }
+  },
+  "17": {
+    "bookId": 17,
+    "bookNumber": 57,
+    "title": "Philemon",
+    "chapterIndicies": {
+      "start": 203,
+      "end": 203
+    }
+  },
+  "18": {
+    "bookId": 18,
+    "bookNumber": 58,
+    "title": "Hebrews",
+    "chapterIndicies": {
+      "start": 204,
+      "end": 216
+    }
+  },
+  "19": {
+    "bookId": 19,
+    "bookNumber": 59,
+    "title": "James",
+    "chapterIndicies": {
+      "start": 217,
+      "end": 221
+    }
+  },
+  "20": {
+    "bookId": 20,
+    "bookNumber": 60,
+    "title": "1 Peter",
+    "chapterIndicies": {
+      "start": 222,
+      "end": 226
+    }
+  },
+  "21": {
+    "bookId": 21,
+    "bookNumber": 61,
+    "title": "2 Peter",
+    "chapterIndicies": {
+      "start": 227,
+      "end": 229
+    }
+  },
+  "22": {
+    "bookId": 22,
+    "bookNumber": 62,
+    "title": "1 John",
+    "chapterIndicies": {
+      "start": 230,
+      "end": 234
+    }
+  },
+  "23": {
+    "bookId": 23,
+    "bookNumber": 63,
+    "title": "2 John",
+    "chapterIndicies": {
+      "start": 235,
+      "end": 235
+    }
+  },
+  "24": {
+    "bookId": 24,
+    "bookNumber": 64,
+    "title": "3 John",
+    "chapterIndicies": {
+      "start": 236,
+      "end": 236
+    }
+  },
+  "25": {
+    "bookId": 25,
+    "bookNumber": 65,
+    "title": "Jude",
+    "chapterIndicies": {
+      "start": 237,
+      "end": 237
+    }
+  },
+  "26": {
+    "bookId": 26,
+    "bookNumber": 66,
+    "title": "Revelation",
+    "chapterIndicies": {
+      "start": 238,
+      "end": 259
+    }
+  }
+}

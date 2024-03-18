@@ -1,6 +1,7 @@
 export type Word = {
-  wordId: string;
+  wordId: number;
   content: string;
   gloss: string;
   occurance?: number;
+  gkRef?: string;
 };

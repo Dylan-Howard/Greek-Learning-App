@@ -6,7 +6,8 @@ import Nav from './Nav/Nav';
 
 // const TEST_USER_ID = 'user1';
 const TEST_USER_ID = 'user2';
-const DEFAULT_TEXT_ID = 0;
+const DEFAULT_BOOK_ID = 0;
+const DEFAULT_CHAPTER_ID = 0;
 
 // eslint-disable-next-line no-console, @typescript-eslint/no-unused-vars
 const log = (message: any) => console.log(message);
@@ -18,11 +19,12 @@ function App() {
   );
   /* States for side bar */
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [activeDeclensionId, setActiveDeclensionId] = useState('0');
+  const [activeMorphologyId, setActiveMorphologyId] = useState(-1);
 
   /* States primarily for text rendering */
-  const [activeTextIndex, setActiveTextIndex] = useState(DEFAULT_TEXT_ID);
-  const [activeChapterIndex, setActiveChapterIndex] = useState('1');
+  /* @TODO - Merge these two states into a Page state { bookId, chapterId } */
+  const [activeBookId, setActiveBookId] = useState(DEFAULT_BOOK_ID);
+  const [activeChapterId, setActiveChapterId] = useState(DEFAULT_CHAPTER_ID);
 
   const tabs = [
     { title: 'Home', iconName: 'home' },
@@ -31,13 +33,13 @@ function App() {
     { title: 'Settings', iconName: 'settings' },
   ];
 
-  const changeActiveDeclension = (declensionId: string) => {
-    setActiveDeclensionId(declensionId);
-    if (!declensionId) { setActiveTabIndex(0); }
-    if (declensionId && activeTabIndex !== 4) { setActiveTabIndex(4); }
+  const changeActiveDeclension = (morphologyId: number) => {
+    setActiveMorphologyId(morphologyId);
+    if (morphologyId === -1) { setActiveTabIndex(0); }
+    if (morphologyId !== -1 && activeTabIndex !== 4) { setActiveTabIndex(4); }
   };
 
-  if (activeDeclensionId! !== '0') {
+  if (activeMorphologyId !== -1) {
     tabs.push({ title: 'Details', iconName: 'chat_info' });
   }
 
@@ -49,15 +51,14 @@ function App() {
           tabs={tabs}
           activeTabIndex={activeTabIndex}
           setActiveTabIndex={setActiveTabIndex}
-          activeTextIndex={activeTextIndex}
-          activeChapterIndex={activeChapterIndex}
-          activeDeclensionId={activeDeclensionId}
+          activeChapterId={activeChapterId}
+          activeMorphologyId={activeMorphologyId}
         />
         <TextRenderer
-          activeTextIndex={activeTextIndex}
-          setActiveTextIndex={setActiveTextIndex}
-          activeChapterIndex={activeChapterIndex}
-          setActiveChapterIndex={setActiveChapterIndex}
+          activeBookId={activeBookId}
+          setActiveBookId={setActiveBookId}
+          activeChapterId={activeChapterId}
+          setActiveChapterId={setActiveChapterId}
           changeActiveDeclension={changeActiveDeclension}
         />
       </div>

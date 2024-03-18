@@ -31,19 +31,19 @@
   },
   "6": {
     "grammarId": 6,
-    "name": "1st Declension",
+    "name": "1st Person",
     "abreviation": "1st",
     "lessonId": 5
   },
   "7": {
     "grammarId": 7,
-    "name": "2nd Declension",
+    "name": "2nd Person",
     "abreviation": "2nd",
     "lessonId": 4
   },
   "8": {
     "grammarId": 8,
-    "name": "3rd Declension",
+    "name": "3rd Person",
     "abreviation": "3rd",
     "lessonId": 8
   },
@@ -84,10 +84,10 @@
     "lessonId": 10
   },
   "15": {
-    "grammarId": 15,
+    "grammarId": 33,
     "name": "Preposition",
     "abreviation": "Prep",
-    "lessonId": 8
+    "lessonId": 0
   },
   "16": {
     "grammarId": 16,
@@ -133,19 +133,19 @@
   },
   "23": {
     "grammarId": 23,
-    "name": "First Person",
+    "name": "First Declension",
     "abreviation": "1st",
     "lessonId": 2
   },
   "24": {
     "grammarId": 24,
-    "name": "Second Person",
+    "name": "Second Declension",
     "abreviation": "2nd",
     "lessonId": 2
   },
   "25": {
     "grammarId": 25,
-    "name": "Third Person",
+    "name": "Third Declension",
     "abreviation": "3rd",
     "lessonId": 2
   },
@@ -172,5 +172,35 @@
     "name": "Accusative",
     "abreviation": "Acc",
     "lessonId": 4
+  },
+  "30": {
+    "grammarId": 30,
+    "name": "Noun",
+    "abreviation": "N",
+    "lessonId": 0
+  },
+  "31": {
+    "grammarId": 31,
+    "name": "Pronoun",
+    "abreviation": "Pn",
+    "lessonId": 0
+  },
+  "32": {
+    "grammarId": 32,
+    "name": "Verb",
+    "abreviation": "V",
+    "lessonId": 0
+  },
+  "34": {
+    "grammarId": 34,
+    "name": "Article",
+    "abreviation": "Art",
+    "lessonId": 0
+  },
+  "35": {
+    "grammarId": 35,
+    "name": "Particle",
+    "abreviation": "Particle",
+    "lessonId": 0
   }
 }

@@ -10,7 +10,7 @@ function TextDetails({ details } : { details: DeclensionDetails }) {
   return (
     <div className="TextDetails">
       {
-        details.root ? <span className="DetailsHeading GreekText">{`${details.root.name}`}</span> : ''
+        details.root ? <span className="DetailsHeading GreekText">{`${details.root}`}</span> : ''
       }
       {
         // @ts-ignore

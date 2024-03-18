@@ -9,7 +9,7 @@ function TextSelect({
 }: {
   activeOption: string,
   setOptionIndex: Function,
-  options: string[]
+  options: { id: number, label: string }[]
 }) {
   const [isActive, setIsActive] = useState(false);
 
@@ -40,15 +40,15 @@ function TextSelect({
         role="listbox"
       >
         {
-          options.map((opt, i) => (
-            <li key={`opt-${opt}`}>
+          options.map((opt) => (
+            <li key={`opt-${opt.id}`}>
               <input
                 type="radio"
-                id={`opt-${opt}`}
-                name="social-account"
-                onClick={() => handleOptionClick(i + 1)}
+                id={`opt-${opt.id}-${opt.label}`}
+                name="selection-option"
+                onClick={() => handleOptionClick(opt.id)}
               />
-              <label htmlFor={`opt-${opt}`}>{opt}</label>
+              <label htmlFor={`opt-${opt.id}-${opt.label}`}>{opt.label}</label>
             </li>
           ))
         }

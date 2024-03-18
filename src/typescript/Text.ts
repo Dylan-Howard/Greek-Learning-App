@@ -2,30 +2,6 @@
  * Types used for Text Rendering
  */
 
-export type Unit = {
-  unitId: string,
-  content: string;
-  morphologyId: string,
-  en: string,
-};
-
-export interface Verse {
-  [key: string]: Unit[] | string | null;
-  verseNumber: string;
-  content: string;
-  units: Unit[] | null;
-}
-
-type VerseCollection = {
-  [key: string]: Verse | undefined;
-};
-
-export interface Chapter {
-  [key: string]: VerseCollection | string;
-  chapterNumber: string;
-  verses: VerseCollection;
-}
-
 type ChapterCollection = {
   [key: string]: Chapter | undefined;
 };
@@ -37,13 +13,6 @@ export interface Text {
   chapters: ChapterCollection;
 }
 
-export type Vocab = {
-  wordId: number;
-  content: string;
-  gloss: string;
-  occurances: string | number;
-};
-
 type MorphologicalForm = {
   grammarId: number;
   name: string;
@@ -52,44 +21,43 @@ type MorphologicalForm = {
 };
 
 export type Declension = {
-  morphId: string;
-  tenseId?: string;
-  voiceId?: string;
-  moodId?: string;
-  personId?: string;
-  countId?: string;
-  genderId?: string;
-  patternId?: string;
-  vocabId: string;
+  morphologyId: number;
+  posId: number;
+  caseId?: number;
+  tenseId?: number;
+  voiceId?: number;
+  moodId?: number;
+  personId?: number;
+  numberId?: number;
+  genderId?: number;
+  patternId?: number;
+  degreeId?: number;
+  wordId: number;
 };
 
 export type DeclensionDetails = {
-  type: {
-    name: string;
-  } | undefined,
+  pos: MorphologicalForm,
   tense: MorphologicalForm | undefined | null,
   voice: MorphologicalForm | undefined | null,
   mood: MorphologicalForm | undefined | null,
   person: MorphologicalForm | undefined | null,
-  count: MorphologicalForm | undefined | null,
+  number: MorphologicalForm | undefined | null,
   gender: MorphologicalForm | undefined | null,
+  case: MorphologicalForm | undefined | null,
+  degree: MorphologicalForm | undefined | null,
   pattern: MorphologicalForm | undefined | null,
-  root: {
-    name: string
-  } | undefined,
-  gloss: {
-    name: string
-  } | undefined,
+  root: string,
+  gloss: string,
 };
 
 type FormKey = keyof Form;
 
-type Form = {
-  formId: FormKey;
-  name: string;
-  abreviation: string;
-  lessonId: LessonKey;
-};
+// type Form = {
+//   formId: FormKey;
+//   name: string;
+//   abreviation: string;
+//   lessonId: LessonKey;
+// };
 
 type LessonKey = keyof Lesson;
 
@@ -98,4 +66,65 @@ type Lesson = {
   grammerId: FormKey,
   title: string,
   tag: string,
+};
+
+export type Form = {
+  grammarId: number;
+  name: string;
+  abreviation: string;
+  lessonId: number;
+};
+
+export type Vocab = {
+  wordId: number;
+  content: string;
+  gloss: string;
+  occurances: number;
+  gkRef: string;
+};
+
+export type Unit = {
+  unitId: number;
+  content: string;
+  morphologyId: number;
+  en?: string;
+  verseId: number;
+};
+
+export type Verse = {
+  verseId: number;
+  verseNumber: number;
+  chapterId: number;
+  unitIndicies: {
+    start: number;
+    end: number;
+  };
+};
+
+export type Chapter = {
+  chapterId: number;
+  chapterNumber: number;
+  title: string;
+  bookId: number;
+  verseIndicies: {
+    start: number;
+    end: number;
+  };
+};
+
+export type Book = {
+  bookId: number;
+  bookNumber: number;
+  title: string;
+  chapterIndicies: {
+    start: number;
+    end: number;
+  };
+};
+
+/* Should be a unique combination of unitId and langauge */
+export type Translation = {
+  unitId: number;
+  content: string;
+  language: string;
 };

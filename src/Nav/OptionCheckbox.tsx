@@ -8,7 +8,7 @@ function OptionCheckbox(
     value,
     onChange,
   }: {
-    id: string,
+    id: number,
     type: string,
     name: string,
     value: boolean,

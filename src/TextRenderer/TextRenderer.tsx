@@ -6,10 +6,11 @@
 import './TextRenderer.css';
 import { useContext, useState } from 'react';
 import TextUnit from './TextUnit';
-import texts from '../data/texts.json';
+// import texts from '../data/texts.json';
 import TextSelect from './TextSelect';
 import { UserContext } from '../User/User';
-import { Text, Verse } from '../typescript/Text';
+import { Text, Unit, Verse } from '../typescript/Text';
+import * as TextService from '../LanguageData/LanguageData';
 
 const DEFAULT_TEXT_ID = 0;
 
@@ -21,124 +22,97 @@ const log = (message: any) => {
 
 function TextRenderer(
   {
-    activeTextIndex,
-    setActiveTextIndex,
-    activeChapterIndex,
-    setActiveChapterIndex,
+    activeBookId,
+    setActiveBookId,
+    activeChapterId,
+    setActiveChapterId,
     changeActiveDeclension,
   } : {
-    activeTextIndex: number,
-    setActiveTextIndex: Function,
-    activeChapterIndex: string,
-    setActiveChapterIndex: Function,
+    activeBookId: number,
+    setActiveBookId: Function,
+    activeChapterId: number,
+    setActiveChapterId: Function,
     changeActiveDeclension: Function,
   },
 ) {
   const { user } = useContext(UserContext);
+  // const [textUnits, setTextUnits] : [ Unit[], Function ] = useState([]);
 
   /* Sets the theme based on the user setting */
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
 
   /* Sets the active text */
-  const activeText: Text = texts.texts[activeTextIndex];
+  const activeBook = TextService.fetchBookById(activeBookId);
+  const activeChapter = TextService.fetchChapterById(activeChapterId);
+  const activeUnits = TextService.fetchUnitsByChapterId(activeChapterId);
 
   /* Determines whether the text is Left-Right or Right-Left */
-  const isRightToLeftText = !!(activeText.title === 'Ruth');
+  const isRightToLeftText = !!(activeBook.title === 'Ruth');
 
   /* Determines the position of the active chapter within the active text */
   let chapterPosition;
-  const chaptersInActiveText = Object.keys(activeText.chapters);
-
-  if (activeChapterIndex === '1') {
+  if (activeChapterId === 0) {
     chapterPosition = 'first';
   }
-  if (chaptersInActiveText.indexOf(activeChapterIndex) === chaptersInActiveText.length) {
+  if (activeChapterId === TextService.fetchMaxChapterId()) {
     chapterPosition = 'last';
   }
 
-  const heading = activeText?.title;
+  const handleTextChange = (targetBookId: number) => {
+    const targetBook = TextService.fetchBookById(targetBookId);
+    if (!targetBook) { return; }
 
-  /* Compiles all verses in the active chapter */
-  let activeVerses: Verse[] | [] = [];
-
-  if (activeChapterIndex.toString() in activeText.chapters) {
-    const chapterVerses = activeText.chapters[activeChapterIndex.toString()]?.verses;
-    // @ts-ignore
-    activeVerses = Object.values(chapterVerses);
-  } else {
-    activeVerses = [];
-  }
-
-  const handleTextChange = (targetTextIndex: number) => {
-    const targetText = texts.texts[targetTextIndex];
-    if (!targetText) { return; }
-
-    setActiveTextIndex(targetTextIndex);
-    setActiveChapterIndex('1');
+    setActiveBookId(targetBookId);
+    setActiveChapterId(targetBook.chapterIndicies.start);
   };
 
-  const handleChapterChange = (targetChapterIndex: number) => {
-    log(targetChapterIndex);
-
-    const chapterId = `${targetChapterIndex}`;
+  const handleChapterChange = (targetChapterId: number) => {
+    // log(targetChapterId);
 
     /* Determines if the targetChapterIndex is within the current text.
-     * If not, the chapter change with also change the text.
-    */
-    if (targetChapterIndex === 0) {
-      log('Changing to last chapter of previous text');
-      return;
+     * If not, the chapter change should only change the text.
+     */
+    if (targetChapterId < activeBook.chapterIndicies.start) {
+      // log('Changing to last chapter of the piror book');
+      setActiveBookId(activeBookId - 1);
     }
-    if (targetChapterIndex > chaptersInActiveText.length) {
-      log('Changing to first chapter of next text');
-      return;
+    if (targetChapterId > activeBook.chapterIndicies.end) {
+      // log('Changing to first chapter of the next book');
+      setActiveBookId(activeBookId + 1);
     }
 
-    const targetChapter = activeText.chapters[chapterId];
-    if (!targetChapter) { return; }
-
-    setActiveChapterIndex(chapterId);
+    setActiveChapterId(targetChapterId);
   };
 
-  const handleUnitClick = (e: any, morphologyId: string | undefined) => {
-    changeActiveDeclension(morphologyId || 0);
+  const handleUnitClick = (morphologyId: number | undefined) => {
+    changeActiveDeclension(morphologyId);
   };
 
   return (
     <div className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}>
       <form className="TextRendererRow TextForm">
         <TextSelect
-          activeOption={texts.texts[activeTextIndex].title}
+          activeOption={TextService.fetchBookById(activeBookId).title}
           setOptionIndex={handleTextChange}
-          options={texts.texts.map((txt) => txt.title)}
+          options={TextService.fetchBookSelectionOptions()}
         />
         <TextSelect
-          activeOption={activeChapterIndex}
+          activeOption={activeChapter.chapterNumber}
           setOptionIndex={handleChapterChange}
-          options={
-            Object.keys(texts.texts[activeTextIndex].chapters).map((chp) => chp.toString())
-          }
+          options={TextService.fetchChapterSelectionOptionsByBookId(activeBookId)}
         />
       </form>
       <div className="TextRendererRow">
         <div className="TextRendererColumn">
           <div className={isRightToLeftText ? 'TextDisplay HebrewText' : 'TextDisplay'}>
+            <h1 className="TextHeading">{`${activeBook.title} ${activeChapter.chapterNumber}`}</h1>
             {
-              activeText ? (
-                <h1 className="TextHeading">{heading}</h1>
-              ) : ''
-            }
-            {
-              activeVerses.map((vrs: Verse) => (
-                vrs.units
-                  ? vrs.units.map((unt) => (
-                    <TextUnit
-                      key={`unit-${unt.unitId}`}
-                      unit={unt}
-                      onClick={(e: Event) => handleUnitClick(e, unt.morphologyId)}
-                    />
-                  ))
-                  : <span key={vrs.verseNumber}>{`${vrs.content} `}</span>
+              activeUnits.map((unt: Unit) => (
+                <TextUnit
+                  key={`unit-${unt.verseId}-${unt.unitId}`}
+                  unit={unt}
+                  onClick={() => handleUnitClick(unt.morphologyId)}
+                />
               ))
             }
           </div>
@@ -146,21 +120,33 @@ function TextRenderer(
       </div>
       <div className="TextRendererRow">
         <div className="TextRendererColumn">
-          <div className="TextControls">
-            <button
-              className="TextControlButton ButtonLeft"
-              type="button"
-              onClick={() => handleChapterChange(parseInt(activeChapterIndex, 10) - 1)}
-            >
-              <span className="material-symbols-outlined">chevron_left</span>
-            </button>
-            <button
-              className="TextControlButton ButtonRight"
-              type="button"
-              onClick={() => handleChapterChange(parseInt(activeChapterIndex, 10) + 1)}
-            >
-              <span className="material-symbols-outlined">chevron_right</span>
-            </button>
+          <div className={chapterPosition === 'first' ? 'TextControls InvertDirection' : 'TextControls'}>
+            {
+              chapterPosition !== 'first'
+                ? (
+                  <button
+                    className="TextControlButton ButtonLeft"
+                    type="button"
+                    onClick={() => handleChapterChange(activeChapterId - 1)}
+                  >
+                    <span className="material-symbols-outlined">chevron_left</span>
+                  </button>
+                )
+                : ''
+            }
+            {
+              chapterPosition !== 'last'
+                ? (
+                  <button
+                    className="TextControlButton ButtonRight"
+                    type="button"
+                    onClick={() => handleChapterChange(activeChapterId + 1)}
+                  >
+                    <span className="material-symbols-outlined">chevron_right</span>
+                  </button>
+                )
+                : ''
+            }
           </div>
         </div>
       </div>

@@ -1,73 +1,23 @@
 import './DetailsMenu.css';
 import { useContext } from 'react';
-import { Declension, DeclensionDetails } from '../typescript/Text';
-import declensions from '../data/declensions.json';
-import forms from '../data/grammaticalForms.json';
-import vocab from '../data/vocabulary.json';
 import { UserContext } from '../User/User';
+import { fetchMorphologyById, fetchMorphologyDetailsByMorphologyId } from '../LanguageData/LanguageData';
 
-const fetchDeclensionDetails = (declension: Declension) : DeclensionDetails => {
-  // @ts-ignore
-  const {
-    tenseId,
-    voiceId,
-    moodId,
-    personId,
-    countId,
-    genderId,
-    patternId,
-    vocabId,
-  } : {
-    tenseId: keyof typeof forms,
-    voiceId: keyof typeof forms,
-    moodId: keyof typeof forms,
-    personId: keyof typeof forms,
-    countId: keyof typeof forms,
-    genderId: keyof typeof forms,
-    patternId: keyof typeof forms,
-    vocabId: keyof typeof vocab,
-  } = declension;
-
-  return ({
-    type: tenseId ? { name: 'verb' } : { name: 'noun' },
-    tense: tenseId ? forms[tenseId] : undefined,
-    voice: voiceId ? forms[voiceId] : undefined,
-    mood: moodId ? forms[moodId] : undefined,
-    person: personId ? forms[personId] : undefined,
-    count: countId ? forms[countId] : undefined,
-    gender: genderId ? forms[genderId] : undefined,
-    pattern: patternId ? forms[patternId] : undefined,
-    root: vocabId
-    // @ts-ignore
-      ? { name: vocab.gk.filter(({ wordId }) => wordId === vocabId)[0].content }
-      : undefined,
-    gloss: vocabId
-      // @ts-ignore
-      ? { name: vocab.gk.filter(({ wordId }) => wordId === vocabId)[0].gloss }
-      : undefined,
-  });
-};
-
-function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: string }) {
+function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
   const { user, setUser } = useContext(UserContext);
-  // const { user } = useContext(UserContext);
   const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
 
-  const unitForm = declensions.filter(
-    ({ morphId }) => morphId === activeDeclensionId,
-  );
+  const unitForm = fetchMorphologyById(activeMorphologyId);
   if (!unitForm) {
     return <span>No active declension</span>;
   }
 
-  const details = fetchDeclensionDetails(unitForm[0]);
-  const keys = Object.keys(details);
+  const details = fetchMorphologyDetailsByMorphologyId(activeMorphologyId);
+  const detailKeys = Object.keys(details);
   const isComplete = user?.progress
-    .vocabulary?.find((vcb) => vcb.id === unitForm[0].vocabId)?.isComplete;
+    .vocabulary?.find((vcb) => vcb.id === unitForm.wordId)?.isComplete;
 
-  const handleButtonClick = (settingId: string, settingType: string) => {
-    console.log(settingId);
-
+  const handleButtonClick = (settingId: number, settingType: string) => {
     /* Guards if no active user is set */
     if (!user) { return; }
     const updatedUser = {
@@ -108,18 +58,19 @@ function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: string }) {
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id="details-menu" className="SettingsMenuTab MenuActive">
         {
-          details.root ? <h1 className="MenuTabTitle GreekText">{`${details.root.name}`}</h1> : ''
+          details.root ? <h1 className="MenuTabTitle GreekText">{`${details.root}`}</h1> : ''
         }
         <div className="DetailsSection">
           {
           // @ts-ignore
-          keys.filter((key) => !!details[key])
+          detailKeys.filter((key) => !!details[key])
             .map((key) => (
               <div className="DetailsItem" key={`detail-${key}`}>
                 <span className="DetailsLabel">{key}</span>
                 <span className={`DetailsValue ${key === 'root' ? 'GreekText' : ''}`}>
                   {
                     // @ts-ignore
+                    // details[key].name
                     details[key].name
                   }
                 </span>
@@ -131,7 +82,7 @@ function DetailsMenu({ activeDeclensionId } : { activeDeclensionId: string }) {
           <button
             className="SettingsButton"
             type="button"
-            onClick={() => handleButtonClick(unitForm[0].vocabId, 'Word')}
+            onClick={() => handleButtonClick(unitForm.wordId, 'Word')}
           >
             {
               isComplete ? 'I don’t know this word' : 'Don’t translate this word anymore?'

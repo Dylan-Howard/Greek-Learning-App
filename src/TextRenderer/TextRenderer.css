@@ -96,6 +96,10 @@
   margin-bottom: 2rem;
 }
 
+.TextControls.InvertDirection {
+  flex-direction: row-reverse;
+}
+
 .TextControlButton {
   cursor: pointer;
   outline: none;

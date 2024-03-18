@@ -5,8 +5,7 @@ import {
   useContext,
   useState,
 } from 'react';
-import { fetchLessons, fetchVocabulary, fetchVocabularyByChapter } from '../LanguageData/LanguageData';
-// import texts from '../data/texts.json';
+import { fetchLessons, fetchVocabulary, fetchVocabularyByChapterId } from '../LanguageData/LanguageData';
 import { UserContext } from '../User/User';
 import { Tab } from '../Common/Tab';
 import { Lesson } from '../Common/Lesson';
@@ -19,14 +18,12 @@ const LANGUAGE = 'gk';
 function SettingsMenu(
   {
     tab: { title },
-    activemorphologyId,
-    activeTextIndex,
-    activeChapterIndex,
+    activeMorphologyId,
+    activeChapterId,
   } : {
     tab: Tab,
-    activemorphologyId: string,
-    activeTextIndex: number,
-    activeChapterIndex: string,
+    activeMorphologyId: number,
+    activeChapterId: number,
   },
 ) {
   const { user, setUser } = useContext(UserContext);
@@ -37,7 +34,7 @@ function SettingsMenu(
 
   if (title === 'Home') { return <span />; }
   const options : {
-    id: string,
+    id: number,
     name: string,
     type: string,
     isActive: boolean,
@@ -64,7 +61,7 @@ function SettingsMenu(
   if (title === 'Dictionary') {
     let vocabulary;
     if (showOnlyActive) {
-      vocabulary = fetchVocabularyByChapter('gk', activeTextIndex, activeChapterIndex);
+      vocabulary = fetchVocabularyByChapterId(activeChapterId);
     } else {
       vocabulary = fetchVocabulary(LANGUAGE);
     }
@@ -93,23 +90,23 @@ function SettingsMenu(
 
       options.push(
         ...keys
-          .filter((set: string) => (
-            filter === set.substring(0, filter.length)
+          .filter((setting: string) => (
+            filter === setting.substring(0, filter.length)
           ))
-          .map((set: string) => ({
-            id: keys.indexOf(set).toString(),
-            name: set,
+          .map((setting: string) => ({
+            id: keys.indexOf(setting),
+            name: setting,
             type: 'setting',
-            isActive: !!settings[set],
+            isActive: !!settings[setting],
           })),
       );
     }
   }
   if (title === 'Details') {
     options.push({
-      id: '1',
+      id: 1,
       type: 'Details',
-      name: activemorphologyId.toString(),
+      name: activeMorphologyId.toString(),
       isActive: true,
     });
   }
@@ -124,7 +121,7 @@ function SettingsMenu(
 
   const handleCheckboxChange = (
     e: ChangeEvent<HTMLInputElement>,
-    settingId: string,
+    settingId: number,
     settingType: string,
   ) => {
     /* Guards if no active user is set */
@@ -168,7 +165,7 @@ function SettingsMenu(
 
   const handleSettingChange = (
     e: ChangeEvent<HTMLInputElement>,
-    settingId: string,
+    settingId: number,
   ) => {
     /* Guards if no active user is set */
     if (!user) { return; }
@@ -184,9 +181,9 @@ function SettingsMenu(
     const { settings } = updatedUser;
 
     const keys = Object.keys(settings);
-    if (!keys[parseInt(settingId, 10)]) { return; }
+    if (!keys[settingId]) { return; }
     /* Updates the setting */
-    settings[keys[parseInt(settingId, 10)]] = e.target.checked;
+    settings[keys[settingId]] = e.target.checked;
 
     setUser(updatedUser);
   };
