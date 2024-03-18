@@ -21,6 +21,7 @@ type MorphologicalForm = {
 };
 
 export type Declension = {
+  content: string;
   morphologyId: number;
   posId: number;
   caseId?: number;
@@ -36,18 +37,19 @@ export type Declension = {
 };
 
 export type DeclensionDetails = {
-  pos: MorphologicalForm,
-  tense: MorphologicalForm | undefined | null,
-  voice: MorphologicalForm | undefined | null,
-  mood: MorphologicalForm | undefined | null,
-  person: MorphologicalForm | undefined | null,
-  number: MorphologicalForm | undefined | null,
-  gender: MorphologicalForm | undefined | null,
-  case: MorphologicalForm | undefined | null,
-  degree: MorphologicalForm | undefined | null,
-  pattern: MorphologicalForm | undefined | null,
-  root: string,
-  gloss: string,
+  content: string;
+  pos: MorphologicalForm;
+  tense: MorphologicalForm | undefined | null;
+  voice: MorphologicalForm | undefined | null;
+  mood: MorphologicalForm | undefined | null;
+  person: MorphologicalForm | undefined | null;
+  number: MorphologicalForm | undefined | null;
+  gender: MorphologicalForm | undefined | null;
+  case: MorphologicalForm | undefined | null;
+  degree: MorphologicalForm | undefined | null;
+  pattern: MorphologicalForm | undefined | null;
+  root: { name: string } | undefined;
+  gloss: { name: string } | undefined;
 };
 
 type FormKey = keyof Form;

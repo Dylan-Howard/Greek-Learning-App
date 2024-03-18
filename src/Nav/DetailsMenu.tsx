@@ -13,7 +13,9 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
   }
 
   const details = fetchMorphologyDetailsByMorphologyId(activeMorphologyId);
-  const detailKeys = Object.keys(details);
+  const detailKeys = Object.keys(details)
+    .filter((key) => key !== 'content');
+
   const isComplete = user?.progress
     .vocabulary?.find((vcb) => vcb.id === unitForm.wordId)?.isComplete;
 
@@ -58,7 +60,7 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id="details-menu" className="SettingsMenuTab MenuActive">
         {
-          details.root ? <h1 className="MenuTabTitle GreekText">{`${details.root}`}</h1> : ''
+          details.content ? <h1 className="MenuTabTitle GreekText">{`${details.content}`}</h1> : ''
         }
         <div className="DetailsSection">
           {
@@ -70,7 +72,6 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
                 <span className={`DetailsValue ${key === 'root' ? 'GreekText' : ''}`}>
                   {
                     // @ts-ignore
-                    // details[key].name
                     details[key].name
                   }
                 </span>

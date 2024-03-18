@@ -120,6 +120,7 @@ function fetchFormById(formId: number) {
 
 export const fetchMorphologyDetailsByMorphologyId = (morphologyId: number) : DeclensionDetails => {
   const {
+    content,
     posId,
     tenseId,
     voiceId,
@@ -132,6 +133,7 @@ export const fetchMorphologyDetailsByMorphologyId = (morphologyId: number) : Dec
     caseId,
     wordId,
   } : {
+    content: string,
     posId: number,
     tenseId?: number,
     voiceId?: number,
@@ -145,7 +147,10 @@ export const fetchMorphologyDetailsByMorphologyId = (morphologyId: number) : Dec
     wordId: number,
   } = fetchMorphologyById(morphologyId);
 
+  const vocab = fetchVocabularyById(wordId);
+
   return ({
+    content,
     pos: fetchFormById(posId),
     tense: tenseId ? fetchFormById(tenseId) : undefined,
     voice: voiceId ? fetchFormById(voiceId) : undefined,
@@ -156,8 +161,12 @@ export const fetchMorphologyDetailsByMorphologyId = (morphologyId: number) : Dec
     pattern: patternId ? fetchFormById(patternId) : undefined,
     degree: degreeId ? fetchFormById(degreeId) : undefined,
     case: caseId ? fetchFormById(caseId) : undefined,
-    root: fetchVocabularyById(wordId).content || 'Not yet defined',
-    gloss: fetchVocabularyById(wordId).gloss,
+    root: {
+      name: vocab ? vocab.content : 'Not yet defined',
+    },
+    gloss: {
+      name: vocab ? vocab.gloss : 'Not yet defined',
+    },
   });
 };
 
