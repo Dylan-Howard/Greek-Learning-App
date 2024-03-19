@@ -32,19 +32,19 @@
   "6": {
     "grammarId": 6,
     "name": "1st Person",
-    "abreviation": "1st",
+    "abreviation": "1",
     "lessonId": 5
   },
   "7": {
     "grammarId": 7,
     "name": "2nd Person",
-    "abreviation": "2nd",
+    "abreviation": "2",
     "lessonId": 4
   },
   "8": {
     "grammarId": 8,
     "name": "3rd Person",
-    "abreviation": "3rd",
+    "abreviation": "3",
     "lessonId": 8
   },
   "9": {

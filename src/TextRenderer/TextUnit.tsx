@@ -20,17 +20,11 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
     ? TextService.fetchMorphologyDetailsByMorphologyId(unit.morphologyId)
     : undefined;
 
-  let textContent;
-  if (declension && isRecognizable === 'recognizable') {
-    textContent = unit.content;
-  } else if (declension && isRecognizable === 'needsHelps') {
-    textContent = `${unit.content} ${TextService.stringifyShorthandDetails(details)}`;
-  } else {
-    textContent = unit.en || unit.content;
+  const primaryText = isRecognizable === 'unrecognizable' ? (unit.en || unit.content) : unit.content;
+  let helpText;
+  if (declension && isRecognizable === 'needsHelps') {
+    helpText = TextService.stringifyShorthandDetails(details);
   }
-
-  // console.log(unit);
-  // console.log(textContent);
 
   if (unit && details) {
     return (
@@ -42,11 +36,14 @@ function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
         role="button"
         tabIndex={0}
       >
-        {` ${textContent}`}
+        <span className="TextUnitPrimary">{` ${primaryText}`}</span>
+        {
+          helpText ? <span className="TextUnitHelp">{` ${helpText}`}</span> : ''
+        }
       </span>
     );
   }
-  return <span className="TextUnit">{`${textContent}`}</span>;
+  return <span className="TextUnit">{`${primaryText}`}</span>;
 }
 
 export default TextUnit;

@@ -173,21 +173,20 @@ export const fetchMorphologyDetailsByMorphologyId = (morphologyId: number) : Dec
 export const stringifyShorthandDetails = (details: DeclensionDetails | undefined) => {
   if (!details) { return ''; }
   const {
-    root, tense, voice, mood, person, number, gender, pattern,
+    root, pos, tense, voice, mood, person, number, gender, pattern,
   } = details;
   const shorthand = [];
-  if (root) { shorthand.push(`${root}: `); }
+  if (root) { shorthand.push(`${root.name}: `); }
+  if (pos) { shorthand.push(`${pos.abreviation[0]}-`); }
   /* Verb Details */
   if (tense) { shorthand.push(`${tense.abreviation}`); }
   if (voice) { shorthand.push(`${voice.abreviation}`); }
-  if (mood) { shorthand.push(`${mood.abreviation}`); }
+  if (mood) { shorthand.push(`${mood.abreviation}-`); }
   if (person) { shorthand.push(`${person.abreviation}`); }
-  if (tense && person) { shorthand.push(']'); }
   /* Noun Details */
-  if (number) { shorthand.push(`${number.abreviation}`); }
   if (gender) { shorthand.push(`${gender.abreviation}`); }
+  if (number) { shorthand.push(`${number.abreviation}`); }
   if (pattern) { shorthand.push(`${pattern.abreviation}`); }
-
   return `[${shorthand.join('')}]`;
 };
 
