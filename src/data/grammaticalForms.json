@@ -33,19 +33,19 @@
     "grammarId": 6,
     "name": "1st Person",
     "abreviation": "1",
-    "lessonId": 5
+    "lessonId": 2
   },
   "7": {
     "grammarId": 7,
     "name": "2nd Person",
     "abreviation": "2",
-    "lessonId": 4
+    "lessonId": 2
   },
   "8": {
     "grammarId": 8,
     "name": "3rd Person",
     "abreviation": "3",
-    "lessonId": 8
+    "lessonId": 2
   },
   "9": {
     "grammarId": 9,
@@ -87,7 +87,7 @@
     "grammarId": 33,
     "name": "Preposition",
     "abreviation": "Prep",
-    "lessonId": 0
+    "lessonId": 8
   },
   "16": {
     "grammarId": 16,
@@ -111,7 +111,7 @@
     "grammarId": 19,
     "name": "Indicative",
     "abreviation": "I",
-    "lessonId": 2
+    "lessonId": 3
   },
   "20": {
     "grammarId": 20,
@@ -177,30 +177,48 @@
     "grammarId": 30,
     "name": "Noun",
     "abreviation": "N",
-    "lessonId": 0
+    "lessonId": 1
   },
   "31": {
     "grammarId": 31,
     "name": "Pronoun",
     "abreviation": "Pn",
-    "lessonId": 0
+    "lessonId": 9
   },
   "32": {
     "grammarId": 32,
     "name": "Verb",
     "abreviation": "V",
-    "lessonId": 0
+    "lessonId": 2
   },
   "34": {
     "grammarId": 34,
     "name": "Article",
     "abreviation": "Art",
-    "lessonId": 0
+    "lessonId": 2
   },
   "35": {
     "grammarId": 35,
     "name": "Particle",
     "abreviation": "Particle",
-    "lessonId": 0
+    "lessonId": 1
+  },
+  "36": {
+    "grammarId": 36,
+    "name": "Imperfect",
+    "abreviation": "I",
+    "lessonId": 7
+  },
+  "37": {
+    "grammarId": 37,
+    "name": "Participle",
+    "abreviation": "Part",
+    "lessonId": 20
+  },
+  "38": {
+    "grammarId": 38,
+    "name": "Infiniative",
+    "abreviation": "Inf",
+    "lessonId": 21
   }
 }

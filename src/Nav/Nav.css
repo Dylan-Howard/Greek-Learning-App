@@ -73,9 +73,11 @@
   background-color: #3A74A6;
 }
 
+.NavButtons > .NavIcon:hover,
 .NavButtons > .NavIcon:hover > .material-symbols-outlined {
   color: #4A89BF;
 }
+.NavButtons > .NavIcon.NavActive:hover,
 .NavButtons > .NavIcon.NavActive:hover > .material-symbols-outlined {
   color: #FFFAFF;
 }
@@ -95,6 +97,6 @@
     width: 64px;
   }
   .NavIcon > .NavIconTitle {
-    display: none;
+    font-size: 11px;
   }
 }
