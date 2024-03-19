@@ -10,7 +10,7 @@ import { Word } from '../Common/Word';
 import { Lesson } from '../Common/Lesson';
 import {
   Book, Declension, DeclensionDetails, Unit,
-} from '../typescript/Text';
+} from './Text';
 
 export const fetchMorphology = (lng: string) => {
   if (vocabulary && lng === 'gk') {

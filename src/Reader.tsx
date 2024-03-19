@@ -1,9 +1,9 @@
 import './Reader.css';
 import { useState } from 'react';
-// import { useCookies } from 'react-cookie';
-import fetchUser, { UserContext } from './User/User';
+import { UserContext } from './User/User';
 import TextRenderer from './TextRenderer/TextRenderer';
 import Nav from './Nav/Nav';
+import * as UserService from './User/UserService';
 
 // const TEST_USER_ID = 'user1';
 const TEST_USER_ID = 'user2';
@@ -25,7 +25,7 @@ const getUser = () => {
 
   console.log(localUser);
 
-  return localUser ? JSON.parse(localUser) : fetchUser(TEST_USER_ID);
+  return localUser ? JSON.parse(localUser) : UserService.fetchUser(TEST_USER_ID);
 };
 
 const saveUser = (userData: any) => {
@@ -38,23 +38,17 @@ const saveUser = (userData: any) => {
 
 function App() {
   /* State for user details */
-  const [activeUser, setActiveUser] = useState(
-    getUser(),
-  );
-  // const [userSettings, setUserSettings, removeUserSettings] = useCookies(['userSettings']);
+  const [activeUser, setActiveUser] = useState(getUser());
 
   /* States for side bar */
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [activeMorphologyId, setActiveMorphologyId] = useState(-1);
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
 
   /* States primarily for text rendering */
-  /* @TODO - Merge these two states into a Page state { bookId, chapterId } */
-  const [ activeText , setActiveText ] = useState({
+  const [activeText, setActiveText] = useState({
     bookId: DEFAULT_BOOK_ID,
     chapterId: DEFAULT_CHAPTER_ID,
   });
-  // const [activeBookId, setActiveBookId] = useState(DEFAULT_BOOK_ID);
-  // const [activeChapterId, setActiveChapterId] = useState(DEFAULT_CHAPTER_ID);
 
   const changeActiveDeclension = (morphologyId: number) => {
     setActiveMorphologyId(morphologyId);
@@ -63,9 +57,10 @@ function App() {
   };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  // const handleUserUpdate = () => {
-  //   saveUser(activeUser);
-  // };
+  const handleUserUpdate = (user: any) => {
+    setActiveUser(user);
+    saveUser(activeUser);
+  };
 
   if (activeMorphologyId !== -1) {
     tabs.push({ title: 'Details', iconName: 'chat_info' });
@@ -79,16 +74,12 @@ function App() {
           tabs={tabs}
           activeTabIndex={activeTabIndex}
           setActiveTabIndex={setActiveTabIndex}
-          // activeChapterId={activeChapterId}
-          // activeMorphologyId={activeMorphologyId}
           activeText={activeText}
+          activeMorphologyId={activeMorphologyId}
         />
         <TextRenderer
-          // activeBookId={activeBookId}
-          // setActiveBookId={setActiveBookId}
-          // activeChapterId={activeChapterId}
-          // setActiveChapterId={setActiveChapterId}
           activeText={activeText}
+          setActiveText={setActiveText}
           changeActiveDeclension={changeActiveDeclension}
         />
       </div>

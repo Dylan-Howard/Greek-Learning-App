@@ -1,18 +1,9 @@
+import { createContext, useContext } from 'react';
+import * as TextService from './LanguageData';
+
 /**
  * Types used for Text Rendering
  */
-
-type ChapterCollection = {
-  [key: string]: Chapter | undefined;
-};
-
-export interface Text {
-  [key: string]: ChapterCollection | string;
-  title: string;
-  label: string;
-  chapters: ChapterCollection;
-}
-
 type MorphologicalForm = {
   grammarId: number;
   name: string;
@@ -53,13 +44,6 @@ export type DeclensionDetails = {
 };
 
 type FormKey = keyof Form;
-
-// type Form = {
-//   formId: FormKey;
-//   name: string;
-//   abreviation: string;
-//   lessonId: LessonKey;
-// };
 
 type LessonKey = keyof Lesson;
 
@@ -124,9 +108,37 @@ export type Book = {
   };
 };
 
+type Text = {
+  bookId: number;
+  chapterId: number;
+};
+
 /* Should be a unique combination of unitId and langauge */
 export type Translation = {
   unitId: number;
   content: string;
   language: string;
 };
+
+/**
+ * Functions used for Text Context
+ */
+const DEFAULT_BOOK_ID = 0;
+const DEFAULT_CHAPTER_ID = 0;
+
+export const TextContext = createContext<{ text: Text, setUser: Function }>({
+  text: {
+    bookId: DEFAULT_BOOK_ID,
+    chapterId: DEFAULT_CHAPTER_ID,
+  },
+  setUser: () => {},
+});
+
+export function useTextContext() {
+  const context = useContext(TextContext);
+  if (context === undefined) {
+    throw new Error('useTodoContext must be within TodoProvider');
+  }
+
+  return context;
+}

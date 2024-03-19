@@ -1,5 +1,6 @@
-import { Declension } from '../typescript/Text';
-import { User } from '../User/User';
+import { Declension } from '../LanguageData/Text';
+import { User, UserSettings, UserProgress } from './User';
+import userData from '../data/userData.json';
 
 // eslint-disable-next-line import/prefer-default-export
 export const doesUserRecognize = (declension: Declension, user: User) => {
@@ -43,3 +44,35 @@ export const doesUserRecognize = (declension: Declension, user: User) => {
 export function getUserSettingById(userId: number, settingId: number) {
   return userId === settingId;
 }
+
+function fetchUserProgressData(userId: string, progressArea: string) :
+{ id: number, isComplete: boolean }[] | undefined {
+  const userProgress = userData.users.find(({ id }: { id: string }) => id === userId)?.progress;
+
+  if (!userProgress) {
+    return undefined;
+  }
+  if (progressArea === 'lessons') {
+    return userProgress[progressArea];
+  }
+  if (progressArea === 'vocabulary') {
+    return userProgress[progressArea];
+  }
+  return undefined;
+}
+
+function fetchUserSettings(userId: string): UserSettings | undefined {
+  return userData.users.find(({ id }: { id: string }) => id === userId)?.settings;
+}
+
+export const fetchUser = (userId: string) : User => {
+  const progress: UserProgress = {
+    lessons: fetchUserProgressData(userId, 'lessons'),
+    vocabulary: fetchUserProgressData(userId, 'vocabulary'),
+  };
+  const settings: UserSettings = fetchUserSettings(userId) || {
+    alwaysShowFullDetails: false,
+    prefersDarkMode: true,
+  };
+  return { progress, settings };
+};

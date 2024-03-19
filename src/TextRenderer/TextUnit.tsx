@@ -2,10 +2,10 @@
  * Text Unit
  */
 
-import { Unit } from '../typescript/Text';
+import { Unit } from '../LanguageData/Text';
 import { useUserContext } from '../User/User';
 import * as TextService from '../LanguageData/LanguageData';
-import * as UserService from '../LanguageData/UserService';
+import * as UserService from '../User/UserService';
 
 function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
   const declension = TextService.fetchMorphologyByUnitId(unit.unitId);

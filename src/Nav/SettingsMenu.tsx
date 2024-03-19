@@ -19,11 +19,11 @@ function SettingsMenu(
   {
     tab: { title },
     activeMorphologyId,
-    activeChapterId,
+    activeText,
   } : {
     tab: Tab,
     activeMorphologyId: number,
-    activeChapterId: number,
+    activeText: { bookId: number, chapterId: number },
   },
 ) {
   const { user, setUser } = useContext(UserContext);
@@ -61,7 +61,7 @@ function SettingsMenu(
   if (title === 'Dictionary') {
     let vocabulary;
     if (showOnlyActive) {
-      vocabulary = fetchVocabularyByChapterId(activeChapterId);
+      vocabulary = fetchVocabularyByChapterId(activeText.chapterId);
     } else {
       vocabulary = fetchVocabulary(LANGUAGE);
     }

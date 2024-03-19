@@ -2,7 +2,7 @@
  * Text Unit
  */
 
-import { DeclensionDetails } from '../typescript/Text';
+import { DeclensionDetails } from '../LanguageData/Text';
 
 // eslint-disable-next-line react/no-unused-prop-types, react/prop-types
 function TextDetails({ details } : { details: DeclensionDetails }) {

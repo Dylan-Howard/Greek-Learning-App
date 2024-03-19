@@ -6,13 +6,10 @@
 import './TextRenderer.css';
 import { useContext, useState } from 'react';
 import TextUnit from './TextUnit';
-// import texts from '../data/texts.json';
 import TextSelect from './TextSelect';
 import { UserContext } from '../User/User';
-import { Text, Unit, Verse } from '../typescript/Text';
+import { Unit } from '../LanguageData/Text';
 import * as TextService from '../LanguageData/LanguageData';
-
-const DEFAULT_TEXT_ID = 0;
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const log = (message: any) => {
@@ -22,16 +19,12 @@ const log = (message: any) => {
 
 function TextRenderer(
   {
-    activeBookId,
-    setActiveBookId,
-    activeChapterId,
-    setActiveChapterId,
+    activeText,
+    setActiveText,
     changeActiveDeclension,
   } : {
-    activeBookId: number,
-    setActiveBookId: Function,
-    activeChapterId: number,
-    setActiveChapterId: Function,
+    activeText: { bookId: number, chapterId: number },
+    setActiveText: Function,
     changeActiveDeclension: Function,
   },
 ) {
@@ -42,19 +35,19 @@ function TextRenderer(
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
 
   /* Sets the active text */
-  const activeBook = TextService.fetchBookById(activeBookId);
-  const activeChapter = TextService.fetchChapterById(activeChapterId);
-  const activeUnits = TextService.fetchUnitsByChapterId(activeChapterId);
+  const activeBook = TextService.fetchBookById(activeText.bookId);
+  const activeChapter = TextService.fetchChapterById(activeText.chapterId);
+  const activeUnits = TextService.fetchUnitsByChapterId(activeText.chapterId);
 
   /* Determines whether the text is Left-Right or Right-Left */
   const isRightToLeftText = !!(activeBook.title === 'Ruth');
 
   /* Determines the position of the active chapter within the active text */
   let chapterPosition;
-  if (activeChapterId === 0) {
+  if (activeText.chapterId === 0) {
     chapterPosition = 'first';
   }
-  if (activeChapterId === TextService.fetchMaxChapterId()) {
+  if (activeText.chapterId === TextService.fetchMaxChapterId()) {
     chapterPosition = 'last';
   }
 
@@ -62,26 +55,27 @@ function TextRenderer(
     const targetBook = TextService.fetchBookById(targetBookId);
     if (!targetBook) { return; }
 
-    setActiveBookId(targetBookId);
-    setActiveChapterId(targetBook.chapterIndicies.start);
+    setActiveText({
+      bookId: targetBookId,
+      chapterId: targetBook.chapterIndicies.start,
+    });
   };
 
   const handleChapterChange = (targetChapterId: number) => {
-    // log(targetChapterId);
-
     /* Determines if the targetChapterIndex is within the current text.
      * If not, the chapter change should only change the text.
      */
+    let targetBookId = activeText.bookId;
     if (targetChapterId < activeBook.chapterIndicies.start) {
-      // log('Changing to last chapter of the piror book');
-      setActiveBookId(activeBookId - 1);
+      targetBookId -= 1;
     }
     if (targetChapterId > activeBook.chapterIndicies.end) {
-      // log('Changing to first chapter of the next book');
-      setActiveBookId(activeBookId + 1);
+      targetBookId += 1;
     }
-
-    setActiveChapterId(targetChapterId);
+    setActiveText({
+      bookId: targetBookId,
+      chapterId: targetChapterId,
+    });
   };
 
   const handleUnitClick = (morphologyId: number | undefined) => {
@@ -92,14 +86,14 @@ function TextRenderer(
     <div className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}>
       <form className="TextRendererRow TextForm">
         <TextSelect
-          activeOption={TextService.fetchBookById(activeBookId).title}
+          activeOption={TextService.fetchBookById(activeBook.bookId).title}
           setOptionIndex={handleTextChange}
           options={TextService.fetchBookSelectionOptions()}
         />
         <TextSelect
           activeOption={activeChapter.chapterNumber}
           setOptionIndex={handleChapterChange}
-          options={TextService.fetchChapterSelectionOptionsByBookId(activeBookId)}
+          options={TextService.fetchChapterSelectionOptionsByBookId(activeBook.bookId)}
         />
       </form>
       <div className="TextRendererRow">
@@ -127,7 +121,7 @@ function TextRenderer(
                   <button
                     className="TextControlButton ButtonLeft"
                     type="button"
-                    onClick={() => handleChapterChange(activeChapterId - 1)}
+                    onClick={() => handleChapterChange(activeText.chapterId - 1)}
                   >
                     <span className="material-symbols-outlined">chevron_left</span>
                   </button>
@@ -140,7 +134,7 @@ function TextRenderer(
                   <button
                     className="TextControlButton ButtonRight"
                     type="button"
-                    onClick={() => handleChapterChange(activeChapterId + 1)}
+                    onClick={() => handleChapterChange(activeText.chapterId + 1)}
                   >
                     <span className="material-symbols-outlined">chevron_right</span>
                   </button>
