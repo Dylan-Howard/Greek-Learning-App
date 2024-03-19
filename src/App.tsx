@@ -1,32 +1,24 @@
 import './App.css';
 import {
   BrowserRouter,
-  Link,
   Route,
   Routes,
 } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material';
+import { light } from './Theme';
 import Reader from './Reader';
-
-// eslint-disable-next-line no-console, @typescript-eslint/no-unused-vars
-const log = (message: any) => console.log(message);
-
-function About() {
-  return (
-    <>
-      <h1>About</h1>
-      <Link to="/">Reader</Link>
-    </>
-  );
-}
+import About from './About/About';
 
 function App() {
   return (
-    <BrowserRouter basename="/DynamicInterlinear">
-      <Routes>
-        <Route path="/" element={<Reader />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider theme={light}>
+      <BrowserRouter basename="/DynamicInterlinear">
+        <Routes>
+          <Route path="/" element={<Reader />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
