@@ -1,14 +1,12 @@
 .Navbar {
-  display: flex;
-  justify-content: center;
-  flex-direction: column-reverse;
+  height: 100%;
 }
 
 .Navbar.NavDark {
   background: #252B2D;
 }
 .Navbar.NavLight {
-  background: #FAFAFA;
+  background: #EAEAF6;
 }
 
 .NavButtons {
@@ -16,14 +14,19 @@
   justify-content: space-around;
   flex-direction: row;
 
-  background: #1B2021;
-  color: #FAFAFA;
+  background: #EAEAF6;
+  color: #252B2D;
   width: 100%;
   padding-bottom: env(safe-area-inset-bottom);
 
   position: relative;
   z-index: 2;
 }
+.Navbar.NavDark .NavButtons {
+  background: #1B2021;
+  color: #F8F8FC;
+}
+
 .NavButtons ::selection {
   background-color: transparent;
 }
@@ -31,8 +34,8 @@
   background-color: transparent;
 }
 
-.NavButtons > .NavIcon,
-.NavButtons > .NavLogo {
+.NavButtons .NavIcon,
+.NavButtons .NavLogo {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -41,44 +44,56 @@
   /* min-width: 64px; */
   width: 20%;
 
-  background: #1B2021;
+  background: #EAEAF6;
   border: none;
-  color: #FAFAFA;
+  border-radius: 0;
+  color: #252B2D;
   cursor: pointer;
   font-size: 13.3px;
   text-decoration: none;
 }
-.NavIcon > .NavIconTitle {
+.Navbar.NavDark .NavButtons .NavIcon,
+.Navbar.NavDark .NavButtons .NavLogo {
+  background: #1B2021;
+  color: #EAEAF6;
+}
+
+.NavIcon .NavLink {
+  color: #1B2021;
+  text-decoration: none;
+}
+.Navbar.NavDark .NavIcon .NavLink {
+  color: #F8F8FC;
+}
+
+.NavIcon .NavIconTitle {
   display: block;
   width: 100%;
   margin-top: 4px;
   text-align: center;
+  text-decoration: none;
 }
 
-.NavButtons > .NavIcon.NavActive {
+
+.NavButtons .NavIcon.NavActive {
   background: #4A89BF;
 }
 
-.NavButtons > .NavIcon > .material-symbols-outlined {
-  font-size: 1.8rem;
-  text-align: center;
-  vertical-align: middle;
-  width: 100%;
-}
-
-.NavButtons > .NavIcon:hover {
+.Navbar.NavDark .NavButtons .NavIcon:hover,
+.Navbar.NavDark .NavButtons .NavIcon:hover .NavLink {
   background: #252B2D;
 }
-.NavButtons > .NavIcon.NavActive:hover {
+.NavButtons .NavIcon.NavActive:hover,
+.NavButtons .NavIcon.NavActive:hover .NavLink {
   background-color: #3A74A6;
 }
 
-.NavButtons > .NavIcon:hover,
-.NavButtons > .NavIcon:hover > .material-symbols-outlined {
+.NavButtons .NavIcon:hover,
+.NavButtons .NavIcon:hover .NavLink {
   color: #4A89BF;
 }
-.NavButtons > .NavIcon.NavActive:hover,
-.NavButtons > .NavIcon.NavActive:hover > .material-symbols-outlined {
+.NavButtons .NavIcon.NavActive:hover,
+.NavButtons .NavIcon.NavActive:hover .NavLink {
   color: #FFFAFF;
 }
 
@@ -93,10 +108,10 @@
     padding: 8px 0;
     width: auto;
   }
-  .NavButtons > .NavIcon {
+  .NavButtons .NavIcon {
     width: 64px;
   }
-  .NavIcon > .NavIconTitle {
+  .NavIcon .NavIconTitle {
     font-size: 11px;
   }
 }

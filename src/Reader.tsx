@@ -30,17 +30,17 @@ function App() {
   const changeActiveDeclension = (morphologyId: number) => {
     setActiveMorphologyId(morphologyId);
     if (morphologyId === -1) { setActiveTabIndex(0); }
-    if (morphologyId !== -1 && activeTabIndex !== 4) { setActiveTabIndex(4); }
+    if (morphologyId !== -1 && activeTabIndex !== 3) { setActiveTabIndex(3); }
   };
 
   let tabs = [
     { title: 'Home', iconName: 'home' },
-    { title: 'Lessons', iconName: 'play_lesson' },
+    { title: 'Lessons', iconName: 'lessons' },
     { title: 'Dictionary', iconName: 'dictionary' },
   ];
 
   if (activeMorphologyId !== -1) {
-    tabs = [...tabs, { title: 'Details', iconName: 'chat_info' }];
+    tabs = [...tabs, { title: 'Details', iconName: 'details' }];
   }
 
   return (

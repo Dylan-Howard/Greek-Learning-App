@@ -1,6 +1,9 @@
 import './Nav.css';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import SettingsIcon from '@mui/icons-material/Settings';
+import InfoIcon from '@mui/icons-material/Info';
+import { IconButton, Stack } from '@mui/material';
 import SettingsMenu from './SettingsMenu';
 import { Tab } from '../Common/Tab';
 import { NavButton } from './NavButton';
@@ -22,7 +25,12 @@ function Nav({
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
 
   return (
-    <nav className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}>
+    <Stack
+      component="nav"
+      direction={{ xs: 'column-reverse', sm: 'row' }}
+      justifyContent="start"
+      className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}
+    >
       <div className="NavButtons">
         {/* <div className="NavLogo">
           <img src="/static/img/icon-500x500.png" alt="Scriptura Logo" />
@@ -38,14 +46,18 @@ function Nav({
             />
           ))
         }
-        <Link to="/settings" className="NavIcon">
-          <span className="material-symbols-outlined">settings</span>
-          <span className="NavIconTitle">Settings</span>
-        </Link>
-        <Link to="/about" className="NavIcon">
-          <span className="material-symbols-outlined">info</span>
-          <span className="NavIconTitle">About</span>
-        </Link>
+        <IconButton className="NavIcon" aria-label="delete" sx={{ color: 'primary.contrastText' }}>
+          <Link to="/settings" className="NavLink">
+            <SettingsIcon />
+            <span className="NavIconTitle">Settings</span>
+          </Link>
+        </IconButton>
+        <IconButton className="NavIcon" aria-label="delete" sx={{ color: 'primary.contrastText' }}>
+          <Link to="/about" className="NavLink">
+            <InfoIcon />
+            <span className="NavIconTitle">About</span>
+          </Link>
+        </IconButton>
       </div>
       {
           tabs[activeTabIndex].title === 'Details'
@@ -57,7 +69,7 @@ function Nav({
               />
             )
         }
-    </nav>
+    </Stack>
   );
 }
 

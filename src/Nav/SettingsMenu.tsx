@@ -216,7 +216,13 @@ function SettingsMenu(
           type="search"
           variant="outlined"
           onChange={(e) => handleTextboxChange(e)}
-          sx={{ backgroundColor: 'background.paper' }}
+          sx={{
+            backgroundColor: 'background.paper',
+            width: '.9',
+            m: 'auto',
+            mt: 1,
+            mb: 1,
+          }}
         />
         {
           options.length !== 0
@@ -237,11 +243,6 @@ function SettingsMenu(
             ))
             : <span className="SettingsNotice">No options match this search filter</span>
         }
-        <Button
-          onClick={() => UserService.clearLocalUser()}
-        >
-          Clear User Data
-        </Button>
       </div>
     </div>
   );

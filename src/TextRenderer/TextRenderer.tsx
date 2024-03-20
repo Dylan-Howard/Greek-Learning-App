@@ -5,7 +5,16 @@
  */
 import './TextRenderer.css';
 import { useContext } from 'react';
-import Fab from '@mui/material/Fab';
+import {
+  Container,
+  Fab,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+  Stack,
+} from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TextUnit from './TextUnit';
@@ -81,17 +90,18 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
     chapterPosition = 'last';
   }
 
-  const handleTextChange = (targetBookId: number) => {
-    const targetBook = TextService.fetchBookById(targetBookId);
+  const handleTextChange = (event: SelectChangeEvent) => {
+    const targetBook = TextService.fetchBookById(parseInt(event.target.value, 10));
     if (!targetBook) { return; }
 
     setText({
-      bookId: targetBookId,
+      bookId: parseInt(event.target.value, 10),
       chapterId: targetBook.chapterIndicies.start,
     });
   };
 
-  const handleChapterChange = (targetChapterId: number) => {
+  const handleChapterChange = (event: SelectChangeEvent) => {
+    const targetChapterId = parseInt(event.target.value, 10);
     /* Determines if the targetChapterIndex is within the current text.
      * If not, the chapter change should only change the text.
      */
@@ -114,7 +124,47 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
 
   return (
     <div className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}>
-      <form className="TextRendererRow TextForm">
+      <Container maxWidth="md" sx={{ mt: 4 }}>
+        <Stack direction="row" justifyContent="center">
+          <FormControl>
+            <InputLabel id="text-select-book-label">Book</InputLabel>
+            <Select
+              labelId="text-select-book-label"
+              id="text-select-book"
+              value={`${activeBook.bookId}`}
+              label="Text"
+              onChange={handleTextChange}
+              sx={{ width: 180 }}
+            >
+              {
+                TextService.fetchBookSelectionOptions()
+                  .map((book) => (
+                    <MenuItem value={book.id} key={`book-${book.id}`}>{book.label}</MenuItem>
+                  ))
+              }
+            </Select>
+          </FormControl>
+          <FormControl>
+            <InputLabel id="text-select-book-label">Chapter</InputLabel>
+            <Select
+              labelId="text-select-chapter-label"
+              id="text-select-chapter"
+              value={`${activeChapter.chapterId}`}
+              label="Chapter"
+              onChange={handleChapterChange}
+              sx={{ width: 80 }}
+            >
+              {
+                TextService.fetchChapterSelectionOptionsByBookId(activeBook.bookId)
+                  .map((chp) => (
+                    <MenuItem value={chp.id} key={`chapter-${chp.id}`}>{chp.label}</MenuItem>
+                  ))
+              }
+            </Select>
+          </FormControl>
+        </Stack>
+      </Container>
+      {/* <form className="TextRendererRow TextForm">
         <TextSelect
           activeOption={TextService.fetchBookById(activeBook.bookId).title}
           setOptionIndex={handleTextChange}
@@ -125,7 +175,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
           setOptionIndex={handleChapterChange}
           options={TextService.fetchChapterSelectionOptionsByBookId(activeBook.bookId)}
         />
-      </form>
+      </form> */}
       <div className="TextRendererRow">
         <div className="TextRendererColumn">
           <div className={isRightToLeftText ? 'TextDisplay HebrewText' : 'TextDisplay'}>
