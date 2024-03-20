@@ -11,13 +11,11 @@ function Nav({
   tabs,
   activeTabIndex,
   setActiveTabIndex,
-  activeText,
   activeMorphologyId,
 } : {
   tabs: Tab[],
   activeTabIndex: number,
   setActiveTabIndex: Function,
-  activeText: { bookId: number, chapterId: number },
   activeMorphologyId: number,
 }) {
   const { user } = useContext(UserContext);
@@ -27,7 +25,7 @@ function Nav({
     <nav className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}>
       <div className="NavButtons">
         {/* <div className="NavLogo">
-          <img src="/static/img/icon-500x500.png." alt="Scriptura Logo" />
+          <img src="/static/img/icon-500x500.png" alt="Scriptura Logo" />
         </div> */}
         {
           tabs.map(({ title, iconName }, i) => (
@@ -55,7 +53,6 @@ function Nav({
               <SettingsMenu
                 tab={tabs[activeTabIndex]}
                 activeMorphologyId={activeMorphologyId}
-                activeText={activeText}
               />
             )
         }

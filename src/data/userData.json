@@ -1,7 +1,18 @@
 {
-  "users": [
-    {
-      "id": "user1",
+  "users": {
+    "0": {
+      "id": "default",
+      "progress": {
+        "lessons": [],
+        "vocabulary": []
+      },
+      "settings" : {
+        "alwaysShowFullDetails": false,
+        "prefersDarkMode": false
+      }
+    },
+    "1": {
+      "id": "template1",
       "progress": {
         "lessons": [
           {
@@ -61,8 +72,1537 @@
         "prefersDarkMode": false
       }
     },
-    {
-      "id": "user2",
+    "2": {
+      "id": "template2",
+      "progress": {
+        "lessons": [
+          {
+            "id": 1,
+            "isComplete": true
+          },
+          {
+            "id": 2,
+            "isComplete": true
+          },
+          {
+            "id": 3,
+            "isComplete": true
+          },
+          {
+            "id": 4,
+            "isComplete": true
+          },
+          {
+            "id": 5,
+            "isComplete": true
+          },
+          {
+            "id": 6,
+            "isComplete": true
+          },
+          {
+            "id": 7,
+            "isComplete": true
+          },
+          {
+            "id": 8,
+            "isComplete": true
+          },
+          {
+            "id": 9,
+            "isComplete": true
+          },
+          {
+            "id": 10,
+            "isComplete": true
+          },
+          {
+            "id": 11,
+            "isComplete": true
+          },
+          {
+            "id": 12,
+            "isComplete": true
+          },
+          {
+            "id": 13,
+            "isComplete": true
+          },
+          {
+            "id": 14,
+            "isComplete": true
+          },
+          {
+            "id": 15,
+            "isComplete": true
+          },
+          {
+            "id": 16,
+            "isComplete": true
+          },
+          {
+            "id": 17,
+            "isComplete": true
+          },
+          {
+            "id": 18,
+            "isComplete": true
+          },
+          {
+            "id": 19,
+            "isComplete": true
+          },
+          {
+            "id": 20,
+            "isComplete": true
+          },
+          {
+            "id": 21,
+            "isComplete": true
+          },
+          {
+            "id": 22,
+            "isComplete": true
+          },
+          {
+            "id": 23,
+            "isComplete": true
+          },
+          {
+            "id": 24,
+            "isComplete": true
+          },
+          {
+            "id": 25,
+            "isComplete": true
+          },
+          {
+            "id": 26,
+            "isComplete": true
+          }
+        ],
+        "vocabulary": [
+          {
+            "id": 1,
+            "isComplete": true
+          },
+          {
+            "id": 2,
+            "isComplete": true
+          },
+          {
+            "id": 3,
+            "isComplete": true
+          },
+          {
+            "id": 4,
+            "isComplete": true
+          },
+          {
+            "id": 5,
+            "isComplete": true
+          },
+          {
+            "id": 6,
+            "isComplete": true
+          },
+          {
+            "id": 7,
+            "isComplete": true
+          },
+          {
+            "id": 8,
+            "isComplete": true
+          },
+          {
+            "id": 9,
+            "isComplete": true
+          },
+          {
+            "id": 10,
+            "isComplete": true
+          },
+          {
+            "id": 11,
+            "isComplete": true
+          },
+          {
+            "id": 12,
+            "isComplete": true
+          },
+          {
+            "id": 13,
+            "isComplete": true
+          },
+          {
+            "id": 14,
+            "isComplete": true
+          },
+          {
+            "id": 15,
+            "isComplete": true
+          },
+          {
+            "id": 16,
+            "isComplete": true
+          },
+          {
+            "id": 17,
+            "isComplete": true
+          },
+          {
+            "id": 18,
+            "isComplete": true
+          },
+          {
+            "id": 19,
+            "isComplete": true
+          },
+          {
+            "id": 20,
+            "isComplete": true
+          },
+          {
+            "id": 21,
+            "isComplete": true
+          },
+          {
+            "id": 22,
+            "isComplete": true
+          },
+          {
+            "id": 23,
+            "isComplete": true
+          },
+          {
+            "id": 24,
+            "isComplete": true
+          },
+          {
+            "id": 25,
+            "isComplete": true
+          },
+          {
+            "id": 26,
+            "isComplete": true
+          },
+          {
+            "id": 27,
+            "isComplete": true
+          },
+          {
+            "id": 28,
+            "isComplete": true
+          },
+          {
+            "id": 29,
+            "isComplete": true
+          },
+          {
+            "id": 30,
+            "isComplete": true
+          },
+          {
+            "id": 31,
+            "isComplete": true
+          },
+          {
+            "id": 32,
+            "isComplete": true
+          },
+          {
+            "id": 33,
+            "isComplete": true
+          },
+          {
+            "id": 34,
+            "isComplete": true
+          },
+          {
+            "id": 35,
+            "isComplete": true
+          },
+          {
+            "id": 36,
+            "isComplete": true
+          },
+          {
+            "id": 37,
+            "isComplete": true
+          },
+          {
+            "id": 38,
+            "isComplete": true
+          },
+          {
+            "id": 39,
+            "isComplete": true
+          },
+          {
+            "id": 40,
+            "isComplete": true
+          },
+          {
+            "id": 41,
+            "isComplete": true
+          },
+          {
+            "id": 42,
+            "isComplete": true
+          },
+          {
+            "id": 43,
+            "isComplete": true
+          },
+          {
+            "id": 44,
+            "isComplete": true
+          },
+          {
+            "id": 45,
+            "isComplete": true
+          },
+          {
+            "id": 46,
+            "isComplete": true
+          },
+          {
+            "id": 47,
+            "isComplete": true
+          },
+          {
+            "id": 48,
+            "isComplete": true
+          },
+          {
+            "id": 49,
+            "isComplete": true
+          },
+          {
+            "id": 50,
+            "isComplete": true
+          },
+          {
+            "id": 51,
+            "isComplete": true
+          },
+          {
+            "id": 52,
+            "isComplete": true
+          },
+          {
+            "id": 53,
+            "isComplete": true
+          },
+          {
+            "id": 54,
+            "isComplete": true
+          },
+          {
+            "id": 55,
+            "isComplete": true
+          },
+          {
+            "id": 56,
+            "isComplete": true
+          },
+          {
+            "id": 57,
+            "isComplete": true
+          },
+          {
+            "id": 58,
+            "isComplete": true
+          },
+          {
+            "id": 59,
+            "isComplete": true
+          },
+          {
+            "id": 60,
+            "isComplete": true
+          },
+          {
+            "id": 61,
+            "isComplete": true
+          },
+          {
+            "id": 62,
+            "isComplete": true
+          },
+          {
+            "id": 63,
+            "isComplete": true
+          },
+          {
+            "id": 64,
+            "isComplete": true
+          },
+          {
+            "id": 65,
+            "isComplete": true
+          },
+          {
+            "id": 66,
+            "isComplete": true
+          },
+          {
+            "id": 67,
+            "isComplete": true
+          },
+          {
+            "id": 68,
+            "isComplete": true
+          },
+          {
+            "id": 69,
+            "isComplete": true
+          },
+          {
+            "id": 70,
+            "isComplete": true
+          },
+          {
+            "id": 71,
+            "isComplete": true
+          },
+          {
+            "id": 72,
+            "isComplete": true
+          },
+          {
+            "id": 73,
+            "isComplete": true
+          },
+          {
+            "id": 74,
+            "isComplete": true
+          },
+          {
+            "id": 75,
+            "isComplete": true
+          },
+          {
+            "id": 76,
+            "isComplete": true
+          },
+          {
+            "id": 77,
+            "isComplete": true
+          },
+          {
+            "id": 78,
+            "isComplete": true
+          },
+          {
+            "id": 79,
+            "isComplete": true
+          },
+          {
+            "id": 80,
+            "isComplete": true
+          },
+          {
+            "id": 81,
+            "isComplete": true
+          },
+          {
+            "id": 82,
+            "isComplete": true
+          },
+          {
+            "id": 83,
+            "isComplete": true
+          },
+          {
+            "id": 84,
+            "isComplete": true
+          },
+          {
+            "id": 85,
+            "isComplete": true
+          },
+          {
+            "id": 86,
+            "isComplete": true
+          },
+          {
+            "id": 87,
+            "isComplete": true
+          },
+          {
+            "id": 88,
+            "isComplete": true
+          },
+          {
+            "id": 89,
+            "isComplete": true
+          },
+          {
+            "id": 90,
+            "isComplete": true
+          },
+          {
+            "id": 91,
+            "isComplete": true
+          },
+          {
+            "id": 92,
+            "isComplete": true
+          },
+          {
+            "id": 93,
+            "isComplete": true
+          },
+          {
+            "id": 94,
+            "isComplete": true
+          },
+          {
+            "id": 95,
+            "isComplete": true
+          },
+          {
+            "id": 96,
+            "isComplete": true
+          },
+          {
+            "id": 97,
+            "isComplete": true
+          },
+          {
+            "id": 98,
+            "isComplete": true
+          },
+          {
+            "id": 99,
+            "isComplete": true
+          },
+          {
+            "id": 100,
+            "isComplete": true
+          },
+          {
+            "id": 101,
+            "isComplete": true
+          },
+          {
+            "id": 102,
+            "isComplete": true
+          },
+          {
+            "id": 103,
+            "isComplete": true
+          },
+          {
+            "id": 104,
+            "isComplete": true
+          },
+          {
+            "id": 105,
+            "isComplete": true
+          },
+          {
+            "id": 106,
+            "isComplete": true
+          },
+          {
+            "id": 107,
+            "isComplete": true
+          },
+          {
+            "id": 108,
+            "isComplete": true
+          },
+          {
+            "id": 109,
+            "isComplete": true
+          },
+          {
+            "id": 110,
+            "isComplete": true
+          },
+          {
+            "id": 111,
+            "isComplete": true
+          },
+          {
+            "id": 112,
+            "isComplete": true
+          },
+          {
+            "id": 113,
+            "isComplete": true
+          },
+          {
+            "id": 114,
+            "isComplete": true
+          },
+          {
+            "id": 115,
+            "isComplete": true
+          },
+          {
+            "id": 116,
+            "isComplete": true
+          },
+          {
+            "id": 117,
+            "isComplete": true
+          },
+          {
+            "id": 118,
+            "isComplete": true
+          },
+          {
+            "id": 119,
+            "isComplete": true
+          },
+          {
+            "id": 120,
+            "isComplete": true
+          },
+          {
+            "id": 121,
+            "isComplete": true
+          },
+          {
+            "id": 122,
+            "isComplete": true
+          },
+          {
+            "id": 123,
+            "isComplete": true
+          },
+          {
+            "id": 124,
+            "isComplete": true
+          },
+          {
+            "id": 125,
+            "isComplete": true
+          },
+          {
+            "id": 126,
+            "isComplete": true
+          },
+          {
+            "id": 127,
+            "isComplete": true
+          },
+          {
+            "id": 128,
+            "isComplete": true
+          },
+          {
+            "id": 129,
+            "isComplete": true
+          },
+          {
+            "id": 130,
+            "isComplete": true
+          },
+          {
+            "id": 131,
+            "isComplete": true
+          },
+          {
+            "id": 132,
+            "isComplete": true
+          },
+          {
+            "id": 133,
+            "isComplete": true
+          },
+          {
+            "id": 134,
+            "isComplete": true
+          },
+          {
+            "id": 135,
+            "isComplete": true
+          },
+          {
+            "id": 136,
+            "isComplete": true
+          },
+          {
+            "id": 137,
+            "isComplete": true
+          },
+          {
+            "id": 138,
+            "isComplete": true
+          },
+          {
+            "id": 139,
+            "isComplete": true
+          },
+          {
+            "id": 140,
+            "isComplete": true
+          },
+          {
+            "id": 141,
+            "isComplete": true
+          },
+          {
+            "id": 142,
+            "isComplete": true
+          },
+          {
+            "id": 143,
+            "isComplete": true
+          },
+          {
+            "id": 144,
+            "isComplete": true
+          },
+          {
+            "id": 145,
+            "isComplete": true
+          },
+          {
+            "id": 146,
+            "isComplete": true
+          },
+          {
+            "id": 147,
+            "isComplete": true
+          },
+          {
+            "id": 148,
+            "isComplete": true
+          },
+          {
+            "id": 149,
+            "isComplete": true
+          },
+          {
+            "id": 150,
+            "isComplete": true
+          },
+          {
+            "id": 151,
+            "isComplete": true
+          },
+          {
+            "id": 152,
+            "isComplete": true
+          },
+          {
+            "id": 153,
+            "isComplete": true
+          },
+          {
+            "id": 154,
+            "isComplete": true
+          },
+          {
+            "id": 155,
+            "isComplete": true
+          },
+          {
+            "id": 156,
+            "isComplete": true
+          },
+          {
+            "id": 157,
+            "isComplete": true
+          },
+          {
+            "id": 158,
+            "isComplete": true
+          },
+          {
+            "id": 159,
+            "isComplete": true
+          },
+          {
+            "id": 160,
+            "isComplete": true
+          },
+          {
+            "id": 161,
+            "isComplete": true
+          },
+          {
+            "id": 162,
+            "isComplete": true
+          },
+          {
+            "id": 163,
+            "isComplete": true
+          },
+          {
+            "id": 164,
+            "isComplete": true
+          },
+          {
+            "id": 165,
+            "isComplete": true
+          },
+          {
+            "id": 166,
+            "isComplete": true
+          },
+          {
+            "id": 167,
+            "isComplete": true
+          },
+          {
+            "id": 168,
+            "isComplete": true
+          },
+          {
+            "id": 169,
+            "isComplete": true
+          },
+          {
+            "id": 170,
+            "isComplete": true
+          },
+          {
+            "id": 171,
+            "isComplete": true
+          },
+          {
+            "id": 172,
+            "isComplete": true
+          },
+          {
+            "id": 173,
+            "isComplete": true
+          },
+          {
+            "id": 174,
+            "isComplete": true
+          },
+          {
+            "id": 175,
+            "isComplete": true
+          },
+          {
+            "id": 176,
+            "isComplete": true
+          },
+          {
+            "id": 177,
+            "isComplete": true
+          },
+          {
+            "id": 178,
+            "isComplete": true
+          },
+          {
+            "id": 179,
+            "isComplete": true
+          },
+          {
+            "id": 180,
+            "isComplete": true
+          },
+          {
+            "id": 181,
+            "isComplete": true
+          },
+          {
+            "id": 182,
+            "isComplete": true
+          },
+          {
+            "id": 183,
+            "isComplete": true
+          },
+          {
+            "id": 184,
+            "isComplete": true
+          },
+          {
+            "id": 185,
+            "isComplete": true
+          },
+          {
+            "id": 186,
+            "isComplete": true
+          },
+          {
+            "id": 187,
+            "isComplete": true
+          },
+          {
+            "id": 188,
+            "isComplete": true
+          },
+          {
+            "id": 189,
+            "isComplete": true
+          },
+          {
+            "id": 190,
+            "isComplete": true
+          },
+          {
+            "id": 191,
+            "isComplete": true
+          },
+          {
+            "id": 192,
+            "isComplete": true
+          },
+          {
+            "id": 193,
+            "isComplete": true
+          },
+          {
+            "id": 194,
+            "isComplete": true
+          },
+          {
+            "id": 195,
+            "isComplete": true
+          },
+          {
+            "id": 196,
+            "isComplete": true
+          },
+          {
+            "id": 197,
+            "isComplete": true
+          },
+          {
+            "id": 198,
+            "isComplete": true
+          },
+          {
+            "id": 199,
+            "isComplete": true
+          },
+          {
+            "id": 200,
+            "isComplete": true
+          },
+          {
+            "id": 201,
+            "isComplete": true
+          },
+          {
+            "id": 202,
+            "isComplete": true
+          },
+          {
+            "id": 203,
+            "isComplete": true
+          },
+          {
+            "id": 204,
+            "isComplete": true
+          },
+          {
+            "id": 205,
+            "isComplete": true
+          },
+          {
+            "id": 206,
+            "isComplete": true
+          },
+          {
+            "id": 207,
+            "isComplete": true
+          },
+          {
+            "id": 208,
+            "isComplete": true
+          },
+          {
+            "id": 209,
+            "isComplete": true
+          },
+          {
+            "id": 210,
+            "isComplete": true
+          },
+          {
+            "id": 211,
+            "isComplete": true
+          },
+          {
+            "id": 212,
+            "isComplete": true
+          },
+          {
+            "id": 213,
+            "isComplete": true
+          },
+          {
+            "id": 214,
+            "isComplete": true
+          },
+          {
+            "id": 215,
+            "isComplete": true
+          },
+          {
+            "id": 216,
+            "isComplete": true
+          },
+          {
+            "id": 217,
+            "isComplete": true
+          },
+          {
+            "id": 218,
+            "isComplete": true
+          },
+          {
+            "id": 219,
+            "isComplete": true
+          },
+          {
+            "id": 220,
+            "isComplete": true
+          },
+          {
+            "id": 221,
+            "isComplete": true
+          },
+          {
+            "id": 222,
+            "isComplete": true
+          },
+          {
+            "id": 223,
+            "isComplete": true
+          },
+          {
+            "id": 224,
+            "isComplete": true
+          },
+          {
+            "id": 225,
+            "isComplete": true
+          },
+          {
+            "id": 226,
+            "isComplete": true
+          },
+          {
+            "id": 227,
+            "isComplete": true
+          },
+          {
+            "id": 228,
+            "isComplete": true
+          },
+          {
+            "id": 229,
+            "isComplete": true
+          },
+          {
+            "id": 230,
+            "isComplete": true
+          },
+          {
+            "id": 231,
+            "isComplete": true
+          },
+          {
+            "id": 232,
+            "isComplete": true
+          },
+          {
+            "id": 233,
+            "isComplete": true
+          },
+          {
+            "id": 234,
+            "isComplete": true
+          },
+          {
+            "id": 235,
+            "isComplete": true
+          },
+          {
+            "id": 236,
+            "isComplete": true
+          },
+          {
+            "id": 237,
+            "isComplete": true
+          },
+          {
+            "id": 238,
+            "isComplete": true
+          },
+          {
+            "id": 239,
+            "isComplete": true
+          },
+          {
+            "id": 240,
+            "isComplete": true
+          },
+          {
+            "id": 241,
+            "isComplete": true
+          },
+          {
+            "id": 242,
+            "isComplete": true
+          },
+          {
+            "id": 243,
+            "isComplete": true
+          },
+          {
+            "id": 244,
+            "isComplete": true
+          },
+          {
+            "id": 245,
+            "isComplete": true
+          },
+          {
+            "id": 246,
+            "isComplete": true
+          },
+          {
+            "id": 247,
+            "isComplete": true
+          },
+          {
+            "id": 248,
+            "isComplete": true
+          },
+          {
+            "id": 249,
+            "isComplete": true
+          },
+          {
+            "id": 250,
+            "isComplete": true
+          },
+          {
+            "id": 251,
+            "isComplete": true
+          },
+          {
+            "id": 252,
+            "isComplete": true
+          },
+          {
+            "id": 253,
+            "isComplete": true
+          },
+          {
+            "id": 254,
+            "isComplete": true
+          },
+          {
+            "id": 255,
+            "isComplete": true
+          },
+          {
+            "id": 256,
+            "isComplete": true
+          },
+          {
+            "id": 257,
+            "isComplete": true
+          },
+          {
+            "id": 258,
+            "isComplete": true
+          },
+          {
+            "id": 259,
+            "isComplete": true
+          },
+          {
+            "id": 260,
+            "isComplete": true
+          },
+          {
+            "id": 261,
+            "isComplete": true
+          },
+          {
+            "id": 262,
+            "isComplete": true
+          },
+          {
+            "id": 263,
+            "isComplete": true
+          },
+          {
+            "id": 264,
+            "isComplete": true
+          },
+          {
+            "id": 265,
+            "isComplete": true
+          },
+          {
+            "id": 266,
+            "isComplete": true
+          },
+          {
+            "id": 267,
+            "isComplete": true
+          },
+          {
+            "id": 268,
+            "isComplete": true
+          },
+          {
+            "id": 269,
+            "isComplete": true
+          },
+          {
+            "id": 270,
+            "isComplete": true
+          },
+          {
+            "id": 271,
+            "isComplete": true
+          },
+          {
+            "id": 272,
+            "isComplete": true
+          },
+          {
+            "id": 273,
+            "isComplete": true
+          },
+          {
+            "id": 274,
+            "isComplete": true
+          },
+          {
+            "id": 275,
+            "isComplete": true
+          },
+          {
+            "id": 276,
+            "isComplete": true
+          },
+          {
+            "id": 277,
+            "isComplete": true
+          },
+          {
+            "id": 278,
+            "isComplete": true
+          },
+          {
+            "id": 279,
+            "isComplete": true
+          },
+          {
+            "id": 280,
+            "isComplete": true
+          },
+          {
+            "id": 281,
+            "isComplete": true
+          },
+          {
+            "id": 282,
+            "isComplete": true
+          },
+          {
+            "id": 283,
+            "isComplete": true
+          },
+          {
+            "id": 284,
+            "isComplete": true
+          },
+          {
+            "id": 285,
+            "isComplete": true
+          },
+          {
+            "id": 286,
+            "isComplete": true
+          },
+          {
+            "id": 287,
+            "isComplete": true
+          },
+          {
+            "id": 288,
+            "isComplete": true
+          },
+          {
+            "id": 289,
+            "isComplete": true
+          },
+          {
+            "id": 290,
+            "isComplete": true
+          },
+          {
+            "id": 291,
+            "isComplete": true
+          },
+          {
+            "id": 292,
+            "isComplete": true
+          },
+          {
+            "id": 293,
+            "isComplete": true
+          },
+          {
+            "id": 294,
+            "isComplete": true
+          },
+          {
+            "id": 295,
+            "isComplete": true
+          },
+          {
+            "id": 296,
+            "isComplete": true
+          },
+          {
+            "id": 297,
+            "isComplete": true
+          },
+          {
+            "id": 298,
+            "isComplete": true
+          },
+          {
+            "id": 299,
+            "isComplete": true
+          },
+          {
+            "id": 300,
+            "isComplete": true
+          },
+          {
+            "id": 301,
+            "isComplete": true
+          },
+          {
+            "id": 302,
+            "isComplete": true
+          },
+          {
+            "id": 303,
+            "isComplete": true
+          },
+          {
+            "id": 304,
+            "isComplete": true
+          },
+          {
+            "id": 305,
+            "isComplete": true
+          },
+          {
+            "id": 306,
+            "isComplete": true
+          },
+          {
+            "id": 307,
+            "isComplete": true
+          },
+          {
+            "id": 308,
+            "isComplete": true
+          },
+          {
+            "id": 309,
+            "isComplete": true
+          },
+          {
+            "id": 310,
+            "isComplete": true
+          },
+          {
+            "id": 311,
+            "isComplete": true
+          },
+          {
+            "id": 312,
+            "isComplete": true
+          },
+          {
+            "id": 313,
+            "isComplete": true
+          },
+          {
+            "id": 314,
+            "isComplete": true
+          },
+          {
+            "id": 315,
+            "isComplete": true
+          },
+          {
+            "id": 316,
+            "isComplete": true
+          },
+          {
+            "id": 317,
+            "isComplete": true
+          },
+          {
+            "id": 318,
+            "isComplete": true
+          },
+          {
+            "id": 319,
+            "isComplete": true
+          },
+          {
+            "id": 320,
+            "isComplete": true
+          },
+          {
+            "id": 321,
+            "isComplete": true
+          },
+          {
+            "id": 322,
+            "isComplete": true
+          },
+          {
+            "id": 323,
+            "isComplete": true
+          },
+          {
+            "id": 324,
+            "isComplete": true
+          },
+          {
+            "id": 325,
+            "isComplete": true
+          },
+          {
+            "id": 326,
+            "isComplete": true
+          },
+          {
+            "id": 327,
+            "isComplete": true
+          },
+          {
+            "id": 328,
+            "isComplete": true
+          },
+          {
+            "id": 329,
+            "isComplete": true
+          },
+          {
+            "id": 330,
+            "isComplete": true
+          },
+          {
+            "id": 331,
+            "isComplete": true
+          },
+          {
+            "id": 332,
+            "isComplete": true
+          },
+          {
+            "id": 333,
+            "isComplete": true
+          },
+          {
+            "id": 334,
+            "isComplete": true
+          },
+          {
+            "id": 335,
+            "isComplete": true
+          },
+          {
+            "id": 336,
+            "isComplete": true
+          },
+          {
+            "id": 337,
+            "isComplete": true
+          },
+          {
+            "id": 338,
+            "isComplete": true
+          },
+          {
+            "id": 339,
+            "isComplete": true
+          },
+          {
+            "id": 340,
+            "isComplete": true
+          },
+          {
+            "id": 341,
+            "isComplete": true
+          },
+          {
+            "id": 342,
+            "isComplete": true
+          },
+          {
+            "id": 343,
+            "isComplete": true
+          },
+          {
+            "id": 344,
+            "isComplete": true
+          },
+          {
+            "id": 345,
+            "isComplete": true
+          },
+          {
+            "id": 346,
+            "isComplete": true
+          },
+          {
+            "id": 347,
+            "isComplete": true
+          },
+          {
+            "id": 348,
+            "isComplete": true
+          },
+          {
+            "id": 349,
+            "isComplete": true
+          },
+          {
+            "id": 350,
+            "isComplete": true
+          },
+          {
+            "id": 351,
+            "isComplete": true
+          },
+          {
+            "id": 352,
+            "isComplete": true
+          },
+          {
+            "id": 353,
+            "isComplete": true
+          }
+        ]
+      },
+      "settings" : {
+        "alwaysShowFullDetails": false,
+        "prefersDarkMode": true
+      }
+    },
+    "3": {
+      "id": "template3",
       "progress": {
         "lessons": [
           {
@@ -1590,7 +3130,7 @@
         "prefersDarkMode": true
       }
     }
-  ]
+  }
 }
 
 

@@ -1,5 +1,5 @@
 import { createContext, useContext } from 'react';
-import * as TextService from './LanguageData';
+// import * as TextService from './LanguageData';
 
 /**
  * Types used for Text Rendering
@@ -126,12 +126,12 @@ export type Translation = {
 const DEFAULT_BOOK_ID = 0;
 const DEFAULT_CHAPTER_ID = 0;
 
-export const TextContext = createContext<{ text: Text, setUser: Function }>({
+export const TextContext = createContext<{ text: Text, setText: Function }>({
   text: {
     bookId: DEFAULT_BOOK_ID,
     chapterId: DEFAULT_CHAPTER_ID,
   },
-  setUser: () => {},
+  setText: () => {},
 });
 
 export function useTextContext() {

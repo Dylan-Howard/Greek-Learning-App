@@ -5,13 +5,16 @@ import {
   useContext,
   useState,
 } from 'react';
-import { fetchLessons, fetchVocabulary, fetchVocabularyByChapterId } from '../LanguageData/LanguageData';
+import { Button, TextField } from '@mui/material';
+import * as TextService from '../LanguageData/LanguageData';
+import * as UserService from '../User/UserService';
 import { UserContext } from '../User/User';
 import { Tab } from '../Common/Tab';
 import { Lesson } from '../Common/Lesson';
 import { Word } from '../Common/Word';
 import transliterateGreek from '../typescript/Transliterate';
 import OptionCheckbox from './OptionCheckbox';
+import { TextContext } from '../LanguageData/Text';
 
 const LANGUAGE = 'gk';
 
@@ -19,14 +22,13 @@ function SettingsMenu(
   {
     tab: { title },
     activeMorphologyId,
-    activeText,
   } : {
     tab: Tab,
     activeMorphologyId: number,
-    activeText: { bookId: number, chapterId: number },
   },
 ) {
   const { user, setUser } = useContext(UserContext);
+  const { text } = useContext(TextContext);
   const [filter, setFilter] = useState('');
   const [showOnlyActive, setShowOnlyActive] = useState(true);
 
@@ -41,7 +43,7 @@ function SettingsMenu(
   }[] = [];
 
   if (title === 'Lessons') {
-    const lessons = fetchLessons(LANGUAGE);
+    const lessons = TextService.fetchLessons(LANGUAGE);
 
     options.push(
       ...lessons
@@ -61,9 +63,9 @@ function SettingsMenu(
   if (title === 'Dictionary') {
     let vocabulary;
     if (showOnlyActive) {
-      vocabulary = fetchVocabularyByChapterId(activeText.chapterId);
+      vocabulary = TextService.fetchVocabularyByChapterId(text.chapterId);
     } else {
-      vocabulary = fetchVocabulary(LANGUAGE);
+      vocabulary = TextService.fetchVocabulary(LANGUAGE);
     }
 
     options.push(
@@ -115,7 +117,7 @@ function SettingsMenu(
     setShowOnlyActive(!showOnlyActive);
   };
 
-  const handleTextboxChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleTextboxChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFilter(e.target.value);
   };
 
@@ -195,22 +197,22 @@ function SettingsMenu(
         {
           title === 'Dictionary'
             ? (
-              <button
-                className="SettingsButton"
-                type="button"
+              <Button
+                fullWidth
                 onClick={() => handleButtonClick()}
+                sx={{ textTransform: 'none' }}
               >
-                {
-                  showOnlyActive ? 'Show all vocabulary?' : 'Only show current chapter\'s vocabulary?'
-                }
-              </button>
+                { showOnlyActive ? 'Show all vocabulary?' : 'Only show current chapter\'s vocabulary?' }
+              </Button>
             )
             : ''
         }
-        <input
-          className="SettingsSearchBox"
-          placeholder="Search"
+        <TextField
+          label="Search"
+          type="search"
+          variant="outlined"
           onChange={(e) => handleTextboxChange(e)}
+          sx={{ backgroundColor: 'background.paper' }}
         />
         {
           options.length !== 0
@@ -235,6 +237,11 @@ function SettingsMenu(
             ))
             : <span className="SettingsNotice">No options match this search filter</span>
         }
+        <Button
+          onClick={() => UserService.clearLocalUser()}
+        >
+          Clear User Data
+        </Button>
       </div>
     </div>
   );

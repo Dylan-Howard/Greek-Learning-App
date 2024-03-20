@@ -21,6 +21,7 @@ export interface UserSettings {
 }
 
 export type User = {
+  id: number,
   progress: UserProgress,
   settings: UserSettings,
 };

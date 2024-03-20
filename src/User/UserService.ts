@@ -45,27 +45,33 @@ export function getUserSettingById(userId: number, settingId: number) {
   return userId === settingId;
 }
 
-function fetchUserProgressData(userId: string, progressArea: string) :
+function fetchUserProgressData(userId: number, progressArea: string) :
 { id: number, isComplete: boolean }[] | undefined {
-  const userProgress = userData.users.find(({ id }: { id: string }) => id === userId)?.progress;
+  if (userId in userData.users) {
+    // @ts-ignore
+    const { progress } = userData.users[`${userId}`];
 
-  if (!userProgress) {
-    return undefined;
+    if (progressArea === 'lessons') {
+      return progress[progressArea];
+    }
+    if (progressArea === 'vocabulary') {
+      return progress[progressArea];
+    }
   }
-  if (progressArea === 'lessons') {
-    return userProgress[progressArea];
-  }
-  if (progressArea === 'vocabulary') {
-    return userProgress[progressArea];
-  }
+
   return undefined;
 }
 
-function fetchUserSettings(userId: string): UserSettings | undefined {
-  return userData.users.find(({ id }: { id: string }) => id === userId)?.settings;
+function fetchUserSettings(userId: number): UserSettings | undefined {
+  if (userId in userData.users) {
+    // @ts-ignore
+    return userData.users[`${userId}`].settings;
+  }
+
+  return undefined;
 }
 
-export const fetchUser = (userId: string) : User => {
+export const fetchUser = (userId: number) : User => {
   const progress: UserProgress = {
     lessons: fetchUserProgressData(userId, 'lessons'),
     vocabulary: fetchUserProgressData(userId, 'vocabulary'),
@@ -74,5 +80,22 @@ export const fetchUser = (userId: string) : User => {
     alwaysShowFullDetails: false,
     prefersDarkMode: true,
   };
-  return { progress, settings };
+  return { id: userId, progress, settings };
+};
+
+export const getLocalUser = () => {
+  const localUser = localStorage.getItem('koineUser');
+  return localUser ? JSON.parse(localUser) : undefined;
+};
+
+export const saveLocalUser = (toSaveUser: User) => {
+  // console.log('Saving: ');
+  // console.log(userData);
+  // localStorage.setItem('koineUser', userData);
+  localStorage.setItem('koineUser', JSON.stringify(toSaveUser));
+};
+
+export const clearLocalUser = () => {
+  console.log('Clearing');
+  localStorage.clear();
 };

@@ -1,5 +1,6 @@
 import './DetailsMenu.css';
 import { useContext } from 'react';
+import Button from '@mui/material/Button';
 import { UserContext } from '../User/User';
 import { fetchMorphologyById, fetchMorphologyDetailsByMorphologyId } from '../LanguageData/LanguageData';
 
@@ -80,15 +81,14 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
           }
         </div>
         <div className="DetailsSection">
-          <button
-            className="SettingsButton"
-            type="button"
+          <Button
+            size="small"
+            fullWidth
             onClick={() => handleButtonClick(unitForm.wordId, 'Word')}
+            sx={{ textTransform: 'none' }}
           >
-            {
-              isComplete ? 'I don’t know this word' : 'Don’t translate this word anymore?'
-            }
-          </button>
+            { isComplete ? 'I don’t know this word' : 'I know this word' }
+          </Button>
           {/* <h2>Relevant Links</h2> */}
         </div>
       </div>
