@@ -81,12 +81,11 @@ export function getUserSettingById(userId: number, settingId: number) {
   return userId === settingId;
 }
 
-function fetchUserProgressData(userId: number, progressArea: string) :
+function fetchUserProgressData(progressArea: string) :
 { id: number, isComplete: boolean }[] | undefined {
-  if (userId in userData.users) {
-    // @ts-ignore
-    // const { progress } = userData.users[`${userId}`];
-    const { progress } = getLocalUser(userId);
+  const user = getLocalUser();
+  if (user) {
+    const { progress } = user;
 
     if (progressArea === 'lessons') {
       return progress[progressArea];
@@ -99,10 +98,10 @@ function fetchUserProgressData(userId: number, progressArea: string) :
   return undefined;
 }
 
-function fetchUserSettings(userId: number): UserSettings | undefined {
-  if (userId in userData.users) {
-    // @ts-ignore
-    return userData.users[`${userId}`].settings;
+function fetchUserSettings(): UserSettings | undefined {
+  const user = getLocalUser();
+  if (user) {
+    return user.settings;
   }
 
   return undefined;
@@ -110,12 +109,17 @@ function fetchUserSettings(userId: number): UserSettings | undefined {
 
 export const fetchUser = (userId: number) : User => {
   const progress: UserProgress = {
-    lessons: fetchUserProgressData(userId, 'lessons'),
-    vocabulary: fetchUserProgressData(userId, 'vocabulary'),
+    lessons: fetchUserProgressData('lessons'),
+    vocabulary: fetchUserProgressData('vocabulary'),
   };
-  const settings: UserSettings = fetchUserSettings(userId) || {
+  const settings: UserSettings = fetchUserSettings() || {
     alwaysShowFullDetails: false,
-    prefersDarkMode: true,
+    prefersDarkMode: false,
   };
   return { id: userId, progress, settings };
 };
+
+export const fetchUserTemplate = (userTemplateId: number) : User => (
+  // @ts-ignore
+  userData.users[`${userTemplateId}`]
+);

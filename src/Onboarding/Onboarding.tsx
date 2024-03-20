@@ -94,7 +94,7 @@ export default function OnboardingDialog(
           <Grid item sm={3}>
             <OnboardingOptionBox
               title="Newcomer"
-              description="I know a litle, but I&lsquo;m excited to learn more!"
+              description="I&lsquo;m new and excited to learn!"
               imgURL="/DynamicInterlinear/static/img/OnboardingLevel1.png"
               value={1}
               checked={userLevel === 1}
@@ -104,7 +104,7 @@ export default function OnboardingDialog(
           <Grid item sm={3}>
             <OnboardingOptionBox
               title="Verse Voyager"
-              description="I&lsquo;ve taken a class or two."
+              description="I understand the grammar and know the most common words."
               imgURL="/DynamicInterlinear/static/img/OnboardingLevel2.png"
               value={2}
               checked={userLevel === 2}
@@ -114,7 +114,7 @@ export default function OnboardingDialog(
           <Grid item sm={3}>
             <OnboardingOptionBox
               title="Textual Titan"
-              description="I&lsquo;ve studied for years."
+              description="I&lsquo;ve learned every word that occurs more than 15 times."
               imgURL="/DynamicInterlinear/static/img/OnboardingLevel3.png"
               value={3}
               checked={userLevel === 3}

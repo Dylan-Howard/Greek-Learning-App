@@ -26,8 +26,7 @@ function App() {
   if (!isOnboarded) { log('user is not onboarded'); }
 
   const createUser = (userTemplateId: number) => {
-    log(`Setting user to template id ${userTemplateId}`);
-    setActiveUser(UserService.fetchUser(userTemplateId));
+    setActiveUser(UserService.fetchUserTemplate(userTemplateId));
     UserService.saveLocalUser(activeUser);
   };
 
