@@ -129,6 +129,7 @@ function SettingsMenu(
     /* Guards if no active user is set */
     if (!user) { return; }
     const updatedUser = {
+      id: user.id,
       progress: {
         ...user.progress,
       },
@@ -163,6 +164,7 @@ function SettingsMenu(
     }
 
     setUser(updatedUser);
+    UserService.saveLocalUser(updatedUser);
   };
 
   const handleSettingChange = (
@@ -172,6 +174,7 @@ function SettingsMenu(
     /* Guards if no active user is set */
     if (!user) { return; }
     const updatedUser = {
+      id: user.id,
       progress: {
         ...user.progress,
       },
@@ -188,6 +191,7 @@ function SettingsMenu(
     settings[keys[settingId]] = e.target.checked;
 
     setUser(updatedUser);
+    UserService.saveLocalUser(updatedUser);
   };
 
   return (

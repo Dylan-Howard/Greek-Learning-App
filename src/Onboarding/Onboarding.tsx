@@ -71,7 +71,6 @@ export default function OnboardingDialog(
       PaperProps={{
         component: 'form',
         onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-          console.log(userLevel);
           event.preventDefault();
           onSubmit(userLevel);
           handleClose();

@@ -21,7 +21,7 @@ export const fetchMorphology = (lng: string) => {
 
 export const fetchLessons = (lng: string): Lesson[] => {
   if (lessons && lng === 'gk') {
-    return lessons.gk;
+    return Object.values(lessons.gk);
   }
   return [];
 };
@@ -223,3 +223,9 @@ export function fetchMaxChapterId() {
   const { length } = Object.values(chapters);
   return length - 1;
 }
+
+export const fetchLessonByFormId = (formId: number): Lesson => {
+  const { lessonId } = fetchFormById(formId);
+  // @ts-ignore
+  return lessons.gk[`${lessonId}`];
+};

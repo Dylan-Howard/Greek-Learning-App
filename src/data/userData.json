@@ -1598,7 +1598,7 @@
       },
       "settings" : {
         "alwaysShowFullDetails": false,
-        "prefersDarkMode": true
+        "prefersDarkMode": false
       }
     },
     "3": {
@@ -3127,7 +3127,7 @@
       },
       "settings" : {
         "alwaysShowFullDetails": false,
-        "prefersDarkMode": true
+        "prefersDarkMode": false
       }
     }
   }

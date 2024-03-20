@@ -23,8 +23,7 @@ function App() {
 
   let isOnboarded = false;
   if (UserService.getLocalUser()) { isOnboarded = true; }
-
-  log(`isOnboarded: ${isOnboarded}`);
+  if (!isOnboarded) { log('user is not onboarded'); }
 
   const createUser = (userTemplateId: number) => {
     log(`Setting user to template id ${userTemplateId}`);

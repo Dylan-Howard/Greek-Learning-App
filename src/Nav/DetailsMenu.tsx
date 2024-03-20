@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import Button from '@mui/material/Button';
 import { UserContext } from '../User/User';
 import { fetchMorphologyById, fetchMorphologyDetailsByMorphologyId } from '../LanguageData/LanguageData';
+import * as UserService from '../User/UserService';
 
 function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
   const { user, setUser } = useContext(UserContext);
@@ -55,6 +56,7 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
     }
 
     setUser(updatedUser);
+    UserService.saveLocalUser(user);
   };
 
   return (
