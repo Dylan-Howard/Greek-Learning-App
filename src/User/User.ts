@@ -15,9 +15,9 @@ export type UserProgress = {
 };
 
 export interface UserSettings {
-  alwaysShowFullDetails: boolean,
-  prefersDarkMode: boolean,
-  [key: string]: boolean | undefined,
+  theme: string,
+  translation: string,
+  [key: string]: string | undefined,
 }
 
 export type User = {

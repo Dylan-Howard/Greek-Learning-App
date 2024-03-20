@@ -1,4 +1,4 @@
-import { ChangeEventHandler, useState } from 'react';
+import { ChangeEventHandler, useContext, useState } from 'react';
 import {
   Box,
   Button,
@@ -11,6 +11,8 @@ import {
   Typography,
 } from '@mui/material';
 import './Onboarding.css';
+import { UserContext } from '../User/User';
+import * as UserService from '../User/UserService';
 
 function OnboardingOptionBox({
   title,
@@ -47,8 +49,9 @@ function OnboardingOptionBox({
 }
 
 export default function OnboardingDialog(
-  { show, onSubmit }: { show: boolean, onSubmit: Function },
+  { show }: { show: boolean },
 ) {
+  const { setUser } = useContext(UserContext);
   const [open, setOpen] = useState(show);
   const [userLevel, setUserLevel] = useState(0);
 
@@ -64,6 +67,12 @@ export default function OnboardingDialog(
     setOpen(false);
   };
 
+  const createUser = (userTemplateId: number) => {
+    const updatedUser = UserService.fetchUserTemplate(userTemplateId);
+    setUser(updatedUser);
+    UserService.saveLocalUser(updatedUser);
+  };
+
   return (
     <Dialog
       open={open}
@@ -72,7 +81,7 @@ export default function OnboardingDialog(
         component: 'form',
         onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
           event.preventDefault();
-          onSubmit(userLevel);
+          createUser(userLevel);
           handleClose();
         },
       }}

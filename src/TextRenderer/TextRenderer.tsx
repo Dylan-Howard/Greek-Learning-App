@@ -62,7 +62,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   const { text, setText } = useContext(TextContext);
 
   /* Sets the theme based on the user setting */
-  const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
+  const activeTheme = user?.settings.theme;
 
   /* Sets the active text */
   const activeBook = TextService.fetchBookById(text.bookId);

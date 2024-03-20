@@ -13,7 +13,11 @@ export const saveLocalUser = (toSaveUser: User) => {
 };
 
 export const clearLocalUser = () => {
-  localStorage.clear();
+  // localStorage.clear();
+  localStorage.removeItem('koineUser');
+
+  console.log('Cleared');
+  console.log(localStorage.getItem('koineUser'));
 };
 
 export const doesUserRecognize = (declension: Declension, user: User) => {
@@ -113,8 +117,8 @@ export const fetchUser = (userId: number) : User => {
     vocabulary: fetchUserProgressData('vocabulary'),
   };
   const settings: UserSettings = fetchUserSettings() || {
-    alwaysShowFullDetails: false,
-    prefersDarkMode: false,
+    theme: 'light',
+    translation: 'esv',
   };
   return { id: userId, progress, settings };
 };
@@ -123,3 +127,15 @@ export const fetchUserTemplate = (userTemplateId: number) : User => (
   // @ts-ignore
   userData.users[`${userTemplateId}`]
 );
+
+export const createUser = () => ({
+  id: 4,
+  progress: {
+    lessons: [],
+    vocabulary: [],
+  },
+  settings: {
+    theme: 'light',
+    translation: 'esv',
+  },
+});

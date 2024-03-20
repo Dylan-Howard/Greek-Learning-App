@@ -38,10 +38,11 @@ function Nav({
             />
           ))
         }
-        <Link
-          to="/about"
-          className="NavIcon"
-        >
+        <Link to="/settings" className="NavIcon">
+          <span className="material-symbols-outlined">settings</span>
+          <span className="NavIconTitle">Settings</span>
+        </Link>
+        <Link to="/about" className="NavIcon">
           <span className="material-symbols-outlined">info</span>
           <span className="NavIconTitle">About</span>
         </Link>

@@ -53,7 +53,7 @@ export const light = createTheme({
     },
     background: {
       default: '#F8F8FC',
-      paper: '#F8F8FC',
+      paper: '#FFFFFF',
     },
     footer: {
       main: '#1B2021',

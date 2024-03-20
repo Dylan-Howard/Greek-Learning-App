@@ -84,26 +84,26 @@ function SettingsMenu(
         })),
     );
   }
-  if (title === 'Settings') {
-    if (user) {
-      const { settings } = user;
+  // if (title === 'Settings') {
+  //   if (user) {
+  //     const { settings } = user;
 
-      const keys = Object.keys(settings);
+  //     const keys = Object.keys(settings);
 
-      options.push(
-        ...keys
-          .filter((setting: string) => (
-            filter === setting.substring(0, filter.length)
-          ))
-          .map((setting: string) => ({
-            id: keys.indexOf(setting),
-            name: setting,
-            type: 'setting',
-            isActive: !!settings[setting],
-          })),
-      );
-    }
-  }
+  //     options.push(
+  //       ...keys
+  //         .filter((setting: string) => (
+  //           filter === setting.substring(0, filter.length)
+  //         ))
+  //         .map((setting: string) => ({
+  //           id: keys.indexOf(setting),
+  //           name: setting,
+  //           type: 'setting',
+  //           isActive: !!settings[setting],
+  //         })),
+  //     );
+  //   }
+  // }
   if (title === 'Details') {
     options.push({
       id: 1,
@@ -167,32 +167,32 @@ function SettingsMenu(
     UserService.saveLocalUser(updatedUser);
   };
 
-  const handleSettingChange = (
-    e: ChangeEvent<HTMLInputElement>,
-    settingId: number,
-  ) => {
-    /* Guards if no active user is set */
-    if (!user) { return; }
-    const updatedUser = {
-      id: user.id,
-      progress: {
-        ...user.progress,
-      },
-      settings: {
-        ...user.settings,
-      },
-    };
-    /* Guards from non-existant settings */
-    const { settings } = updatedUser;
+  // const handleSettingChange = (
+  //   e: ChangeEvent<HTMLInputElement>,
+  //   settingId: number,
+  // ) => {
+  //   /* Guards if no active user is set */
+  //   if (!user) { return; }
+  //   const updatedUser = {
+  //     id: user.id,
+  //     progress: {
+  //       ...user.progress,
+  //     },
+  //     settings: {
+  //       ...user.settings,
+  //     },
+  //   };
+  //   /* Guards from non-existant settings */
+  //   const { settings } = updatedUser;
 
-    const keys = Object.keys(settings);
-    if (!keys[settingId]) { return; }
-    /* Updates the setting */
-    settings[keys[settingId]] = e.target.checked;
+  //   const keys = Object.keys(settings);
+  //   if (!keys[settingId]) { return; }
+  //   /* Updates the setting */
+  //   settings[keys[settingId]] = e.target.checked;
 
-    setUser(updatedUser);
-    UserService.saveLocalUser(updatedUser);
-  };
+  //   setUser(updatedUser);
+  //   UserService.saveLocalUser(updatedUser);
+  // };
 
   return (
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
@@ -232,11 +232,7 @@ function SettingsMenu(
                 type={type}
                 name={name}
                 value={isActive}
-                onChange={
-                  type === 'setting'
-                    ? (e) => handleSettingChange(e, id)
-                    : (e) => handleCheckboxChange(e, id, type)
-                }
+                onChange={(e) => handleCheckboxChange(e, id, type)}
               />
             ))
             : <span className="SettingsNotice">No options match this search filter</span>
