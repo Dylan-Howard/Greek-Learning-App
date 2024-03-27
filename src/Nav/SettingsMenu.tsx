@@ -5,6 +5,7 @@ import {
   useContext,
   useState,
 } from 'react';
+import { Link } from 'react-router-dom';
 import { Button, TextField } from '@mui/material';
 import * as TextService from '../LanguageData/LanguageData';
 import * as UserService from '../User/UserService';
@@ -167,33 +168,6 @@ function SettingsMenu(
     UserService.saveLocalUser(updatedUser);
   };
 
-  // const handleSettingChange = (
-  //   e: ChangeEvent<HTMLInputElement>,
-  //   settingId: number,
-  // ) => {
-  //   /* Guards if no active user is set */
-  //   if (!user) { return; }
-  //   const updatedUser = {
-  //     id: user.id,
-  //     progress: {
-  //       ...user.progress,
-  //     },
-  //     settings: {
-  //       ...user.settings,
-  //     },
-  //   };
-  //   /* Guards from non-existant settings */
-  //   const { settings } = updatedUser;
-
-  //   const keys = Object.keys(settings);
-  //   if (!keys[settingId]) { return; }
-  //   /* Updates the setting */
-  //   settings[keys[settingId]] = e.target.checked;
-
-  //   setUser(updatedUser);
-  //   UserService.saveLocalUser(updatedUser);
-  // };
-
   return (
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
@@ -211,6 +185,14 @@ function SettingsMenu(
             )
             : ''
         }
+        <Button
+          fullWidth
+          sx={{ textTransform: 'none' }}
+        >
+          <Link to="/vocabulary">
+            See all vocabulary
+          </Link>
+        </Button>
         <TextField
           label="Search"
           type="search"

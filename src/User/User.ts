@@ -15,6 +15,7 @@ export type UserProgress = {
 };
 
 export interface UserSettings {
+  isOnboarded: string,
   theme: string,
   translation: string,
   [key: string]: string | undefined,

@@ -17,12 +17,12 @@ export function NavButton(
     title,
     iconName,
     isActive,
-    onShow,
+    onClick,
   } : {
     title: string,
     iconName: string,
     isActive: boolean,
-    onShow: MouseEventHandler<HTMLButtonElement>
+    onClick: MouseEventHandler<HTMLButtonElement>
   },
 ) {
   return (
@@ -32,7 +32,7 @@ export function NavButton(
       type="button"
       className={isActive ? 'NavIcon NavActive' : 'NavIcon'}
       data-menu={`${title}-menu`}
-      onClick={onShow}
+      onClick={onClick}
       aria-label={iconName}
       sx={{ color: 'primary.contrastText' }}
     >

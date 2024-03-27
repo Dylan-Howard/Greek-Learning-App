@@ -117,6 +117,7 @@ export const fetchUser = (userId: number) : User => {
     vocabulary: fetchUserProgressData('vocabulary'),
   };
   const settings: UserSettings = fetchUserSettings() || {
+    isOnboarded: 'true',
     theme: 'light',
     translation: 'esv',
   };
@@ -135,6 +136,7 @@ export const createUser = () => ({
     vocabulary: [],
   },
   settings: {
+    isOnboarded: 'false',
     theme: 'light',
     translation: 'esv',
   },

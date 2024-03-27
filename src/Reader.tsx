@@ -13,8 +13,9 @@ function App() {
   /* Context for user details */
   const { user } = useContext(UserContext);
 
-  let isOnboarded = false;
-  if (user) { isOnboarded = true; }
+  const isOnboarded = { user };
+  console.log(isOnboarded);
+  // if (user) { isOnboarded = true; }
   // if (!isOnboarded) { log('user is not onboarded'); }
 
   /* States primarily for text rendering */
