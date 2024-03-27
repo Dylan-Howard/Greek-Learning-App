@@ -19,7 +19,7 @@ import './SettingsPage.css';
 import * as UserService from './UserService';
 
 function UserSettings() {
-  const { user } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const [settings, setSettings] = useState({
     isOnboarded: 'true',
     theme: user ? user.settings.theme : 'light',
@@ -40,6 +40,7 @@ function UserSettings() {
   const handleButtonClick = () => {
     if (!user) { return; }
     UserService.saveLocalUser({ ...user, settings });
+    setUser(user);
   };
 
   return (

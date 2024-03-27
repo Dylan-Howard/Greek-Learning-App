@@ -87,7 +87,7 @@ export default function OnboardingDialog(
       }}
       sx={{ p: 2 }}
     >
-      <DialogTitle>Welcome, Scholoar!</DialogTitle>
+      <DialogTitle>Welcome, Scholar!</DialogTitle>
       <DialogContent sx={{ mb: 2 }}>
         <DialogContentText sx={{ pb: 2 }}>
           To get you started on your learning journey, let us know how comfortable you already

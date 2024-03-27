@@ -12,11 +12,7 @@ const DEFAULT_CHAPTER_ID = 0;
 function App() {
   /* Context for user details */
   const { user } = useContext(UserContext);
-
-  const isOnboarded = { user };
-  console.log(isOnboarded);
-  // if (user) { isOnboarded = true; }
-  // if (!isOnboarded) { log('user is not onboarded'); }
+  const isOnboarded = user?.settings.isOnboarded === 'true';
 
   /* States primarily for text rendering */
   const [activeText, setActiveText] = useState({

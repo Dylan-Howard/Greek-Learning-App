@@ -1,22 +1,12 @@
 import './Nav.css';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Box,
-  Divider,
-  Drawer,
   IconButton,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
   Stack,
 } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
-import MailIcon from '@mui/icons-material/Mail';
-import InboxIcon from '@mui/icons-material/Inbox';
 import { Tab } from '../Common/Tab';
 import { UserContext } from '../User/User';
 import { NavButton } from './NavButton';
@@ -36,47 +26,6 @@ function Nav({
 }) {
   const { user } = useContext(UserContext);
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
-
-  const [tabIndex, setTabIndex] = useState(0);
-  console.log({
-    activeTabIndex,
-    activeMorphologyId,
-  });
-
-  const toggleDrawer = (newTab: number) => () => {
-    setTabIndex(newTab);
-  };
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(0)}>
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem key={text} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
 
   return (
     <Stack
@@ -121,9 +70,7 @@ function Nav({
           </Link>
         </IconButton>
       </div>
-      <Drawer open={tabIndex !== 0} onClose={toggleDrawer(0)}>
-        {/* { DrawerList } */}
-        {
+      {
           tabs[activeTabIndex].title === 'Details'
             ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
             : (
@@ -133,17 +80,6 @@ function Nav({
               />
             )
         }
-      </Drawer>
-      {/* {
-          tabs[activeTabIndex].title === 'Details'
-            ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
-            : (
-              <SettingsMenu
-                tab={tabs[activeTabIndex]}
-                activeMorphologyId={activeMorphologyId}
-              />
-            )
-        } */}
     </Stack>
   );
 }

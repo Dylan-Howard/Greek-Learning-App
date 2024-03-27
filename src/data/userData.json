@@ -68,6 +68,7 @@
         ]
       },
       "settings" : {
+        "isOnboarded": "true",
         "theme": "light",
         "translation": "esv"
       }
@@ -1597,6 +1598,7 @@
         ]
       },
       "settings" : {
+        "isOnboarded": "true",
         "theme": "light",
         "translation": "esv"
       }
@@ -3126,6 +3128,7 @@
         ]
       },
       "settings" : {
+        "isOnboarded": "true",
         "theme": "light",
         "translation": "esv"
       }

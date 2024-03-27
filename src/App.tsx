@@ -15,7 +15,7 @@ import * as UserService from './User/UserService';
 import { UserContext } from './User/User';
 
 function App() {
-  /* State for user details */
+  /* States for user details */
   const [activeUser, setActiveUser] = useState(
     UserService.getLocalUser() || UserService.createUser(),
   );

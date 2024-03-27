@@ -13,11 +13,7 @@ export const saveLocalUser = (toSaveUser: User) => {
 };
 
 export const clearLocalUser = () => {
-  // localStorage.clear();
   localStorage.removeItem('koineUser');
-
-  console.log('Cleared');
-  console.log(localStorage.getItem('koineUser'));
 };
 
 export const doesUserRecognize = (declension: Declension, user: User) => {
