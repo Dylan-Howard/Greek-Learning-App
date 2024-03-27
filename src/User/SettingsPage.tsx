@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMsal } from '@azure/msal-react';
 import {
   Breadcrumbs,
   Button,
@@ -17,15 +18,39 @@ import SaveIcon from '@mui/icons-material/Save';
 import { UserContext } from './User';
 import './SettingsPage.css';
 import * as UserService from './UserService';
+import { callMsGraph } from './AzureUserService';
+import { loginRequest } from '../authConfig';
 
 function UserSettings() {
   const { user, setUser } = useContext(UserContext);
+
+  const { instance, accounts } = useMsal();
+  const [graphData, setGraphData] = useState(null);
+
   const [settings, setSettings] = useState({
     isOnboarded: 'true',
     theme: user ? user.settings.theme : 'light',
     translation: user ? user.settings.translation : 'esv',
     textbook: user ? user.settings.textbook : 'mounce',
   });
+
+  const username = graphData
+    // @ts-ignore
+    ? graphData.userPrincipalName
+      .split('#')[0].split('_').join('@')
+    : user?.id;
+
+  function RequestProfileData() {
+    // Silently acquires an access token which is then attached to a request for MS Graph data
+    instance
+      .acquireTokenSilent({
+        ...loginRequest,
+        account: accounts[0],
+      })
+      .then((response) => {
+        callMsGraph(response.accessToken).then((res) => setGraphData(res));
+      });
+  }
 
   const handleSelectChange = (event: SelectChangeEvent, setting: string) => {
     if (!(setting in settings)) {
@@ -42,6 +67,8 @@ function UserSettings() {
     UserService.saveLocalUser({ ...user, settings });
     setUser(user);
   };
+
+  if (!graphData) { RequestProfileData(); }
 
   return (
     <Grid container justifyContent="center" sx={{ mt: 4 }}>
@@ -60,7 +87,8 @@ function UserSettings() {
         <Paper sx={{ p: 2 }}>
           <Stack spacing={2}>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-              {`User: ${user ? user.id : 'No user active'}`}
+              {`User: ${username || 'No user active'}`}
+              {/* { accounts[0].name } */}
             </Typography>
             <FormControl fullWidth>
               <InputLabel id="settings-label-theme">Theme</InputLabel>

@@ -31,7 +31,6 @@ function SettingsMenu(
   const { user, setUser } = useContext(UserContext);
   const { text } = useContext(TextContext);
   const [filter, setFilter] = useState('');
-  const [showOnlyActive, setShowOnlyActive] = useState(true);
 
   const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
 
@@ -62,12 +61,7 @@ function SettingsMenu(
     );
   }
   if (title === 'Dictionary') {
-    let vocabulary;
-    if (showOnlyActive) {
-      vocabulary = TextService.fetchVocabularyByChapterId(text.chapterId);
-    } else {
-      vocabulary = TextService.fetchVocabulary(LANGUAGE);
-    }
+    const vocabulary = TextService.fetchVocabularyByChapterId(text.chapterId);
 
     options.push(
       ...vocabulary
@@ -85,26 +79,6 @@ function SettingsMenu(
         })),
     );
   }
-  // if (title === 'Settings') {
-  //   if (user) {
-  //     const { settings } = user;
-
-  //     const keys = Object.keys(settings);
-
-  //     options.push(
-  //       ...keys
-  //         .filter((setting: string) => (
-  //           filter === setting.substring(0, filter.length)
-  //         ))
-  //         .map((setting: string) => ({
-  //           id: keys.indexOf(setting),
-  //           name: setting,
-  //           type: 'setting',
-  //           isActive: !!settings[setting],
-  //         })),
-  //     );
-  //   }
-  // }
   if (title === 'Details') {
     options.push({
       id: 1,
@@ -113,10 +87,6 @@ function SettingsMenu(
       isActive: true,
     });
   }
-
-  const handleButtonClick = () => {
-    setShowOnlyActive(!showOnlyActive);
-  };
 
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFilter(e.target.value);
@@ -172,26 +142,11 @@ function SettingsMenu(
     <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
       <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
         <h1 className="MenuTabTitle">{title}</h1>
-        {
-          title === 'Dictionary'
-            ? (
-              <Button
-                fullWidth
-                onClick={() => handleButtonClick()}
-                sx={{ textTransform: 'none' }}
-              >
-                { showOnlyActive ? 'Show all vocabulary?' : 'Only show current chapter\'s vocabulary?' }
-              </Button>
-            )
-            : ''
-        }
         <Button
           fullWidth
           sx={{ textTransform: 'none' }}
         >
-          <Link to="/vocabulary">
-            See all vocabulary
-          </Link>
+          <Link to="/vocabulary">See all vocabulary</Link>
         </Button>
         <TextField
           label="Search"

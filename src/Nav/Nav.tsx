@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Tab } from '../Common/Tab';
 import { UserContext } from '../User/User';
 import { NavButton } from './NavButton';
@@ -51,7 +52,7 @@ function Nav({
         }
         <IconButton
           className="NavIcon"
-          aria-label="delete"
+          aria-label="settings"
           sx={{ color: 'primary.contrastText' }}
         >
           <Link to="/settings" className="NavLink">
@@ -61,12 +62,22 @@ function Nav({
         </IconButton>
         <IconButton
           className="NavIcon"
-          aria-label="delete"
+          aria-label="about"
           sx={{ color: 'primary.contrastText' }}
         >
           <Link to="/about" className="NavLink">
             <InfoIcon />
             <span className="NavIconTitle">About</span>
+          </Link>
+        </IconButton>
+        <IconButton
+          className="NavIcon"
+          aria-label="profile"
+          sx={{ color: 'primary.contrastText' }}
+        >
+          <Link to="/profile" className="NavLink">
+            <AccountCircleIcon />
+            <span className="NavIconTitle">Profile</span>
           </Link>
         </IconButton>
       </div>

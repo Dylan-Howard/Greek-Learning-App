@@ -1,13 +1,21 @@
 import './Reader.css';
-import { useState, useMemo, useContext } from 'react';
+import {
+  useState,
+  useMemo,
+  useContext,
+  // useEffect,
+} from 'react';
+
 import { UserContext } from './User/User';
 import { TextContext } from './LanguageData/Text';
 import TextRenderer from './TextRenderer/TextRenderer';
 import Nav from './Nav/Nav';
 import OnboardingDialog from './Onboarding/Onboarding';
 
-const DEFAULT_BOOK_ID = 0;
-const DEFAULT_CHAPTER_ID = 0;
+// import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
+
+const DEFAULT_BOOK_ID = 1;
+const DEFAULT_CHAPTER_ID = 1;
 
 function App() {
   /* Context for user details */
