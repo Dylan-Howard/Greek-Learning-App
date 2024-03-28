@@ -32,6 +32,14 @@ export async function fetchVocabulary() {
   return JSON.parse(words);
 }
 
+export async function fetchVocabularyByChapter(chapterId: number) {
+  const words = await fetchData('words');
+
+  console.log(chapterId);
+
+  return JSON.parse(words);
+}
+
 export async function fetchChapter(chapterId: number) {
   const chapter = await fetchData(`chapters/${chapterId}`);
 

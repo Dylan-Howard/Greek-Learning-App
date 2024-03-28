@@ -5,3 +5,11 @@ export type Word = {
   occurance?: number;
   gkRef?: string;
 };
+
+export type Wordv2 = {
+  rootId: number;
+  content: string;
+  gloss: string;
+  occurance?: number;
+  gkRef?: string;
+};

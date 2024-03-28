@@ -36,9 +36,6 @@ function Nav({
       className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}
     >
       <div className="NavButtons">
-        {/* <div className="NavLogo">
-          <img src="/static/img/icon-500x500.png" alt="Scriptura Logo" />
-        </div> */}
         {
           tabs.map(({ title, iconName }, i) => (
             <NavButton
