@@ -20,7 +20,7 @@ import TableRow from '@mui/material/TableRow';
 import * as AzureTextService from '../LanguageData/AzureTextService';
 import VocabularySetCard from './VocabularySetCard';
 
-function Vocabulary() {
+function VocabularySet() {
   const [words, setWords] = useState([]);
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -64,7 +64,7 @@ function Vocabulary() {
         <VocabularySetCard
           title="1 John"
           description="All vocabulary in the book of 1 John"
-          link="sets/1John"
+          link="/sets/1John"
           progress={40}
         />
       </Grid>
@@ -72,7 +72,7 @@ function Vocabulary() {
         <VocabularySetCard
           title="2 John"
           description="All vocabulary in the book of 2 John"
-          link="sets/2John"
+          link="../sets/2John"
           progress={22}
         />
       </Grid>
@@ -80,7 +80,7 @@ function Vocabulary() {
         <VocabularySetCard
           title="3 John"
           description="All vocabulary in the book of 3 John"
-          link="sets/3John"
+          link="../sets/3John"
           progress={8}
         />
       </Grid>
@@ -132,4 +132,4 @@ function Vocabulary() {
   );
 }
 
-export default Vocabulary;
+export default VocabularySet;

@@ -198,6 +198,7 @@ function SettingsMenu(
           type="search"
           variant="outlined"
           onChange={(e) => handleTextboxChange(e)}
+          size="small"
           sx={{
             backgroundColor: 'background.paper',
             width: '.9',

@@ -1,5 +1,6 @@
 const fetchData = async (resource: string) => {
   const apiUrl = 'http://localhost:7071/api';
+  // const apiUrl = 'https://koinetext.azurewebsites.net/api/';
   try {
     const response = await fetch(`${apiUrl}/${resource}`);
 
@@ -33,11 +34,20 @@ export async function fetchVocabulary() {
 }
 
 export async function fetchVocabularyByChapter(chapterId: number) {
-  const words = await fetchData('words');
+  const words = await fetchData(`chapters/${chapterId}/words`);
 
-  console.log(chapterId);
+  // console.log(chapterId);
 
   return JSON.parse(words);
+}
+
+export async function fetchUnitsByChapter(chapterId: number) {
+  // const units = await fetchData(`chapters/${chapterId}/units`);
+  const units = await fetchData(`chapter/${chapterId}/units`);
+
+  console.log(units);
+
+  return JSON.parse(units);
 }
 
 export async function fetchChapter(chapterId: number) {

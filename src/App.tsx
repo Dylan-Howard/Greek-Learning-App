@@ -19,7 +19,8 @@ import { msalConfig } from './authConfig';
 
 import { dark, light } from './Theme';
 import Reader from './Reader';
-import VocabPage from './Vocabulary/Vocabulary';
+import Vocabulary from './Vocabulary/Vocabulary';
+import VocabularySet from './Vocabulary/VocabularySet';
 import SettingsPage from './User/SettingsPage';
 import About from './About/About';
 import ProfilePage from './User/ProfilePage';
@@ -48,7 +49,9 @@ function App() {
             <BrowserRouter basename="/DynamicInterlinear">
               <Routes>
                 <Route path="/" element={<Reader />} />
-                <Route path="/vocabulary" element={<VocabPage />} />
+                {/* <Route path="/lessons" element={<LessonsPage />} /> */}
+                <Route path="/vocabulary" element={<Vocabulary />} />
+                <Route path="/sets" element={<VocabularySet />} />
                 <Route path="/settings" element={<SettingsPage />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/profile" element={<ProfilePage />} />

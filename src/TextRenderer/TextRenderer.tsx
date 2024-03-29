@@ -21,7 +21,6 @@ import {
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TextUnit from './TextUnit';
-import TextSelect from './TextSelect';
 import { UserContext } from '../User/User';
 import { TextContext, Unit } from '../LanguageData/Text';
 import * as TextService from '../LanguageData/LanguageData';
@@ -127,6 +126,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   const { user } = useContext(UserContext);
   const { text, setText } = useContext(TextContext);
   const [selections, setSelections] = useState({ texts: [], chapters: [] });
+  const [units, setUnits] = useState([]);
 
   /* Sets the theme based on the user setting */
   const activeTheme = user?.settings.theme;
@@ -149,6 +149,10 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
     AzureTextService.fetchTextSelectionOptions(text.bookId)
       .then((data) => setSelections(data));
   }, []);
+  useEffect(() => {
+    AzureTextService.fetchUnitsByChapter(text.chapterId)
+      .then((data) => setUnits(data));
+  }, [text]);
 
   const isSelectionLoaded = selections.texts.length && selections.chapters.length;
 
