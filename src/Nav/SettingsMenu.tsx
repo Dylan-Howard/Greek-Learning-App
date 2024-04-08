@@ -7,7 +7,7 @@ import {
   useState,
 } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Skeleton, TextField } from '@mui/material';
+import { Button, TextField } from '@mui/material';
 import * as AzureTextService from '../LanguageData/AzureTextService';
 import * as UserService from '../User/UserService';
 import {
@@ -20,6 +20,7 @@ import { Wordv2 } from '../Common/Word';
 import transliterateGreek from '../typescript/Transliterate';
 import OptionCheckbox from './OptionCheckbox';
 import { TextContext } from '../LanguageData/Text';
+import { SettingsMenuTabSkeleton } from '../Skeletons/Skeletons';
 
 function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
   return lessons.filter((lsn: Lesson) => (
@@ -175,14 +176,7 @@ function SettingsMenu(
     return (
       <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
         <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
-          <Skeleton variant="rounded" width={256} height={64} sx={{ m: 2, mb: 8 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
-          <Skeleton variant="rounded" width={256} height={32} sx={{ m: 2, mb: 1 }} />
+          <SettingsMenuTabSkeleton />
         </div>
       </div>
     );

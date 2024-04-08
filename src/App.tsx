@@ -18,7 +18,7 @@ import {
 import { msalConfig } from './authConfig';
 
 import { dark, light } from './Theme';
-import Reader from './Reader';
+import Reader from './Reader/Reader';
 import Vocabulary from './Vocabulary/Vocabulary';
 import VocabularySet from './Vocabulary/VocabularySet';
 import SettingsPage from './User/SettingsPage';

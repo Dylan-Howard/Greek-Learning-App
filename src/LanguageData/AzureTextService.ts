@@ -27,6 +27,12 @@ export async function fetchTexts() {
   return JSON.parse(texts);
 }
 
+export async function fetchText(textId: number) {
+  const text = await fetchData(`texts/${textId}`);
+
+  return JSON.parse(text);
+}
+
 export async function fetchVocabulary() {
   const words = await fetchData('words');
 
@@ -43,9 +49,9 @@ export async function fetchVocabularyByChapter(chapterId: number) {
 
 export async function fetchUnitsByChapter(chapterId: number) {
   // const units = await fetchData(`chapters/${chapterId}/units`);
-  const units = await fetchData(`chapter/${chapterId}/units`);
+  const units = await fetchData(`chapters/${chapterId}/units`);
 
-  console.log(units);
+  // console.log(units);
 
   return JSON.parse(units);
 }
@@ -63,11 +69,19 @@ export async function fetchChaptersByText(textId: number) {
 }
 
 export async function fetchTextSelectionOptions(currTextId: number) {
-  const texts = await fetchData('texts');
-  const chapters = await fetchData(`texts/${currTextId}/chapters`);
+  const selections = await fetchData(`selections/${currTextId}`);
 
-  return {
-    texts: JSON.parse(texts),
-    chapters: JSON.parse(chapters),
-  };
+  return JSON.parse(selections);
+}
+
+export async function fetchMorphology(morphologyId: number) {
+  const morphology = await fetchData(`morphologies/${morphologyId}`);
+
+  return JSON.parse(morphology);
+}
+
+export async function fetchMorphologyDetails(morphologyId: number) {
+  const details = await fetchData(`morphologies/${morphologyId}/details`);
+
+  return JSON.parse(details);
 }

@@ -23,8 +23,9 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TextUnit from './TextUnit';
 import { UserContext } from '../User/User';
 import { TextContext, Unit } from '../LanguageData/Text';
-import * as TextService from '../LanguageData/LanguageData';
+// import * as TextService from '../LanguageData/LanguageData';
 import * as AzureTextService from '../LanguageData/AzureTextService';
+import { TextRendererSkeleton } from '../Skeletons/Skeletons';
 
 function TextSelectionControls(
   {
@@ -125,31 +126,31 @@ function TextControls(
 function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Function }) {
   const { user } = useContext(UserContext);
   const { text, setText } = useContext(TextContext);
-  const [selections, setSelections] = useState({ texts: [], chapters: [] });
+  const [selections, setSelections] = useState({
+    texts: [{ textId: 0, title: '' }],
+    chapters: [{ chapterId: 0, chapterNumber: '' }],
+  });
   const [units, setUnits] = useState([]);
 
   /* Sets the theme based on the user setting */
   const activeTheme = user?.settings.theme;
 
-  /* Sets the active text */
-  const activeBook = TextService.fetchBookById(text.bookId - 1);
-  const activeChapter = TextService.fetchChapterById(text.chapterId - 1);
-  const activeUnits = TextService.fetchUnitsByChapterId(text.chapterId - 1);
+  /* Sets the chapter title */
+  const title = selections.texts.find((txt) => txt.textId === text.bookId)?.title || '';
+  title.concat(selections.chapters.find((chp) => chp.chapterId === text.chapterId)?.chapterNumber || '');
 
   /* Determines the position of the active chapter within the active text */
   let chapterPosition;
-  if (text.chapterId === 0) {
+  if (selections.chapters[0].chapterId === text.chapterId) {
     chapterPosition = 'first';
   }
-  if (text.chapterId === TextService.fetchMaxChapterId()) {
+  if (selections.chapters[selections.chapters.length - 1].chapterId === text.chapterId) {
     chapterPosition = 'last';
   }
 
   useEffect(() => {
     AzureTextService.fetchTextSelectionOptions(text.bookId)
       .then((data) => setSelections(data));
-  }, []);
-  useEffect(() => {
     AzureTextService.fetchUnitsByChapter(text.chapterId)
       .then((data) => setUnits(data));
   }, [text]);
@@ -203,15 +204,17 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
       <div className="TextRendererRow">
         <div className="TextRendererColumn">
           <div className="TextDisplay">
-            <h1 className="TextHeading">{`${activeBook.title} ${activeChapter.chapterNumber}`}</h1>
+            <h1 className="TextHeading">{title}</h1>
             {
-              activeUnits.map((unt: Unit) => (
-                <TextUnit
-                  key={`unit-${unt.verseId}-${unt.unitId}`}
-                  unit={unt}
-                  onClick={() => handleUnitClick(unt.morphologyId)}
-                />
-              ))
+              units.length
+                ? units.map((unt: Unit) => (
+                  <TextUnit
+                    key={`unit-${unt.verseId}-${unt.unitId}`}
+                    unit={unt}
+                    onClick={() => handleUnitClick(unt.morphologyId)}
+                  />
+                ))
+                : <TextRendererSkeleton />
             }
           </div>
         </div>

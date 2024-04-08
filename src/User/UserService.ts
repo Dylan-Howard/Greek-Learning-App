@@ -1,7 +1,7 @@
 import { Declension } from '../LanguageData/Text';
 import { User, UserSettings, UserProgress } from './User';
 import userData from '../data/userData.json';
-import { fetchLessonByFormId } from '../LanguageData/LanguageData';
+// import { fetchLessonByFormId } from '../LanguageData/LanguageData';
 
 export const getLocalUser = () : User | undefined => {
   const localUser = localStorage.getItem('koineUser');

@@ -6,11 +6,11 @@ import {
   // useEffect,
 } from 'react';
 
-import { UserContext } from './User/User';
-import { TextContext } from './LanguageData/Text';
-import TextRenderer from './TextRenderer/TextRenderer';
-import Nav from './Nav/Nav';
-import OnboardingDialog from './Onboarding/Onboarding';
+import { UserContext } from '../User/User';
+import { TextContext } from '../LanguageData/Text';
+import TextRenderer from '../TextRenderer/TextRenderer';
+import Nav from '../Nav/Nav';
+import OnboardingDialog from '../Onboarding/Onboarding';
 
 // import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 

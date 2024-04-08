@@ -4,7 +4,7 @@
 
 import { Unit } from '../LanguageData/Text';
 import { useUserContext } from '../User/User';
-import * as TextService from '../LanguageData/LanguageData';
+// import * as TextService from '../LanguageData/LanguageData';
 import * as UserService from '../User/UserService';
 
 function TextUnit({ unit, onClick }: { unit: Unit, onClick: Function }) {
