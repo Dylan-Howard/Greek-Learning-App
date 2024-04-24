@@ -29,9 +29,9 @@ function UserSettings() {
 
   const [settings, setSettings] = useState({
     isOnboarded: 'true',
-    theme: user ? user.settings.theme : 'light',
+    prefersDarkMode: user ? user.settings.prefersDarkMode : false,
     translation: user ? user.settings.translation : 'esv',
-    textbook: user ? user.settings.textbook : 'mounce',
+    // textbook: user ? user.settings.textbook : 'mounce',
   });
 
   const username = graphData
@@ -88,14 +88,13 @@ function UserSettings() {
           <Stack spacing={2}>
             <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
               {`User: ${username || 'No user active'}`}
-              {/* { accounts[0].name } */}
             </Typography>
             <FormControl fullWidth>
               <InputLabel id="settings-label-theme">Theme</InputLabel>
               <Select
                 labelId="settings-label-theme"
                 id="settings-theme"
-                value={settings.theme}
+                value={settings.prefersDarkMode ? 'dark' : 'light'}
                 label="Theme"
                 onChange={(e) => handleSelectChange(e, 'theme')}
               >
@@ -116,7 +115,7 @@ function UserSettings() {
                 <MenuItem value="csb">Christian Standard Bible</MenuItem>
               </Select>
             </FormControl>
-            <FormControl fullWidth>
+            {/* <FormControl fullWidth>
               <InputLabel id="settings-label-textbook">Preferred Textbook</InputLabel>
               <Select
                 labelId="settings-label-textbook"
@@ -127,7 +126,7 @@ function UserSettings() {
               >
                 <MenuItem value="mounce">Mounce</MenuItem>
               </Select>
-            </FormControl>
+            </FormControl> */}
           </Stack>
           <Stack direction="row" justifyContent="space-between" sx={{ mt: 2 }}>
             <Button

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // import { AuthenticatedTemplate, UnauthenticatedTemplate, useMsal } from '@azure/msal-react';
 import { useMsal } from '@azure/msal-react';
 import { loginRequest } from '../authConfig';
-import { callMsGraph } from './AzureUserService';
+import { callMsGraph, fetchUser } from './AzureUserService';
 
 /**
 * Renders information about the signed-in user or a button to retrieve data about the user
@@ -24,7 +24,17 @@ function ProfilePage() {
       });
   }
 
-  // console.log(graphData);
+  useEffect(() => {
+    console.log(graphData);
+    // @ts-ignore
+    if (graphData && graphData.id) {
+      // @ts-ignore
+      const { id } = graphData;
+      fetchUser(id)
+        .then((usr) => console.log(`Current User: ${usr}`));
+    }
+  }, [graphData]);
+
   if (!graphData) { RequestProfileData(); }
 
   return (
@@ -36,13 +46,14 @@ function ProfilePage() {
       <div id="profile-div">
         {
           Object.values(graphData || {})
-            .map((val: any) => <p>{`${val}`}</p>)
+            .filter((val: any) => !!val)
+            .map((val: any) => <p key={`val-${val}`}>{`${val}`}</p>)
         }
       </div>
       <div id="profile-div">
         {
           Object.keys(graphData || {})
-            .map((val: any) => <p>{`${val}`}</p>)
+            .map((val: any) => <p key={`key-${val}`}>{`${val}`}</p>)
         }
       </div>
     </>

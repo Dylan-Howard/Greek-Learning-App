@@ -15,14 +15,12 @@ export type UserProgress = {
 };
 
 export interface UserSettings {
-  isOnboarded: string,
-  theme: string,
+  prefersDarkMode: boolean,
   translation: string,
-  [key: string]: string | undefined,
 }
 
 export type User = {
-  id: number,
+  id: string,
   progress: UserProgress,
   settings: UserSettings,
 };

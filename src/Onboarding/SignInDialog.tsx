@@ -24,20 +24,10 @@ export default function SignInDialog(
     setOpen(false);
   };
 
-  // const handleLogin = (loginType) => {
   const handleLogin = () => {
     instance.loginPopup(loginRequest).catch((e) => {
       console.log(e);
     });
-    // if (loginType === "popup") {
-    //   instance.loginPopup(loginRequest).catch((e) => {
-    //     console.log(e);
-    //   });
-    // } else if (loginType === "redirect") {
-    //   instance.loginRedirect(loginRequest).catch((e) => {
-    //     console.log(e);
-    //   });
-    // }
   };
 
   return (

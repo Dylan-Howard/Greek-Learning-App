@@ -9,11 +9,9 @@ import {
 import { Link } from 'react-router-dom';
 import { Button, TextField } from '@mui/material';
 import * as AzureTextService from '../LanguageData/AzureTextService';
-import * as UserService from '../User/UserService';
-import {
-  User,
-  UserContext,
-} from '../User/User';
+import * as AzureUserService from '../User/AzureUserService';
+// import * as UserService from '../User/UserService';
+import { User, UserContext } from '../User/User';
 import { Tab } from '../Common/Tab';
 import { Lesson } from '../Common/Lesson';
 import { Wordv2 } from '../Common/Word';
@@ -167,7 +165,7 @@ function SettingsMenu(
     }
 
     setUser(updatedUser);
-    UserService.saveLocalUser(updatedUser);
+    AzureUserService.updateUser(updatedUser);
   };
 
   if (title === 'Home') { return <span />; }

@@ -1,4 +1,5 @@
 import { ChangeEventHandler, useContext, useState } from 'react';
+import { useMsal } from '@azure/msal-react';
 import {
   Box,
   Button,
@@ -11,8 +12,12 @@ import {
   Typography,
 } from '@mui/material';
 import './Onboarding.css';
+
+import { loginRequest } from '../authConfig';
+
 import { UserContext } from '../User/User';
-import * as UserService from '../User/UserService';
+// import * as UserService from '../User/UserService';
+import * as AzureUserService from '../User/AzureUserService';
 
 function OnboardingOptionBox({
   title,
@@ -48,45 +53,21 @@ function OnboardingOptionBox({
   );
 }
 
-export default function OnboardingDialog(
-  { show }: { show: boolean },
-) {
-  const { setUser } = useContext(UserContext);
-  const [open, setOpen] = useState(show);
-  const [userLevel, setUserLevel] = useState(0);
-
-  if (!show) { return <span />; }
-
-  const submitDisabled = userLevel === 0;
-
+function OnboardingContent({
+  userLevel,
+  setUserLevel,
+} : {
+  userLevel: number,
+  setUserLevel: Function,
+}) {
   const onOptionChange = (value: number) => {
     setUserLevel(value);
   };
 
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const createUser = (userTemplateId: number) => {
-    const updatedUser = UserService.fetchUserTemplate(userTemplateId);
-    setUser(updatedUser);
-    UserService.saveLocalUser(updatedUser);
-  };
+  const submitDisabled = userLevel === 0;
 
   return (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      PaperProps={{
-        component: 'form',
-        onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-          event.preventDefault();
-          createUser(userLevel);
-          handleClose();
-        },
-      }}
-      sx={{ p: 2 }}
-    >
+    <>
       <DialogTitle>Welcome, Scholar!</DialogTitle>
       <DialogContent sx={{ mb: 2 }}>
         <DialogContentText sx={{ pb: 2 }}>
@@ -141,6 +122,119 @@ export default function OnboardingDialog(
           Let&lsquo;s start
         </Button>
       </DialogActions>
+    </>
+  );
+}
+
+function SignInContent() {
+  return (
+    <>
+      <DialogTitle>Welcome, Scholar!</DialogTitle>
+      <DialogContent sx={{ mb: 2 }}>
+        <DialogContentText sx={{ pb: 2 }}>
+          Sign in below
+        </DialogContentText>
+      </DialogContent>
+      <DialogActions>
+        <Button
+          variant="contained"
+          type="submit"
+        >
+          Sign in
+        </Button>
+      </DialogActions>
+    </>
+  );
+}
+
+export default function AuthPrompt({ show }: { show: boolean }) {
+  const [open, setOpen] = useState(show);
+
+  const { setUser } = useContext(UserContext);
+  const [isNewUser, setIsNewUser] = useState(false);
+  const [userLevel, setUserLevel] = useState(0);
+
+  const { instance } = useMsal();
+
+  if (!show) { return <span />; }
+
+  const toggleNewUser = () => setIsNewUser(!isNewUser);
+
+  const handleLogin = () => {
+    instance.loginPopup(loginRequest)
+      .then(({ account }) => {
+        AzureUserService.fetchUser(account.localAccountId)
+          .then((usr) => {
+            if (usr) {
+              setUser(usr);
+            } else {
+              console.log('User not found. Let\'s register.');
+              toggleNewUser();
+              instance.logoutRedirect({ account });
+            }
+          });
+      });
+  };
+
+  const handleRegistration = () => {
+    instance.loginPopup(loginRequest)
+      .then(({ account }) => {
+        AzureUserService.fetchUser(account.localAccountId)
+          .then((tst) => {
+            if (!tst) {
+              AzureUserService.createUser(
+                account.localAccountId,
+                account.name || '',
+                userLevel,
+              ).then((usr) => setUser(usr));
+            } else {
+              console.log('It looks like this user is already registered. Signing in');
+              AzureUserService.fetchUser(account.localAccountId)
+                .then((usr) => setUser(usr));
+            }
+          });
+      });
+  };
+
+  if (!show) { return <span />; }
+
+  const handleClose = (_event: any, reason: string) => {
+    if (reason !== 'backdropClick') {
+      setOpen(false);
+    }
+  };
+
+  // const createLocalUser = (userTemplateId: number) => {
+  //   const updatedUser = UserService.fetchUserTemplate(userTemplateId);
+  //   setUser(updatedUser);
+  //   UserService.saveLocalUser(updatedUser);
+  // };
+
+  return (
+    <Dialog
+      open={open}
+      onClose={handleClose}
+      PaperProps={{
+        component: 'form',
+        onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
+          event.preventDefault();
+          if (isNewUser) {
+            // createUser(userLevel);
+            handleRegistration();
+          } else {
+            handleLogin();
+            handleClose(event, 'submit');
+          }
+        },
+      }}
+      sx={{ p: 2 }}
+    >
+      {
+        isNewUser
+          ? <OnboardingContent userLevel={userLevel} setUserLevel={setUserLevel} />
+          : <SignInContent />
+      }
+      <Button onClick={toggleNewUser}>{isNewUser ? 'Already have an account?' : 'Need to create an account?'}</Button>
     </Dialog>
   );
 }

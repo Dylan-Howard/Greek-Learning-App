@@ -1,6 +1,6 @@
 const fetchData = async (resource: string) => {
-  const apiUrl = 'http://localhost:7071/api';
-  // const apiUrl = 'https://koinetext.azurewebsites.net/api/';
+  const apiUrl = 'http://localhost:7072/api';
+  // const apiUrl = 'https://koinetext.azurewebsites.net/api';
   try {
     const response = await fetch(`${apiUrl}/${resource}`);
 
@@ -11,12 +11,18 @@ const fetchData = async (resource: string) => {
     const responseData = await response.text();
     return responseData;
   } catch (error) {
-    return '[]';
+    return '{}';
   }
 };
 
 export async function fetchLessons() {
   const lessons = await fetchData('lessons');
+
+  return JSON.parse(lessons);
+}
+
+export async function fetchLessonByForm(grammarId: number) {
+  const lessons = await fetchData(`grammaticalForms/${grammarId}/lessons`);
 
   return JSON.parse(lessons);
 }
@@ -42,16 +48,11 @@ export async function fetchVocabulary() {
 export async function fetchVocabularyByChapter(chapterId: number) {
   const words = await fetchData(`chapters/${chapterId}/words`);
 
-  // console.log(chapterId);
-
   return JSON.parse(words);
 }
 
 export async function fetchUnitsByChapter(chapterId: number) {
-  // const units = await fetchData(`chapters/${chapterId}/units`);
   const units = await fetchData(`chapters/${chapterId}/units`);
-
-  // console.log(units);
 
   return JSON.parse(units);
 }
@@ -84,4 +85,10 @@ export async function fetchMorphologyDetails(morphologyId: number) {
   const details = await fetchData(`morphologies/${morphologyId}/details`);
 
   return JSON.parse(details);
+}
+
+export async function fetchMorphologyAbbreviation(morphologyId: number) {
+  const abbreviation = await fetchData(`morphologies/${morphologyId}/abbreviation`);
+
+  return JSON.parse(abbreviation);
 }

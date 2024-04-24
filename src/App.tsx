@@ -24,28 +24,48 @@ import VocabularySet from './Vocabulary/VocabularySet';
 import SettingsPage from './User/SettingsPage';
 import About from './About/About';
 import ProfilePage from './User/ProfilePage';
-import * as UserService from './User/UserService';
+// import * as UserService from './User/UserService';
 import { UserContext } from './User/User';
-import SignInDialog from './Onboarding/SignInDialog';
+import AuthPrompt from './Onboarding/Onboarding';
+import * as AzureUserService from './User/AzureUserService';
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
 function App() {
   /* States for user details */
-  const [activeUser, setActiveUser] = useState(
-    UserService.getLocalUser() || UserService.createUser(),
-  );
-
-  const { theme } = activeUser.settings;
   const isAuthenticated = useIsAuthenticated();
+  const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
+  // const [user, setUser] = useContext();
+
+  const theme = activeUser.settings.prefersDarkMode ? 'dark' : 'light';
+
+  console.log(activeUser.settings.prefersDarkMode);
+
+  console.log(isAuthenticated);
+  console.log(activeUser.id);
+
+  if (isAuthenticated && activeUser.id === 'guest') {
+    const account = msalInstance.getActiveAccount();
+    console.log('Signing in');
+    if (account) {
+      AzureUserService.fetchUser(account.localAccountId)
+        .then((usr) => {
+          if (usr) {
+            setActiveUser(usr);
+          }
+        });
+    }
+  }
+
+  console.log(activeUser);
 
   return (
     <MsalProvider instance={msalInstance}>
-      <ThemeProvider theme={theme === 'dark' ? dark : light}>
-        <AuthenticatedTemplate>
-          <UserContext.Provider
-            value={useMemo(() => ({ user: activeUser, setUser: setActiveUser }), [activeUser])}
-          >
+      <UserContext.Provider
+        value={useMemo(() => ({ user: activeUser, setUser: setActiveUser }), [activeUser])}
+      >
+        <ThemeProvider theme={theme === 'dark' ? dark : light}>
+          <AuthenticatedTemplate>
             <BrowserRouter basename="/DynamicInterlinear">
               <Routes>
                 <Route path="/" element={<Reader />} />
@@ -57,17 +77,12 @@ function App() {
                 <Route path="/profile" element={<ProfilePage />} />
               </Routes>
             </BrowserRouter>
-          </UserContext.Provider>
-        </AuthenticatedTemplate>
-        <UnauthenticatedTemplate>
-          <SignInDialog show={!isAuthenticated} />
-          <p>
-            <center>
-              Please sign-in to see your profile information.
-            </center>
-          </p>
-        </UnauthenticatedTemplate>
-      </ThemeProvider>
+          </AuthenticatedTemplate>
+          <UnauthenticatedTemplate>
+            <AuthPrompt show={!isAuthenticated} />
+          </UnauthenticatedTemplate>
+        </ThemeProvider>
+      </UserContext.Provider>
     </MsalProvider>
   );
 }

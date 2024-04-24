@@ -18,61 +18,61 @@ export const clearLocalUser = () => {
 
 export const doesUserRecognize = (declension: Declension, user: User) => {
   if (!user || !user.progress.lessons || !user.progress.vocabulary) { return 'unrecognizable'; }
-  const { lessons, vocabulary } = user.progress;
+  // const { lessons, vocabulary } = user.progress;
 
   if (!declension) { return 'unrecognizable'; }
-  const {
-    // posId,
-    caseId,
-    degreeId,
-    numberId,
-    genderId,
-    tenseId,
-    voiceId,
-    moodId,
-    personId,
-    patternId,
-    wordId,
-  } = declension;
+  // const {
+  //   posId,
+  //   caseId,
+  //   degreeId,
+  //   numberId,
+  //   genderId,
+  //   tenseId,
+  //   voiceId,
+  //   moodId,
+  //   personId,
+  //   patternId,
+  //   wordId,
+  // } = declension;
 
-  const lessonIds = {
-    // pos: posId ? fetchLessonByFormId(posId).lessonId : undefined,
-    case: caseId ? fetchLessonByFormId(caseId).lessonId : undefined,
-    degree: degreeId ? fetchLessonByFormId(degreeId).lessonId : undefined,
-    number: numberId ? fetchLessonByFormId(numberId).lessonId : undefined,
-    gender: genderId ? fetchLessonByFormId(genderId).lessonId : undefined,
-    tense: tenseId ? fetchLessonByFormId(tenseId).lessonId : undefined,
-    voice: voiceId ? fetchLessonByFormId(voiceId).lessonId : undefined,
-    mood: moodId ? fetchLessonByFormId(moodId).lessonId : undefined,
-    person: personId ? fetchLessonByFormId(personId).lessonId : undefined,
-    pattern: patternId ? fetchLessonByFormId(patternId).lessonId : undefined,
-  };
+  // const lessonIds = {
+  //   pos: posId ? fetchLessonByFormId(posId).lessonId : undefined,
+  //   case: caseId ? AzureTextService.fetchLessonByForm(caseId).lessonId : undefined,
+  //   degree: degreeId ? AzureTextService.fetchLessonByForm(degreeId).lessonId : undefined,
+  //   number: numberId ? AzureTextService.fetchLessonByForm(numberId).lessonId : undefined,
+  //   gender: genderId ? AzureTextService.fetchLessonByForm(genderId).lessonId : undefined,
+  //   tense: tenseId ? AzureTextService.fetchLessonByForm(tenseId).lessonId : undefined,
+  //   voice: voiceId ? AzureTextService.fetchLessonByForm(voiceId).lessonId : undefined,
+  //   mood: moodId ? AzureTextService.fetchLessonByForm(moodId).lessonId : undefined,
+  //   person: personId ? AzureTextService.fetchLessonByForm(personId).lessonId : undefined,
+  //   pattern: patternId ? AzureTextService.fetchLessonByForm(patternId).lessonId : undefined,
+  // };
 
-  const progressCheck = {
-    case: lessonIds.case
-      ? lessons.find(({ id }) => id === lessonIds.case)?.isComplete : true,
-    degree: lessonIds.degree
-      ? lessons.find(({ id }) => id === lessonIds.degree)?.isComplete : true,
-    number: lessonIds.number
-      ? lessons.find(({ id }) => id === lessonIds.number)?.isComplete : true,
-    gender: lessonIds.gender
-      ? lessons.find(({ id }) => id === lessonIds.gender)?.isComplete : true,
-    tense: lessonIds.tense
-      ? lessons.find(({ id }) => id === lessonIds.tense)?.isComplete : true,
-    voice: lessonIds.voice
-      ? lessons.find(({ id }) => id === lessonIds.voice)?.isComplete : true,
-    mood: lessonIds.mood
-      ? lessons.find(({ id }) => id === lessonIds.mood)?.isComplete : true,
-    person: lessonIds.person
-      ? lessons.find(({ id }) => id === lessonIds.person)?.isComplete : true,
-    pattern: lessonIds.pattern
-      ? lessons.find(({ id }) => id === lessonIds.pattern)?.isComplete : true,
-    word: wordId ? vocabulary.find((vcb) => vcb.id === wordId)?.isComplete : true,
-  };
+  // const progressCheck = {
+  //   case: lessonIds.case
+  //     ? lessons.find(({ id }) => id === lessonIds.case)?.isComplete : true,
+  //   degree: lessonIds.degree
+  //     ? lessons.find(({ id }) => id === lessonIds.degree)?.isComplete : true,
+  //   number: lessonIds.number
+  //     ? lessons.find(({ id }) => id === lessonIds.number)?.isComplete : true,
+  //   gender: lessonIds.gender
+  //     ? lessons.find(({ id }) => id === lessonIds.gender)?.isComplete : true,
+  //   tense: lessonIds.tense
+  //     ? lessons.find(({ id }) => id === lessonIds.tense)?.isComplete : true,
+  //   voice: lessonIds.voice
+  //     ? lessons.find(({ id }) => id === lessonIds.voice)?.isComplete : true,
+  //   mood: lessonIds.mood
+  //     ? lessons.find(({ id }) => id === lessonIds.mood)?.isComplete : true,
+  //   person: lessonIds.person
+  //     ? lessons.find(({ id }) => id === lessonIds.person)?.isComplete : true,
+  //   pattern: lessonIds.pattern
+  //     ? lessons.find(({ id }) => id === lessonIds.pattern)?.isComplete : true,
+  //   word: wordId ? vocabulary.find((vcb) => vcb.id === wordId)?.isComplete : true,
+  // };
 
-  if (Object.values(progressCheck).some((prg) => !prg)) {
-    return Object.values(progressCheck)[7] ? 'needsHelps' : 'unrecognizable';
-  }
+  // if (Object.values(progressCheck).some((prg) => !prg)) {
+  //   return Object.values(progressCheck)[7] ? 'needsHelps' : 'unrecognizable';
+  // }
 
   return 'recognizable';
 };
@@ -107,14 +107,13 @@ function fetchUserSettings(): UserSettings | undefined {
   return undefined;
 }
 
-export const fetchUser = (userId: number) : User => {
+export const fetchUser = (userId: string) : User => {
   const progress: UserProgress = {
     lessons: fetchUserProgressData('lessons'),
     vocabulary: fetchUserProgressData('vocabulary'),
   };
   const settings: UserSettings = fetchUserSettings() || {
-    isOnboarded: 'true',
-    theme: 'light',
+    prefersDarkMode: false,
     translation: 'esv',
   };
   return { id: userId, progress, settings };
