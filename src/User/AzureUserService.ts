@@ -18,9 +18,11 @@ export async function callMsGraph(accessToken: string) {
   };
 
   return fetch(graphConfig.graphMeEndpoint, options)
-    .then((response) => response.json())
-    .catch((error) => console.log(error));
+    .then((response) => response.json());
 }
+
+const API_URL = 'http://localhost:7073/api';
+// const API_URL = 'https://koinetext.azurewebsites.net/api';
 
 // function wait(delay: number) {
 //   return new Promise((resolve) => { setTimeout(resolve, delay); });
@@ -39,10 +41,8 @@ export async function callMsGraph(accessToken: string) {
 // }
 
 const fetchData = async (resource: string) => {
-  const apiUrl = 'http://localhost:7071/api';
-  // const apiUrl = 'https://koinetext.azurewebsites.net/api';
   try {
-    const response = await fetch(`${apiUrl}/${resource}`);
+    const response = await fetch(`${API_URL}/${resource}`);
 
     if (!response.ok) {
       throw new Error(`Error fetching data: ${response.statusText}`);
@@ -55,12 +55,34 @@ const fetchData = async (resource: string) => {
   }
 };
 
-const postData = async (resource: string, data: Object) => {
-  const apiUrl = 'http://localhost:7071/api';
-  // const apiUrl = 'https://koinetext.azurewebsites.net/api';
+const patchData = async (resource: string, data: Object) => {
   try {
     const response = await fetch(
-      `${apiUrl}/${resource}`,
+      `${API_URL}/${resource}`,
+      {
+        method: 'PATCH', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      },
+    );
+
+    if (!response.ok) {
+      throw new Error(`Error fetching data: ${response.statusText}`);
+    }
+
+    const responseData = await response.json();
+    return responseData;
+  } catch (error) {
+    return undefined;
+  }
+};
+
+const postData = async (resource: string, data: Object) => {
+  try {
+    const response = await fetch(
+      `${API_URL}/${resource}`,
       {
         method: 'POST', // or 'PUT'
         headers: {
@@ -83,6 +105,7 @@ const postData = async (resource: string, data: Object) => {
 
 export const getDefaultUserState = () => ({
   id: 'guest',
+  name: 'Guest',
   progress: {
     lessons: [],
     vocabulary: [],
@@ -111,21 +134,30 @@ export async function createUser(id: string, name: string, userLevel: number) {
 }
 
 export async function fetchUser(id: string) {
+  if (id === 'guest') {
+    return undefined;
+  }
   const user = await fetchData(`users/${id}`);
 
   return user ? JSON.parse(user) : undefined;
 }
 
 export async function fetchUserLessons(id: string) {
+  if (id === 'guest') {
+    return undefined;
+  }
   const lessons = await fetchData(`users/${id}/lessons`);
 
   return lessons || undefined;
 }
 
 export async function updateUser(userData: User) {
-  const user = await postData(`users/${userData.id}`, userData);
+  if (userData.id === 'guest') {
+    return undefined;
+  }
+  const user = await patchData(`users/${userData.id}`, userData);
 
-  return user ? JSON.parse(user) : undefined;
+  return user || undefined;
 }
 
 export default callMsGraph;

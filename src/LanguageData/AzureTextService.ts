@@ -11,7 +11,7 @@ const fetchData = async (resource: string) => {
     const responseData = await response.text();
     return responseData;
   } catch (error) {
-    return '{}';
+    return 'false';
   }
 };
 

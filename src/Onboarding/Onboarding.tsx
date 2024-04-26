@@ -1,34 +1,33 @@
-import { ChangeEventHandler, useContext, useState } from 'react';
+import {
+  ChangeEventHandler,
+  MouseEventHandler,
+  useContext,
+  useState,
+} from 'react';
 import { useMsal } from '@azure/msal-react';
+import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
-  Dialog,
-  DialogActions,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
+  Container,
   Grid,
+  Stack,
   Typography,
 } from '@mui/material';
-import './Onboarding.css';
 
 import { loginRequest } from '../authConfig';
-
 import { UserContext } from '../User/User';
-// import * as UserService from '../User/UserService';
 import * as AzureUserService from '../User/AzureUserService';
+import './Onboarding.css';
 
 function OnboardingOptionBox({
   title,
-  description,
   imgURL,
   value,
   checked,
   onChange,
 } : {
   title: string,
-  description: string,
   imgURL: string,
   value: number,
   checked: boolean,
@@ -47,116 +46,141 @@ function OnboardingOptionBox({
       <Box className="OptionContent">
         <img src={imgURL} alt={title} />
         <Typography className="OptionTitle">{title}</Typography>
-        <Typography className="OptionDescription">{description}</Typography>
       </Box>
     </label>
   );
 }
 
-function OnboardingContent({
+const userLevelContent = [
+  {
+    title: 'Newcomer',
+    description: "I'm new and excited to learn!",
+    imageUrl: '/DynamicInterlinear/static/img/OnboardingLevel1.png',
+  },
+  {
+    title: 'Verse Voyager',
+    description: 'I most of the grammar and know every word that occures more than 50 times.',
+    imageUrl: '/DynamicInterlinear/static/img/OnboardingLevel2.png',
+  },
+  {
+    title: 'Textual Titan',
+    description: "I'm fluent in the grammar and I've learned every word that occurs more than 15 times.",
+    imageUrl: '/DynamicInterlinear/static/img/OnboardingLevel3.png',
+  },
+];
+
+function RegisterContent({
+  toggleNewUser,
+  handleRegistration,
   userLevel,
   setUserLevel,
 } : {
+  toggleNewUser: MouseEventHandler<HTMLButtonElement>,
+  handleRegistration: MouseEventHandler<HTMLButtonElement>,
   userLevel: number,
   setUserLevel: Function,
 }) {
-  const onOptionChange = (value: number) => {
-    setUserLevel(value);
-  };
+  const onOptionChange = (value: number) => setUserLevel(value);
 
   const submitDisabled = userLevel === 0;
 
   return (
     <>
-      <DialogTitle>Welcome, Scholar!</DialogTitle>
-      <DialogContent sx={{ mb: 2 }}>
-        <DialogContentText sx={{ pb: 2 }}>
-          To get you started on your learning journey, let us know how comfortable you already
-          feel with Koine Greek.
-        </DialogContentText>
-        <Grid
-          container
-          spacing={0}
-          justifyContent="space-between"
-          alignItems="stretch"
-          columns={10}
-        >
-          <Grid item sm={3}>
-            <OnboardingOptionBox
-              title="Newcomer"
-              description="I&lsquo;m new and excited to learn!"
-              imgURL="/DynamicInterlinear/static/img/OnboardingLevel1.png"
-              value={1}
-              checked={userLevel === 1}
-              onChange={() => onOptionChange(1)}
-            />
-          </Grid>
-          <Grid item sm={3}>
-            <OnboardingOptionBox
-              title="Verse Voyager"
-              description="I understand the grammar and know the most common words."
-              imgURL="/DynamicInterlinear/static/img/OnboardingLevel2.png"
-              value={2}
-              checked={userLevel === 2}
-              onChange={() => onOptionChange(2)}
-            />
-          </Grid>
-          <Grid item sm={3}>
-            <OnboardingOptionBox
-              title="Textual Titan"
-              description="I&lsquo;ve learned every word that occurs more than 15 times."
-              imgURL="/DynamicInterlinear/static/img/OnboardingLevel3.png"
-              value={3}
-              checked={userLevel === 3}
-              onChange={() => onOptionChange(3)}
-            />
-          </Grid>
-        </Grid>
-      </DialogContent>
-      <DialogActions>
-        <Button
-          variant="contained"
-          type="submit"
-          disabled={submitDisabled}
-        >
-          Let&lsquo;s start
-        </Button>
-      </DialogActions>
+      <Typography
+        variant="h2"
+        sx={{
+          fontSize: 42,
+          textAlign: 'center',
+          mt: 8,
+          mb: 2,
+        }}
+      >
+        Welcome, Scholar!
+      </Typography>
+      <Typography variant="body1" sx={{ textAlign: 'center', mb: 6 }}>To get you started on your learning journey, let us know how comfortable you already feel with Koine Greek.</Typography>
+      <Grid
+        container
+        spacing={0}
+        justifyContent="space-between"
+        alignItems="stretch"
+        columns={10}
+        sx={{ mb: 5 }}
+      >
+        {
+          userLevelContent.map(({ title, imageUrl }, i) => (
+            <Grid item sm={3}>
+              <OnboardingOptionBox
+                key={`onboarding-${title}`}
+                title={title}
+                imgURL={imageUrl}
+                value={i + 1}
+                checked={userLevel === i + 1}
+                onChange={() => onOptionChange(i + 1)}
+              />
+            </Grid>
+          ))
+        }
+      </Grid>
+      <Typography variant="body1" sx={{ textAlign: 'center', mb: 6 }}>
+        {
+          userLevel
+            ? userLevelContent[userLevel - 1].description
+            : ''
+        }
+      </Typography>
+      <Stack flexDirection="row" justifyContent="center" sx={{ mb: 2 }}>
+        <Button variant="contained" type="submit" disabled={submitDisabled} onClick={handleRegistration}>Create Account</Button>
+      </Stack>
+      <Stack flexDirection="row" justifyContent="center">
+        <Button type="button" size="small" onClick={toggleNewUser} sx={{ color: '#333' }}>Already have an account?</Button>
+      </Stack>
     </>
   );
 }
 
-function SignInContent() {
+function SignInContent({
+  toggleNewUser,
+  handleLogin,
+} : {
+  toggleNewUser: MouseEventHandler<HTMLButtonElement>,
+  handleLogin: MouseEventHandler<HTMLButtonElement>
+}) {
   return (
     <>
-      <DialogTitle>Welcome, Scholar!</DialogTitle>
-      <DialogContent sx={{ mb: 2 }}>
-        <DialogContentText sx={{ pb: 2 }}>
-          Sign in below
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions>
-        <Button
-          variant="contained"
-          type="submit"
-        >
-          Sign in
-        </Button>
-      </DialogActions>
+      <Box sx={{
+        height: '128px',
+        mt: 24,
+        ml: 'auto',
+        mr: 'auto',
+        mb: 4,
+      }}
+      >
+        <img
+          src="/DynamicInterlinear/static/img/koine-logo.svg"
+          alt="Koine"
+          className="SignInLogo"
+        />
+      </Box>
+      <Typography variant="h2" sx={{ fontSize: 42, textAlign: 'center', mb: 2 }}>Welcome, Scholar!</Typography>
+      <Typography variant="body1" sx={{ textAlign: 'center', mb: 6 }}>Start reading by by signing into your account below.</Typography>
+      <Stack flexDirection="row" justifyContent="center" sx={{ mb: 2 }}>
+        <Button variant="outlined" type="button" onClick={toggleNewUser} sx={{ mr: 2 }}>Create Account</Button>
+        <Button variant="contained" type="submit" onClick={handleLogin}>Sign In</Button>
+      </Stack>
+      <Stack flexDirection="row" justifyContent="center">
+        <Link to="/reader"><Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button></Link>
+      </Stack>
     </>
   );
 }
 
-export default function AuthPrompt({ show }: { show: boolean }) {
-  const [open, setOpen] = useState(show);
-
+export default function AuthPrompt() {
   const { setUser } = useContext(UserContext);
   const [isNewUser, setIsNewUser] = useState(false);
   const [userLevel, setUserLevel] = useState(0);
+  const [authError, setAuthError] = useState(false);
 
   const { instance } = useMsal();
-
-  if (!show) { return <span />; }
 
   const toggleNewUser = () => setIsNewUser(!isNewUser);
 
@@ -168,9 +192,9 @@ export default function AuthPrompt({ show }: { show: boolean }) {
             if (usr) {
               setUser(usr);
             } else {
-              console.log('User not found. Let\'s register.');
+              // If the user doesn't exits, initiate onboarding.
               toggleNewUser();
-              instance.logoutRedirect({ account });
+              instance.logoutPopup({ account });
             }
           });
       });
@@ -186,9 +210,14 @@ export default function AuthPrompt({ show }: { show: boolean }) {
                 account.localAccountId,
                 account.name || '',
                 userLevel,
-              ).then((usr) => setUser(usr));
+              )
+                .then((usr) => setUser(usr))
+                .catch(() => {
+                  setAuthError(true);
+                  console.log('We should handle an auth error by asking if the user wants to continue as a guest.');
+                });
             } else {
-              console.log('It looks like this user is already registered. Signing in');
+              // If the user is already registered, initiate the sign in.
               AzureUserService.fetchUser(account.localAccountId)
                 .then((usr) => setUser(usr));
             }
@@ -196,45 +225,47 @@ export default function AuthPrompt({ show }: { show: boolean }) {
       });
   };
 
-  if (!show) { return <span />; }
-
-  const handleClose = (_event: any, reason: string) => {
-    if (reason !== 'backdropClick') {
-      setOpen(false);
-    }
-  };
-
-  // const createLocalUser = (userTemplateId: number) => {
-  //   const updatedUser = UserService.fetchUserTemplate(userTemplateId);
-  //   setUser(updatedUser);
-  //   UserService.saveLocalUser(updatedUser);
-  // };
+  if (authError) { return <span />; }
 
   return (
-    <Dialog
-      open={open}
-      onClose={handleClose}
-      PaperProps={{
-        component: 'form',
-        onSubmit: (event: React.FormEvent<HTMLFormElement>) => {
-          event.preventDefault();
-          if (isNewUser) {
-            // createUser(userLevel);
-            handleRegistration();
-          } else {
-            handleLogin();
-            handleClose(event, 'submit');
-          }
-        },
-      }}
-      sx={{ p: 2 }}
-    >
-      {
-        isNewUser
-          ? <OnboardingContent userLevel={userLevel} setUserLevel={setUserLevel} />
-          : <SignInContent />
-      }
-      <Button onClick={toggleNewUser}>{isNewUser ? 'Already have an account?' : 'Need to create an account?'}</Button>
-    </Dialog>
+    <Grid container>
+      <Grid
+        item
+        sm={6}
+        sx={{
+          mr: -2,
+          zIndex: 1,
+          background: '#FAFAFA',
+          borderRadius: '1rem',
+          boxShadow: 3,
+        }}
+      >
+        <Container>
+          <Stack flexDirection="column" justifyContent="start" sx={{ height: '100vh' }}>
+            {
+              isNewUser && !authError
+                ? (
+                  <RegisterContent
+                    toggleNewUser={toggleNewUser}
+                    handleRegistration={handleRegistration}
+                    userLevel={userLevel}
+                    setUserLevel={setUserLevel}
+                  />
+                )
+                : <SignInContent toggleNewUser={toggleNewUser} handleLogin={handleLogin} />
+              }
+          </Stack>
+        </Container>
+      </Grid>
+      <Grid item sm={6}>
+        <Box sx={{ height: '100vh', width: 'calc(100% + 1rem)' }}>
+          <img
+            src="/DynamicInterlinear/static/img/signin-wallpaper.jpg"
+            alt="Sign in to Koine!"
+            className="SignInWallpaper"
+          />
+        </Box>
+      </Grid>
+    </Grid>
   );
 }

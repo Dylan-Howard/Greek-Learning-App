@@ -5,9 +5,10 @@ import {
   IconButton,
   Stack,
 } from '@mui/material';
-import SettingsIcon from '@mui/icons-material/Settings';
 import InfoIcon from '@mui/icons-material/Info';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import LoginIcon from '@mui/icons-material/Login';
+
 import { Tab } from '../Common/Tab';
 import { UserContext } from '../User/User';
 import { NavButton } from './NavButton';
@@ -53,8 +54,8 @@ function Nav({
           sx={{ color: 'primary.contrastText' }}
         >
           <Link to="/settings" className="NavLink">
-            <SettingsIcon />
-            <span className="NavIconTitle">Settings</span>
+            <AccountCircleIcon />
+            <span className="NavIconTitle">Profile</span>
           </Link>
         </IconButton>
         <IconButton
@@ -67,27 +68,33 @@ function Nav({
             <span className="NavIconTitle">About</span>
           </Link>
         </IconButton>
-        <IconButton
-          className="NavIcon"
-          aria-label="profile"
-          sx={{ color: 'primary.contrastText' }}
-        >
-          <Link to="/profile" className="NavLink">
-            <AccountCircleIcon />
-            <span className="NavIconTitle">Profile</span>
-          </Link>
-        </IconButton>
+        {
+          user?.id === 'guest'
+            ? (
+              <IconButton
+                className="NavIcon"
+                aria-label="sign in"
+                sx={{ color: 'primary.contrastText' }}
+              >
+                <Link to="/welcome" className="NavLink">
+                  <LoginIcon />
+                  <span className="NavIconTitle">Sign in</span>
+                </Link>
+              </IconButton>
+            )
+            : ''
+        }
       </div>
       {
-          tabs[activeTabIndex].title === 'Details'
-            ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
-            : (
-              <SettingsMenu
-                tab={tabs[activeTabIndex]}
-                activeMorphologyId={activeMorphologyId}
-              />
-            )
-        }
+        tabs[activeTabIndex].title === 'Details'
+          ? <DetailsMenu activeMorphologyId={activeMorphologyId} />
+          : (
+            <SettingsMenu
+              tab={tabs[activeTabIndex]}
+              activeMorphologyId={activeMorphologyId}
+            />
+          )
+      }
     </Stack>
   );
 }

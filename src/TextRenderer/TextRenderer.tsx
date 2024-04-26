@@ -7,7 +7,10 @@ import './TextRenderer.css';
 import {
   ReactNode, useContext, useEffect, useState,
 } from 'react';
+import { Link } from 'react-router-dom';
 import {
+  Box,
+  Button,
   Container,
   Fab,
   FormControl,
@@ -18,13 +21,15 @@ import {
   selectClasses,
   Skeleton,
   Stack,
+  Typography,
 } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TextUnit from './TextUnit';
 import { UserContext } from '../User/User';
-import { TextContext, Unit } from '../LanguageData/Text';
+import { TextContext, Unit, Unitv2 } from '../LanguageData/Text';
 import * as AzureTextService from '../LanguageData/AzureTextService';
+import * as AzureReaderService from '../LanguageData/AzureReaderService';
 import { TextRendererSkeleton } from '../Skeletons/Skeletons';
 
 function TextSelectionControls(
@@ -128,22 +133,55 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   const { text, setText } = useContext(TextContext);
   const [selections, setSelections] = useState({
     texts: [{ textId: 1, title: '' }],
-    chapters: [{ chapterId: 1, chapterNumber: '' }],
+    chapters: [{ chapterId: 1, chapterNumber: 1 }],
   });
+  const [title, setTitle] = useState('');
   const [units, setUnits] = useState([]);
+  const [loadingError, setLoadingError] = useState(false);
+
+  const handleFetch = () => {
+    AzureReaderService.fetchPage(text.chapterId, user?.id || '')
+      .then((data) => {
+        if (!data) {
+          setLoadingError(true);
+          return;
+        }
+        setSelections(data.selection);
+        setTitle(data.title);
+        setUnits(data.text);
+        setLoadingError(false);
+      });
+  };
 
   useEffect(() => {
-    AzureTextService.fetchTextSelectionOptions(text.bookId)
-      .then((data) => setSelections(data));
-    AzureTextService.fetchUnitsByChapter(text.chapterId)
-      .then((data) => setUnits(data));
-  }, [text]);
+    if (user?.id === 'guest') {
+      setLoadingError(true);
+      return;
+    }
+    handleFetch();
+  }, [text, user]);
 
-  if (!selections || !selections.texts || !selections.chapters) {
+  const handleReloadClick = () => {
+    setLoadingError(false);
+    handleFetch();
+  };
+
+  if (loadingError) {
     return (
       <div className="TextContainer TextLight">
         <Container maxWidth="md" sx={{ mt: 4 }}>
-          <p>Hmmm, it likes like we had a problem finding our books.</p>
+          <Stack flexDirection="column" justifyContent="center" alignItems="center">
+            <Box sx={{ width: 400, mt: 8, mb: 8 }}>
+              <img src="DynamicInterlinear/static/img/not-found.svg" alt="Resources not found" />
+            </Box>
+            <Typography sx={{ mb: 2 }}>
+              Hmmm, it likes like we&lsquo;re having trouble finding our texts.
+            </Typography>
+            <Stack flexDirection="row" justifyContent="center">
+              <Button variant="outlined" onClick={handleReloadClick} sx={{ mr: 2 }}>Look again</Button>
+              <Link to="/welcome"><Button variant="contained">Sign In</Button></Link>
+            </Stack>
+          </Stack>
         </Container>
       </div>
     );
@@ -180,10 +218,6 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   /* Sets the theme based on the user setting */
   const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
 
-  /* Sets the chapter title */
-  const title = selections.texts.find((txt) => txt.textId === text.bookId)?.title || '';
-  title.concat(selections.chapters.find((chp) => chp.chapterId === text.chapterId)?.chapterNumber || '');
-
   /* Determines the position of the active chapter within the active text */
   let chapterPosition;
   if (selections.chapters[0].chapterId === text.chapterId) {
@@ -215,17 +249,17 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
         <div className="TextRendererColumn">
           <div className="TextDisplay">
             <h1 className="TextHeading">{title}</h1>
-            {/* {
+            {
               units.length
-                ? units.map((unt: Unit) => (
+                ? units.map((unt: Unitv2) => (
                   <TextUnit
-                    key={`unit-${unt.verseId}-${unt.unitId}`}
+                    key={`unit-${unt.verseNumber}-${unt.unitId}`}
                     unit={unt}
                     onClick={() => handleUnitClick(unt.morphologyId)}
                   />
                 ))
                 : <TextRendererSkeleton />
-            } */}
+            }
           </div>
         </div>
       </div>

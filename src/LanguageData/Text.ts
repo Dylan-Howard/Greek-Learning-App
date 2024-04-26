@@ -77,6 +77,14 @@ export type Unit = {
   verseId: number;
 };
 
+export type Unitv2 = {
+  unitId: number;
+  content: string;
+  helpText: string;
+  morphologyId: number;
+  verseNumber: number;
+};
+
 export type Verse = {
   verseId: number;
   verseNumber: number;

@@ -20,7 +20,8 @@
   z-index: 1;
 }
 .SettingsMenu.MenuLight {
-  background: #EDF2F4;
+  /* background: #EDF2F4; */
+  background: #E4E4F4;
   color: #1B2021;
 }
 .SettingsMenu.MenuDark {
@@ -34,15 +35,10 @@
 }
 
 .SettingsMenuTab {
-  /* display: none; */
   box-sizing: border-box;
   width: 300px;
 
   display: flex;
-  /* visibility: hidden;
-  transform: translate(-1rem, 0);
-
-  transition: 300ms; */
 }
 
 .SettingsMenuTab.MenuActive {
@@ -51,9 +47,6 @@
   justify-content: flex-start;
   margin: 0;
   width: 100%;
-
-  /* visibility: visible;
-  transform: translate(0, 0); */
 }
 
 .SettingsMenuTab .SettingsButton {
@@ -65,7 +58,7 @@
 }
 
 .SettingsMenu.MenuLight .SettingsButton {
-  background: #EDF2F4;
+  background-color: #E4E4F4;
   color: #1B2021;
 }
 .SettingsMenu.MenuDark .SettingsButton {
@@ -109,7 +102,7 @@
   outline: 0;
   padding: 12px 2rem;
 
-  background-color: #EDF2F4;
+  background-color: #E4E4F4;
   border: none;
   
   font-size: 1.2rem;
@@ -118,7 +111,7 @@
 }
 .SettingsMenu.MenuLight .SettingsNotice,
 .SettingsMenu.MenuLight .SettingsLabel {
-  background-color: #EDF2F4;
+  background-color: #E4E4F4;
 }
 .SettingsMenu.MenuDark .SettingsNotice,
 .SettingsMenu.MenuDark .SettingsLabel {
@@ -136,7 +129,7 @@
 
 .SettingsMenuTab .SettingsLabel:hover,
 .SettingsMenu.MenuLight .SettingsLabel:hover {
-  background-color: #DAE4E7;
+  background-color: #D6D6EE;
 }
 .SettingsMenu.MenuDark .SettingsLabel:hover {
   background-color: #252B2D;
@@ -156,8 +149,6 @@
 
     border-radius: 0;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    /* box-shadow: 0 1px 2px 0 #0000, 0 1px 3px 1px #0000; */
-    /* transition: box-shadow .08s linear,min-width .15s cubic-bezier(0.4,0,0.2,1) */
   }
   .SettingsMenuTab .SettingsSearchBox {
     font-size: 1rem;

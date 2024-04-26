@@ -7,7 +7,7 @@ import {
   Typography,
 } from '@mui/material';
 
-function VocabularySet() {
+function Lessons() {
   return (
     <Grid container justifyContent="center" sx={{ mt: 4 }}>
       <Grid item sm={11} sx={{ mb: 8 }}>
@@ -18,7 +18,7 @@ function VocabularySet() {
           >
             Koine Reader
           </Link>
-          <Typography color="primary.main">Vocabulary Sets</Typography>
+          <Typography color="primary.main">Lessons</Typography>
         </Breadcrumbs>
       </Grid>
       <Grid item xs={11}>
@@ -32,4 +32,4 @@ function VocabularySet() {
   );
 }
 
-export default VocabularySet;
+export default Lessons;

@@ -15,35 +15,11 @@ export const msalConfig = {
   auth: {
     clientId: 'b564eb6a-c4ac-4077-8565-8784703b4c52',
     authority: 'https://login.microsoftonline.com/6c1119a4-f378-4fda-b12e-5caac12c97e9',
-    redirectUri: 'http://localhost:3000',
+    redirectUri: 'http://localhost:3000/DynamicInterlinear/',
   },
   cache: {
     cacheLocation: 'sessionStorage', // This configures where your cache will be stored
     storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
-  },
-  system: {
-    // loggerOptions: {
-    //   loggerCallback: (level: any, message: any, containsPii: any) => {
-    //     if (containsPii) {
-    //       return;
-    //     }
-    //     switch (level) {
-    //       case LogLevel.Error:
-    //         // console.error(message);
-    //         return;
-    //       case LogLevel.Info:
-    //         // console.info(message);
-    //         return;
-    //       case LogLevel.Verbose:
-    //         // console.debug(message);
-    //         return;
-    //       case LogLevel.Warning:
-    //         // console.warn(message);
-    //         break;
-    //       default:
-    //     }
-    //   },
-    // },
   },
 };
 

@@ -1,6 +1,5 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMsal } from '@azure/msal-react';
 import {
   Breadcrumbs,
   Button,
@@ -17,40 +16,18 @@ import {
 import SaveIcon from '@mui/icons-material/Save';
 import { UserContext } from './User';
 import './SettingsPage.css';
-import * as UserService from './UserService';
-import { callMsGraph } from './AzureUserService';
-import { loginRequest } from '../authConfig';
+import * as AzureUserService from './AzureUserService';
 
 function UserSettings() {
   const { user, setUser } = useContext(UserContext);
-
-  const { instance, accounts } = useMsal();
-  const [graphData, setGraphData] = useState(null);
 
   const [settings, setSettings] = useState({
     isOnboarded: 'true',
     prefersDarkMode: user ? user.settings.prefersDarkMode : false,
     translation: user ? user.settings.translation : 'esv',
-    // textbook: user ? user.settings.textbook : 'mounce',
   });
 
-  const username = graphData
-    // @ts-ignore
-    ? graphData.userPrincipalName
-      .split('#')[0].split('_').join('@')
-    : user?.id;
-
-  function RequestProfileData() {
-    // Silently acquires an access token which is then attached to a request for MS Graph data
-    instance
-      .acquireTokenSilent({
-        ...loginRequest,
-        account: accounts[0],
-      })
-      .then((response) => {
-        callMsGraph(response.accessToken).then((res) => setGraphData(res));
-      });
-  }
+  const username = user?.name;
 
   const handleSelectChange = (event: SelectChangeEvent, setting: string) => {
     if (!(setting in settings)) {
@@ -64,11 +41,9 @@ function UserSettings() {
 
   const handleButtonClick = () => {
     if (!user) { return; }
-    UserService.saveLocalUser({ ...user, settings });
+    AzureUserService.updateUser({ ...user, settings });
     setUser(user);
   };
-
-  if (!graphData) { RequestProfileData(); }
 
   return (
     <Grid container justifyContent="center" sx={{ mt: 4 }}>
@@ -80,7 +55,7 @@ function UserSettings() {
           >
             Koine Reader
           </Link>
-          <Typography color="primary.main">Settings</Typography>
+          <Typography color="primary.main">Profile</Typography>
         </Breadcrumbs>
       </Grid>
       <Grid item sm={8} sx={{ mt: 8 }}>
@@ -115,26 +90,8 @@ function UserSettings() {
                 <MenuItem value="csb">Christian Standard Bible</MenuItem>
               </Select>
             </FormControl>
-            {/* <FormControl fullWidth>
-              <InputLabel id="settings-label-textbook">Preferred Textbook</InputLabel>
-              <Select
-                labelId="settings-label-textbook"
-                id="settings-textbook"
-                value={settings.textbook}
-                label="Preferred Textbook"
-                onChange={(e) => handleSelectChange(e, 'textbook')}
-              >
-                <MenuItem value="mounce">Mounce</MenuItem>
-              </Select>
-            </FormControl> */}
           </Stack>
-          <Stack direction="row" justifyContent="space-between" sx={{ mt: 2 }}>
-            <Button
-              variant="text"
-              onClick={() => UserService.clearLocalUser()}
-            >
-              Clear User Data
-            </Button>
+          <Stack direction="row" justifyContent="end" sx={{ mt: 2 }}>
             <Button
               variant="contained"
               type="submit"

@@ -8,11 +8,7 @@ import Nav from '../Nav/Nav';
 const DEFAULT_BOOK_ID = 1;
 const DEFAULT_CHAPTER_ID = 1;
 
-function App() {
-  /* Context for user details */
-  // const { user } = useContext(UserContext);
-  // const isOnboarded = user?.settings.isOnboarded === 'true';
-
+function Reader() {
   /* States primarily for text rendering */
   const [activeText, setActiveText] = useState({
     bookId: DEFAULT_BOOK_ID,
@@ -58,4 +54,4 @@ function App() {
   );
 }
 
-export default App;
+export default Reader;

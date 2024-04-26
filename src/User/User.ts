@@ -5,13 +5,13 @@ import { createContext, useContext } from 'react';
 
 export type UserProgress = {
   lessons: {
-    id: number,
+    lessonId: number,
     isComplete: boolean,
-  }[] | undefined,
+  }[],
   vocabulary: {
-    id: number,
+    wordId: number,
     isComplete: boolean,
-  }[] | undefined,
+  }[],
 };
 
 export interface UserSettings {
@@ -21,6 +21,7 @@ export interface UserSettings {
 
 export type User = {
   id: string,
+  name: string,
   progress: UserProgress,
   settings: UserSettings,
 };
