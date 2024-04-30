@@ -11,7 +11,6 @@ import { ThemeProvider } from '@mui/material';
 
 import { PublicClientApplication } from '@azure/msal-browser';
 import { MsalProvider } from '@azure/msal-react';
-import { msalConfig } from './authConfig';
 
 import { dark, light } from './Theme';
 import Reader from './Reader/Reader';
@@ -24,6 +23,7 @@ import * as AzureUserService from './User/AzureUserService';
 
 import AuthPrompt from './Onboarding/Onboarding';
 import Lessons from './Lessons/Lessons';
+import { loginRequest, msalConfig } from './authConfig';
 
 const msalInstance = new PublicClientApplication(msalConfig);
 
@@ -32,6 +32,24 @@ function App() {
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
   const theme = activeUser.settings.prefersDarkMode ? 'dark' : 'light';
+
+  console.log(`Active: ${activeUser.id}`);
+
+  const attemptSilentSSO = () => {
+    const accountHint = msalInstance.getAllAccounts()[0];
+    if (!accountHint) {
+      return;
+    }
+
+    console.log('Silent Sign-in');
+    const silentRequest = {
+      ...loginRequest,
+      loginHint: accountHint.username,
+    };
+    console.log(silentRequest);
+    msalInstance.initialize()
+      .then(() => msalInstance.ssoSilent(silentRequest));
+  };
 
   if (activeUser.id === 'guest') {
     const account = msalInstance.getActiveAccount();
@@ -43,6 +61,8 @@ function App() {
           }
           setActiveUser(usr);
         });
+    } else {
+      attemptSilentSSO();
     }
   }
 
@@ -55,7 +75,14 @@ function App() {
           <BrowserRouter basename="/DynamicInterlinear">
             <Routes>
               <Route path="/" element={<Reader />} />
-              <Route path="/welcome" element={activeUser.id === 'guest' ? <AuthPrompt /> : <Navigate to="/" />} />
+              <Route
+                path="/welcome"
+                element={
+                  activeUser.id === 'guest'
+                    ? <AuthPrompt />
+                    : <Navigate to="/" />
+                }
+              />
               <Route path="/lessons" element={<Lessons />} />
               <Route path="/vocabulary" element={<Vocabulary />} />
               <Route path="/sets" element={<VocabularySet />} />
@@ -63,20 +90,6 @@ function App() {
               <Route path="/about" element={<About />} />
             </Routes>
           </BrowserRouter>
-          {/* <AuthenticatedTemplate>
-            <BrowserRouter basename="/DynamicInterlinear">
-              <Routes>
-                <Route path="/" element={<Reader />} />
-                <Route path="/vocabulary" element={<Vocabulary />} />
-                <Route path="/sets" element={<VocabularySet />} />
-                <Route path="/settings" element={<SettingsPage />} />
-                <Route path="/about" element={<About />} />
-              </Routes>
-            </BrowserRouter>
-          </AuthenticatedTemplate>
-          <UnauthenticatedTemplate>
-            <AuthPrompt show={!isAuthenticated} />
-          </UnauthenticatedTemplate> */}
         </ThemeProvider>
       </MsalProvider>
     </UserContext.Provider>

@@ -5,7 +5,7 @@ import {
   useState,
 } from 'react';
 import { useMsal } from '@azure/msal-react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -108,9 +108,8 @@ function RegisterContent({
       >
         {
           userLevelContent.map(({ title, imageUrl }, i) => (
-            <Grid item sm={3}>
+            <Grid item sm={3} key={`onboarding-${title}`}>
               <OnboardingOptionBox
-                key={`onboarding-${title}`}
                 title={title}
                 imgURL={imageUrl}
                 value={i + 1}
@@ -168,7 +167,10 @@ function SignInContent({
         <Button variant="contained" type="submit" onClick={handleLogin}>Sign In</Button>
       </Stack>
       <Stack flexDirection="row" justifyContent="center">
-        <Link to="/reader"><Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button></Link>
+        {/* <Link to="/">
+          <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
+        </Link> */}
+        <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
       </Stack>
     </>
   );
@@ -187,6 +189,9 @@ export default function AuthPrompt() {
   const handleLogin = () => {
     instance.loginPopup(loginRequest)
       .then(({ account }) => {
+        if (!account) {
+          return;
+        }
         AzureUserService.fetchUser(account.localAccountId)
           .then((usr) => {
             if (usr) {
@@ -258,7 +263,7 @@ export default function AuthPrompt() {
         </Container>
       </Grid>
       <Grid item sm={6}>
-        <Box sx={{ height: '100vh', width: 'calc(100% + 1rem)' }}>
+        <Box sx={{ height: '100vh', width: 'calc(100% + 1rem)', overflow: 'hidden' }}>
           <img
             src="/DynamicInterlinear/static/img/signin-wallpaper.jpg"
             alt="Sign in to Koine!"

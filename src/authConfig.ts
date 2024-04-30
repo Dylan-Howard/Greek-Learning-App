@@ -16,9 +16,10 @@ export const msalConfig = {
     clientId: 'b564eb6a-c4ac-4077-8565-8784703b4c52',
     authority: 'https://login.microsoftonline.com/6c1119a4-f378-4fda-b12e-5caac12c97e9',
     redirectUri: 'http://localhost:3000/DynamicInterlinear/',
+    navigateToLoginRequestUrl: false,
   },
   cache: {
-    cacheLocation: 'sessionStorage', // This configures where your cache will be stored
+    cacheLocation: 'localStorage', // This configures where your cache will be stored
     storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
   },
 };
