@@ -23,15 +23,16 @@ import * as AzureUserService from './User/AzureUserService';
 
 import AuthPrompt from './Onboarding/Onboarding';
 import Lessons from './Lessons/Lessons';
-import { loginRequest } from './authConfig';
+import { loginRequest } from './Auth/authConfig';
 
 function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
   /* States for user details */
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
-  const theme = activeUser.settings.prefersDarkMode ? 'dark' : 'light';
-
   console.log(`Active: ${activeUser.id}`);
+  console.log(activeUser);
+
+  const theme = activeUser.settings.prefersDarkMode ? 'dark' : 'light';
 
   const attemptSilentSSO = () => {
     const accountHint = msalInstance.getAllAccounts()[0];

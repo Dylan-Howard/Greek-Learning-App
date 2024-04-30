@@ -103,7 +103,7 @@ function UserSettings() {
           </Stack>
           <Stack direction="row" justifyContent="end" sx={{ mt: 2 }}>
             {
-              user?.id === 'guest'
+              user?.id !== 'guest'
                 ? (
                   <Button
                     variant="outlined"

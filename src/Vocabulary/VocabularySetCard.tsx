@@ -24,12 +24,12 @@ function VocabularySetCard(
   },
 ) {
   return (
-    <Card sx={{ m: 1 }}>
-      <CardContent>
-        <Typography variant="body1" component="h3" sx={{ fontSize: 22, fontWeight: 600 }}>
+    <Card sx={{ m: 1, p: 2 }}>
+      <CardContent sx={{ p: 0, mb: 2 }}>
+        <Typography variant="body1" component="h3" sx={{ fontSize: 22, fontWeight: 600, mb: 2 }}>
           {title}
         </Typography>
-        <Typography variant="body1" color="text.secondary" sx={{ fontSize: 14, mb: 1.5 }}>
+        <Typography variant="body1" color="text.secondary" sx={{ fontSize: 14, mb: 2 }}>
           {description}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -43,7 +43,7 @@ function VocabularySetCard(
           </Box>
         </Box>
       </CardContent>
-      <CardActions>
+      <CardActions sx={{ p: 0 }}>
         <Button size="small">
           <Link to={`${link}`}>
             {link}
