@@ -23,11 +23,9 @@ import * as AzureUserService from './User/AzureUserService';
 
 import AuthPrompt from './Onboarding/Onboarding';
 import Lessons from './Lessons/Lessons';
-import { loginRequest, msalConfig } from './authConfig';
+import { loginRequest } from './authConfig';
 
-const msalInstance = new PublicClientApplication(msalConfig);
-
-function App() {
+function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
   /* States for user details */
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
@@ -41,12 +39,10 @@ function App() {
       return;
     }
 
-    console.log('Silent Sign-in');
     const silentRequest = {
       ...loginRequest,
       loginHint: accountHint.username,
     };
-    console.log(silentRequest);
     msalInstance.initialize()
       .then(() => msalInstance.ssoSilent(silentRequest));
   };

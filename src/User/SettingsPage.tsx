@@ -1,5 +1,7 @@
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMsal } from '@azure/msal-react';
+
 import {
   Breadcrumbs,
   Button,
@@ -13,13 +15,17 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import LogoutIcon from '@mui/icons-material/Logout';
 import SaveIcon from '@mui/icons-material/Save';
+
 import { UserContext } from './User';
 import './SettingsPage.css';
 import * as AzureUserService from './AzureUserService';
 
 function UserSettings() {
   const { user, setUser } = useContext(UserContext);
+
+  const { instance } = useMsal();
 
   const [settings, setSettings] = useState({
     isOnboarded: 'true',
@@ -39,7 +45,11 @@ function UserSettings() {
     setSettings(updatedSettings);
   };
 
-  const handleButtonClick = () => {
+  const handleSignOut = () => {
+    instance.logoutPopup();
+  };
+
+  const handleSave = () => {
     if (!user) { return; }
     AzureUserService.updateUser({ ...user, settings });
     setUser(user);
@@ -92,11 +102,26 @@ function UserSettings() {
             </FormControl>
           </Stack>
           <Stack direction="row" justifyContent="end" sx={{ mt: 2 }}>
+            {
+              user?.id === 'guest'
+                ? (
+                  <Button
+                    variant="outlined"
+                    type="submit"
+                    startIcon={<LogoutIcon />}
+                    onClick={handleSignOut}
+                    sx={{ mr: 2 }}
+                  >
+                    Sign Out
+                  </Button>
+                )
+                : ''
+            }
             <Button
               variant="contained"
               type="submit"
               startIcon={<SaveIcon />}
-              onClick={handleButtonClick}
+              onClick={handleSave}
             >
               Save
             </Button>

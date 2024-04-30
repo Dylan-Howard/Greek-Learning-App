@@ -138,7 +138,7 @@ function SettingsMenu(
     settingType: string,
   ) => {
     /* Guards if no active user is set */
-    if (!user) { return; }
+    if (!user || user.id === 'guest') { return; }
 
     const updatedUser = {
       id: user.id,

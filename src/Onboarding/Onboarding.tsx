@@ -186,8 +186,18 @@ export default function AuthPrompt() {
 
   const toggleNewUser = () => setIsNewUser(!isNewUser);
 
+  const getLoginHint = () => {
+    const ids = instance.getAllAccounts().map((acc) => acc.localAccountId);
+    return ids.length ? ids[0] : undefined;
+  };
+
   const handleLogin = () => {
-    instance.loginPopup(loginRequest)
+    const request = {
+      ...loginRequest,
+      loginHint: getLoginHint(),
+    };
+
+    instance.loginPopup(request)
       .then(({ account }) => {
         if (!account) {
           return;
