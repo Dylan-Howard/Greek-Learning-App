@@ -39,7 +39,7 @@ export const msalConfig = {
     storeAuthStateInCookie: false, // Set this to "true" if you are having issues on IE11 or Edge
   },
 };
-// https://koinelearning.b2clogin.com/koinelearning.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1_SignUp_SignIn
+
 /**
  * Add here the endpoints and scopes when obtaining an access token for protected web APIs. For more
  * information, see: https://github.com/AzureAD/microsoft-authentication-library-for-js/blob/dev/lib/msal-browser/docs/resources-and-scopes.md
@@ -60,6 +60,5 @@ export const protectedResources = {
  * https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-permissions-and-consent#openid-connect-scopes
  */
 export const loginRequest = {
-  // scopes: ['User.Read'],
   scopes: [],
 };
