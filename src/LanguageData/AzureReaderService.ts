@@ -1,9 +1,9 @@
+const API_URL = 'https://koine.azure-api.net/api';
+
 const postData = async (resource: string, data: Object) => {
-  const apiUrl = 'http://localhost:7074/api';
-  // const apiUrl = 'https://koinereader.azurewebsites.net/api';
   try {
     const response = await fetch(
-      `${apiUrl}/${resource}`,
+      `${API_URL}/${resource}`,
       {
         method: 'POST',
         headers: {

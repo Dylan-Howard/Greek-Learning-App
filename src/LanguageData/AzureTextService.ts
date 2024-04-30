@@ -1,8 +1,8 @@
+const API_URL = 'https://koine.azure-api.net/api';
+
 const fetchData = async (resource: string) => {
-  const apiUrl = 'http://localhost:7072/api';
-  // const apiUrl = 'https://koinetext.azurewebsites.net/api';
   try {
-    const response = await fetch(`${apiUrl}/${resource}`);
+    const response = await fetch(`${API_URL}/${resource}`);
 
     if (!response.ok) {
       throw new Error(`Error fetching data: ${response.statusText}`);

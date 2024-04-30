@@ -139,7 +139,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   const [units, setUnits] = useState([]);
   const [loadingError, setLoadingError] = useState(false);
 
-  const handleFetch = () => {
+  const handlePageFetch = () => {
     AzureReaderService.fetchPage(text.chapterId, user?.id || '')
       .then((data) => {
         if (!data) {
@@ -154,16 +154,12 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   };
 
   useEffect(() => {
-    if (user?.id === 'guest') {
-      setLoadingError(true);
-      return;
-    }
-    handleFetch();
+    handlePageFetch();
   }, [text, user]);
 
   const handleReloadClick = () => {
     setLoadingError(false);
-    handleFetch();
+    handlePageFetch();
   };
 
   if (loadingError) {

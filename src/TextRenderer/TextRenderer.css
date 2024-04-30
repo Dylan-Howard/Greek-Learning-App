@@ -2,12 +2,6 @@
   font-family: 'Noto Serif', serif;
 }
 
-.HebrewText {
-  direction: rtl;
-  font-size: 1.4rem;
-  line-height: 2.2rem;
-}
-
 .TextContainer {
   display: flex;
   justify-content: flex-start;
@@ -130,7 +124,7 @@
  * @TODO - Style each info unit according to function
  */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   .TextDisplay {
     padding: 4rem 4rem 2rem;
   }

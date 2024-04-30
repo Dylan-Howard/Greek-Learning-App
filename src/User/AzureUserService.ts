@@ -21,8 +21,7 @@ export async function callMsGraph(accessToken: string) {
     .then((response) => response.json());
 }
 
-const API_URL = 'http://localhost:7073/api';
-// const API_URL = 'https://koinetext.azurewebsites.net/api';
+const API_URL = 'https://koine.azure-api.net/api';
 
 // function wait(delay: number) {
 //   return new Promise((resolve) => { setTimeout(resolve, delay); });
@@ -55,39 +54,13 @@ const fetchData = async (resource: string) => {
   }
 };
 
-const patchData = async (resource: string, data: Object) => {
+const sendData = async (resource: string, method: string, data: Object) => {
   try {
     const response = await fetch(
       `${API_URL}/${resource}`,
       {
-        method: 'PATCH', // or 'PUT'
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      },
-    );
-
-    if (!response.ok) {
-      throw new Error(`Error fetching data: ${response.statusText}`);
-    }
-
-    const responseData = await response.json();
-    return responseData;
-  } catch (error) {
-    return undefined;
-  }
-};
-
-const postData = async (resource: string, data: Object) => {
-  try {
-    const response = await fetch(
-      `${API_URL}/${resource}`,
-      {
-        method: 'POST', // or 'PUT'
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        method,
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       },
     );
@@ -128,7 +101,7 @@ export async function createUser(id: string, name: string, userLevel: number) {
     progressTemplate = users.users[2].progress;
   }
 
-  const user = await postData('users', { id, name, progress: progressTemplate });
+  const user = await sendData('users', 'POST', { id, name, progress: progressTemplate });
 
   return user || undefined;
 }
@@ -155,7 +128,7 @@ export async function updateUser(userData: User) {
   if (userData.id === 'guest') {
     return undefined;
   }
-  const user = await patchData(`users/${userData.id}`, userData);
+  const user = await sendData(`users/${userData.id}`, 'PATCH', userData);
 
   return user || undefined;
 }
