@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/DynamicInterlinear/static/css/main.10ee7f86.css",
-    "main.js": "/DynamicInterlinear/static/js/main.2863017a.js",
+    "main.css": "/DynamicInterlinear/static/css/main.077e9d71.css",
+    "main.js": "/DynamicInterlinear/static/js/main.eea7c263.js",
+    "static/js/839.a90ee00b.chunk.js": "/DynamicInterlinear/static/js/839.a90ee00b.chunk.js",
     "static/js/787.e1cea973.chunk.js": "/DynamicInterlinear/static/js/787.e1cea973.chunk.js",
     "index.html": "/DynamicInterlinear/index.html",
-    "main.10ee7f86.css.map": "/DynamicInterlinear/static/css/main.10ee7f86.css.map",
-    "main.2863017a.js.map": "/DynamicInterlinear/static/js/main.2863017a.js.map",
+    "main.077e9d71.css.map": "/DynamicInterlinear/static/css/main.077e9d71.css.map",
+    "main.eea7c263.js.map": "/DynamicInterlinear/static/js/main.eea7c263.js.map",
+    "839.a90ee00b.chunk.js.map": "/DynamicInterlinear/static/js/839.a90ee00b.chunk.js.map",
     "787.e1cea973.chunk.js.map": "/DynamicInterlinear/static/js/787.e1cea973.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10ee7f86.css",
-    "static/js/main.2863017a.js"
+    "static/css/main.077e9d71.css",
+    "static/js/main.eea7c263.js"
   ]
 }
