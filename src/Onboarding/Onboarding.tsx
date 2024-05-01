@@ -10,7 +10,6 @@ import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
-  Container,
   Grid,
   Stack,
   Typography,
@@ -87,7 +86,7 @@ function RegisterContent({
   const submitDisabled = userLevel === 0;
 
   return (
-    <>
+    <Box>
       <Typography
         variant="h2"
         sx={{
@@ -135,7 +134,7 @@ function RegisterContent({
       <Stack flexDirection="row" justifyContent="center">
         <Button type="button" size="small" onClick={toggleNewUser} sx={{ color: '#333' }}>Already have an account?</Button>
       </Stack>
-    </>
+    </Box>
   );
 }
 
@@ -147,9 +146,10 @@ function SignInContent({
   handleLogin: MouseEventHandler<HTMLButtonElement>
 }) {
   return (
-    <>
+    <Box>
       <Box sx={{
         height: '128px',
+        width: '128px',
         mt: 24,
         ml: 'auto',
         mr: 'auto',
@@ -172,9 +172,8 @@ function SignInContent({
         <Link to="/">
           <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
         </Link>
-        {/* <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button> */}
       </Stack>
-    </>
+    </Box>
   );
 }
 
@@ -268,13 +267,16 @@ export default function AuthPrompt() {
         sm={6}
         sx={{
           background: theme.palette.background.default,
-          borderRadius: '1rem',
+          borderTopRightRadius: { xs: 0, sm: '1rem' },
+          borderBottomRightRadius: { xs: 0, sm: '1rem' },
           boxShadow: 3,
+          height: 'calc(100vh - env(safe-area-inset-bottom))',
+          p: 3,
+          pb: 'calc(16px + env(safe-area-inset-bottom))',
         }}
       >
-        <Container>
-          <Stack flexDirection="column" justifyContent="start" sx={{ height: '100vh' }}>
-            {
+        <Stack flexDirection="column" justifyContent="space-between" sx={{ height: '100%' }}>
+          {
               isNewUser && !authError
                 ? (
                   <RegisterContent
@@ -286,10 +288,12 @@ export default function AuthPrompt() {
                 )
                 : <SignInContent toggleNewUser={toggleNewUser} handleLogin={handleLogin} />
               }
-          </Stack>
-        </Container>
+          <Link to="/about">
+            <Button fullWidth size="small" sx={{ color: 'text.primary' }}>About Koine</Button>
+          </Link>
+        </Stack>
       </Grid>
-      <Grid item sm={6}>
+      <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'display' } }}>
         <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={{ height: '100vh' }}>
           <img
             src="/DynamicInterlinear/static/img/welcome-standalone.svg"

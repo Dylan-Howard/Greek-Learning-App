@@ -52,7 +52,8 @@ export const light = createTheme({
       secondary: '#1B2021CC',
     },
     background: {
-      default: '#F8F8FC',
+      // default: '#F8F8FC',
+      default: '#F1F1F9',
       secondary: '#EAEAF6',
       tertiary: '#E2E2F3',
       paper: '#FFFFFF',

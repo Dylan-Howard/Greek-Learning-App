@@ -18,11 +18,11 @@
 }
 
 .TextContainer.TextLight {
-  background: #F8F8FC;
+  /* background: #F8F8FC; */
   color: #1B2021;
 }
 .TextContainer.TextDark {
-  background: #252B2D;
+  /* background: #252B2D; */
   color: #F8F8FC;
 }
 

@@ -83,7 +83,7 @@ function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
               <Route path="/lessons" element={<Lessons />} />
               <Route path="/vocabulary" element={<Vocabulary />} />
               <Route path="/sets" element={<VocabularySet />} />
-              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="/profile" element={<SettingsPage />} />
               <Route path="/about" element={<About />} />
             </Routes>
           </BrowserRouter>

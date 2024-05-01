@@ -76,7 +76,6 @@ function OptionCheckbox(
 
   return (
     <FormControlLabel
-      key={id}
       id={id}
       control={<OptionSwitch checked={checked} onChange={handleChange} />}
       label={name}

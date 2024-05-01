@@ -2,6 +2,7 @@ import './SettingsMenu.css';
 
 import {
   ChangeEvent,
+  MouseEventHandler,
   useContext,
   useEffect,
   useState,
@@ -11,15 +12,16 @@ import {
   Button,
   Container,
   Divider,
+  IconButton,
   Stack,
   TextField,
   Typography,
   useTheme,
 } from '@mui/material';
+import CloseIcon from '@mui/icons-material/Close';
 import * as AzureTextService from '../LanguageData/AzureTextService';
 import * as AzureUserService from '../User/AzureUserService';
 import { User, UserContext } from '../User/User';
-import { Tab } from '../Common/Tab';
 import { Lesson } from '../Common/Lesson';
 import { Wordv2 } from '../Common/Word';
 import transliterateGreek from '../typescript/Transliterate';
@@ -66,11 +68,13 @@ function SettingsLink({ resource }: { resource: string }) {
 
 function SettingsMenu(
   {
-    tab: { title },
+    title,
     activeMorphologyId,
+    handleClose,
   } : {
-    tab: Tab,
+    title: string,
     activeMorphologyId: number,
+    handleClose: MouseEventHandler<HTMLButtonElement>,
   },
 ) {
   const { user, setUser } = useContext(UserContext);
@@ -198,17 +202,31 @@ function SettingsMenu(
   return (
     <Container sx={{
       bgcolor: 'background.tertiary',
-      pt: 4,
-      height: '100vh',
-      overflowY: 'scroll',
+      pt: 2,
+      borderTopLeftRadius: { xs: 24, sm: 0 },
+      borderTopRightRadius: { xs: 24, sm: 0 },
+      borderColor: 'text.primary',
     }}
     >
-      <Stack>
+      <Stack flexDirection="row" justifyContent="end">
+        <IconButton aria-label="close" onClick={handleClose}>
+          <CloseIcon />
+        </IconButton>
+      </Stack>
+      <Stack
+        sx={{
+          height: {
+            xs: 500,
+            sm: '100vh',
+          },
+          overflowY: 'scroll',
+        }}
+      >
         {!optionsLoading
           ? (
             <>
               <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
-                {title}
+                {title || ''}
               </Typography>
               { resource ? <SettingsLink resource={resource} /> : ''}
               <TextField
@@ -230,6 +248,7 @@ function SettingsMenu(
                   }) => (
                     <OptionCheckbox
                       id={`option-${type}-${id}`}
+                      key={`option-${type}-${id}`}
                       name={name}
                       value={isActive}
                       onCheck={(e) => handleCheckboxChange(e, id, type)}

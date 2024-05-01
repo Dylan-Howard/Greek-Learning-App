@@ -224,7 +224,10 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
   }
 
   return (
-    <div className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}>
+    <Box
+      className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}
+      sx={{ bgcolor: 'background.default' }}
+    >
       <Container maxWidth="md" sx={{ mt: 4 }}>
         <Stack direction="row" justifyContent="center">
           {
@@ -268,7 +271,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
           />
         </div>
       </div>
-    </div>
+    </Box>
   );
 }
 
