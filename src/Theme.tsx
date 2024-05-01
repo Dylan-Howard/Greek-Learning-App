@@ -2,6 +2,11 @@ import { createTheme } from '@mui/material';
 
 declare module '@mui/material/styles' {
   interface PaletteOptions {
+    // background?: {
+    //   default?: string,
+    //   dark?: string,
+    //   paper?: string,
+    // };
     footer?: {
       main?: string,
       contrastText?: string,
@@ -53,6 +58,7 @@ export const light = createTheme({
     },
     background: {
       default: '#F8F8FC',
+      // dark: '#EAEAF6',
       paper: '#FFFFFF',
     },
     footer: {
