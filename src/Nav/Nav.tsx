@@ -35,6 +35,7 @@ function Nav({
       direction={{ xs: 'column-reverse', sm: 'row' }}
       justifyContent="start"
       className={activeTheme === 'light' ? 'Navbar NavLight' : 'Navbar NavDark'}
+      sx={{ bgColor: 'background.default' }}
     >
       <div className="NavButtons">
         {

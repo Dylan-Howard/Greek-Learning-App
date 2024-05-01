@@ -2,23 +2,17 @@ import { createTheme } from '@mui/material';
 
 declare module '@mui/material/styles' {
   interface PaletteOptions {
-    // background?: {
-    //   default?: string,
-    //   dark?: string,
-    //   paper?: string,
-    // };
     footer?: {
       main?: string,
       contrastText?: string,
     };
   }
-
-  // interface PaletteOptions {
-  //   footer?: {
-  //     main?: string,
-  //     contrastText?: string,
-  //   };
-  // }
+  interface TypeBackground {
+    default: string,
+    secondary?: string,
+    tertiary?: string,
+    paper: string,
+  }
 }
 
 const themeTypography = {
@@ -31,6 +25,7 @@ const themeTypography = {
     '"Segoe UI Emoji"',
     '"Segoe UI Symbol"',
   ].join(','),
+  greekFontFamily: ['Noto Serif', 'serif'].join(''),
   h1: {
     fontWeight: 600,
   },
@@ -58,7 +53,8 @@ export const light = createTheme({
     },
     background: {
       default: '#F8F8FC',
-      // dark: '#EAEAF6',
+      secondary: '#EAEAF6',
+      tertiary: '#E2E2F3',
       paper: '#FFFFFF',
     },
     footer: {

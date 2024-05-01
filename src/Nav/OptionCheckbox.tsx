@@ -3,7 +3,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 import { ChangeEvent, ChangeEventHandler, useState } from 'react';
 
-const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+const OptionSwitch = styled(Switch)(({ theme }) => ({
   width: 56,
   height: 28,
   padding: 7,
@@ -78,10 +78,8 @@ function OptionCheckbox(
     <FormControlLabel
       key={id}
       id={id}
-      // control={<Switch checked={checked} onChange={handleChange} />}
-      control={<MaterialUISwitch checked={checked} onChange={handleChange} />}
+      control={<OptionSwitch checked={checked} onChange={handleChange} />}
       label={name}
-      // labelPlacement="start"
       sx={{ mb: 1 }}
     />
   );

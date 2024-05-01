@@ -84,7 +84,7 @@ function SettingsMenu(
   }]);
   const [optionsLoading, setOptionsLoading] = useState(true);
 
-  const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
+  // const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
   const theme = useTheme();
 
   let resource;
@@ -195,56 +195,51 @@ function SettingsMenu(
 
   if (title === 'Home') { return <span />; }
 
-  if (optionsLoading) {
-    return (
-      <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
-        <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
-          <SettingsMenuTabSkeleton />
-        </div>
-      </div>
-    );
-  }
-
   return (
-    // <Container className={
-    //  activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
-    <Container className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
+    <Container sx={{
+      bgcolor: 'background.tertiary',
+      pt: 4,
+      height: '100vh',
+      overflowY: 'scroll',
+    }}
+    >
       <Stack>
-        <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
-          {title}
-        </Typography>
-        { resource ? <SettingsLink resource={resource} /> : ''}
-        <TextField
-          label="Search"
-          type="search"
-          variant="outlined"
-          onChange={(e) => handleTextboxChange(e)}
-          size="small"
-          sx={{
-            backgroundColor: '#EDF2F4',
-            mb: 2,
-          }}
-        />
-        <Divider sx={{ mb: 2 }} />
-        {
-          options.length !== 0
-            ? options.map(({
-              id,
-              type,
-              name,
-              isActive,
-            }) => (
-              <OptionCheckbox
-                id={`option-${type}-${id}`}
-                // key={`option-${type}-${id}`}
-                // type={type}
-                name={name}
-                value={isActive}
-                onCheck={(e) => handleCheckboxChange(e, id, type)}
+        {!optionsLoading
+          ? (
+            <>
+              <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
+                {title}
+              </Typography>
+              { resource ? <SettingsLink resource={resource} /> : ''}
+              <TextField
+                label="Search"
+                type="search"
+                variant="outlined"
+                onChange={(e) => handleTextboxChange(e)}
+                size="small"
+                sx={{ bgcolor: 'background.default', mb: 2 }}
               />
-            ))
-            : <Typography variant="body1">No options match this search filter</Typography>
-        }
+              <Divider sx={{ mb: 2 }} />
+              {
+                options.length !== 0
+                  ? options.map(({
+                    id,
+                    type,
+                    name,
+                    isActive,
+                  }) => (
+                    <OptionCheckbox
+                      id={`option-${type}-${id}`}
+                      name={name}
+                      value={isActive}
+                      onCheck={(e) => handleCheckboxChange(e, id, type)}
+                    />
+                  ))
+                  : <Typography variant="body1">No options match this search filter</Typography>
+              }
+            </>
+          )
+          : <SettingsMenuTabSkeleton />}
       </Stack>
     </Container>
   );
