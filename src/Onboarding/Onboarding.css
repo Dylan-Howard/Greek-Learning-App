@@ -1,9 +1,8 @@
 .SignInLogo { height: 100%; }
 
-.SignInWallpaper {
-  height: 100vh;
-  min-width: 100%;
-  object-fit: cover;
+.SignIn-Illustration {
+  width: 80%;
+  max-width: 500px;
 }
 
 .OptionContainer {

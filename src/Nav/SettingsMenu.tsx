@@ -7,7 +7,15 @@ import {
   useState,
 } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, TextField } from '@mui/material';
+import {
+  Button,
+  Container,
+  Divider,
+  Stack,
+  TextField,
+  Typography,
+  useTheme,
+} from '@mui/material';
 import * as AzureTextService from '../LanguageData/AzureTextService';
 import * as AzureUserService from '../User/AzureUserService';
 import { User, UserContext } from '../User/User';
@@ -49,7 +57,7 @@ function mapVocabulary(vocabulary: Wordv2[], user: User | undefined, filter: str
 function SettingsLink({ resource }: { resource: string }) {
   return (
     <Link to={`/${resource}`}>
-      <Button fullWidth sx={{ textTransform: 'none' }}>
+      <Button sx={{ textTransform: 'none', mb: 2 }}>
         {`See all ${resource}`}
       </Button>
     </Link>
@@ -77,6 +85,7 @@ function SettingsMenu(
   const [optionsLoading, setOptionsLoading] = useState(true);
 
   const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
+  const theme = useTheme();
 
   let resource;
   if (title === 'Dictionary') {
@@ -176,7 +185,12 @@ function SettingsMenu(
       }
     }
     AzureUserService.updateUser(updatedUser)
-      .then(() => setUser(updatedUser));
+      .catch((err) => {
+        // setUser(updatedUser);
+        // eslint-disable-next-line no-console
+        console.log(err);
+      });
+    setUser(updatedUser);
   };
 
   if (title === 'Home') { return <span />; }
@@ -192,9 +206,13 @@ function SettingsMenu(
   }
 
   return (
-    <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
-      <div id={`${title}-menu`} className="SettingsMenuTab MenuActive">
-        <h1 className="MenuTabTitle">{title}</h1>
+    // <Container className={
+    //  activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
+    <Container className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
+      <Stack>
+        <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
+          {title}
+        </Typography>
         { resource ? <SettingsLink resource={resource} /> : ''}
         <TextField
           label="Search"
@@ -203,13 +221,11 @@ function SettingsMenu(
           onChange={(e) => handleTextboxChange(e)}
           size="small"
           sx={{
-            backgroundColor: 'background.paper',
-            width: '.9',
-            m: 'auto',
-            mt: 1,
-            mb: 1,
+            backgroundColor: '#EDF2F4',
+            mb: 2,
           }}
         />
+        <Divider sx={{ mb: 2 }} />
         {
           options.length !== 0
             ? options.map(({
@@ -219,18 +235,18 @@ function SettingsMenu(
               isActive,
             }) => (
               <OptionCheckbox
-                id={id}
-                key={`option-${type}-${id}`}
-                type={type}
+                id={`option-${type}-${id}`}
+                // key={`option-${type}-${id}`}
+                // type={type}
                 name={name}
                 value={isActive}
-                onChange={(e) => handleCheckboxChange(e, id, type)}
+                onCheck={(e) => handleCheckboxChange(e, id, type)}
               />
             ))
-            : <span className="SettingsNotice">No options match this search filter</span>
+            : <Typography variant="body1">No options match this search filter</Typography>
         }
-      </div>
-    </div>
+      </Stack>
+    </Container>
   );
 }
 

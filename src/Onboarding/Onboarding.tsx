@@ -15,6 +15,7 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 
 import { loginRequest } from '../Auth/authConfig';
 import { UserContext } from '../User/User';
@@ -182,6 +183,7 @@ export default function AuthPrompt() {
   const [isNewUser, setIsNewUser] = useState(false);
   const [userLevel, setUserLevel] = useState(0);
   const [authError, setAuthError] = useState(false);
+  const theme = useTheme();
 
   const { instance } = useMsal();
 
@@ -260,14 +262,12 @@ export default function AuthPrompt() {
   if (authError) { return <span />; }
 
   return (
-    <Grid container>
+    <Grid container sx={{ backgroundColor: '#F5E4CC' }}>
       <Grid
         item
         sm={6}
         sx={{
-          mr: -2,
-          zIndex: 1,
-          background: '#FAFAFA',
+          background: theme.palette.background.default,
           borderRadius: '1rem',
           boxShadow: 3,
         }}
@@ -290,13 +290,13 @@ export default function AuthPrompt() {
         </Container>
       </Grid>
       <Grid item sm={6}>
-        <Box sx={{ height: '100vh', width: 'calc(100% + 1rem)', overflow: 'hidden' }}>
+        <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={{ height: '100vh' }}>
           <img
-            src="/DynamicInterlinear/static/img/signin-wallpaper.jpg"
+            src="/DynamicInterlinear/static/img/welcome-standalone.svg"
             alt="Sign in to Koine!"
-            className="SignInWallpaper"
+            className="SignIn-Illustration"
           />
-        </Box>
+        </Stack>
       </Grid>
     </Grid>
   );
