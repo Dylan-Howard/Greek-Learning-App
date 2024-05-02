@@ -60,10 +60,10 @@ function Reader() {
         <Box
           sx={{
             position: 'fixed',
-            bottom: { xs: 75, sm: 'auto' },
+            bottom: { xs: 72.5, sm: 'auto' },
             left: { xs: 'auto', sm: 80 },
-            zIndex: 1000,
-            maxWidth: 350,
+            zIndex: 1100,
+            maxWidth: { xs: 'auto', sm: 350 },
           }}
         >
           <Slide

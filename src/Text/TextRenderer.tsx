@@ -256,7 +256,7 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
           )
           : <Skeleton variant="rounded" width={260} height={40} />} */}
       </Stack>
-      <Box sx={{ height: '100%', overflowY: 'scroll' }}>
+      <Box sx={{ height: { xs: 'calc(100% - 160.5px)', sm: 'calc(100% - 88px)' }, overflowY: 'scroll' }}>
         <Container maxWidth="sm">
           <Typography
             variant="h2"

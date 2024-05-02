@@ -28,7 +28,7 @@ function Nav({
         position: 'fixed',
         height: { xs: 'auto', sm: '100vh' },
         width: { xs: '100vw', sm: 'auto' },
-        zIndex: 1100,
+        zIndex: 1150,
         bgcolor: 'background.secondary',
         pt: { xs: 'calc(env(safe-area-inset-top) + 16px)', sm: 0 },
         pl: { xs: 2, sm: 0 },

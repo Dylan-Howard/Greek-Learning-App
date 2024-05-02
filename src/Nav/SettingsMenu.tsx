@@ -262,7 +262,7 @@ function SettingsMenu(
           ? <MenuCloseButton onClose={handleMouseClose} />
           : <MenuHandle onTouchClose={handleTouchClose} />
       }
-      <Stack sx={{ height: { xs: 500, sm: '100vh' }, overflowY: 'scroll' }}>
+      <Stack sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, overflowY: 'scroll' }}>
         {!optionsLoading
           ? (
             <>
