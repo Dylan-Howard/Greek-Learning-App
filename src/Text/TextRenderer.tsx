@@ -1,13 +1,9 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * TextRenderer
  */
-import './TextRenderer.css';
 import {
   ReactNode, useContext, useEffect, useState,
 } from 'react';
-import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
@@ -18,16 +14,16 @@ import {
   MenuItem,
   Select,
   SelectChangeEvent,
-  selectClasses,
-  Skeleton,
+  // Skeleton,
   Stack,
   Typography,
+  useTheme,
 } from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import TextUnit from './TextUnit';
 import { UserContext } from '../User/User';
-import { TextContext, Unit, Unitv2 } from '../LanguageData/Text';
+import { TextContext, Unitv2 } from '../LanguageData/Text';
 import * as AzureTextService from '../LanguageData/AzureTextService';
 import * as AzureReaderService from '../LanguageData/AzureReaderService';
 import { TextRendererSkeleton } from '../Skeletons/Skeletons';
@@ -97,38 +93,39 @@ function TextControls(
   },
 ) {
   return (
-    <div className={chapterPosition === 'first' ? 'TextControls InvertDirection' : 'TextControls'}>
-      {
-        chapterPosition !== 'first'
-          ? (
-            <Fab
-              color="primary"
-              aria-label="navigate-back"
-              onClick={() => onChange(chapterId - 1)}
-            >
-              <ChevronLeftIcon />
-            </Fab>
-          )
-          : ''
-      }
-      {
-        chapterPosition !== 'last'
-          ? (
-            <Fab
-              color="primary"
-              aria-label="navigate-back"
-              onClick={() => onChange(chapterId + 1)}
-            >
-              <ChevronRightIcon />
-            </Fab>
-          )
-          : ''
-      }
-    </div>
+    <Stack
+      direction={chapterPosition === 'first' ? 'row-reverse' : 'row'}
+      justifyContent="space-between"
+      sx={{ m: 4, mt: 0 }}
+    >
+      {chapterPosition !== 'first'
+        ? (
+          <Fab
+            color="primary"
+            aria-label="navigate-back"
+            onClick={() => onChange(chapterId - 1)}
+          >
+            <ChevronLeftIcon />
+          </Fab>
+        )
+        : ''}
+      {chapterPosition !== 'last'
+        ? (
+          <Fab
+            color="primary"
+            aria-label="navigate-back"
+            onClick={() => onChange(chapterId + 1)}
+          >
+            <ChevronRightIcon />
+          </Fab>
+        )
+        : ''}
+    </Stack>
   );
 }
 
-function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Function }) {
+function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Function }) {
+  const theme = useTheme();
   const { user } = useContext(UserContext);
   const { text, setText } = useContext(TextContext);
   const [selections, setSelections] = useState({
@@ -153,35 +150,12 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
       });
   };
 
-  useEffect(() => {
-    handlePageFetch();
-  }, [text, user]);
+  useEffect(() => { handlePageFetch(); }, [text, user]);
 
   const handleReloadClick = () => {
     setLoadingError(false);
     handlePageFetch();
   };
-
-  if (loadingError) {
-    return (
-      <div className="TextContainer TextLight">
-        <Container maxWidth="md" sx={{ mt: 4 }}>
-          <Stack flexDirection="column" justifyContent="center" alignItems="center">
-            <Box sx={{ width: 400, mt: 8, mb: 8 }}>
-              <img src="DynamicInterlinear/static/img/not-found.svg" alt="Resources not found" />
-            </Box>
-            <Typography sx={{ mb: 2 }}>
-              Hmmm, it likes like we&lsquo;re having trouble finding our texts.
-            </Typography>
-            <Stack flexDirection="row" justifyContent="center">
-              <Button variant="outlined" onClick={handleReloadClick} sx={{ mr: 2 }}>Look again</Button>
-              <Link to="/welcome"><Button variant="contained">Sign In</Button></Link>
-            </Stack>
-          </Stack>
-        </Container>
-      </div>
-    );
-  }
 
   const isSelectionLoaded = selections.texts.length && selections.chapters.length;
 
@@ -196,8 +170,7 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
       });
   };
 
-  const handleChapterChange = (event: SelectChangeEvent) => {
-    const targetChapterId = parseInt(event.target.value, 10);
+  const handleChapterChange = (targetChapterId: number) => {
     AzureTextService.fetchChapter(targetChapterId)
       .then(({ textId }) => {
         setText({
@@ -207,12 +180,14 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
       });
   };
 
-  const handleUnitClick = (morphologyId: number | undefined) => {
-    changeActiveDeclension(morphologyId);
+  const handleChapterSelect = (event: SelectChangeEvent) => {
+    const targetChapterId = parseInt(event.target.value, 10);
+    handleChapterChange(targetChapterId);
   };
 
-  /* Sets the theme based on the user setting */
-  const activeTheme = user?.settings.prefersDarkMode ? 'dark' : 'light';
+  const handleUnitClick = (morphologyId: number | undefined) => {
+    changeActiveMorphology(morphologyId);
+  };
 
   /* Determines the position of the active chapter within the active text */
   let chapterPosition;
@@ -223,31 +198,80 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
     chapterPosition = 'last';
   }
 
+  if (loadingError) {
+    return (
+      <Box
+        sx={{
+          bgcolor: 'background.default',
+          height: 'calc(100vh - env(safe-area-inset-bottom))',
+          ml: { xs: 0, sm: 10 },
+        }}
+      >
+        <Stack flexDirection="column" justifyContent="center" alignItems="center">
+          <Box
+            sx={{
+              width: '90%',
+              maxWidth: 400,
+              mt: 8,
+              mb: 8,
+            }}
+          >
+            <img src="DynamicInterlinear/static/img/not-found.svg" alt="Resources not found" />
+          </Box>
+          <Typography textAlign="center" sx={{ m: 4 }}>
+            Hmmm, it likes like we&lsquo;re having trouble finding our texts.
+          </Typography>
+          <Stack flexDirection="row" justifyContent="center">
+            <Button variant="contained" onClick={handleReloadClick} sx={{ mr: 2 }}>Look again</Button>
+          </Stack>
+        </Stack>
+      </Box>
+    );
+  }
+
   return (
     <Box
-      className={`TextContainer Text${activeTheme === 'light' ? 'Light' : 'Dark'}`}
-      sx={{ bgcolor: 'background.default' }}
+      sx={{
+        bgcolor: 'background.default',
+        height: 'calc(100vh - env(safe-area-inset-bottom))',
+        width: '100%',
+        ml: { xs: 0, sm: 10 },
+      }}
     >
-      <Container maxWidth="md" sx={{ mt: 4 }}>
-        <Stack direction="row" justifyContent="center">
-          {
-            isSelectionLoaded
-              ? (
-                <TextSelectionControls
-                  selections={selections}
-                  text={text}
-                  handleTextChange={handleTextChange}
-                  handleChapterChange={handleChapterChange}
-                />
-              )
-              : <Skeleton variant="rounded" width={260} height={40} />
-          }
-        </Stack>
-      </Container>
-      <div className="TextRendererRow">
-        <div className="TextRendererColumn">
-          <div className="TextDisplay">
-            <h1 className="TextHeading">{title}</h1>
+      <Stack direction="row" justifyContent="center" sx={{ mt: 4, pb: 2 }}>
+        <TextSelectionControls
+          selections={selections}
+          text={text}
+          handleTextChange={handleTextChange}
+          handleChapterChange={handleChapterSelect}
+        />
+        {/* {isSelectionLoaded
+          ? (
+            <TextSelectionControls
+              selections={selections}
+              text={text}
+              handleTextChange={handleTextChange}
+              handleChapterChange={handleChapterSelect}
+            />
+          )
+          : <Skeleton variant="rounded" width={260} height={40} />} */}
+      </Stack>
+      <Box sx={{ height: '100%', overflowY: 'scroll' }}>
+        <Container maxWidth="sm">
+          <Typography
+            variant="h2"
+            sx={{
+              fontFamily: 'Noto Serif, serif',
+              fontSize: 48,
+              fontWeight: theme.typography.fontWeightBold,
+              lineHeight: 1.8,
+              textAlign: 'center',
+              mb: 2,
+            }}
+          >
+            {title}
+          </Typography>
+          <Box sx={{ mb: 4 }}>
             {
               units.length
                 ? units.map((unt: Unitv2) => (
@@ -258,19 +282,19 @@ function TextRenderer({ changeActiveDeclension } : { changeActiveDeclension: Fun
                   />
                 ))
                 : <TextRendererSkeleton />
-            }
-          </div>
-        </div>
-      </div>
-      <div className="TextRendererRow">
-        <div className="TextRendererColumn">
-          <TextControls
-            chapterId={text.chapterId}
-            chapterPosition={chapterPosition}
-            onChange={handleChapterChange}
-          />
-        </div>
-      </div>
+              }
+          </Box>
+          {isSelectionLoaded
+            ? (
+              <TextControls
+                chapterId={text.chapterId}
+                chapterPosition={chapterPosition}
+                onChange={handleChapterChange}
+              />
+            )
+            : '' }
+        </Container>
+      </Box>
     </Box>
   );
 }

@@ -1,15 +1,68 @@
-import './DetailsMenu.css';
-import { useContext, useEffect, useState } from 'react';
+import {
+  MouseEventHandler,
+  TouchEvent,
+  TouchEventHandler,
+  useEffect,
+  useState,
+} from 'react';
+
 import {
   Box,
   Container,
   Grid,
+  IconButton,
   Stack,
   Typography,
+  useMediaQuery,
 } from '@mui/material';
-import { UserContext } from '../User/User';
+import CloseIcon from '@mui/icons-material/Close';
+
 import * as AzureTextService from '../LanguageData/AzureTextService';
 import { DetailsSkeleton } from '../Skeletons/Skeletons';
+
+function MenuHandle({ onTouchClose }: { onTouchClose: TouchEventHandler }) {
+  const [swipe, setSwipe] = useState({ start: 0 });
+  const swipeCloseDistance = 50;
+
+  const handleTouchStart = (e: any) => {
+    setSwipe({ start: e.touches[0].clientY });
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    const swipeDistance = e.changedTouches[0].clientY - swipe.start;
+    if (swipeCloseDistance < swipeDistance) {
+      onTouchClose(e);
+    }
+  };
+
+  return (
+    <Stack
+      flexDirection="row"
+      justifyContent="center"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      sx={{ pt: 2, pb: 2 }}
+    >
+      <Box
+        sx={{
+          border: '#333 1px solid',
+          borderColor: 'text.primary',
+          width: 48,
+        }}
+      />
+    </Stack>
+  );
+}
+
+function MenuCloseButton({ onClose }: { onClose: MouseEventHandler<HTMLButtonElement> }) {
+  return (
+    <Stack flexDirection="row" justifyContent="end" sx={{ pt: 2, pb: 2 }}>
+      <IconButton aria-label="close" onClick={onClose}>
+        <CloseIcon />
+      </IconButton>
+    </Stack>
+  );
+}
 
 function DetailsItem({ label, value } : { label: string, value: string }) {
   return (
@@ -20,8 +73,17 @@ function DetailsItem({ label, value } : { label: string, value: string }) {
   );
 }
 
-function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
-  const { user } = useContext(UserContext);
+function DetailsMenu({
+  activeMorphologyId,
+  handleMouseClose,
+  handleTouchClose,
+} : {
+  activeMorphologyId: number,
+  handleMouseClose: MouseEventHandler,
+  handleTouchClose: TouchEventHandler,
+}) {
+  const gt600px = useMediaQuery('(min-width:600px)');
+
   const [isLoading, setIsLoading] = useState(true);
   const [morphology, setMorphology] = useState({
     content: null,
@@ -30,8 +92,6 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
     ],
   });
 
-  const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
-
   const unitForm = AzureTextService.fetchMorphologyDetails(activeMorphologyId);
   if (!unitForm) {
     return <span>No active declension</span>;
@@ -39,6 +99,7 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
 
   useEffect(() => {
     setIsLoading(true);
+    console.log('Loading details');
     AzureTextService.fetchMorphologyDetails(activeMorphologyId)
       .then((dtl) => {
         const details: { field: string, value: string }[] = [];
@@ -62,48 +123,43 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
       });
   }, [activeMorphologyId]);
 
-  if (isLoading) {
-    return (
-      <div className={activeTheme === 'light' ? 'SettingsMenu MenuLight' : 'SettingsMenu MenuDark'}>
-        <DetailsSkeleton />
-      </div>
-    );
-  }
-
   return (
     <Container sx={{
       bgcolor: 'background.tertiary',
-      pt: 4,
-      height: '100vh',
-      overflowY: 'scroll',
+      pr: { xs: 4, sm: 2 },
+      pl: { xs: 4, sm: 2 },
+      borderTopLeftRadius: { xs: 24, sm: 0 },
+      borderTopRightRadius: { xs: 24, sm: 0 },
+      width: { xs: '100vw', sm: 'auto' },
     }}
     >
-      <Stack>
-        { isLoading ? <DetailsSkeleton /> : '' }
-        <Typography
-          variant="h2"
-          color="theme.palette.text.primary"
-          sx={{ fontSize: 48, mb: 2, fontFamily: 'Noto Serif' }}
-        >
-          {morphology.content}
-        </Typography>
-        <Grid container>
-          {
-            morphology.details.map(({ field, value }) => (
-              <Grid item xs={6} key={`detail-${field}`}>
-                <DetailsItem label={field} value={value} />
+      {
+        gt600px
+          ? <MenuCloseButton onClose={handleMouseClose} />
+          : <MenuHandle onTouchClose={handleTouchClose} />
+      }
+      <Stack sx={{ height: { xs: 500, sm: '100vh' }, overflowY: 'scroll' }}>
+        {!isLoading
+          ? (
+            <>
+              <Typography
+                variant="h2"
+                sx={{ fontSize: 48, mb: 2, fontFamily: 'Noto Serif' }}
+              >
+                {morphology.content}
+              </Typography>
+              <Grid container>
+                {
+                  morphology.details.map(({ field, value }) => (
+                    <Grid item xs={6} key={`detail-${field}`}>
+                      <DetailsItem label={field} value={value} />
+                    </Grid>
+                  ))
+                }
               </Grid>
-            ))
-          }
-        </Grid>
-        {/* <Button
-          size="small"
-          fullWidth
-          onClick={() => handleButtonClick(unitForm.wordId, 'Word')}
-          sx={{ textTransform: 'none' }}
-        >
-          { isComplete ? 'I don’t know this word' : 'I know this word' }
-        </Button> */}
+            </>
+          )
+          : <DetailsSkeleton />}
       </Stack>
     </Container>
   );

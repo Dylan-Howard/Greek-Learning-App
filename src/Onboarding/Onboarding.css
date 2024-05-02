@@ -51,10 +51,8 @@
 @media screen and (min-width: 500px) {
   .OptionContainer .OptionContent {
     margin: auto;
-    /* width: 100%; */
   }
   .OptionContent img {
-    /* margin: 0 0 1rem; */
     height: auto;
     width: 100%;
   }

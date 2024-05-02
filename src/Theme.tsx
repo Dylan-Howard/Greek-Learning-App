@@ -13,6 +13,14 @@ declare module '@mui/material/styles' {
     tertiary?: string,
     paper: string,
   }
+  interface TypographyVariants {
+    readerBody: React.CSSProperties;
+    readerHelp: React.CSSProperties;
+  }
+  interface TypographyVariantsOptions {
+    readerBody?: React.CSSProperties;
+    readerHelp?: React.CSSProperties;
+  }
 }
 
 const themeTypography = {
@@ -31,6 +39,16 @@ const themeTypography = {
   },
   h2: {
     fontWeight: 600,
+  },
+  readerBody: {
+    fontFamily: ['Noto Serif', 'serif'].join(''),
+    fontSize: '1.1rem',
+    lineHeight: '2rem',
+  },
+  readerHelp: {
+    fontFamily: ['Noto Serif', 'serif'].join(''),
+    fontSize: '1rem',
+    lineHeight: '2rem',
   },
 };
 

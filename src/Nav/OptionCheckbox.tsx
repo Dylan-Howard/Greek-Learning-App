@@ -79,7 +79,7 @@ function OptionCheckbox(
       id={id}
       control={<OptionSwitch checked={checked} onChange={handleChange} />}
       label={name}
-      sx={{ mb: 1 }}
+      sx={{ m: 0, mb: 1 }}
     />
   );
 }

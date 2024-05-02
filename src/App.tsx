@@ -1,4 +1,3 @@
-import './App.css';
 import { useMemo, useState } from 'react';
 import {
   BrowserRouter,

@@ -60,7 +60,9 @@ export async function fetchUnitsByChapter(chapterId: number) {
 export async function fetchChapter(chapterId: number) {
   const chapter = await fetchData(`chapters/${chapterId}`);
 
-  return JSON.parse(chapter)[0];
+  console.log(JSON.parse(chapter));
+
+  return JSON.parse(chapter);
 }
 
 export async function fetchChaptersByText(textId: number) {

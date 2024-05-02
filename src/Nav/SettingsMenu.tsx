@@ -1,14 +1,15 @@
-import './SettingsMenu.css';
-
 import {
   ChangeEvent,
   MouseEventHandler,
+  TouchEvent,
+  TouchEventHandler,
   useContext,
   useEffect,
   useState,
 } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  Box,
   Button,
   Container,
   Divider,
@@ -16,6 +17,7 @@ import {
   Stack,
   TextField,
   Typography,
+  useMediaQuery,
   useTheme,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
@@ -56,6 +58,50 @@ function mapVocabulary(vocabulary: Wordv2[], user: User | undefined, filter: str
     }));
 }
 
+function MenuHandle({ onTouchClose }: { onTouchClose: TouchEventHandler }) {
+  const [swipe, setSwipe] = useState({ start: 0 });
+  const swipeCloseDistance = 50;
+
+  const handleTouchStart = (e: any) => {
+    setSwipe({ start: e.touches[0].clientY });
+  };
+
+  const handleTouchEnd = (e: TouchEvent) => {
+    const swipeDistance = e.changedTouches[0].clientY - swipe.start;
+    if (swipeCloseDistance < swipeDistance) {
+      onTouchClose(e);
+    }
+  };
+
+  return (
+    <Stack
+      flexDirection="row"
+      justifyContent="center"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      sx={{ pt: 2, pb: 2 }}
+    >
+      <Box
+        sx={{
+          border: '#333 1px solid',
+          borderColor: 'text.primary',
+          width: 48,
+        }}
+      />
+    </Stack>
+  );
+}
+
+function MenuCloseButton({ onClose }: { onClose: MouseEventHandler<HTMLButtonElement> }) {
+  return (
+    <Stack flexDirection="row" justifyContent="end" sx={{ pt: 2, pb: 2 }}>
+      <IconButton aria-label="close" onClick={onClose}>
+        <CloseIcon />
+      </IconButton>
+    </Stack>
+  );
+}
+
 function SettingsLink({ resource }: { resource: string }) {
   return (
     <Link to={`/${resource}`}>
@@ -70,11 +116,13 @@ function SettingsMenu(
   {
     title,
     activeMorphologyId,
-    handleClose,
+    handleMouseClose,
+    handleTouchClose,
   } : {
     title: string,
     activeMorphologyId: number,
-    handleClose: MouseEventHandler<HTMLButtonElement>,
+    handleMouseClose: MouseEventHandler,
+    handleTouchClose: TouchEventHandler,
   },
 ) {
   const { user, setUser } = useContext(UserContext);
@@ -87,8 +135,8 @@ function SettingsMenu(
     isActive: false,
   }]);
   const [optionsLoading, setOptionsLoading] = useState(true);
+  const gt600px = useMediaQuery('(min-width:600px)');
 
-  // const activeTheme = !user?.settings.prefersDarkMode ? 'light' : 'dark';
   const theme = useTheme();
 
   let resource;
@@ -202,26 +250,19 @@ function SettingsMenu(
   return (
     <Container sx={{
       bgcolor: 'background.tertiary',
-      pt: 2,
+      pr: { xs: 4, sm: 2 },
+      pl: { xs: 4, sm: 2 },
       borderTopLeftRadius: { xs: 24, sm: 0 },
       borderTopRightRadius: { xs: 24, sm: 0 },
-      borderColor: 'text.primary',
+      width: { xs: '100vw', sm: 'auto' },
     }}
     >
-      <Stack flexDirection="row" justifyContent="end">
-        <IconButton aria-label="close" onClick={handleClose}>
-          <CloseIcon />
-        </IconButton>
-      </Stack>
-      <Stack
-        sx={{
-          height: {
-            xs: 500,
-            sm: '100vh',
-          },
-          overflowY: 'scroll',
-        }}
-      >
+      {
+        gt600px
+          ? <MenuCloseButton onClose={handleMouseClose} />
+          : <MenuHandle onTouchClose={handleTouchClose} />
+      }
+      <Stack sx={{ height: { xs: 500, sm: '100vh' }, overflowY: 'scroll' }}>
         {!optionsLoading
           ? (
             <>
