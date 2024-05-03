@@ -60,7 +60,7 @@ function Reader() {
         <Box
           sx={{
             position: 'fixed',
-            bottom: { xs: 72.5, sm: 'auto' },
+            bottom: { xs: 'calc(72.5px + env(safe-area-inset-bottom))', sm: 'auto' },
             left: { xs: 'auto', sm: 80 },
             zIndex: 1100,
             maxWidth: { xs: 'auto', sm: 350 },
