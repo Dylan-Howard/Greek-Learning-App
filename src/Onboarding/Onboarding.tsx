@@ -20,6 +20,7 @@ import { loginRequest } from '../Auth/authConfig';
 import { UserContext } from '../User/User';
 import * as AzureUserService from '../User/AzureUserService';
 import './Onboarding.css';
+import WelcomeIllustration from './WelcomeIllustration';
 
 function OnboardingOptionBox({
   title,
@@ -293,13 +294,9 @@ export default function AuthPrompt() {
           </Link>
         </Stack>
       </Grid>
-      <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'display' } }}>
+      <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'block' } }}>
         <Stack flexDirection="column" justifyContent="center" alignItems="center" sx={{ height: '100vh' }}>
-          <img
-            src="/DynamicInterlinear/static/img/welcome-standalone.svg"
-            alt="Sign in to Koine!"
-            className="SignIn-Illustration"
-          />
+          <WelcomeIllustration />
         </Stack>
       </Grid>
     </Grid>

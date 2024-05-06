@@ -1,0 +1,97 @@
+
+/* Keyframes */
+@keyframes left-eye-blink {
+  0% { transform: translate(0px, 0px); }
+  1% { transform: translate(4px, 10px); }
+  2% { transform: translate(6px, 12px); }
+  3% { transform: translate(2px, 4px); }
+  4% { transform: translate(0px, 0px); }
+}
+@keyframes left-eye-iris-blink {
+  0% { transform: translate(0px, 0px); }
+  1% { transform: translate(2px, 2px); }
+  2% { transform: translate(2px, 2px); }
+  3% { transform: translate(0px, 0px); }
+}
+
+@keyframes right-eye-blink {
+  0% { transform: translate(0px, 0px); }
+  1% { transform: translate(4px, 10px); }
+  2% { transform: translate(6px, 12px); }
+  3% { transform: translate(2px, 4px); }
+  4% { transform: translate(0px, 0px); }
+}
+
+@keyframes right-eye-iris-blink {
+  0% { transform: translate(0px, 0px); }
+  1% { transform: translate(1px, 1px); }
+  2% { transform: translate(1px, 1px); }
+  3% { transform: translate(1px, 1px); }
+  4% { transform: translate(0px, 0px); }
+}
+
+@keyframes letters-float {
+  0% { transform: translate(0px, -1px) rotate(10deg); }
+  12.5% { transform: translate(2px, 0px) rotate(20deg); }
+  25% { transform: translate(4px, 1px) rotate(10deg); }
+  37.5% { transform: translate(2px, 0px) rotate(0deg); }
+  50% { transform: translate(0px, -1px) rotate(-10deg); }
+  62.5% { transform: translate(2px, 0px) rotate(-20deg); }
+  75% { transform: translate(4px, 1px) rotate(-10deg); }
+  87.5% { transform: translate(2px, 0px) rotate(0deg); }
+  100% { transform: translate(0px, -1px) rotate(10deg); }
+}
+
+/* Assignments */
+#Left-Lid { animation: left-eye-blink 8s ease infinite; }
+#Left-Eye-Iris-Shader { animation: left-eye-iris-blink 8s ease infinite; }
+#Right-Lid { animation: right-eye-blink 8s ease infinite; }
+#Right-Eye-Iris-Shader { animation: right-eye-iris-blink 8s ease infinite; }
+
+#Letter-1,
+#Letter-2,
+#Letter-3,
+#Letter-4,
+#Letter-5,
+#Letter-6,
+#Letter-7,
+#Letter-8,
+#Letter-9,
+#Letter-10,
+#Letter-11,
+#Letter-12,
+#Letter-13,
+#Letter-14,
+#Letter-15,
+#Letter-16,
+#Letter-17,
+#Letter-18,
+#Letter-19,
+#Letter-20,
+#Letter-21,
+#Letter-22,
+#Letter-23 { animation: letters-float 8s infinite linear forwards; }
+
+#Letter-1 { transform-origin: 78px 186px; animation-delay: 100ms; }
+#Letter-2 { transform-origin: 126px 142px; animation-delay: 2200ms; }
+#Letter-3 { transform-origin: 178px 115px; animation-delay: 300ms; }
+#Letter-4 { transform-origin: 234px 123px; animation-delay: 400ms; }
+#Letter-5 { transform-origin: 271px 148px; animation-delay: 1500ms; }
+#Letter-6 { transform-origin: 317px 156px; animation-delay: 100ms; }
+#Letter-7 { transform-origin: 103px 238px; animation-delay: 700ms; }
+#Letter-8 { transform-origin: 126px 192px; animation-delay: 800ms; }
+#Letter-9 { transform-origin: 175px 168px; animation-delay: 900ms; }
+#Letter-10 { transform-origin: 205px 146px; animation-delay: 1000ms; }
+#Letter-11 { transform-origin: 240px 160px; animation-delay: 1100ms; }
+#Letter-12 { transform-origin: 139px 259px; animation-delay: 1200ms; }
+#Letter-13 { transform-origin: 169px 219px; animation-delay: 1300ms; }
+#Letter-14 { transform-origin: 211px 206px; animation-delay: 1400ms; }
+#Letter-15 { transform-origin: 253px 207px; animation-delay: 500ms; }
+#Letter-16 { transform-origin: 287px 184px; animation-delay: 1600ms; }
+#Letter-17 { transform-origin: 304px 227px; animation-delay: 1700ms; }
+#Letter-18 { transform-origin: 325px 198px; animation-delay: 1800ms; }
+#Letter-19 { transform-origin: 184px 295px; animation-delay: 1900ms; }
+#Letter-20 { transform-origin: 205px 254px; animation-delay: 2000ms; }
+#Letter-21 { transform-origin: 234px 287px; animation-delay: 2100ms; }
+#Letter-22 { transform-origin: 258px 254px; animation-delay: 200ms; }
+#Letter-23 { transform-origin: 293px 272px; animation-delay: 2300ms; }
