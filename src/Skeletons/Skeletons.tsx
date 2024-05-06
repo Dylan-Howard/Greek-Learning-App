@@ -18,13 +18,13 @@ export function SettingsMenuTabSkeleton() {
 export function TextRendererSkeleton() {
   return (
     <>
-      <Skeleton variant="rounded" width="70vw" height={28} sx={{ m: 2, mb: 3 }} />
-      <Skeleton variant="rounded" width="60vw" height={28} sx={{ m: 2, mb: 3 }} />
-      <Skeleton variant="rounded" width="70vw" height={28} sx={{ m: 2, mb: 3 }} />
-      <Skeleton variant="rounded" width="55vw" height={28} sx={{ m: 2, mb: 3 }} />
-      <Skeleton variant="rounded" width="70vw" height={28} sx={{ m: 2, mb: 3 }} />
-      <Skeleton variant="rounded" width="65vw" height={28} sx={{ m: 2, mb: 3 }} />
-      <Skeleton variant="rounded" width="25vw" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="90%" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="80%" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="95%" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="55%" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="90%" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="75%" height={28} sx={{ m: 2, mb: 3 }} />
+      <Skeleton variant="rounded" width="45%" height={28} sx={{ m: 2, mb: 3 }} />
     </>
   );
 }
