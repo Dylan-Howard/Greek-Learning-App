@@ -20,21 +20,32 @@ import { loginRequest } from '../Auth/authConfig';
 import { UserContext } from '../User/User';
 import * as AzureUserService from '../User/AzureUserService';
 import './Onboarding.css';
-import WelcomeIllustration from './WelcomeIllustration';
+import {
+  WelcomeIllustration,
+  OnboardingIllustration1,
+  OnboardingIllustration2,
+  OnboardingIllustration3,
+} from './WelcomeIllustration';
+
+type IllustrationMap = { [index: number]: () => JSX.Element };
+const illustrationMap: IllustrationMap = {
+  1: OnboardingIllustration1,
+  2: OnboardingIllustration2,
+  3: OnboardingIllustration3,
+};
 
 function OnboardingOptionBox({
   title,
-  imgURL,
   value,
   checked,
   onChange,
 } : {
   title: string,
-  imgURL: string,
   value: number,
   checked: boolean,
   onChange: ChangeEventHandler,
 }) {
+  const illustration = illustrationMap[value] || OnboardingIllustration1;
   return (
     <label htmlFor={`onboarding-radio-${value}`} className="OptionContainer">
       <input
@@ -46,7 +57,7 @@ function OnboardingOptionBox({
         checked={checked}
       />
       <Box className="OptionContent">
-        <img src={imgURL} alt={title} />
+        {illustration()}
         <Typography className="OptionTitle">{title}</Typography>
       </Box>
     </label>
@@ -57,17 +68,17 @@ const userLevelContent = [
   {
     title: 'Newcomer',
     description: "I'm new and excited to learn!",
-    imageUrl: '/DynamicInterlinear/static/img/OnboardingLevel1.png',
+    imageUrl: '/DynamicInterlinear/static/img/Onboarding-1.svg',
   },
   {
     title: 'Verse Voyager',
     description: 'I most of the grammar and know every word that occures more than 50 times.',
-    imageUrl: '/DynamicInterlinear/static/img/OnboardingLevel2.png',
+    imageUrl: '/DynamicInterlinear/static/img/Onboarding-2.svg',
   },
   {
     title: 'Textual Titan',
     description: "I'm fluent in the grammar and I've learned every word that occurs more than 15 times.",
-    imageUrl: '/DynamicInterlinear/static/img/OnboardingLevel3.png',
+    imageUrl: '/DynamicInterlinear/static/img/Onboarding-3.svg',
   },
 ];
 
@@ -109,11 +120,10 @@ function RegisterContent({
         sx={{ mb: 5 }}
       >
         {
-          userLevelContent.map(({ title, imageUrl }, i) => (
+          userLevelContent.map(({ title }, i) => (
             <Grid item sm={3} key={`onboarding-${title}`}>
               <OnboardingOptionBox
                 title={title}
-                imgURL={imageUrl}
                 value={i + 1}
                 checked={userLevel === i + 1}
                 onChange={() => onOptionChange(i + 1)}

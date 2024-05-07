@@ -70,9 +70,6 @@ export const light = createTheme({
       secondary: '#1B2021CC',
     },
     background: {
-      // default: '#F1F1F9',
-      // secondary: '#EAEAF6',
-      // tertiary: '#E2E2F3',
       default: '#F8F8FC',
       secondary: '#F1F1F9',
       tertiary: '#EAEAF6',

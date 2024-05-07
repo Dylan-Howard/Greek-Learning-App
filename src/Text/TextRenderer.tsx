@@ -14,6 +14,7 @@ import {
   MenuItem,
   Select,
   SelectChangeEvent,
+  Skeleton,
   // Skeleton,
   Stack,
   Typography,
@@ -157,7 +158,7 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
     handlePageFetch();
   };
 
-  const isSelectionLoaded = selections.texts.length && selections.chapters.length;
+  const isSelectionLoaded = selections.texts.length && selections.texts[0].title !== '';
 
   const handleTextChange = (event: SelectChangeEvent) => {
     const targetTextId = parseInt(event.target.value, 10);
@@ -203,7 +204,7 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
       <Box
         sx={{
           bgcolor: 'background.default',
-          height: 'calc(100vh - env(safe-area-inset-bottom))',
+          height: { xs: 'calc(100% - 160.5px)', sm: 'calc(100% - 88px)' },
           ml: { xs: 0, sm: 10 },
         }}
       >
@@ -239,13 +240,7 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
       }}
     >
       <Stack direction="row" justifyContent="center" sx={{ mt: 4, pb: 2 }}>
-        <TextSelectionControls
-          selections={selections}
-          text={text}
-          handleTextChange={handleTextChange}
-          handleChapterChange={handleChapterSelect}
-        />
-        {/* {isSelectionLoaded
+        {isSelectionLoaded
           ? (
             <TextSelectionControls
               selections={selections}
@@ -254,7 +249,7 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
               handleChapterChange={handleChapterSelect}
             />
           )
-          : <Skeleton variant="rounded" width={260} height={40} />} */}
+          : <Skeleton variant="rounded" width={260} height={40} />}
       </Stack>
       <Box sx={{ height: { xs: 'calc(100% - 160.5px)', sm: 'calc(100% - 88px)' }, overflowY: 'scroll' }}>
         <Container maxWidth="sm">

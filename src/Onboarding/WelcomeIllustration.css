@@ -31,15 +31,15 @@
 }
 
 @keyframes letters-float {
-  0% { transform: translate(0px, -1px) rotate(10deg); }
-  12.5% { transform: translate(2px, 0px) rotate(20deg); }
-  25% { transform: translate(4px, 1px) rotate(10deg); }
-  37.5% { transform: translate(2px, 0px) rotate(0deg); }
-  50% { transform: translate(0px, -1px) rotate(-10deg); }
-  62.5% { transform: translate(2px, 0px) rotate(-20deg); }
-  75% { transform: translate(4px, 1px) rotate(-10deg); }
-  87.5% { transform: translate(2px, 0px) rotate(0deg); }
-  100% { transform: translate(0px, -1px) rotate(10deg); }
+  0% { transform: translate(-2px, -1px) rotate(10deg); }
+  12.5% { transform: translate(0px, 0px) rotate(20deg); }
+  25% { transform: translate(2px, 1px) rotate(10deg); }
+  37.5% { transform: translate(0px, 0px) rotate(0deg); }
+  50% { transform: translate(-2px, -1px) rotate(-10deg); }
+  62.5% { transform: translate(0px, 0px) rotate(-20deg); }
+  75% { transform: translate(2px, 1px) rotate(-10deg); }
+  87.5% { transform: translate(0px, 0px) rotate(0deg); }
+  100% { transform: translate(-2px, -1px) rotate(10deg); }
 }
 
 /* Assignments */
@@ -72,26 +72,338 @@
 #Letter-22,
 #Letter-23 { animation: letters-float 8s infinite linear forwards; }
 
-#Letter-1 { transform-origin: 78px 186px; animation-delay: 100ms; }
-#Letter-2 { transform-origin: 126px 142px; animation-delay: 2200ms; }
-#Letter-3 { transform-origin: 178px 115px; animation-delay: 300ms; }
-#Letter-4 { transform-origin: 234px 123px; animation-delay: 400ms; }
-#Letter-5 { transform-origin: 271px 148px; animation-delay: 1500ms; }
-#Letter-6 { transform-origin: 317px 156px; animation-delay: 100ms; }
-#Letter-7 { transform-origin: 103px 238px; animation-delay: 700ms; }
-#Letter-8 { transform-origin: 126px 192px; animation-delay: 800ms; }
-#Letter-9 { transform-origin: 175px 168px; animation-delay: 900ms; }
-#Letter-10 { transform-origin: 205px 146px; animation-delay: 1000ms; }
-#Letter-11 { transform-origin: 240px 160px; animation-delay: 1100ms; }
-#Letter-12 { transform-origin: 139px 259px; animation-delay: 1200ms; }
-#Letter-13 { transform-origin: 169px 219px; animation-delay: 1300ms; }
-#Letter-14 { transform-origin: 211px 206px; animation-delay: 1400ms; }
-#Letter-15 { transform-origin: 253px 207px; animation-delay: 500ms; }
-#Letter-16 { transform-origin: 287px 184px; animation-delay: 1600ms; }
-#Letter-17 { transform-origin: 304px 227px; animation-delay: 1700ms; }
-#Letter-18 { transform-origin: 325px 198px; animation-delay: 1800ms; }
-#Letter-19 { transform-origin: 184px 295px; animation-delay: 1900ms; }
-#Letter-20 { transform-origin: 205px 254px; animation-delay: 2000ms; }
-#Letter-21 { transform-origin: 234px 287px; animation-delay: 2100ms; }
-#Letter-22 { transform-origin: 258px 254px; animation-delay: 200ms; }
-#Letter-23 { transform-origin: 293px 272px; animation-delay: 2300ms; }
+#Letter-1 {
+  transform-origin: 78px 186px;
+  animation-delay: 100ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-2 {
+  transform-origin: 126px 142px;
+  animation-delay: 2200ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-3 {
+  transform-origin: 178px 115px;
+  animation-delay: 300ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-4 {
+  transform-origin: 234px 123px;
+  animation-delay: 400ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-5 {
+  transform-origin: 271px 148px;
+  animation-delay: 1500ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-6 {
+  transform-origin: 317px 156px;
+  animation-delay: 100ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-7 {
+  transform-origin: 103px 238px;
+  animation-delay: 700ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-8 {
+  transform-origin: 126px 192px;
+  animation-delay: 800ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-9 {
+  transform-origin: 175px 168px;
+  animation-delay: 900ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-10 {
+  transform-origin: 205px 146px;
+  animation-delay: 1000ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-11 {
+  transform-origin: 240px 160px;
+  animation-delay: 1100ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-12 {
+  transform-origin: 139px 259px;
+  animation-delay: 1200ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-13 {
+  transform-origin: 169px 219px;
+  animation-delay: 1300ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-14 {
+  transform-origin: 211px 206px;
+  animation-delay: 1400ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-15 {
+  transform-origin: 253px 207px;
+  animation-delay: 500ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-16 {
+  transform-origin: 287px 184px;
+  animation-delay: 1600ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-17 {
+  transform-origin: 304px 227px;
+  animation-delay: 1700ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-18 {
+  transform-origin: 325px 198px;
+  animation-delay: 1800ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-19 {
+  transform-origin: 184px 295px;
+  animation-delay: 1900ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-20 {
+  transform-origin: 205px 254px;
+  animation-delay: 2000ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-21 {
+  transform-origin: 234px 287px;
+  animation-delay: 2100ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-22 {
+  transform-origin: 258px 254px;
+  animation-delay: 200ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+#Letter-23 {
+  transform-origin: 293px 272px;
+  animation-delay: 2300ms;
+  transform: translate(-2px, -1px) rotate(10deg);
+}
+
+/* Keyframes */
+@keyframes letters-fly {
+  0% { transform: translateX(780px) }
+  100% { transform: translateX(-780px) }
+}
+
+#Onboarding-Level-1 #OB1-Letter-1,
+#Onboarding-Level-2 #OB2-Letter-1,
+#Onboarding-Level-3 #OB3-Letter-1,
+#Onboarding-Level-1 #OB1-Letter-2,
+#Onboarding-Level-2 #OB2-Letter-2,
+#Onboarding-Level-3 #OB3-Letter-2,
+#Onboarding-Level-1 #OB1-Letter-3,
+#Onboarding-Level-2 #OB2-Letter-3,
+#Onboarding-Level-3 #OB3-Letter-3,
+#Onboarding-Level-1 #OB1-Letter-4,
+#Onboarding-Level-2 #OB2-Letter-4,
+#Onboarding-Level-3 #OB3-Letter-4,
+#Onboarding-Level-1 #OB1-Letter-5,
+#Onboarding-Level-2 #OB2-Letter-5,
+#Onboarding-Level-3 #OB3-Letter-5,
+#Onboarding-Level-1 #OB1-Letter-6,
+#Onboarding-Level-2 #OB2-Letter-6,
+#Onboarding-Level-3 #OB3-Letter-6,
+#Onboarding-Level-1 #OB1-Letter-7,
+#Onboarding-Level-2 #OB2-Letter-7,
+#Onboarding-Level-3 #OB3-Letter-7,
+#Onboarding-Level-1 #OB1-Letter-8,
+#Onboarding-Level-2 #OB2-Letter-8,
+#Onboarding-Level-3 #OB3-Letter-8,
+#Onboarding-Level-1 #OB1-Letter-9,
+#Onboarding-Level-2 #OB2-Letter-9,
+#Onboarding-Level-3 #OB3-Letter-9,
+#Onboarding-Level-1 #OB1-Letter-10,
+#Onboarding-Level-2 #OB2-Letter-10,
+#Onboarding-Level-3 #OB3-Letter-10,
+#Onboarding-Level-1 #OB1-Letter-11,
+#Onboarding-Level-2 #OB2-Letter-11,
+#Onboarding-Level-3 #OB3-Letter-11,
+#Onboarding-Level-1 #OB1-Letter-12,
+#Onboarding-Level-2 #OB2-Letter-12,
+#Onboarding-Level-3 #OB3-Letter-12,
+#Onboarding-Level-1 #OB1-Letter-13,
+#Onboarding-Level-2 #OB2-Letter-13,
+#Onboarding-Level-3 #OB3-Letter-13,
+#Onboarding-Level-1 #OB1-Letter-14,
+#Onboarding-Level-2 #OB2-Letter-14,
+#Onboarding-Level-3 #OB3-Letter-14,
+#Onboarding-Level-1 #OB1-Letter-15,
+#Onboarding-Level-2 #OB2-Letter-15,
+#Onboarding-Level-3 #OB3-Letter-15,
+#Onboarding-Level-1 #OB1-Letter-16,
+#Onboarding-Level-2 #OB2-Letter-16,
+#Onboarding-Level-3 #OB3-Letter-16,
+#Onboarding-Level-1 #OB1-Letter-17,
+#Onboarding-Level-2 #OB2-Letter-17,
+#Onboarding-Level-3 #OB3-Letter-17,
+#Onboarding-Level-1 #OB1-Letter-18,
+#Onboarding-Level-2 #OB2-Letter-18,
+#Onboarding-Level-3 #OB3-Letter-18,
+#Onboarding-Level-1 #OB1-Letter-19,
+#Onboarding-Level-2 #OB2-Letter-19,
+#Onboarding-Level-3 #OB3-Letter-19,
+#Onboarding-Level-1 #OB1-Letter-20,
+#Onboarding-Level-2 #OB2-Letter-20,
+#Onboarding-Level-3 #OB3-Letter-20,
+#Onboarding-Level-1 #OB1-Letter-21,
+#Onboarding-Level-2 #OB2-Letter-21,
+#Onboarding-Level-3 #OB3-Letter-21,
+#Onboarding-Level-1 #OB1-Letter-22,
+#Onboarding-Level-2 #OB2-Letter-22,
+#Onboarding-Level-3 #OB3-Letter-22,
+#Onboarding-Level-1 #OB1-Letter-23,
+#Onboarding-Level-2 #OB2-Letter-23,
+#Onboarding-Level-3 #OB3-Letter-23 { display: none; }
+
+#Onboarding-Level-1:hover #OB1-Letter-1,
+#Onboarding-Level-2:hover #OB2-Letter-1,
+#Onboarding-Level-3:hover #OB3-Letter-1,
+#Onboarding-Level-1:hover #OB1-Letter-2,
+#Onboarding-Level-2:hover #OB2-Letter-2,
+#Onboarding-Level-3:hover #OB3-Letter-2,
+#Onboarding-Level-1:hover #OB1-Letter-3,
+#Onboarding-Level-2:hover #OB2-Letter-3,
+#Onboarding-Level-3:hover #OB3-Letter-3,
+#Onboarding-Level-1:hover #OB1-Letter-4,
+#Onboarding-Level-2:hover #OB2-Letter-4,
+#Onboarding-Level-3:hover #OB3-Letter-4,
+#Onboarding-Level-1:hover #OB1-Letter-5,
+#Onboarding-Level-2:hover #OB2-Letter-5,
+#Onboarding-Level-3:hover #OB3-Letter-5,
+#Onboarding-Level-1:hover #OB1-Letter-6,
+#Onboarding-Level-2:hover #OB2-Letter-6,
+#Onboarding-Level-3:hover #OB3-Letter-6,
+#Onboarding-Level-1:hover #OB1-Letter-7,
+#Onboarding-Level-2:hover #OB2-Letter-7,
+#Onboarding-Level-3:hover #OB3-Letter-7,
+#Onboarding-Level-1:hover #OB1-Letter-8,
+#Onboarding-Level-2:hover #OB2-Letter-8,
+#Onboarding-Level-3:hover #OB3-Letter-8,
+#Onboarding-Level-1:hover #OB1-Letter-9,
+#Onboarding-Level-2:hover #OB2-Letter-9,
+#Onboarding-Level-3:hover #OB3-Letter-9,
+#Onboarding-Level-1:hover #OB1-Letter-10,
+#Onboarding-Level-2:hover #OB2-Letter-10,
+#Onboarding-Level-3:hover #OB3-Letter-10,
+#Onboarding-Level-1:hover #OB1-Letter-11,
+#Onboarding-Level-2:hover #OB2-Letter-11,
+#Onboarding-Level-3:hover #OB3-Letter-11,
+#Onboarding-Level-1:hover #OB1-Letter-12,
+#Onboarding-Level-2:hover #OB2-Letter-12,
+#Onboarding-Level-3:hover #OB3-Letter-12,
+#Onboarding-Level-1:hover #OB1-Letter-13,
+#Onboarding-Level-2:hover #OB2-Letter-13,
+#Onboarding-Level-3:hover #OB3-Letter-13,
+#Onboarding-Level-1:hover #OB1-Letter-14,
+#Onboarding-Level-2:hover #OB2-Letter-14,
+#Onboarding-Level-3:hover #OB3-Letter-14,
+#Onboarding-Level-1:hover #OB1-Letter-15,
+#Onboarding-Level-2:hover #OB2-Letter-15,
+#Onboarding-Level-3:hover #OB3-Letter-15,
+#Onboarding-Level-1:hover #OB1-Letter-16,
+#Onboarding-Level-2:hover #OB2-Letter-16,
+#Onboarding-Level-3:hover #OB3-Letter-16,
+#Onboarding-Level-1:hover #OB1-Letter-17,
+#Onboarding-Level-2:hover #OB2-Letter-17,
+#Onboarding-Level-3:hover #OB3-Letter-17,
+#Onboarding-Level-1:hover #OB1-Letter-18,
+#Onboarding-Level-2:hover #OB2-Letter-18,
+#Onboarding-Level-3:hover #OB3-Letter-18,
+#Onboarding-Level-1:hover #OB1-Letter-19,
+#Onboarding-Level-2:hover #OB2-Letter-19,
+#Onboarding-Level-3:hover #OB3-Letter-19,
+#Onboarding-Level-1:hover #OB1-Letter-20,
+#Onboarding-Level-2:hover #OB2-Letter-20,
+#Onboarding-Level-3:hover #OB3-Letter-20,
+#Onboarding-Level-1:hover #OB1-Letter-21,
+#Onboarding-Level-2:hover #OB2-Letter-21,
+#Onboarding-Level-3:hover #OB3-Letter-21,
+#Onboarding-Level-1:hover #OB1-Letter-22,
+#Onboarding-Level-2:hover #OB2-Letter-22,
+#Onboarding-Level-3:hover #OB3-Letter-22,
+#Onboarding-Level-1:hover #OB1-Letter-23,
+#Onboarding-Level-2:hover #OB2-Letter-23,
+#Onboarding-Level-3:hover #OB3-Letter-23 {
+  display: block;
+  animation: letters-fly 2s linear infinite;
+  transform: translateX(800px);
+}
+
+#Onboarding-Level-1:hover #OB1-Letter-1,
+#Onboarding-Level-2:hover #OB1-Letter-1,
+#Onboarding-Level-3:hover #OB1-Letter-1 { animation-duration: 2100ms; }
+#Onboarding-Level-1:hover #OB1-Letter-2,
+#Onboarding-Level-2:hover #OB2-Letter-2,
+#Onboarding-Level-3:hover #OB3-Letter-2 { animation-duration: 2300ms; animation-delay: 100ms; }
+#Onboarding-Level-1:hover #OB1-Letter-3,
+#Onboarding-Level-2:hover #OB2-Letter-3,
+#Onboarding-Level-3:hover #OB3-Letter-3 { animation-duration: 2400ms; animation-delay: 200ms; }
+#Onboarding-Level-1:hover #OB1-Letter-4,
+#Onboarding-Level-2:hover #OB2-Letter-4,
+#Onboarding-Level-3:hover #OB3-Letter-4 { animation-duration: 2500ms; animation-delay: 300ms; }
+#Onboarding-Level-1:hover #OB1-Letter-5,
+#Onboarding-Level-2:hover #OB2-Letter-5,
+#Onboarding-Level-3:hover #OB3-Letter-5 { animation-duration: 2200ms; animation-delay: 400ms; }
+#Onboarding-Level-1:hover #OB1-Letter-6,
+#Onboarding-Level-2:hover #OB2-Letter-6,
+#Onboarding-Level-3:hover #OB3-Letter-6 { animation-duration: 1900ms; animation-delay: 500ms; }
+#Onboarding-Level-1:hover #OB1-Letter-7,
+#Onboarding-Level-2:hover #OB2-Letter-7,
+#Onboarding-Level-3:hover #OB3-Letter-7 { animation-duration: 1800ms; animation-delay: 100ms; }
+#Onboarding-Level-1:hover #OB1-Letter-8,
+#Onboarding-Level-2:hover #OB2-Letter-8,
+#Onboarding-Level-3:hover #OB3-Letter-8 { animation-duration: 1900ms; animation-delay: 200ms; }
+#Onboarding-Level-1:hover #OB1-Letter-9,
+#Onboarding-Level-2:hover #OB2-Letter-9,
+#Onboarding-Level-3:hover #OB3-Letter-9 { animation-duration: 2000ms; animation-delay: 300ms; }
+#Onboarding-Level-1:hover #OB1-Letter-10,
+#Onboarding-Level-2:hover #OB2-Letter-10,
+#Onboarding-Level-3:hover #OB3-Letter-10 { animation-duration: 2100ms; animation-delay: 400ms; }
+#Onboarding-Level-1:hover #OB1-Letter-11,
+#Onboarding-Level-2:hover #OB2-Letter-11,
+#Onboarding-Level-3:hover #OB3-Letter-11 { animation-duration: 2200ms; animation-delay: 500ms; }
+#Onboarding-Level-1:hover #OB1-Letter-12,
+#Onboarding-Level-2:hover #OB2-Letter-12,
+#Onboarding-Level-3:hover #OB3-Letter-12 { animation-duration: 2300ms; animation-delay: 100ms; }
+#Onboarding-Level-1:hover #OB1-Letter-13,
+#Onboarding-Level-2:hover #OB2-Letter-13,
+#Onboarding-Level-3:hover #OB3-Letter-13 { animation-duration: 2400ms; animation-delay: 200ms; }
+#Onboarding-Level-1:hover #OB1-Letter-14,
+#Onboarding-Level-2:hover #OB2-Letter-14,
+#Onboarding-Level-3:hover #OB3-Letter-14 { animation-duration: 2500ms; animation-delay: 300ms; }
+#Onboarding-Level-1:hover #OB1-Letter-15,
+#Onboarding-Level-2:hover #OB2-Letter-15,
+#Onboarding-Level-3:hover #OB3-Letter-15 { animation-duration: 2400ms; animation-delay: 400ms; }
+#Onboarding-Level-1:hover #OB1-Letter-16,
+#Onboarding-Level-2:hover #OB2-Letter-16,
+#Onboarding-Level-3:hover #OB3-Letter-16 { animation-duration: 2300ms; animation-delay: 500ms; }
+#Onboarding-Level-1:hover #OB1-Letter-17,
+#Onboarding-Level-2:hover #OB2-Letter-17,
+#Onboarding-Level-3:hover #OB3-Letter-17 { animation-duration: 2200ms; animation-delay: 600ms; }
+#Onboarding-Level-1:hover #OB1-Letter-18,
+#Onboarding-Level-2:hover #OB2-Letter-18,
+#Onboarding-Level-3:hover #OB3-Letter-18 { animation-duration: 2100ms; animation-delay: 700ms; }
+#Onboarding-Level-1:hover #OB1-Letter-19,
+#Onboarding-Level-2:hover #OB2-Letter-19,
+#Onboarding-Level-3:hover #OB3-Letter-19 { animation-duration: 2000ms; animation-delay: 800ms; }
+#Onboarding-Level-1:hover #OB1-Letter-20,
+#Onboarding-Level-2:hover #OB2-Letter-20,
+#Onboarding-Level-3:hover #OB3-Letter-20 { animation-duration: 1900ms; }
+#Onboarding-Level-1:hover #OB1-Letter-21,
+#Onboarding-Level-2:hover #OB2-Letter-21,
+#Onboarding-Level-3:hover #OB3-Letter-21 { animation-duration: 1800ms; animation-delay: 100ms; }
+#Onboarding-Level-1:hover #OB1-Letter-22,
+#Onboarding-Level-2:hover #OB2-Letter-22,
+#Onboarding-Level-3:hover #OB3-Letter-22 { animation-duration: 1700ms; animation-delay: 200ms; }
+#Onboarding-Level-1:hover #OB1-Letter-23,
+#Onboarding-Level-2:hover #OB2-Letter-23,
+#Onboarding-Level-3:hover #OB3-Letter-23 { animation-duration: 1600ms; animation-delay: 300ms; }

@@ -1,4 +1,3 @@
-import './Reader.css';
 import { useState, useMemo } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
