@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/DynamicInterlinear/static/css/main.01ff730d.css",
-    "main.js": "/DynamicInterlinear/static/js/main.05ed2e14.js",
-    "static/js/839.a90ee00b.chunk.js": "/DynamicInterlinear/static/js/839.a90ee00b.chunk.js",
-    "static/js/787.e1cea973.chunk.js": "/DynamicInterlinear/static/js/787.e1cea973.chunk.js",
-    "index.html": "/DynamicInterlinear/index.html",
-    "main.01ff730d.css.map": "/DynamicInterlinear/static/css/main.01ff730d.css.map",
-    "main.05ed2e14.js.map": "/DynamicInterlinear/static/js/main.05ed2e14.js.map",
-    "839.a90ee00b.chunk.js.map": "/DynamicInterlinear/static/js/839.a90ee00b.chunk.js.map",
-    "787.e1cea973.chunk.js.map": "/DynamicInterlinear/static/js/787.e1cea973.chunk.js.map"
+    "main.css": "/Greek-Learning-App/static/css/main.01ff730d.css",
+    "main.js": "/Greek-Learning-App/static/js/main.b6ddca5f.js",
+    "static/js/839.a90ee00b.chunk.js": "/Greek-Learning-App/static/js/839.a90ee00b.chunk.js",
+    "static/js/787.e1cea973.chunk.js": "/Greek-Learning-App/static/js/787.e1cea973.chunk.js",
+    "index.html": "/Greek-Learning-App/index.html",
+    "main.01ff730d.css.map": "/Greek-Learning-App/static/css/main.01ff730d.css.map",
+    "main.b6ddca5f.js.map": "/Greek-Learning-App/static/js/main.b6ddca5f.js.map",
+    "839.a90ee00b.chunk.js.map": "/Greek-Learning-App/static/js/839.a90ee00b.chunk.js.map",
+    "787.e1cea973.chunk.js.map": "/Greek-Learning-App/static/js/787.e1cea973.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.01ff730d.css",
-    "static/js/main.05ed2e14.js"
+    "static/js/main.b6ddca5f.js"
   ]
 }
