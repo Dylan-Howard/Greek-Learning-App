@@ -1,0 +1,59 @@
+.SignInLogo { height: 100%; }
+
+.SignIn-Illustration {
+  width: 80%;
+  max-width: 500px;
+}
+
+.OptionContainer {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.OptionContainer input[type="radio"].OptionRadio {
+  visibility: hidden;
+}
+
+.OptionContainer .OptionContent {
+  box-sizing: border-box;
+  border: 2px solid #CCCCCC;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  text-align: center;
+  padding: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+
+  transition: .2s;
+}
+
+.OptionContainer:hover .OptionContent,
+.OptionContainer input[type="radio"].OptionRadio:checked + .OptionContent {
+  border-color: #689CCA;
+}
+
+.OptionContent img {
+  margin: 0 auto 1rem;
+  height: 100px;
+  width: 90%;
+}
+
+.OptionContent .OptionTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.OptionContent .OptionDescription {
+  opacity: .8;
+}
+
+@media screen and (min-width: 500px) {
+  .OptionContainer .OptionContent {
+    margin: auto;
+  }
+  .OptionContent img {
+    height: auto;
+    width: 100%;
+  }
+}

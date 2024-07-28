@@ -1,0 +1,34 @@
+
+.AboutPage h1,
+.AboutPage h2,
+.AboutPage p {
+  text-align: center;
+}
+
+.AboutPage .TextGreek {
+  font-family: 'Noto Serif';
+}
+
+.AboutCard {
+  box-sizing: border-box;
+  margin: .8rem;
+  padding-top: 1rem;
+  height: 100%;
+}
+
+.FooterLogo {
+  height: 160px;
+  width: 160px;
+  /* width: 100%; */
+}
+
+.FooterLink {
+  color: #FAFAFA;
+  font-size: 14px;
+  /* line-height: 22px; */
+  text-decoration: none;
+}
+
+.FooterLink:hover {
+  color: #E6C960;
+}
