@@ -28,9 +28,6 @@ function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
   /* States for user details */
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
-  console.log(`Active: ${activeUser.id}`);
-  console.log(activeUser);
-
   const theme = activeUser.settings.prefersDarkMode ? 'dark' : 'light';
 
   const attemptSilentSSO = () => {

@@ -99,7 +99,6 @@ function DetailsMenu({
 
   useEffect(() => {
     setIsLoading(true);
-    console.log('Loading details');
     AzureTextService.fetchMorphologyDetails(activeMorphologyId)
       .then((dtl) => {
         const details: { field: string, value: string }[] = [];
@@ -141,7 +140,7 @@ function DetailsMenu({
       <Stack sx={{ height: { xs: 500, sm: '100vh' }, overflowY: 'scroll' }}>
         {!isLoading
           ? (
-            <>
+            <Box>
               <Typography
                 variant="h2"
                 sx={{ fontSize: 48, mb: 2, fontFamily: 'Noto Serif' }}
@@ -157,7 +156,7 @@ function DetailsMenu({
                   ))
                 }
               </Grid>
-            </>
+            </Box>
           )
           : <DetailsSkeleton />}
       </Stack>
