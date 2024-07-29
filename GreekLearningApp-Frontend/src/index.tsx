@@ -35,13 +35,6 @@ msalInstance.initialize().then(() => {
       <App msalInstance={msalInstance} />
     </React.StrictMode>,
   );
-  // root.render(
-  //   <Router>
-  //     <ThemeProvider theme={theme}>
-  //       <App pca={msalInstance} />
-  //     </ThemeProvider>
-  //   </Router>
-  // );
 });
 
 // If you want to start measuring performance in your app, pass a function

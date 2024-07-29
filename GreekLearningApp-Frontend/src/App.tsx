@@ -28,44 +28,46 @@ function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
   /* States for user details */
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
+  console.log(msalInstance);
+
   const theme = activeUser.settings.prefersDarkMode ? 'dark' : 'light';
 
-  const attemptSilentSSO = () => {
-    const accountHint = msalInstance.getAllAccounts()[0];
-    if (!accountHint) {
-      return;
-    }
+  // const attemptSilentSSO = () => {
+  //   const accountHint = msalInstance?.getAllAccounts()[0];
+  //   if (!accountHint) {
+  //     return;
+  //   }
 
-    const silentRequest = {
-      ...loginRequest,
-      loginHint: accountHint.username,
-    };
-    msalInstance.initialize()
-      .then(() => msalInstance.ssoSilent(silentRequest));
-  };
+  //   const silentRequest = {
+  //     ...loginRequest,
+  //     loginHint: accountHint.username,
+  //   };
+  //   msalInstance.initialize()
+  //     .then(() => msalInstance.ssoSilent(silentRequest));
+  // };
 
-  if (activeUser.id === 'guest') {
-    const account = msalInstance.getActiveAccount();
-    if (account) {
-      AzureUserService.fetchUser(account.localAccountId)
-        .then((usr) => {
-          if (!usr) {
-            return;
-          }
-          setActiveUser(usr);
-        });
-    } else {
-      attemptSilentSSO();
-    }
-  }
+  // if (activeUser.id === 'guest') {
+  //   const account = msalInstance?.getActiveAccount();
+  //   if (account) {
+  //     AzureUserService.fetchUser(account.localAccountId)
+  //       .then((usr) => {
+  //         if (!usr) {
+  //           return;
+  //         }
+  //         setActiveUser(usr);
+  //       });
+  //   } else {
+  //     attemptSilentSSO();
+  //   }
+  // }
 
   return (
     <UserContext.Provider
       value={useMemo(() => ({ user: activeUser, setUser: setActiveUser }), [activeUser])}
     >
-      <MsalProvider instance={msalInstance}>
+      {/* <MsalProvider instance={msalInstance}> */}
         <ThemeProvider theme={theme === 'dark' ? dark : light}>
-          <BrowserRouter basename="/DynamicInterlinear">
+          <BrowserRouter>
             <Routes>
               <Route path="/" element={<Reader />} />
               <Route
@@ -84,7 +86,7 @@ function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
             </Routes>
           </BrowserRouter>
         </ThemeProvider>
-      </MsalProvider>
+      {/* </MsalProvider> */}
     </UserContext.Provider>
   );
 }
