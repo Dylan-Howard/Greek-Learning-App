@@ -65,7 +65,7 @@ function App({ msalInstance } : { msalInstance: PublicClientApplication }) {
     >
       <MsalProvider instance={msalInstance}>
         <ThemeProvider theme={theme === 'dark' ? dark : light}>
-          <BrowserRouter basename="/DynamicInterlinear">
+          <BrowserRouter basename="/Greek-Learning-App">
             <Routes>
               <Route path="/" element={<Reader />} />
               <Route
