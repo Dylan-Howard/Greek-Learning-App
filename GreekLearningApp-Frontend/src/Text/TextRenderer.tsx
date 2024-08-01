@@ -217,7 +217,7 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
               mb: 8,
             }}
           >
-            <img src="DynamicInterlinear/static/img/not-found.svg" alt="Resources not found" />
+            <img src="Greek-Learning-App/static/img/not-found.svg" alt="Resources not found" />
           </Box>
           <Typography textAlign="center" sx={{ m: 4 }}>
             Hmmm, it likes like we&lsquo;re having trouble finding our texts.

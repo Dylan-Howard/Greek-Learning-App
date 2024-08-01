@@ -68,17 +68,17 @@ const userLevelContent = [
   {
     title: 'Newcomer',
     description: "I'm new and excited to learn!",
-    imageUrl: '/DynamicInterlinear/static/img/Onboarding-1.svg',
+    imageUrl: '/Greek-Learning-App/static/img/Onboarding-1.svg',
   },
   {
     title: 'Verse Voyager',
     description: 'I most of the grammar and know every word that occures more than 50 times.',
-    imageUrl: '/DynamicInterlinear/static/img/Onboarding-2.svg',
+    imageUrl: '/Greek-Learning-App/static/img/Onboarding-2.svg',
   },
   {
     title: 'Textual Titan',
     description: "I'm fluent in the grammar and I've learned every word that occurs more than 15 times.",
-    imageUrl: '/DynamicInterlinear/static/img/Onboarding-3.svg',
+    imageUrl: '/Greek-Learning-App/static/img/Onboarding-3.svg',
   },
 ];
 
@@ -168,7 +168,7 @@ function SignInContent({
       }}
       >
         <img
-          src="/DynamicInterlinear/static/img/koine-logo.svg"
+          src="/Greek-Learning-App/static/img/koine-logo.svg"
           alt="Koine"
           className="SignInLogo"
         />
