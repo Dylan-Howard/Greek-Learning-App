@@ -29,6 +29,7 @@ function TextUnit({ unit, onClick }: { unit: Unitv2, onClick: Function }) {
             fontSize: theme.typography.readerBody.fontSize,
             lineHeight: theme.typography.readerBody.lineHeight,
             mr: 1,
+            '&:hover': { color: '#4A89BF' },
           }}
         >
           {content}
