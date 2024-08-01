@@ -1,4 +1,4 @@
-const API_URL = 'https://koine.azure-api.net/api';
+const { API_URL } = process.env;
 
 const fetchData = async (resource: string) => {
   try {

@@ -1,15 +1,13 @@
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { ThemeProvider } from '@mui/material';
+import { light } from './Theme';
+import './index.css';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* <link rel="apple-touch-icon" sizes="144x144" href="%PUBLIC_URL%/static/img/apple-touch-icon.png" /> */}
-        {/* <link rel="apple-touch-icon" sizes="114x114" href="%PUBLIC_URL%/static/img/apple-touch-icon.png" /> */}
-        {/* <link rel="apple-touch-icon" sizes="72x72" href="%PUBLIC_URL%/static/img/apple-touch-icon.png" /> */}
-        {/* <link rel="apple-touch-icon" href="%PUBLIC_URL%/static/img/favicon-32x32.png" /> */}
         <meta name="theme-color" content="#F1F1F9" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1B2021" media="(prefers-color-scheme: dark)" />
         <meta
@@ -21,7 +19,11 @@ export default function RootLayout({
       <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
-          {children}
+          <AppRouterCacheProvider>
+            <ThemeProvider theme={light}>
+              {children}
+            </ThemeProvider>
+          </AppRouterCacheProvider>
         </div>
       </body>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,5 +32,5 @@ export default function RootLayout({
       <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" precedence="default" />
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" precedence="default" />
     </html>
-  )
+  );
 }

@@ -1,24 +1,27 @@
+'use client';
+
 import {
   ChangeEventHandler,
   MouseEventHandler,
-  useContext,
+  // useContext,
   useState,
 } from 'react';
 import { useMsal } from '@azure/msal-react';
 import { AccountInfo } from '@azure/msal-browser';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import {
   Box,
   Button,
+  Link,
   Grid,
   Stack,
   Typography,
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
-import { loginRequest } from '../Auth/authConfig';
-import { UserContext } from '../User/User';
-import * as AzureUserService from '../User/AzureUserService';
+// import { loginRequest } from '../Auth/authConfig';
+// import { UserContext } from '../User/User';
+// import * as AzureUserService from '../User/AzureUserService';
 import './Onboarding.css';
 import {
   WelcomeIllustration,
@@ -180,7 +183,7 @@ function SignInContent({
         <Button variant="contained" type="submit" onClick={handleLogin}>Sign In</Button>
       </Stack>
       <Stack flexDirection="row" justifyContent="center">
-        <Link to="/">
+        <Link href="reader">
           <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
         </Link>
       </Stack>
@@ -189,7 +192,7 @@ function SignInContent({
 }
 
 export default function AuthPrompt() {
-  const { setUser } = useContext(UserContext);
+  // const { setUser } = useContext(UserContext);
   const [isNewUser, setIsNewUser] = useState(false);
   const [userLevel, setUserLevel] = useState(0);
   const [authError, setAuthError] = useState(false);
@@ -229,44 +232,44 @@ export default function AuthPrompt() {
   };
 
   const handleCreate = (account: AccountInfo) => {
-    AzureUserService.createUser(
-      account.localAccountId,
-      account.name || '',
-      userLevel,
-    )
-      .then((usr) => {
-        AzureUserService.fetchUser(usr.id)
-          .then((azu) => setUser(azu));
-      })
-      .catch(() => {
-        setAuthError(true);
-        console.log('We should handle an auth error by asking if the user wants to continue as a guest.');
-      });
+    // AzureUserService.createUser(
+    //   account.localAccountId,
+    //   account.name || '',
+    //   userLevel,
+    // )
+    //   .then((usr) => {
+    //     AzureUserService.fetchUser(usr.id)
+    //       .then((azu) => setUser(azu));
+    //   })
+    //   .catch(() => {
+    //     setAuthError(true);
+    //     console.log('We should handle an auth error by asking if the user wants to continue as a guest.');
+    //   });
   };
 
   const handleRegistration = () => {
-    const activeAccounts = instance.getAllAccounts();
-    if (activeAccounts.length) {
-      handleCreate(activeAccounts[0]);
-      return;
-    }
+    // const activeAccounts = instance.getAllAccounts();
+    // if (activeAccounts.length) {
+    //   handleCreate(activeAccounts[0]);
+    //   return;
+    // }
 
-    const request = {
-      ...loginRequest,
-      loginHint: getLoginHint(),
-    };
+    // const request = {
+    //   ...loginRequest,
+    //   loginHint: getLoginHint(),
+    // };
 
-    instance.loginPopup(request)
-      .then(({ account }) => {
-        AzureUserService.fetchUser(account.localAccountId)
-          .then((tst) => {
-            if (!tst) {
-              handleCreate(account);
-            } else {
-              setUser(tst); // If the user is already registered, initiate the sign in.
-            }
-          });
-      });
+    // instance.loginPopup(request)
+    //   .then(({ account }) => {
+    //     AzureUserService.fetchUser(account.localAccountId)
+    //       .then((tst) => {
+    //         if (!tst) {
+    //           handleCreate(account);
+    //         } else {
+    //           setUser(tst); // If the user is already registered, initiate the sign in.
+    //         }
+    //       });
+    //   });
   };
 
   if (authError) { return <span />; }

@@ -1,3 +1,5 @@
+'use client';
+
 import { useState, useMemo } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
@@ -5,11 +7,11 @@ import Stack from '@mui/material/Stack';
 import Slide from '@mui/material/Slide';
 import Paper from '@mui/material/Paper';
 
-import { TextContext } from '../LanguageData/Text';
-import TextRenderer from '../Text/TextRenderer';
-import Nav from '../Nav/Nav';
-import SettingsMenu from '../Nav/SettingsMenu';
-import DetailsMenu from '../Nav/DetailsMenu';
+import { TextContext } from './LanguageData/Text';
+import TextRenderer from './Text/TextRenderer';
+import Nav from './Nav/Nav';
+import SettingsMenu from './Nav/SettingsMenu';
+import DetailsMenu from './Nav/DetailsMenu';
 
 const DEFAULT_BOOK_ID = 1;
 const DEFAULT_CHAPTER_ID = 1;

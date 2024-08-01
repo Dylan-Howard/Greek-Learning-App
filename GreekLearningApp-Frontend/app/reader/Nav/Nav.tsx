@@ -1,7 +1,11 @@
 import { SyntheticEvent, useContext } from 'react';
-import { Link } from 'react-router-dom';
 
-import { BottomNavigation, BottomNavigationAction, Box } from '@mui/material';
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Box,
+  Link,
+} from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import PersonIcon from '@mui/icons-material/Person';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
@@ -58,7 +62,7 @@ function Nav({
                 label="Profile"
                 icon={<PersonIcon />}
                 component={Link}
-                to="/profile"
+                href="/profile"
               />
             )
             : (
@@ -66,7 +70,7 @@ function Nav({
                 label="Sign In"
                 icon={<LoginIcon />}
                 component={Link}
-                to="/welcome"
+                href="/welcome"
               />
             )
         }

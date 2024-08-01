@@ -1,0 +1,13 @@
+.SettingsLink {
+  color: #4A89BF;
+  text-decoration: none;
+}
+
+.SettingsBreadcrumb.SecondaryBreadcrumb {
+  color: #1B2021CC;
+  text-decoration: none;
+}
+
+.SettingsBreadcrumb.SecondaryBreadcrumb:hover {
+  text-decoration: underline;
+}
