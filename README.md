@@ -6,6 +6,8 @@ Koine is a web application to empower Ancient Greek language learners. The platf
 # Demo
 <img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/koine-demo.gif" height=256 />
 
+[Live Demo](https://dylan-howard.github.io/Greek-Learning-App/)
+
 # Key Features
 * Real-time translation aids: Offers immediate lemma and parsing information for Greek words, customizable based on user proficiency.
 * In-depth word analysis: Provides detailed explanations and examples for comprehensive language exploration.
