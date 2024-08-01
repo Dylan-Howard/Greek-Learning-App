@@ -45,9 +45,11 @@ function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
 }
 
 function mapVocabulary(vocabulary: Wordv2[], user: User | undefined, filter: string) {
+  console.log(transliterateGreek(vocabulary[0].content.substring(0, filter.length)));
+
   return vocabulary
     .filter((vcb: Wordv2) => (
-      filter === transliterateGreek(vcb.content.substring(0, filter.length))
+      filter.toLowerCase() === transliterateGreek(vcb.content.substring(0, filter.length))
     )).map((vcb : Wordv2) => ({
       id: vcb.rootId,
       name: vcb.content,
@@ -274,8 +276,9 @@ function SettingsMenu(
                 label="Search"
                 type="search"
                 variant="outlined"
-                onChange={(e) => handleTextboxChange(e)}
                 size="small"
+                value={filter}
+                onChange={(e) => handleTextboxChange(e)}
                 sx={{ bgcolor: 'background.default', mb: 2 }}
               />
               <Divider sx={{ mb: 2 }} />
