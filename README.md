@@ -1,10 +1,10 @@
-<img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/Logo/koine-logo.svg" height=128 />
+<img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/Logo/koine-logo.svg" height=128 />
 
 # Koine: Ancient Greek Learning Platform
 Koine is a web application to empower Ancient Greek language learners. The platform provides interactive tools to enhance language acquisition and provide a tailored reading experience.
 
 # Demo
-<img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/koine-demo.gif" height=256 />
+<img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/koine-demo.gif" height=256 />
 
 # Key Features
 * Real-time translation aids: Offers immediate lemma and parsing information for Greek words, customizable based on user proficiency.
@@ -20,9 +20,9 @@ The application is built using a robust technology stack to ensure optimal perfo
 * Cloud Platform: Azure Functions for serverless backend execution and Azure API Management for unified API access.
 
 <div>
-  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/icon-react.svg" height=64 />
-  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/icon-csharp.svg" height=64 />
-  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/icon-dotnet.svg" height=64 />
-  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/icon-golang.svg" height=64 />
-  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greak-Learning-App/main/GreekLearningApp-Illustrations/icon-azure.svg" height=64 />
+  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/icon-react.svg" height=64 />
+  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/icon-csharp.svg" height=64 />
+  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/icon-dotnet.svg" height=64 />
+  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/icon-golang.svg" height=64 />
+  <img src="https://raw.githubusercontent.com/Dylan-Howard/Greek-Learning-App/master/GreekLearningApp-Illustrations/icon-azure.svg" height=64 />
 </div>
