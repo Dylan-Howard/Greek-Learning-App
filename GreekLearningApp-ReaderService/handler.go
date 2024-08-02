@@ -28,6 +28,12 @@ type Unit struct {
 	MorphologyId int	`json:"morphologyId"`
 }
 
+type Translation struct {
+	TranslationId int			`json:"translationId"`
+	UnitId 				int			`json:"unitId"`
+	Content 			string	`json:"content"`
+}
+
 type Root struct {
 	RootId			int			`json:"rootId"`
   Content			string	`json:"content"`
@@ -123,7 +129,9 @@ func (m UnitMorphology) GetAbbreviation(g Grammar) string {
 }
 
 func (m UnitMorphology) GetTranslation(tranlationId string) string {
-	return m.Content + "(To be translated)"
+	var translation, _ = fetchTranslation(m.UnitId);
+	// return m.Content + "(To be translated)"
+	return translation.Content;
 }
 
 type UnitLessons struct {
@@ -464,6 +472,23 @@ func fetchRoots(chapterId int)  ([]Root, error) {
 	}
 
 	return roots, nil;
+}
+
+func fetchTranslation(unitId int)  (*Translation , error) {
+	resp := fetch(API_URL, "units/" + strconv.Itoa(unitId) + "/translation")
+	defer resp.Body.Close()
+
+	/* Decode the request body into the user struct */
+	var translation Translation
+	decoder := json.NewDecoder(resp.Body)
+	err := decoder.Decode(&translation)
+	if err != nil {
+		log.Println(err)
+		log.Println("Failed to decode")
+		return nil, err
+	}
+
+	return &translation, nil;
 }
 
 func fetchUser(userId string) (User, error) {

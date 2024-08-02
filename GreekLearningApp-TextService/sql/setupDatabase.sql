@@ -73,3 +73,10 @@ CREATE TABLE [Unit] (
   morphologyId INT FOREIGN KEY REFERENCES [Morphology](morphologyId) NOT NULL,
 	verseId INT FOREIGN KEY REFERENCES Verse(verseId) NOT NULL,
 );
+
+CREATE TABLE [Translation] (
+	translationId INT IDENTITY PRIMARY KEY,
+	translationGUID UNIQUEIDENTIFIER NOT NULL,
+	unitID INT NOT NULL FOREIGN KEY REFERENCES Unit(unitId),
+	[content] NVARCHAR(64) NOT NULL
+)
