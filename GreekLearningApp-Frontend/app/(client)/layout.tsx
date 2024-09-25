@@ -18,7 +18,6 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
     console.log('updating user data');
 
-    // const userId = user.id.split('_')[1];
     const userId = user.id;
 
     UserService.fetchUser(userId)

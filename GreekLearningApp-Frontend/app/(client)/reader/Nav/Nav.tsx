@@ -15,7 +15,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import AbcIcon from '@mui/icons-material/Abc';
 import { UserContext } from 'app/services/User';
 
-function Nav({ activeTabIndex } : { activeTabIndex: number }) {
+export default function Nav({ activeTabIndex } : { activeTabIndex: number }) {
   const router = useRouter();
   const pathName = usePathname();
   const { user } = useContext(UserContext);
@@ -82,5 +82,3 @@ function Nav({ activeTabIndex } : { activeTabIndex: number }) {
     </Box>
   );
 }
-
-export default Nav;
