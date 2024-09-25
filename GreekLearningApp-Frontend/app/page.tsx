@@ -1,9 +1,12 @@
-import Reader from './(client)/reader/page';
+// import Reader from './(client)/reader/[text]/page';
+
+import { redirect } from 'next/navigation';
 
 function App() {
-  return (
-    <Reader />
-  );
+  redirect('/reader');
+  // return (
+  //   <Reader />
+  // );
 }
 
 export default App;

@@ -7,6 +7,7 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 import {
   Box,
@@ -75,16 +76,9 @@ function DetailsItem({ label, value } : { label: string, value: string }) {
   );
 }
 
-function DetailsMenu({
-  activeMorphologyId,
-  handleMouseClose,
-  handleTouchClose,
-} : {
-  activeMorphologyId: number,
-  handleMouseClose: MouseEventHandler,
-  handleTouchClose: TouchEventHandler,
-}) {
-  const gt600px = useMediaQuery('(min-width:600px)');
+function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
+  const router = useRouter();
+  const pathName = usePathname();
 
   const [isLoading, setIsLoading] = useState(true);
   const [morphology, setMorphology] = useState({
@@ -93,6 +87,8 @@ function DetailsMenu({
       { field: '', value: '' },
     ],
   });
+
+  const gt600px = useMediaQuery('(min-width:600px)');
 
   const unitForm = AzureTextService.fetchMorphologyDetails(activeMorphologyId);
   if (!unitForm) {
@@ -124,6 +120,13 @@ function DetailsMenu({
       });
   }, [activeMorphologyId]);
 
+  const handleClose = () => {
+    const baseUrl = pathName.split('/')
+      .slice(0, 4)
+      .join('/');
+    router.push(baseUrl);
+  };
+
   return (
     <Container sx={{
       bgcolor: 'background.tertiary',
@@ -136,8 +139,8 @@ function DetailsMenu({
     >
       {
         gt600px
-          ? <MenuCloseButton onClose={handleMouseClose} />
-          : <MenuHandle onTouchClose={handleTouchClose} />
+          ? <MenuCloseButton onClose={handleClose} />
+          : <MenuHandle onTouchClose={handleClose} />
       }
       <Stack sx={{ height: { xs: 500, sm: '100vh' }, overflowY: 'scroll' }}>
         {!isLoading

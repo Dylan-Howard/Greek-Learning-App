@@ -1,6 +1,7 @@
 'use client';
 
 import { SyntheticEvent, useContext } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 import {
   BottomNavigation,
@@ -14,16 +15,17 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import AbcIcon from '@mui/icons-material/Abc';
 import { UserContext } from 'app/services/User';
 
-function Nav({
-  activeTabIndex,
-  setActiveTabIndex,
-} : {
-  activeTabIndex: number,
-  setActiveTabIndex: Function,
-}) {
+function Nav({ activeTabIndex } : { activeTabIndex: number }) {
+  const router = useRouter();
+  const pathName = usePathname();
   const { user } = useContext(UserContext);
 
-  const handleChange = (event: SyntheticEvent, newValue: number) => setActiveTabIndex(newValue);
+  const handleChange = (event: SyntheticEvent, newValue: number) => {
+    const baseUrl = pathName.split('/')
+      .slice(0, 4)
+      .join('/');
+    router.push(`${baseUrl}/${newValue}`);
+  };
 
   return (
     <Box
@@ -56,6 +58,7 @@ function Nav({
       >
         <BottomNavigationAction label="Lessons" icon={<LibraryBooksIcon />} />
         <BottomNavigationAction label="Vocab" icon={<AbcIcon />} />
+        <BottomNavigationAction label="Details" icon={<LibraryBooksIcon />} />
         {
           user && user.id !== 'guest'
             ? (

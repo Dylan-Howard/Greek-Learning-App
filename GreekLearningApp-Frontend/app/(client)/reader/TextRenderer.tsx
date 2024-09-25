@@ -3,7 +3,10 @@
 import {
   ReactNode, useContext, useEffect, useState,
 } from 'react';
-import { useUser } from '@clerk/nextjs';
+import { usePathname, useRouter } from 'next/navigation';
+// import { useUser } from '@clerk/nextjs';
+import { UserContext } from 'app/services/User';
+
 import Image from 'next/image';
 import {
   Box,
@@ -24,12 +27,11 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 import TextUnit from './TextUnit';
-import { TextContext, Unitv2 } from '../../modules/Text';
+import { Unitv2 } from '../../modules/Text';
 import * as AzureTextService from '../../services/AzureTextService';
 import * as AzureReaderService from '../../services/AzureReaderService';
 import { TextRendererSkeleton } from '../../modules/Skeletons';
 import notFoundImage from '../../not-found.svg';
-import { UserContext } from 'app/services/User';
 
 function TextSelectionControls(
   {
@@ -127,11 +129,15 @@ function TextControls(
   );
 }
 
-function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Function }) {
+function TextRenderer({ activeText } : { activeText: { bookId: number, chapterId: number } }) {
+  const router = useRouter();
+  const pathName = usePathname();
+
   const theme = useTheme();
   const { user } = useContext(UserContext);
 
-  const { text, setText } = useContext(TextContext);
+  const [text, setText] = useState(activeText);
+
   const [selections, setSelections] = useState({
     texts: [{ textId: 1, title: '' }],
     chapters: [{ chapterId: 1, chapterNumber: 1 }],
@@ -190,7 +196,10 @@ function TextRenderer({ changeActiveMorphology } : { changeActiveMorphology: Fun
   };
 
   const handleUnitClick = (morphologyId: number | undefined) => {
-    changeActiveMorphology(morphologyId);
+    const baseUrl = pathName.split('/')
+      .slice(0, 4)
+      .join('/');
+    router.push(`${baseUrl}/2/${morphologyId}`);
   };
 
   /* Determines the position of the active chapter within the active text */

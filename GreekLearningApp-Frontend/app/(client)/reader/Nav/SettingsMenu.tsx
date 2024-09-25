@@ -9,6 +9,7 @@ import {
   useEffect,
   useState,
 } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
   Box,
@@ -118,15 +119,14 @@ function SettingsMenu(
   {
     title,
     activeMorphologyId,
-    handleMouseClose,
-    handleTouchClose,
   } : {
     title: string,
     activeMorphologyId: number,
-    handleMouseClose: MouseEventHandler,
-    handleTouchClose: TouchEventHandler,
   },
 ) {
+  const router = useRouter();
+  const pathName = usePathname();
+
   const { user, setUser } = useContext(UserContext);
   const { text } = useContext(TextContext);
   const [filter, setFilter] = useState('');
@@ -247,6 +247,13 @@ function SettingsMenu(
     setUser(updatedUser);
   };
 
+  const handleClose = () => {
+    const baseUrl = pathName.split('/')
+      .slice(0, 4)
+      .join('/');
+    router.push(baseUrl);
+  };
+
   if (title === 'Home') { return <span />; }
 
   return (
@@ -261,8 +268,8 @@ function SettingsMenu(
     >
       {
         gt600px
-          ? <MenuCloseButton onClose={handleMouseClose} />
-          : <MenuHandle onTouchClose={handleTouchClose} />
+          ? <MenuCloseButton onClose={handleClose} />
+          : <MenuHandle onTouchClose={handleClose} />
       }
       <Stack sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, overflowY: 'scroll', pr: 1 }}>
         {!optionsLoading
