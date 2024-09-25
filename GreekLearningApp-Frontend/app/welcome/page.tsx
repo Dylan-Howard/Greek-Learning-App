@@ -1,14 +1,5 @@
-'use client';
-
-import {
-  ChangeEventHandler,
-  MouseEventHandler,
-  // useContext,
-  useState,
-} from 'react';
-import { useMsal } from '@azure/msal-react';
-import { AccountInfo } from '@azure/msal-browser';
-// import { Link } from 'react-router-dom';
+import NextLink from 'next/link';
+import NextImage from 'next/image';
 import {
   Box,
   Button,
@@ -17,12 +8,10 @@ import {
   Stack,
   Typography,
 } from '@mui/material';
-import { useTheme } from '@mui/material/styles';
 
-// import { loginRequest } from '../Auth/authConfig';
-// import { UserContext } from '../User/User';
-// import * as AzureUserService from '../User/AzureUserService';
+// import * as AzureUserService from '../services/AzureUserService';
 import './Onboarding.css';
+import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs';
 import {
   WelcomeIllustration,
   OnboardingIllustration1,
@@ -46,7 +35,7 @@ function OnboardingOptionBox({
   title: string,
   value: number,
   checked: boolean,
-  onChange: ChangeEventHandler,
+  // onChange: ChangeEventHandler,
 }) {
   const illustration = illustrationMap[value] || OnboardingIllustration1;
   return (
@@ -152,127 +141,103 @@ function RegisterContent({
   );
 }
 
-function SignInContent({
-  toggleNewUser,
-  handleLogin,
-} : {
-  toggleNewUser: MouseEventHandler<HTMLButtonElement>,
-  handleLogin: MouseEventHandler<HTMLButtonElement>
-}) {
-  return (
-    <Box>
-      <Box sx={{
-        height: '128px',
-        width: '128px',
-        mt: 24,
-        ml: 'auto',
-        mr: 'auto',
-        mb: 4,
-      }}
-      >
-        <img
-          src="/DynamicInterlinear/static/img/koine-logo.svg"
-          alt="Koine"
-          className="SignInLogo"
-        />
-      </Box>
-      <Typography variant="h2" sx={{ fontSize: 42, textAlign: 'center', mb: 2 }}>Welcome, Scholar!</Typography>
-      <Typography variant="body1" sx={{ textAlign: 'center', mb: 6 }}>Start reading by by signing into your account below.</Typography>
-      <Stack flexDirection="row" justifyContent="center" sx={{ mb: 2 }}>
-        <Button variant="outlined" type="button" onClick={toggleNewUser} sx={{ mr: 2 }}>Create Account</Button>
-        <Button variant="contained" type="submit" onClick={handleLogin}>Sign In</Button>
-      </Stack>
-      <Stack flexDirection="row" justifyContent="center">
-        <Link href="reader">
-          <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
-        </Link>
-      </Stack>
-    </Box>
-  );
-}
+// function SignInContent({
+//   toggleNewUser,
+//   handleLogin,
+// } : {
+//   toggleNewUser: MouseEventHandler<HTMLButtonElement>,
+//   handleLogin: MouseEventHandler<HTMLButtonElement>
+// }) {
+//   return (
+//     <Box>
+//       <Box sx={{
+//         height: '128px',
+//         width: '128px',
+//         mt: 24,
+//         ml: 'auto',
+//         mr: 'auto',
+//         mb: 4,
+//       }}
+//       >
+//         <img
+//           src="/DynamicInterlinear/static/img/koine-logo.svg"
+//           alt="Koine"
+//           className="SignInLogo"
+//         />
+//       </Box>
+//       <Typography variant="h2" sx={{ fontSize: 42, textAlign: 'center', mb: 2 }}>Welcome, Scholar!</Typography>
+//       <Typography variant="body1" sx={{ textAlign: 'center', mb: 6 }}>Start reading by by signing into your account below.</Typography>
+//       <Stack flexDirection="row" justifyContent="center" sx={{ mb: 2 }}>
+//         <Button variant="outlined" type="button" onClick={toggleNewUser} sx={{ mr: 2 }}>Create Account</Button>
+//         <Button variant="contained" type="submit" onClick={handleLogin}>Sign In</Button>
+//       </Stack>
+//       <Stack flexDirection="row" justifyContent="center">
+//         <Link href="reader">
+//           <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
+//         </Link>
+//       </Stack>
+//     </Box>
+//   );
+// }
 
 export default function AuthPrompt() {
   // const { setUser } = useContext(UserContext);
-  const [isNewUser, setIsNewUser] = useState(false);
-  const [userLevel, setUserLevel] = useState(0);
-  const [authError, setAuthError] = useState(false);
-  const theme = useTheme();
+  // const [isNewUser, setIsNewUser] = useState(false);
+  // const [userLevel, setUserLevel] = useState(0);
+  // const [authError, setAuthError] = useState(false);
 
-  const { instance } = useMsal();
+  // const toggleNewUser = () => setIsNewUser(!isNewUser);
 
-  const toggleNewUser = () => setIsNewUser(!isNewUser);
+  // const getLoginHint = () => {
+  //   const ids = instance.getAllAccounts().map((acc) => acc.localAccountId);
+  //   return ids.length ? ids[0] : undefined;
+  // };
 
-  const getLoginHint = () => {
-    const ids = instance.getAllAccounts().map((acc) => acc.localAccountId);
-    return ids.length ? ids[0] : undefined;
-  };
+  // const handleLogin = () => {
+  //   const request = {
+  //     ...loginRequest,
+  //     loginHint: getLoginHint(),
+  //   };
 
-  const handleLogin = () => {
-    const request = {
-      ...loginRequest,
-      loginHint: getLoginHint(),
-    };
+  //   instance.loginPopup(request)
+  //     .then(({ account }) => {
+  //       if (!account) { return; }
+  //       AzureUserService.fetchUser(account.localAccountId)
+  //         .then((usr) => {
+  //           if (usr) {
+  //             setUser(usr);
+  //           } else {
+  //             // If the user doesn't exits, initiate onboarding.
+  //             toggleNewUser();
+  //             // instance.logoutPopup({ account });
+  //           }
+  //         });
+  //     })
+  //     // eslint-disable-next-line no-console
+  //     .catch((err) => console.log(err));
+  // };
 
-    instance.loginPopup(request)
-      .then(({ account }) => {
-        if (!account) { return; }
-        AzureUserService.fetchUser(account.localAccountId)
-          .then((usr) => {
-            if (usr) {
-              setUser(usr);
-            } else {
-              // If the user doesn't exits, initiate onboarding.
-              toggleNewUser();
-              // instance.logoutPopup({ account });
-            }
-          });
-      })
-      // eslint-disable-next-line no-console
-      .catch((err) => console.log(err));
-  };
+  // const handleCreate = (account: AccountInfo) => {
+  //   // AzureUserService.createUser(
+  //   //   account.localAccountId,
+  //   //   account.name || '',
+  //   //   userLevel,
+  //   // )
+  //   //   .then((usr) => {
+  //   //     AzureUserService.fetchUser(usr.id)
+  //   //       .then((azu) => setUser(azu));
+  //   //   })
+  //   //   .catch(() => {
+  //   //     setAuthError(true);
+  //   //     console.log('We should handle an auth error by asking if the user wants to continue as a guest.');
+  //   //   });
+  // };
 
-  const handleCreate = (account: AccountInfo) => {
-    // AzureUserService.createUser(
-    //   account.localAccountId,
-    //   account.name || '',
-    //   userLevel,
-    // )
-    //   .then((usr) => {
-    //     AzureUserService.fetchUser(usr.id)
-    //       .then((azu) => setUser(azu));
-    //   })
-    //   .catch(() => {
-    //     setAuthError(true);
-    //     console.log('We should handle an auth error by asking if the user wants to continue as a guest.');
-    //   });
-  };
+  // const handleRegistration = () => {
 
-  const handleRegistration = () => {
-    // const activeAccounts = instance.getAllAccounts();
-    // if (activeAccounts.length) {
-    //   handleCreate(activeAccounts[0]);
-    //   return;
-    // }
+  // };
 
-    // const request = {
-    //   ...loginRequest,
-    //   loginHint: getLoginHint(),
-    // };
-
-    // instance.loginPopup(request)
-    //   .then(({ account }) => {
-    //     AzureUserService.fetchUser(account.localAccountId)
-    //       .then((tst) => {
-    //         if (!tst) {
-    //           handleCreate(account);
-    //         } else {
-    //           setUser(tst); // If the user is already registered, initiate the sign in.
-    //         }
-    //       });
-    //   });
-  };
-
-  if (authError) { return <span />; }
+  // if (authError) { return <span />; }
 
   return (
     <Grid container sx={{ backgroundColor: '#F5E4CC' }}>
@@ -280,7 +245,7 @@ export default function AuthPrompt() {
         item
         sm={6}
         sx={{
-          background: theme.palette.background.default,
+          background: '#F8F8FC',
           borderTopRightRadius: { xs: 0, sm: '1rem' },
           borderBottomRightRadius: { xs: 0, sm: '1rem' },
           boxShadow: 3,
@@ -290,7 +255,45 @@ export default function AuthPrompt() {
         }}
       >
         <Stack flexDirection="column" justifyContent="space-between" sx={{ height: '100%' }}>
-          {
+          <Box>
+            <Box sx={{
+              height: '128px',
+              width: '128px',
+              mt: 24,
+              ml: 'auto',
+              mr: 'auto',
+              mb: 4,
+            }}
+            >
+              <NextImage src="/static/img/koine-logo.svg" alt="Koine Logo" width="128" height="128" />
+            </Box>
+            <Typography variant="h2" sx={{ fontSize: 42, textAlign: 'center', mb: 2 }}>Welcome, Scholar!</Typography>
+            <Typography variant="body1" sx={{ textAlign: 'center', mb: 6 }}>Start reading by by signing into your account below.</Typography>
+
+            <SignedIn>
+              <Stack flexDirection="row" justifyContent="center" sx={{ mb: 2 }}>
+                <NextLink href="/reader">
+                  <Button variant="contained" type="button">Start Reading</Button>
+                </NextLink>
+              </Stack>
+            </SignedIn>
+            <SignedOut>
+              <Stack flexDirection="row" justifyContent="center" sx={{ mb: 2 }}>
+                <SignUpButton>
+                  <Button variant="outlined" type="button" sx={{ mr: 2 }}>Create Account</Button>
+                </SignUpButton>
+                <SignInButton>
+                  <Button variant="contained" type="button">Sign In</Button>
+                </SignInButton>
+              </Stack>
+              <Stack flexDirection="row" justifyContent="center">
+                <Link href="reader">
+                  <Button type="button" size="small" sx={{ color: '#333' }}>Continue as guest</Button>
+                </Link>
+              </Stack>
+            </SignedOut>
+          </Box>
+          {/* {
               isNewUser && !authError
                 ? (
                   <RegisterContent
@@ -301,10 +304,10 @@ export default function AuthPrompt() {
                   />
                 )
                 : <SignInContent toggleNewUser={toggleNewUser} handleLogin={handleLogin} />
-              }
-          <Link to="/about">
+              } */}
+          <NextLink href="/about">
             <Button fullWidth size="small" sx={{ color: 'text.primary' }}>About Koine</Button>
-          </Link>
+          </NextLink>
         </Stack>
       </Grid>
       <Grid item sm={6} sx={{ display: { xs: 'none', sm: 'block' } }}>

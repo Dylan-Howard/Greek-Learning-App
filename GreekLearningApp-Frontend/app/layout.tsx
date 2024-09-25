@@ -1,10 +1,10 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { ClerkProvider } from '@clerk/nextjs';
 import { ThemeProvider } from '@mui/material';
 import { light } from './Theme';
 import './index.css';
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
@@ -20,9 +20,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root">
           <AppRouterCacheProvider>
-            <ThemeProvider theme={light}>
-              {children}
-            </ThemeProvider>
+            <ClerkProvider>
+              <ThemeProvider theme={light}>
+                {children}
+              </ThemeProvider>
+            </ClerkProvider>
           </AppRouterCacheProvider>
         </div>
       </body>

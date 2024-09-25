@@ -1,7 +1,5 @@
-// import { react } from 'react';
+import Link from 'next/link';
 
-import './About.css';
-import { Link } from 'react-router-dom';
 import {
   Button,
   Card,
@@ -188,7 +186,7 @@ function About() {
           Get started with Scriptura/Koine today and embark on a transformative journey through
           the New Testament!
         </Typography>
-        <Link to="/">
+        <Link href="/reader">
           <Button variant="contained">
             Reader
           </Button>
@@ -222,15 +220,15 @@ function About() {
         <Grid item xs={4} />
         <Grid item xs={2}>
           <Stack spacing={{ xs: 1 }} sx={{ justifyContent: 'center' }}>
-            <Link to="/" className="FooterLink">Reader</Link>
-            <Link to="/about" className="FooterLink">About</Link>
+            <Link href="/reader" className="FooterLink">Reader</Link>
+            <Link href="/about" className="FooterLink">About</Link>
             <a className="FooterLink" href="https://github.com/eliranwong/OpenGNT">Textual Source</a>
             <Divider
               variant="inset"
               flexItem
               sx={{ opacity: 0.2, bgcolor: 'primary.contrastText' }}
             />
-            <Link to="/">
+            <Link href="/reader">
               <Button variant="contained">
                 Start Reading
               </Button>
