@@ -35,7 +35,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "./dist/types/**/*.ts"
-, "app/profile", "app/Auth"  ],
+, "app/(client)/profile", "app/Auth"  ],
   "exclude": [
     "node_modules"
   ],
