@@ -3,22 +3,6 @@ import { User } from './User';
 
 const API_URL = 'https://koine.azure-api.net/api';
 
-// function wait(delay: number) {
-//   return new Promise((resolve) => { setTimeout(resolve, delay); });
-// }
-
-// function fetchRetry(url, delay, tries, fetchOptions = {}) {
-//   async function onError(err) {
-//     const triesLeft = tries - 1;
-//     if (!triesLeft) {
-//       throw err;
-//     }
-//     await wait(delay);
-//     fetchRetry(url, delay, triesLeft, fetchOptions);
-//   }
-//   return fetch(url, fetchOptions).catch(onError);
-// }
-
 const fetchData = async (resource: string) => {
   try {
     const response = await fetch(`${API_URL}/${resource}`);
@@ -28,8 +12,6 @@ const fetchData = async (resource: string) => {
     }
 
     const responseData = await response.text();
-
-    console.log(responseData);
 
     return responseData;
   } catch (error) {
@@ -61,8 +43,7 @@ const sendData = async (resource: string, method: string, data: Object) => {
 };
 
 export const getDefaultUserState = () : User => ({
-  // id: 'guest',
-  id: '225cb7c0-9593-4fbc-a19a-33b67ef5bc83',
+  id: 'guest',
   name: 'Guest',
   progress: {
     lessons: [],

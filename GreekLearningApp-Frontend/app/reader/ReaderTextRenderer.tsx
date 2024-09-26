@@ -28,7 +28,6 @@ export default async function TextRenderer(
 
   const data = await AzureReaderService.fetchPage(text.chapterId, user?.id || '');
   if (!data) {
-    console.log(user);
     throw new Error('Error fetching the reader page.');
   }
 

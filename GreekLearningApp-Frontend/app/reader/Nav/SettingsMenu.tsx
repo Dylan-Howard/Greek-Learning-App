@@ -36,7 +36,7 @@ import { SettingsMenuTabSkeleton } from '../../modules/Skeletons';
 
 function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
   return lessons.filter((lsn: Lesson) => (
-    filter === lsn.title.substring(0, filter.length)
+    lsn.title.toLowerCase().indexOf(filter.toLowerCase()) !== -1
   )).map((lsn : Lesson) => ({
     id: lsn.lessonId,
     name: lsn.title,
@@ -50,7 +50,9 @@ function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
 function mapVocabulary(vocabulary: Wordv2[], user: User | undefined, filter: string) {
   return vocabulary
     .filter((vcb: Wordv2) => (
-      filter === transliterateGreek(vcb.content.substring(0, filter.length))
+      filter.toLowerCase() === transliterateGreek(
+        vcb.content.substring(0, filter.length),
+      ).toLowerCase()
     )).map((vcb : Wordv2) => ({
       id: vcb.rootId,
       name: vcb.content,
@@ -127,7 +129,7 @@ function SettingsMenu(
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const { user } = useUser();
+  const { user, isSignedIn, isLoaded } = useUser();
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
   const [filter, setFilter] = useState('');
@@ -137,7 +139,10 @@ function SettingsMenu(
     name: '',
     isActive: false,
   }]);
-  const [optionsLoading, setOptionsLoading] = useState(true);
+  const [loading, setLoading] = useState({
+    user: true,
+    options: true,
+  });
 
   const gt600px = useMediaQuery('(min-width:600px)');
   const theme = useTheme();
@@ -158,23 +163,33 @@ function SettingsMenu(
     resource = 'lessons';
   }
 
-  const handleLessonsFetch = () => AzureTextService
-    .fetchLessons()
-    .then((lessons) => {
-      if (lessons) {
-        setOptions(mapLessons(lessons, activeUser, filter));
-        setOptionsLoading(false);
-      }
-    });
+  const handleLessonsFetch = () => {
+    if (loading.user) {
+      return;
+    }
+
+    AzureTextService
+      .fetchLessons()
+      .then((lessons) => {
+        if (lessons) {
+          setOptions(mapLessons(lessons, activeUser, filter));
+          setLoading({ ...loading, options: false });
+        }
+      });
+  };
 
   const handleVocabularyFetch = () => {
+    if (loading.user) {
+      return;
+    }
+
     const chapterId = text.chapterId ? parseInt(text.chapterId, 10) : 1;
     AzureTextService
       .fetchVocabularyByChapter(chapterId)
       .then((vocabulary) => {
         if (vocabulary) {
           setOptions(mapVocabulary(vocabulary, activeUser, filter));
-          setOptionsLoading(false);
+          setLoading({ ...loading, options: false });
         }
       });
   };
@@ -186,17 +201,30 @@ function SettingsMenu(
       name: activeMorphologyId?.toString() || '',
       isActive: true,
     }]);
-    setOptionsLoading(false);
+    setLoading({ ...loading, options: false });
   };
 
   useEffect(() => {
-    if (!user) { return; }
-    AzureUserService.fetchUser(user.id).then((usr) => setActiveUser(usr));
+    setLoading({ ...loading, user: true });
+    if (!isSignedIn && !isLoaded) {
+      return;
+    }
+    if (!user) {
+      return;
+    }
+    AzureUserService.fetchUser(user.id).then((usr) => {
+      setActiveUser(usr);
+      setLoading({ ...loading, user: false });
+    });
   }, [user]);
 
   /* Loads the settings */
   useEffect(() => {
-    setOptionsLoading(true);
+    if (!user && !isSignedIn && !isLoaded) {
+      return;
+    }
+
+    setLoading({ ...loading, options: true });
     if (title === 'Lessons') {
       handleLessonsFetch();
     }
@@ -206,7 +234,8 @@ function SettingsMenu(
     if (title === 'Details') {
       handleDetailsFetch();
     }
-  }, [title, filter]);
+    setLoading({ ...loading, options: false });
+  }, [title, filter, activeUser]);
 
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFilter(e.target.value);
@@ -261,7 +290,6 @@ function SettingsMenu(
         // eslint-disable-next-line no-console
         console.log(err);
       });
-    // setUser(updatedUser);
   };
 
   const handleClose = () => {
@@ -289,7 +317,7 @@ function SettingsMenu(
           : <MenuHandle onTouchClose={handleClose} />
       }
       <Stack sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, overflowY: 'scroll', pr: 1 }}>
-        {!optionsLoading
+        {!loading.options && !loading.user
           ? (
             <>
               <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
