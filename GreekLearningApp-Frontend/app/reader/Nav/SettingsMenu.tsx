@@ -5,12 +5,13 @@ import {
   MouseEventHandler,
   TouchEvent,
   TouchEventHandler,
-  useContext,
   useEffect,
   useState,
 } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useUser } from '@clerk/nextjs';
+
 import {
   Box,
   Button,
@@ -26,7 +27,7 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 import * as AzureTextService from '../../services/AzureTextService';
 import * as AzureUserService from '../../services/AzureUserService';
-import { User, UserContext } from '../../services/User';
+import { User } from '../../services/User';
 import { Lesson } from '../../modules/Lesson';
 import { Wordv2 } from '../../modules/Word';
 import transliterateGreek from '../Transliterate';
@@ -126,8 +127,9 @@ function SettingsMenu(
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const { user, setUser } = useContext(UserContext);
-  // const { text } = useContext(TextContext);
+  const { user } = useUser();
+  const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
+
   const [filter, setFilter] = useState('');
   const [options, setOptions] = useState([{
     id: 0,
@@ -136,8 +138,8 @@ function SettingsMenu(
     isActive: false,
   }]);
   const [optionsLoading, setOptionsLoading] = useState(true);
-  const gt600px = useMediaQuery('(min-width:600px)');
 
+  const gt600px = useMediaQuery('(min-width:600px)');
   const theme = useTheme();
 
   if (!searchParams.has('bookId') || !searchParams.has('chapterId')) {
@@ -160,7 +162,7 @@ function SettingsMenu(
     .fetchLessons()
     .then((lessons) => {
       if (lessons) {
-        setOptions(mapLessons(lessons, user, filter));
+        setOptions(mapLessons(lessons, activeUser, filter));
         setOptionsLoading(false);
       }
     });
@@ -171,7 +173,7 @@ function SettingsMenu(
       .fetchVocabularyByChapter(chapterId)
       .then((vocabulary) => {
         if (vocabulary) {
-          setOptions(mapVocabulary(vocabulary, user, filter));
+          setOptions(mapVocabulary(vocabulary, activeUser, filter));
           setOptionsLoading(false);
         }
       });
@@ -187,6 +189,11 @@ function SettingsMenu(
     setOptionsLoading(false);
   };
 
+  useEffect(() => {
+    if (!user) { return; }
+    AzureUserService.fetchUser(user.id).then((usr) => setActiveUser(usr));
+  }, [user]);
+
   /* Loads the settings */
   useEffect(() => {
     setOptionsLoading(true);
@@ -199,7 +206,7 @@ function SettingsMenu(
     if (title === 'Details') {
       handleDetailsFetch();
     }
-  }, [title, filter, user]);
+  }, [title, filter]);
 
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFilter(e.target.value);
@@ -211,16 +218,16 @@ function SettingsMenu(
     settingType: string,
   ) => {
     /* Guards if no active user is set */
-    if (!user || user.id === 'guest') { return; }
+    if (!activeUser || activeUser.id === 'guest') { return; }
 
     const updatedUser = {
-      id: user.id,
-      name: user.name,
+      id: activeUser.id,
+      name: activeUser.name,
       progress: {
-        ...user.progress,
+        ...activeUser.progress,
       },
       settings: {
-        ...user.settings,
+        ...activeUser.settings,
       },
     };
 
@@ -250,11 +257,11 @@ function SettingsMenu(
     }
     AzureUserService.updateUser(updatedUser)
       .catch((err) => {
-        // setUser(updatedUser);
+        setActiveUser(updatedUser);
         // eslint-disable-next-line no-console
         console.log(err);
       });
-    setUser(updatedUser);
+    // setUser(updatedUser);
   };
 
   const handleClose = () => {

@@ -8,12 +8,7 @@ import Button from '@mui/material/Button';
 
 export default function Error() {
   return (
-    <Box
-      sx={{
-        bgcolor: 'background.default',
-        height: '100%',
-      }}
-    >
+    <Box sx={{ bgcolor: 'background.default', height: '100%' }}>
       <Stack flexDirection="column" justifyContent="center" alignItems="center">
         <Box
           sx={{

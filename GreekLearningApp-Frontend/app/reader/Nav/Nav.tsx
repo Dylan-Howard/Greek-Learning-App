@@ -1,7 +1,8 @@
 'use client';
 
-import { SyntheticEvent, useContext } from 'react';
+import { SyntheticEvent } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
+import { useUser } from '@clerk/nextjs';
 
 import {
   BottomNavigation,
@@ -13,12 +14,11 @@ import LoginIcon from '@mui/icons-material/Login';
 import PersonIcon from '@mui/icons-material/Person';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import AbcIcon from '@mui/icons-material/Abc';
-import { UserContext } from 'app/services/User';
 
 export default function Nav({ activeTabIndex } : { activeTabIndex: number | undefined }) {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const { user } = useContext(UserContext);
+  const { user } = useUser();
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
     const bookId = searchParams.get('bookId') || 1;

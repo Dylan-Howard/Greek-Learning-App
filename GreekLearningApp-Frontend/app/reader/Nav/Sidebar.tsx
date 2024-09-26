@@ -1,9 +1,15 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import { useUser } from '@clerk/nextjs';
+
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Slide from '@mui/material/Slide';
+
+import * as AzureUserService from '../../services/AzureUserService';
+
 import DetailsMenu from './DetailsMenu';
 import SettingsMenu from './SettingsMenu';
 

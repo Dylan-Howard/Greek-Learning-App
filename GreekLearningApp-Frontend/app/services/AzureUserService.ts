@@ -60,8 +60,9 @@ const sendData = async (resource: string, method: string, data: Object) => {
   }
 };
 
-export const getDefaultUserState = () => ({
-  id: 'guest',
+export const getDefaultUserState = () : User => ({
+  // id: 'guest',
+  id: '225cb7c0-9593-4fbc-a19a-33b67ef5bc83',
   name: 'Guest',
   progress: {
     lessons: [],

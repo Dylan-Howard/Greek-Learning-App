@@ -28,7 +28,8 @@ export default async function TextRenderer(
 
   const data = await AzureReaderService.fetchPage(text.chapterId, user?.id || '');
   if (!data) {
-    throw new Error('Not text found.');
+    console.log(user);
+    throw new Error('Error fetching the reader page.');
   }
 
   selections.texts = data.selection.texts;
