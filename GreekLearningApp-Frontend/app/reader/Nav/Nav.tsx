@@ -1,7 +1,7 @@
 'use client';
 
 import { SyntheticEvent, useContext } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 
 import {
   BottomNavigation,
@@ -15,16 +15,16 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import AbcIcon from '@mui/icons-material/Abc';
 import { UserContext } from 'app/services/User';
 
-export default function Nav({ activeTabIndex } : { activeTabIndex: number }) {
+export default function Nav({ activeTabIndex } : { activeTabIndex: number | undefined }) {
   const router = useRouter();
-  const pathName = usePathname();
+  const searchParams = useSearchParams();
   const { user } = useContext(UserContext);
 
   const handleChange = (event: SyntheticEvent, newValue: number) => {
-    const baseUrl = pathName.split('/')
-      .slice(0, 4)
-      .join('/');
-    router.push(`${baseUrl}/${newValue}`);
+    const bookId = searchParams.get('bookId') || 1;
+    const chapterId = searchParams.get('chapterId') || 1;
+
+    router.push(`/reader?bookId=${bookId}&chapterId=${chapterId}&tabId=${newValue}`);
   };
 
   return (

@@ -7,7 +7,9 @@ import Slide from '@mui/material/Slide';
 import DetailsMenu from './DetailsMenu';
 import SettingsMenu from './SettingsMenu';
 
-export default function Sidebar({ tabId, morphologyId } : { tabId: number, morphologyId: number }) {
+export default function Sidebar(
+  { tabId, morphologyId } : { tabId: number | undefined, morphologyId: number | undefined },
+) {
   const gt600px = useMediaQuery('(min-width:600px)');
 
   let tabs = [
@@ -15,7 +17,7 @@ export default function Sidebar({ tabId, morphologyId } : { tabId: number, morph
     { title: 'Dictionary', iconName: 'dictionary' },
   ];
   tabs = !Number.isNaN(morphologyId) ? [...tabs, { title: 'Details', iconName: 'details' }] : tabs;
-  const title = tabs[tabId] ? tabs[tabId].title : '';
+  const title = tabId !== undefined && tabs[tabId] ? tabs[tabId].title : '';
 
   return (
     <Box
@@ -29,7 +31,7 @@ export default function Sidebar({ tabId, morphologyId } : { tabId: number, morph
     >
       <Slide
         direction={gt600px ? 'right' : 'up'}
-        in={!Number.isNaN(tabId)}
+        in={tabId !== undefined && !Number.isNaN(tabId)}
         timeout={200}
         mountOnEnter
         unmountOnExit

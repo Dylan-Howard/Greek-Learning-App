@@ -7,7 +7,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 
 import {
   Box,
@@ -20,8 +20,8 @@ import {
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
 
-import * as AzureTextService from '../../../services/AzureTextService';
-import { DetailsSkeleton } from '../../../modules/Skeletons';
+import * as AzureTextService from '../../services/AzureTextService';
+import { DetailsSkeleton } from '../../modules/Skeletons';
 
 function MenuHandle({ onTouchClose }: { onTouchClose: TouchEventHandler }) {
   const [swipe, setSwipe] = useState({ start: 0 });
@@ -76,9 +76,9 @@ function DetailsItem({ label, value } : { label: string, value: string }) {
   );
 }
 
-function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
+function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number | undefined }) {
   const router = useRouter();
-  const pathName = usePathname();
+  const searchParams = useSearchParams();
 
   const [isLoading, setIsLoading] = useState(true);
   const [morphology, setMorphology] = useState({
@@ -89,6 +89,10 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
   });
 
   const gt600px = useMediaQuery('(min-width:600px)');
+
+  if (!activeMorphologyId) {
+    return <span>No active declension</span>;
+  }
 
   const unitForm = AzureTextService.fetchMorphologyDetails(activeMorphologyId);
   if (!unitForm) {
@@ -121,10 +125,10 @@ function DetailsMenu({ activeMorphologyId } : { activeMorphologyId: number }) {
   }, [activeMorphologyId]);
 
   const handleClose = () => {
-    const baseUrl = pathName.split('/')
-      .slice(0, 4)
-      .join('/');
-    router.push(baseUrl);
+    const bookId = searchParams.get('bookId') || 1;
+    const chapterId = searchParams.get('chapterId') || 1;
+
+    router.push(`/reader?bookId=${bookId}&chapterId=${chapterId}`);
   };
 
   return (

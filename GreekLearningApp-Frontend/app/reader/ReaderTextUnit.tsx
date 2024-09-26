@@ -1,18 +1,18 @@
 'use client';
 
 import Typography from '@mui/material/Typography';
-import { Box, useTheme } from '@mui/material';
-import { Unitv2 } from '../../modules/Text';
+import Box from '@mui/material/Box';
+import { useTheme } from '@mui/material/styles';
 
-function TextUnit({ unit, onClick }: { unit: Unitv2, onClick: Function }) {
+import { Unitv2 } from '../modules/Text';
+
+export default function TextUnit({ unit }: { unit: Unitv2 }) {
   const theme = useTheme();
   const { morphologyId, content, helpText } = unit;
+
   if (morphologyId) {
     return (
       <Box
-        onClick={(e) => onClick(e)}
-        onKeyUp={(e) => onClick(e)}
-        onTouchEnd={(e) => onClick(e)}
         role="button"
         tabIndex={0}
         sx={{ display: 'inline-block' }}
@@ -51,7 +51,6 @@ function TextUnit({ unit, onClick }: { unit: Unitv2, onClick: Function }) {
       </Box>
     );
   }
+
   return <span className="TextUnit">{`${content}`}</span>;
 }
-
-export default TextUnit;

@@ -9,7 +9,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
   Box,
@@ -24,15 +24,14 @@ import {
   useTheme,
 } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
-import * as AzureTextService from '../../../services/AzureTextService';
-import * as AzureUserService from '../../../services/AzureUserService';
-import { User, UserContext } from '../../../services/User';
-import { Lesson } from '../../../modules/Lesson';
-import { Wordv2 } from '../../../modules/Word';
+import * as AzureTextService from '../../services/AzureTextService';
+import * as AzureUserService from '../../services/AzureUserService';
+import { User, UserContext } from '../../services/User';
+import { Lesson } from '../../modules/Lesson';
+import { Wordv2 } from '../../modules/Word';
 import transliterateGreek from '../Transliterate';
 import OptionCheckbox from './OptionCheckbox';
-import { TextContext } from '../../../modules/Text';
-import { SettingsMenuTabSkeleton } from '../../../modules/Skeletons';
+import { SettingsMenuTabSkeleton } from '../../modules/Skeletons';
 
 function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
   return lessons.filter((lsn: Lesson) => (
@@ -121,14 +120,14 @@ function SettingsMenu(
     activeMorphologyId,
   } : {
     title: string,
-    activeMorphologyId: number,
+    activeMorphologyId: number | undefined,
   },
 ) {
   const router = useRouter();
-  const pathName = usePathname();
+  const searchParams = useSearchParams();
 
   const { user, setUser } = useContext(UserContext);
-  const { text } = useContext(TextContext);
+  // const { text } = useContext(TextContext);
   const [filter, setFilter] = useState('');
   const [options, setOptions] = useState([{
     id: 0,
@@ -140,6 +139,14 @@ function SettingsMenu(
   const gt600px = useMediaQuery('(min-width:600px)');
 
   const theme = useTheme();
+
+  if (!searchParams.has('bookId') || !searchParams.has('chapterId')) {
+    throw new Error('Invalid URL request');
+  }
+  const text = {
+    bookId: searchParams.get('bookId'),
+    chapterId: searchParams.get('chapterId'),
+  };
 
   let resource;
   if (title === 'Dictionary') {
@@ -158,20 +165,23 @@ function SettingsMenu(
       }
     });
 
-  const handleVocabularyFetch = () => AzureTextService
-    .fetchVocabularyByChapter(text.chapterId)
-    .then((vocabulary) => {
-      if (vocabulary) {
-        setOptions(mapVocabulary(vocabulary, user, filter));
-        setOptionsLoading(false);
-      }
-    });
+  const handleVocabularyFetch = () => {
+    const chapterId = text.chapterId ? parseInt(text.chapterId, 10) : 1;
+    AzureTextService
+      .fetchVocabularyByChapter(chapterId)
+      .then((vocabulary) => {
+        if (vocabulary) {
+          setOptions(mapVocabulary(vocabulary, user, filter));
+          setOptionsLoading(false);
+        }
+      });
+  };
 
   const handleDetailsFetch = () => {
     setOptions([{
       id: 1,
       type: 'Details',
-      name: activeMorphologyId.toString(),
+      name: activeMorphologyId?.toString() || '',
       isActive: true,
     }]);
     setOptionsLoading(false);
@@ -248,10 +258,10 @@ function SettingsMenu(
   };
 
   const handleClose = () => {
-    const baseUrl = pathName.split('/')
-      .slice(0, 4)
-      .join('/');
-    router.push(baseUrl);
+    const bookId = searchParams.get('bookId') || 1;
+    const chapterId = searchParams.get('chapterId') || 1;
+
+    router.push(`/reader?bookId=${bookId}&chapterId=${chapterId}`);
   };
 
   if (title === 'Home') { return <span />; }
