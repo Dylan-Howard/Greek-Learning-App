@@ -8,7 +8,7 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { useSearchParams, useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
 
@@ -117,17 +117,9 @@ function SettingsLink({ resource }: { resource: string }) {
   );
 }
 
-function SettingsMenu(
-  {
-    title,
-    activeMorphologyId,
-  } : {
-    title: string,
-    activeMorphologyId: number | undefined,
-  },
-) {
+function SettingsMenu({ title } : { title: string }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
+  const pathName = usePathname();
 
   const { user, isSignedIn, isLoaded } = useUser();
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
@@ -143,17 +135,22 @@ function SettingsMenu(
     user: true,
     options: true,
   });
+  const [editing, setEditing] = useState({
+    updatedUser: activeUser,
+    isEditing: false,
+  });
 
   const gt600px = useMediaQuery('(min-width:600px)');
   const theme = useTheme();
 
-  if (!searchParams.has('bookId') || !searchParams.has('chapterId')) {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [bookId, chapterId, tabId, morphologyId] = pathName
+    .split('/')
+    .slice(2, 6);
+
+  if (!bookId || !chapterId) {
     throw new Error('Invalid URL request');
   }
-  const text = {
-    bookId: searchParams.get('bookId'),
-    chapterId: searchParams.get('chapterId'),
-  };
 
   let resource;
   if (title === 'Dictionary') {
@@ -183,9 +180,9 @@ function SettingsMenu(
       return;
     }
 
-    const chapterId = text.chapterId ? parseInt(text.chapterId, 10) : 1;
+    const activeChapterId = chapterId ? parseInt(chapterId, 10) : 1;
     AzureTextService
-      .fetchVocabularyByChapter(chapterId)
+      .fetchVocabularyByChapter(activeChapterId)
       .then((vocabulary) => {
         if (vocabulary) {
           setOptions(mapVocabulary(vocabulary, activeUser, filter));
@@ -198,7 +195,7 @@ function SettingsMenu(
     setOptions([{
       id: 1,
       type: 'Details',
-      name: activeMorphologyId?.toString() || '',
+      name: morphologyId || '',
       isActive: true,
     }]);
     setLoading({ ...loading, options: false });
@@ -234,7 +231,6 @@ function SettingsMenu(
     if (title === 'Details') {
       handleDetailsFetch();
     }
-    setLoading({ ...loading, options: false });
   }, [title, filter, activeUser]);
 
   const handleTextboxChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -248,6 +244,14 @@ function SettingsMenu(
   ) => {
     /* Guards if no active user is set */
     if (!activeUser || activeUser.id === 'guest') { return; }
+
+    if (!editing.isEditing) {
+      console.log('Editing on.');
+      setEditing({
+        updatedUser: activeUser,
+        isEditing: true,
+      });
+    }
 
     const updatedUser = {
       id: activeUser.id,
@@ -284,22 +288,34 @@ function SettingsMenu(
         targetProgressItem.isComplete = e.target.checked;
       }
     }
-    AzureUserService.updateUser(updatedUser)
+    setEditing({ updatedUser, isEditing: true });
+  };
+
+  const handleUserSaveCancel = () => {
+    if (!editing.isEditing) {
+      // setActiveUser(activeUser);
+      return;
+    }
+
+    setEditing({ updatedUser: activeUser, isEditing: false });
+  };
+
+  const handleUserSave = () => {
+    if (!editing.isEditing) {
+      return;
+    }
+
+    AzureUserService.updateUser(activeUser)
       .catch((err) => {
-        setActiveUser(updatedUser);
         // eslint-disable-next-line no-console
         console.log(err);
-      });
+      })
+      .then((usr) => setEditing({ updatedUser: usr, isEditing: false }));
   };
 
   const handleClose = () => {
-    const bookId = searchParams.get('bookId') || 1;
-    const chapterId = searchParams.get('chapterId') || 1;
-
-    router.push(`/reader?bookId=${bookId}&chapterId=${chapterId}`);
+    router.push(`/reader/${bookId || 1}/${chapterId || 1}`);
   };
-
-  if (title === 'Home') { return <span />; }
 
   return (
     <Container sx={{
@@ -316,45 +332,51 @@ function SettingsMenu(
           ? <MenuCloseButton onClose={handleClose} />
           : <MenuHandle onTouchClose={handleClose} />
       }
-      <Stack sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, overflowY: 'scroll', pr: 1 }}>
-        {!loading.options && !loading.user
-          ? (
-            <>
-              <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
-                {title || ''}
-              </Typography>
-              { resource ? <SettingsLink resource={resource} /> : ''}
-              <TextField
-                label="Search"
-                type="search"
-                variant="outlined"
-                onChange={(e) => handleTextboxChange(e)}
-                size="small"
-                sx={{ bgcolor: 'background.default', mb: 2 }}
-              />
-              <Divider sx={{ mb: 2 }} />
-              {
-                options.length !== 0
-                  ? options.map(({
-                    id,
-                    type,
-                    name,
-                    isActive,
-                  }) => (
-                    <OptionCheckbox
-                      id={`option-${type}-${id}`}
-                      key={`option-${type}-${id}`}
-                      name={name}
-                      value={isActive}
-                      onCheck={(e) => handleCheckboxChange(e, id, type)}
-                    />
-                  ))
-                  : <Typography variant="body1">No options match this search filter</Typography>
-              }
-            </>
-          )
-          : <SettingsMenuTabSkeleton />}
-      </Stack>
+      <Box sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, pr: 1 }}>
+        <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
+          {title || ''}
+        </Typography>
+        { resource ? <SettingsLink resource={resource} /> : ''}
+        <TextField
+          label="Search"
+          type="search"
+          variant="outlined"
+          onChange={(e) => handleTextboxChange(e)}
+          size="small"
+          sx={{ bgcolor: 'background.default', mb: 2 }}
+        />
+        <Divider sx={{ mb: 2 }} />
+        <Stack sx={{ height: editing.isEditing ? 'calc(100% - 260px)' : 'calc(100% - 200px)', overflowY: 'scroll' }}>
+          {
+            options.length !== 0
+              ? options.map(({
+                id,
+                type,
+                name,
+                isActive,
+              }) => (
+                <OptionCheckbox
+                  id={`option-${type}-${id}`}
+                  key={`option-${type}-${id}`}
+                  name={name}
+                  value={isActive}
+                  onCheck={(e) => handleCheckboxChange(e, id, type)}
+                />
+              ))
+              : <Typography variant="body1">No options match this search filter</Typography>
+          }
+        </Stack>
+        {
+          editing.isEditing
+            ? (
+              <Stack direction="row" justifyContent="space-around">
+                <Button variant="outlined" onClick={handleUserSaveCancel}>Close</Button>
+                <Button variant="contained" onClick={handleUserSave}>Save</Button>
+              </Stack>
+            )
+            : ''
+        }
+      </Box>
     </Container>
   );
 }
