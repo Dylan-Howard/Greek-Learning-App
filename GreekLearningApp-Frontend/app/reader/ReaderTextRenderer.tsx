@@ -1,52 +1,32 @@
-import NextLink from 'next/link';
-// import { useUser } from '@clerk/nextjs';
+'use server';
 
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
 
-import * as AzureReaderService from '../services/AzureReaderService';
 import { Unitv2 } from '../modules/Text';
 
-import { TextRendererSkeleton } from '../modules/Skeletons';
 import TextControls from './ReaderControls';
 import TextSelectionControls from './ReaderSelectControls';
-import TextUnit from './ReaderTextUnit';
+import ReaderTextUnit from './ReaderTextUnit';
 import TextTitle from './ReaderTitle';
 
-export default async function TextRenderer(
-  { text } : { text: { bookId: number, chapterId: number } },
-) {
-  const user = { id: 'guest' };
-  const selections = {
-    texts: [{ textId: 1, title: '' }],
-    chapters: [{ chapterId: 1, chapterNumber: 1 }],
-  };
-  let title = '';
-  let units: any[] = [];
-
-  const data = await AzureReaderService.fetchPage(text.chapterId, user?.id || '');
-  if (!data) {
-    throw new Error('Error fetching the reader page.');
+export default async function TextRenderer({
+  text,
+  selections,
+  title,
+  units,
+  position,
+} : {
+  text: { bookId: number, chapterId: number },
+  selections: {
+    texts: { textId: number, title: string }[],
+    chapters: { chapterId: number, title: string }[],
   }
-
-  selections.texts = data.selection.texts;
-  selections.chapters = data.selection.chapters;
-  title = data.title;
-  units = data.text;
-
-  const isSelectionLoaded = selections.texts.length && selections.texts[0].title !== '';
-
-  /* Determines the position of the active chapter within the active text */
-  let chapterPosition;
-  if (selections.chapters[0].chapterId === text.chapterId) {
-    chapterPosition = 'first';
-  }
-  if (selections.chapters[selections.chapters.length - 1].chapterId === text.chapterId) {
-    chapterPosition = 'last';
-  }
-
+  title: string,
+  units: Unitv2[],
+  position: string | undefined,
+}) {
   return (
     <Box
       sx={{
@@ -57,31 +37,15 @@ export default async function TextRenderer(
       }}
     >
       <Stack direction="row" justifyContent="center" sx={{ mt: 4, pb: 2 }}>
-        {
-          isSelectionLoaded
-            ? <TextSelectionControls selections={selections} text={text} />
-            : <Skeleton variant="rounded" width={260} height={40} />
-          }
+        <TextSelectionControls selections={selections} text={text} />
       </Stack>
       <Box sx={{ height: { xs: 'calc(100% - 160.5px)', sm: 'calc(100% - 88px)' }, overflowY: 'scroll' }}>
         <Container maxWidth="sm">
           <TextTitle>{title}</TextTitle>
           <Box sx={{ mb: 4 }}>
-            {
-                units.length
-                  ? units.map((unt: Unitv2) => (
-                    <NextLink href={`/reader?bookId=${text.bookId}&chapterId=${text.chapterId}&tabId=2&morphologyId=${unt.morphologyId}`}>
-                      <TextUnit key={`unit-${unt.verseNumber}-${unt.unitId}`} unit={unt} />
-                    </NextLink>
-                  ))
-                  : <TextRendererSkeleton />
-                }
+            { units.map((unt) => (<ReaderTextUnit unit={unt} />)) }
           </Box>
-          {
-            isSelectionLoaded
-              ? <TextControls chapterId={text.chapterId} chapterPosition={chapterPosition} />
-              : ''
-          }
+          <TextControls chapterId={text.chapterId} chapterPosition={position} />
         </Container>
       </Box>
     </Box>

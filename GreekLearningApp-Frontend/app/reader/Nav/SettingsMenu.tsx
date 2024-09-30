@@ -3,6 +3,7 @@
 import {
   ChangeEvent,
   MouseEventHandler,
+  Suspense,
   TouchEvent,
   TouchEventHandler,
   useEffect,
@@ -32,7 +33,6 @@ import { Lesson } from '../../modules/Lesson';
 import { Wordv2 } from '../../modules/Word';
 import transliterateGreek from '../Transliterate';
 import OptionCheckbox from './OptionCheckbox';
-import { SettingsMenuTabSkeleton } from '../../modules/Skeletons';
 
 function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
   return lessons.filter((lsn: Lesson) => (
@@ -63,50 +63,6 @@ function mapVocabulary(vocabulary: Wordv2[], user: User | undefined, filter: str
     }));
 }
 
-function MenuHandle({ onTouchClose }: { onTouchClose: TouchEventHandler }) {
-  const [swipe, setSwipe] = useState({ start: 0 });
-  const swipeCloseDistance = 50;
-
-  const handleTouchStart = (e: any) => {
-    setSwipe({ start: e.touches[0].clientY });
-  };
-
-  const handleTouchEnd = (e: TouchEvent) => {
-    const swipeDistance = e.changedTouches[0].clientY - swipe.start;
-    if (swipeCloseDistance < swipeDistance) {
-      onTouchClose(e);
-    }
-  };
-
-  return (
-    <Stack
-      flexDirection="row"
-      justifyContent="center"
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
-      sx={{ pt: 2, pb: 2 }}
-    >
-      <Box
-        sx={{
-          border: '#333 1px solid',
-          borderColor: 'text.primary',
-          width: 48,
-        }}
-      />
-    </Stack>
-  );
-}
-
-function MenuCloseButton({ onClose }: { onClose: MouseEventHandler<HTMLButtonElement> }) {
-  return (
-    <Stack flexDirection="row" justifyContent="end" sx={{ pt: 2, pb: 2 }}>
-      <IconButton aria-label="close" onClick={onClose}>
-        <CloseIcon />
-      </IconButton>
-    </Stack>
-  );
-}
-
 function SettingsLink({ resource }: { resource: string }) {
   return (
     <Link href={`/${resource}`}>
@@ -117,8 +73,7 @@ function SettingsLink({ resource }: { resource: string }) {
   );
 }
 
-function SettingsMenu({ title } : { title: string }) {
-  const router = useRouter();
+async function SettingsMenu({ title } : { title: string }) {
   const pathName = usePathname();
 
   const { user, isSignedIn, isLoaded } = useUser();
@@ -139,8 +94,6 @@ function SettingsMenu({ title } : { title: string }) {
     updatedUser: activeUser,
     isEditing: false,
   });
-
-  const gt600px = useMediaQuery('(min-width:600px)');
   const theme = useTheme();
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -313,71 +266,52 @@ function SettingsMenu({ title } : { title: string }) {
       .then((usr) => setEditing({ updatedUser: usr, isEditing: false }));
   };
 
-  const handleClose = () => {
-    router.push(`/reader/${bookId || 1}/${chapterId || 1}`);
-  };
-
   return (
-    <Container sx={{
-      bgcolor: 'background.tertiary',
-      pr: { xs: 4, sm: 2 },
-      pl: { xs: 4, sm: 2 },
-      borderTopLeftRadius: { xs: 24, sm: 0 },
-      borderTopRightRadius: { xs: 24, sm: 0 },
-      width: { xs: '100vw', sm: 'auto' },
-    }}
-    >
-      {
-        gt600px
-          ? <MenuCloseButton onClose={handleClose} />
-          : <MenuHandle onTouchClose={handleClose} />
-      }
-      <Box sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, pr: 1 }}>
-        <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
-          {title || ''}
-        </Typography>
-        { resource ? <SettingsLink resource={resource} /> : ''}
-        <TextField
-          label="Search"
-          type="search"
-          variant="outlined"
-          onChange={(e) => handleTextboxChange(e)}
-          size="small"
-          sx={{ bgcolor: 'background.default', mb: 2 }}
-        />
-        <Divider sx={{ mb: 2 }} />
-        <Stack sx={{ height: editing.isEditing ? 'calc(100% - 260px)' : 'calc(100% - 200px)', overflowY: 'scroll' }}>
-          {
-            options.length !== 0
-              ? options.map(({
-                id,
-                type,
-                name,
-                isActive,
-              }) => (
-                <OptionCheckbox
-                  id={`option-${type}-${id}`}
-                  key={`option-${type}-${id}`}
-                  name={name}
-                  value={isActive}
-                  onCheck={(e) => handleCheckboxChange(e, id, type)}
-                />
-              ))
-              : <Typography variant="body1">No options match this search filter</Typography>
-          }
-        </Stack>
+    <Box sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, pr: 1 }}>
+      <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
+        {title || ''}
+      </Typography>
+      { resource ? <SettingsLink resource={resource} /> : ''}
+      <TextField
+        label="Search"
+        type="search"
+        variant="outlined"
+        onChange={(e) => handleTextboxChange(e)}
+        size="small"
+        sx={{ bgcolor: 'background.default', mb: 2 }}
+      />
+      <Divider sx={{ mb: 2 }} />
+      <Stack sx={{ height: editing.isEditing ? 'calc(100% - 260px)' : 'calc(100% - 200px)', overflowY: 'scroll' }}>
         {
-          editing.isEditing
-            ? (
-              <Stack direction="row" justifyContent="space-around">
-                <Button variant="outlined" onClick={handleUserSaveCancel}>Close</Button>
-                <Button variant="contained" onClick={handleUserSave}>Save</Button>
-              </Stack>
-            )
-            : ''
-        }
-      </Box>
-    </Container>
+          options.length !== 0
+            ? options.map(({
+              id,
+              type,
+              name,
+              isActive,
+            }) => (
+              <OptionCheckbox
+                id={`option-${type}-${id}`}
+                key={`option-${type}-${id}`}
+                name={name}
+                value={isActive}
+                onCheck={(e) => handleCheckboxChange(e, id, type)}
+              />
+            ))
+            : <Typography variant="body1">No options match this search filter</Typography>
+          }
+      </Stack>
+      {
+        editing.isEditing
+          ? (
+            <Stack direction="row" justifyContent="space-around">
+              <Button variant="outlined" onClick={handleUserSaveCancel}>Close</Button>
+              <Button variant="contained" onClick={handleUserSave}>Save</Button>
+            </Stack>
+          )
+          : ''
+      }
+    </Box>
   );
 }
 

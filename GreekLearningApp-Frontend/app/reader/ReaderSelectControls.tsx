@@ -21,7 +21,7 @@ export default function TextSelectionControls(
   const handleTextChange = async (event: SelectChangeEvent) => {
     const targetTextId = parseInt(event.target.value, 10);
     const chapters = await AzureTextService.fetchChaptersByText(targetTextId);
-    router.push(`/reader?bookId=${event.target.value}&chapterId=${chapters[0].chapterId}`);
+    router.push(`/reader/${event.target.value}/${chapters[0].chapterId}`);
   };
 
   const handleChapterChange = async (event: SelectChangeEvent) => {
@@ -31,7 +31,7 @@ export default function TextSelectionControls(
     }
 
     const { textId } = await AzureTextService.fetchChapter(targetChapterId);
-    router.push(`/reader?bookId=${textId}&chapterId=${targetChapterId}`);
+    router.push(`/reader/${textId}/${targetChapterId}`);
   };
 
   return (

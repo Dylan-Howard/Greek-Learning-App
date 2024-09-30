@@ -1,3 +1,5 @@
+import { Unitv2 } from 'app/modules/Text';
+
 const { NEXT_PUBLIC_API_URL } = process.env;
 
 const postData = async (resource: string, data: Object) => {
@@ -25,7 +27,14 @@ const postData = async (resource: string, data: Object) => {
   }
 };
 
-export async function fetchPage(chapterId: number, userId: string) {
+export async function fetchPage(chapterId: number, userId: string): Promise<{
+  selection: {
+    texts: { textId: number, title: string }[],
+    chapters: { chapterId: number, title: string }[],
+  }
+  title: string,
+  text: Unitv2[],
+}> {
   const page = await postData('reader', { chapterId, userId });
 
   return JSON.parse(page);
