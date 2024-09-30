@@ -19,7 +19,7 @@ import Container from '@mui/material/Container';
 import { SettingsMenuTabSkeleton } from 'app/modules/Skeletons';
 import DetailsMenu from './DetailsMenu';
 import SettingsMenu from './SettingsMenu';
-import { useReaderContext } from '../ReaderPageContext';
+import { useReaderContext } from '../ReaderPage/ReaderPageContext';
 
 function MenuHandle({ onTouchClose }: { onTouchClose: TouchEventHandler }) {
   const [swipe, setSwipe] = useState({ start: 0 });
@@ -78,9 +78,6 @@ export default function Sidebar() {
 
   const handleClose = () => setPage({ ...page, tabId: 0, morphologyId: 0 });
 
-  console.log(page?.tabId);
-  console.log(page?.tabId !== 0);
-
   return (
     <Box
       sx={{
@@ -88,7 +85,7 @@ export default function Sidebar() {
         bottom: { xs: 'calc(72.5px + env(safe-area-inset-bottom))', sm: 'auto' },
         left: { xs: 'auto', sm: 80 },
         zIndex: 1100,
-        maxWidth: { xs: 'auto', sm: 350 },
+        maxWidth: { xs: 'none', sm: 350 },
       }}
     >
       <Slide
@@ -108,6 +105,7 @@ export default function Sidebar() {
         >
           <Container sx={{
             bgcolor: 'background.tertiary',
+            height: gt600px ? '100vh' : 100,
             pr: { xs: 4, sm: 2 },
             pl: { xs: 4, sm: 2 },
             borderTopLeftRadius: { xs: 24, sm: 0 },
@@ -120,13 +118,13 @@ export default function Sidebar() {
                 ? <MenuCloseButton onClose={() => handleClose()} />
                 : <MenuHandle onTouchClose={() => handleClose()} />
             }
-            <Suspense fallback={<SettingsMenuTabSkeleton />}>
-              {
+            {/* <Suspense fallback={<SettingsMenuTabSkeleton />}> */}
+            {
                 page?.tabId === 3
                   ? <DetailsMenu />
                   : <SettingsMenu title={title} />
               }
-            </Suspense>
+            {/* </Suspense> */}
           </Container>
         </Paper>
       </Slide>

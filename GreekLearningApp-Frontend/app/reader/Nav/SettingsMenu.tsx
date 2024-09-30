@@ -2,37 +2,29 @@
 
 import {
   ChangeEvent,
-  MouseEventHandler,
-  Suspense,
-  TouchEvent,
-  TouchEventHandler,
   useEffect,
   useState,
 } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useUser } from '@clerk/nextjs';
 
-import {
-  Box,
-  Button,
-  Container,
-  Divider,
-  IconButton,
-  Stack,
-  TextField,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from '@mui/material';
-import CloseIcon from '@mui/icons-material/Close';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
+import Stack from '@mui/material/Stack';
+import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import useTheme from '@mui/material/styles/useTheme';
+import { SettingsMenuTabSkeleton } from 'app/modules/Skeletons';
+
 import * as AzureTextService from '../../services/AzureTextService';
 import * as AzureUserService from '../../services/AzureUserService';
 import { User } from '../../services/User';
 import { Lesson } from '../../modules/Lesson';
 import { Wordv2 } from '../../modules/Word';
-import transliterateGreek from '../Transliterate';
+import transliterateGreek from './Transliterate';
 import OptionCheckbox from './OptionCheckbox';
+import { useReaderContext } from '../ReaderPage/ReaderPageContext';
 
 function mapLessons(lessons: Lesson[], user: User | undefined, filter: string) {
   return lessons.filter((lsn: Lesson) => (
@@ -73,9 +65,8 @@ function SettingsLink({ resource }: { resource: string }) {
   );
 }
 
-async function SettingsMenu({ title } : { title: string }) {
-  const pathName = usePathname();
-
+function SettingsMenu({ title } : { title: string }) {
+  const { page } = useReaderContext();
   const { user, isSignedIn, isLoaded } = useUser();
   const [activeUser, setActiveUser] = useState(AzureUserService.getDefaultUserState());
 
@@ -95,15 +86,6 @@ async function SettingsMenu({ title } : { title: string }) {
     isEditing: false,
   });
   const theme = useTheme();
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [bookId, chapterId, tabId, morphologyId] = pathName
-    .split('/')
-    .slice(2, 6);
-
-  if (!bookId || !chapterId) {
-    throw new Error('Invalid URL request');
-  }
 
   let resource;
   if (title === 'Dictionary') {
@@ -133,7 +115,7 @@ async function SettingsMenu({ title } : { title: string }) {
       return;
     }
 
-    const activeChapterId = chapterId ? parseInt(chapterId, 10) : 1;
+    const activeChapterId = page?.chapterId || 1;
     AzureTextService
       .fetchVocabularyByChapter(activeChapterId)
       .then((vocabulary) => {
@@ -148,7 +130,7 @@ async function SettingsMenu({ title } : { title: string }) {
     setOptions([{
       id: 1,
       type: 'Details',
-      name: morphologyId || '',
+      name: page && page.morphologyId ? `${page.morphologyId}` : '',
       isActive: true,
     }]);
     setLoading({ ...loading, options: false });
@@ -246,7 +228,7 @@ async function SettingsMenu({ title } : { title: string }) {
 
   const handleUserSaveCancel = () => {
     if (!editing.isEditing) {
-      // setActiveUser(activeUser);
+      setActiveUser({ ...activeUser });
       return;
     }
 
@@ -265,6 +247,18 @@ async function SettingsMenu({ title } : { title: string }) {
       })
       .then((usr) => setEditing({ updatedUser: usr, isEditing: false }));
   };
+
+  if (loading.user || loading.options) {
+    return (
+      <Box sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, pr: 1 }}>
+        <Typography variant="h2" color={theme.palette.text.primary} sx={{ fontSize: 48, mb: 2 }}>
+          {title || ''}
+        </Typography>
+        { resource ? <SettingsLink resource={resource} /> : ''}
+        <SettingsMenuTabSkeleton />
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ height: { xs: 500, sm: 'calc(100vh - 72px)' }, pr: 1 }}>
@@ -304,8 +298,8 @@ async function SettingsMenu({ title } : { title: string }) {
       {
         editing.isEditing
           ? (
-            <Stack direction="row" justifyContent="space-around">
-              <Button variant="outlined" onClick={handleUserSaveCancel}>Close</Button>
+            <Stack direction="row" justifyContent="space-around" sx={{ pt: 1 }}>
+              <Button variant="outlined" onClick={handleUserSaveCancel}>Cancel</Button>
               <Button variant="contained" onClick={handleUserSave}>Save</Button>
             </Stack>
           )

@@ -3,7 +3,7 @@
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-export default function TextTitle(props: { children: any }) {
+export default function ReaderPageTitle(props: { children: any }) {
   const theme = useTheme();
   const { children } = props;
 

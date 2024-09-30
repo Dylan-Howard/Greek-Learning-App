@@ -1,3 +1,4 @@
+import React from 'react';
 import Skeleton from '@mui/material/Skeleton/Skeleton';
 
 export function SettingsMenuTabSkeleton() {

@@ -7,9 +7,9 @@ import Stack from '@mui/material/Stack';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-import * as AzureTextService from '../services/AzureTextService';
+import * as AzureTextService from '../../services/AzureTextService';
 
-export default function TextControls(
+export default function ReaderPageControls(
   { chapterId, chapterPosition }: { chapterId: number, chapterPosition: string | undefined },
 ) {
   const router = useRouter();

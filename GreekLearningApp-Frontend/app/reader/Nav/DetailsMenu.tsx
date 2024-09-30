@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import * as AzureTextService from '../../services/AzureTextService';
-import { useReaderContext } from '../ReaderPageContext';
+import { useReaderContext } from '../ReaderPage/ReaderPageContext';
 
 function DetailsItem({ label, value } : { label: string, value: string }) {
   return (
@@ -24,7 +24,13 @@ async function DetailsMenu() {
     return <span>No active declension</span>;
   }
 
-  const unitForm = await AzureTextService.fetchMorphologyDetails(page.morphologyId);
+  let unitForm;
+  try {
+    unitForm = await AzureTextService.fetchMorphologyDetails(page.morphologyId);
+  } catch (err) {
+    return <span>No active declension</span>;
+  }
+
   if (!unitForm || !unitForm.content) {
     return <span>No active declension</span>;
   }

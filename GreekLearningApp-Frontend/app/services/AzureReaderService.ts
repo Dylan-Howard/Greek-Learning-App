@@ -30,7 +30,7 @@ const postData = async (resource: string, data: Object) => {
 export async function fetchPage(chapterId: number, userId: string): Promise<{
   selection: {
     texts: { textId: number, title: string }[],
-    chapters: { chapterId: number, title: string }[],
+    chapters: { chapterId: number, chapterNumber: number }[],
   }
   title: string,
   text: Unitv2[],

@@ -45,12 +45,12 @@ const themeTypography = {
   readerBody: {
     fontFamily: ['Noto Serif', 'serif'].join(''),
     fontSize: '1.1rem',
-    lineHeight: '2rem',
+    lineHeight: '1.2rem',
   },
   readerHelp: {
     fontFamily: ['Noto Serif', 'serif'].join(''),
     fontSize: '1rem',
-    lineHeight: '2rem',
+    lineHeight: '1.2rem',
   },
 };
 
