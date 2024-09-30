@@ -1,4 +1,3 @@
-using Koine.KoineUser;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -11,9 +10,9 @@ using System.Net;
 using Newtonsoft.Json;
 using Microsoft.Azure.Documents.Client;
 
-namespace Koine.GetUser
-{
-  public class GetUser
+namespace KoineUsers;
+
+public class GetUser
   {
     private readonly ILogger<GetUser> _logger;
 
@@ -23,7 +22,7 @@ namespace Koine.GetUser
     }
 
     [Function("GetUser")]
-    public async Task<IActionResult> Run(
+    public IActionResult Run(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "users/{id}")] HttpRequestData req,
       [CosmosDBInput("koineUsers", "user-container",
         Connection = "CosmosDbConnectionSetting",
@@ -38,7 +37,7 @@ namespace Koine.GetUser
         return new NotFoundResult(); 
       }
 
-      _logger.LogInformation($"Retrieved user: {user?.id}");
+      _logger.LogInformation($"Retrieved user: {user?.Id}");
 
       return new OkObjectResult(user);
     }
@@ -47,7 +46,7 @@ namespace Koine.GetUser
   class GetUsers {
 
     [Function("GetUsers")]
-    public async Task<IActionResult> Run(
+    public static IActionResult Run(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "users")]
         HttpRequestData req,
       [CosmosDBInput("koineUsers", "user-container",
@@ -61,7 +60,7 @@ namespace Koine.GetUser
   public class GetUserLessons
   {
     [Function("GetUserLessons")]
-    public async Task<IActionResult> Run(
+    public static IActionResult Run(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "users/{id}/lessons")] HttpRequestData req,
       [CosmosDBInput("koineUsers", "user-container",
         Connection = "CosmosDbConnectionSetting",
@@ -75,13 +74,13 @@ namespace Koine.GetUser
         return new NotFoundResult(); 
       }
 
-      return new OkObjectResult(user.progress?.lessons);
+      return new OkObjectResult(user.Progress?.Lessons);
     }
   }
   public class GetUserVocabulary
   {
     [Function("GetUserVocabulary")]
-    public async Task<IActionResult> Run(
+    public static IActionResult Run(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "users/{id}/vocabulary")] HttpRequestData req,
       [CosmosDBInput("koineUsers", "user-container",
         Connection = "CosmosDbConnectionSetting",
@@ -95,13 +94,13 @@ namespace Koine.GetUser
         return new NotFoundResult(); 
       }
 
-      return new OkObjectResult(user.progress?.vocabulary);
+      return new OkObjectResult(user.Progress?.Vocabulary);
     }
   }
   public class GetUserSettings
   {
     [Function("GetUserSettings")]
-    public async Task<IActionResult> Run(
+    public static IActionResult Run(
       [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "users/{id}/settings")] HttpRequestData req,
       [CosmosDBInput("koineUsers", "user-container",
         Connection = "CosmosDbConnectionSetting",
@@ -115,7 +114,6 @@ namespace Koine.GetUser
         return new NotFoundResult(); 
       }
 
-      return new OkObjectResult(user.settings);
+      return new OkObjectResult(user.Settings);
     }
   }
-}

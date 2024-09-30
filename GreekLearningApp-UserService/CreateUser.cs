@@ -1,21 +1,23 @@
-using Koine.KoineUser;
+using KoineUsers;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
-namespace Koine.CreateUser
-{
-  public class ResponseUser {
-    public string id { get; set; }
+namespace KoineUsers;
+
+public class ResponseUser {
+    [JsonPropertyName("id")]
+    public required string Id { get; set; }
   }
-  public class MultiResponse
+public class MultiResponse
   {
     [CosmosDBOutput("koineUsers", "user-container",
       Connection = "CosmosDbConnectionSetting", CreateIfNotExists = true)]
-    public required User User { get; set; }
+    public required User? User { get; set; }
     public required HttpResponseData HttpResponse { get; set; }
-  }
+}
   public class RegisterUser
   {
     private readonly ILogger<RegisterUser> _logger;
@@ -34,23 +36,23 @@ namespace Koine.CreateUser
 
       var user = new User
       {
-        id = reqUser?.id ?? Guid.NewGuid().ToString(),
-        name = reqUser?.name ?? "",
-        progress = reqUser?.progress ?? new UserProgress
+        Id = reqUser?.Id ?? Guid.NewGuid().ToString(),
+        Name = reqUser?.Name ?? "",
+        Progress = reqUser?.Progress ?? new UserProgress
         {
-          lessons = [],
-          vocabulary = []
+          Lessons = [],
+          Vocabulary = []
         },
-        settings = new UserSettings
+        Settings = new UserSettings
         {
-          prefersDarkMode = false,
-          translation = "esv"
+          PrefersDarkMode = false,
+          Translation = "esv"
         }
       };
 
       var response = req.CreateResponse(System.Net.HttpStatusCode.OK);
       // response.Headers.Add("Content-Type", "application/json");
-      await response.WriteAsJsonAsync(new ResponseUser { id = user.id });
+      await response.WriteAsJsonAsync(new ResponseUser { Id = user.Id });
 
       // Return a response to both HTTP trigger and Azure Cosmos DB output binding.
       return new MultiResponse()
@@ -60,4 +62,3 @@ namespace Koine.CreateUser
       };
     }
   }
-}
