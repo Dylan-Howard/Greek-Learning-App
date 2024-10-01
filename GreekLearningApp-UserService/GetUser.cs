@@ -22,7 +22,7 @@ public class GetUser
       }
 
       var response = req.CreateResponse(HttpStatusCode.OK);
-      await response.WriteAsJsonAsync(user.Progress?.Vocabulary);
+      await response.WriteAsJsonAsync(user);
 
       return response;
     }
