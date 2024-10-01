@@ -94,7 +94,7 @@ export async function updateUser(userData: User) {
   if (userData.id === 'guest') {
     return undefined;
   }
-  const user = await sendData(`users/${userData.id}`, 'PATCH', userData);
+  const user = await sendData(`users/${userData.id}`, 'POST', userData);
 
   return user || undefined;
 }
