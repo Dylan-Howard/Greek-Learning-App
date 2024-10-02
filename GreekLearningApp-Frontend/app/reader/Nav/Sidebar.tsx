@@ -2,7 +2,7 @@
 
 import {
   MouseEventHandler,
-  Suspense,
+  // Suspense,
   TouchEventHandler,
   useState,
 } from 'react';
@@ -16,7 +16,7 @@ import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import Container from '@mui/material/Container';
 
-import { SettingsMenuTabSkeleton } from 'app/modules/Skeletons';
+// import { SettingsMenuTabSkeleton } from 'app/modules/Skeletons';
 import DetailsMenu from './DetailsMenu';
 import SettingsMenu from './SettingsMenu';
 import { useReaderContext } from '../ReaderPage/ReaderPageContext';
@@ -118,13 +118,11 @@ export default function Sidebar() {
                 ? <MenuCloseButton onClose={() => handleClose()} />
                 : <MenuHandle onTouchClose={() => handleClose()} />
             }
-            {/* <Suspense fallback={<SettingsMenuTabSkeleton />}> */}
             {
                 page?.tabId === 3
                   ? <DetailsMenu />
                   : <SettingsMenu title={title} />
               }
-            {/* </Suspense> */}
           </Container>
         </Paper>
       </Slide>

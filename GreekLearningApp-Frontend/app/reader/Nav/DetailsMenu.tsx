@@ -1,10 +1,13 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
-import * as AzureTextService from '../../services/AzureTextService';
+import { DetailsSkeleton } from 'app/modules/Skeletons';
+import * as AzureTextService from 'app/services/AzureTextService';
 import { useReaderContext } from '../ReaderPage/ReaderPageContext';
 
 function DetailsItem({ label, value } : { label: string, value: string }) {
@@ -16,38 +19,56 @@ function DetailsItem({ label, value } : { label: string, value: string }) {
   );
 }
 
-async function DetailsMenu() {
+function DetailsMenu() {
   const { page } = useReaderContext();
+  const [content, setContent] = useState({
+    title: '',
+    formDetails: [{ field: '', value: '' }],
+    loading: true,
+  });
 
   /* Fetch morphology details */
   if (!page || !page.morphologyId) {
-    return <span>No active declension</span>;
+    return <DetailsSkeleton />;
   }
 
-  let unitForm;
-  try {
-    unitForm = await AzureTextService.fetchMorphologyDetails(page.morphologyId);
-  } catch (err) {
-    return <span>No active declension</span>;
-  }
+  useEffect(() => {
+    setContent({ ...content, loading: true });
+    AzureTextService.fetchMorphologyDetails(page.morphologyId)
+      .then((frm) => {
+        if (!frm) {
+          return;
+        }
+        console.log(frm);
 
-  if (!unitForm || !unitForm.content) {
-    return <span>No active declension</span>;
-  }
+        const newContent: {
+          title: string,
+          formDetails: { field: string, value: string }[],
+          loading: boolean,
+        } = {
+          title: frm.content || '',
+          formDetails: [],
+          loading: false,
+        };
+        newContent.formDetails.push({ field: 'Part of Speech', value: frm.posName });
+        if (frm.caseName) { newContent.formDetails.push({ field: 'Case', value: frm.caseName }); }
+        if (frm.tenseName) { newContent.formDetails.push({ field: 'Tense', value: frm.tenseName }); }
+        if (frm.voiceName) { newContent.formDetails.push({ field: 'Voice', value: frm.voiceName }); }
+        if (frm.moodName) { newContent.formDetails.push({ field: 'Mood', value: frm.moodName }); }
+        if (frm.personName) { newContent.formDetails.push({ field: 'Person', value: frm.peronName }); }
+        if (frm.numberName) { newContent.formDetails.push({ field: 'Number', value: frm.numberName }); }
+        if (frm.genderName) { newContent.formDetails.push({ field: 'Gender', value: frm.genderName }); }
+        if (frm.patternName) { newContent.formDetails.push({ field: 'Pattern', value: frm.patternName }); }
+        if (frm.degreeName) { newContent.formDetails.push({ field: 'Degree', value: frm.degreeName }); }
+        newContent.formDetails.push({ field: 'Root', value: frm.rootName });
 
-  const content = unitForm.content || '';
-  const details: { field: string, value: string }[] = [];
-  details.push({ field: 'Part of Speech', value: unitForm.posName });
-  if (unitForm.caseName) { details.push({ field: 'Case', value: unitForm.caseName }); }
-  if (unitForm.tenseName) { details.push({ field: 'Tense', value: unitForm.tenseName }); }
-  if (unitForm.voiceName) { details.push({ field: 'Voice', value: unitForm.voiceName }); }
-  if (unitForm.moodName) { details.push({ field: 'Mood', value: unitForm.moodName }); }
-  if (unitForm.personName) { details.push({ field: 'Person', value: unitForm.peronName }); }
-  if (unitForm.numberName) { details.push({ field: 'Number', value: unitForm.numberName }); }
-  if (unitForm.genderName) { details.push({ field: 'Gender', value: unitForm.genderName }); }
-  if (unitForm.patternName) { details.push({ field: 'Pattern', value: unitForm.patternName }); }
-  if (unitForm.degreeName) { details.push({ field: 'Degree', value: unitForm.degreeName }); }
-  details.push({ field: 'Root', value: unitForm.rootName });
+        setContent(newContent);
+      });
+  }, [page]);
+
+  if (content.loading) {
+    return <DetailsSkeleton />;
+  }
 
   return (
     <Box>
@@ -55,11 +76,11 @@ async function DetailsMenu() {
         variant="h2"
         sx={{ fontSize: 48, mb: 2, fontFamily: 'Noto Serif' }}
       >
-        {content}
+        {content.title}
       </Typography>
       <Grid container>
         {
-          details.map(({ field, value }) => (
+          content.formDetails.map(({ field, value }) => (
             <Grid item xs={6} key={`detail-${field}`}>
               <DetailsItem label={field} value={value} />
             </Grid>

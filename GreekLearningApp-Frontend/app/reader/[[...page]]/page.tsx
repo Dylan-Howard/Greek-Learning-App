@@ -1,11 +1,10 @@
 'use server';
 
+import { currentUser } from '@clerk/nextjs/server';
 import NextLink from 'next/link';
-import { SignedIn, SignedOut } from '@clerk/nextjs';
 
 import * as AzureReaderService from 'app/services/AzureReaderService';
 
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
@@ -14,11 +13,8 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Stack from '@mui/material/Stack';
 
-import AbcIcon from '@mui/icons-material/Abc';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import PersonIcon from '@mui/icons-material/Person';
 
 import ReaderInterface from '../ReaderPage/ReaderInterface';
 import Nav from '../Nav/Nav';
@@ -32,16 +28,19 @@ const DEFAULT_BOOK_ID = 1;
 const DEFAULT_CHAPTER_ID = 1;
 
 export default async function ReaderPage({ params } : { params: { page: string[] } }) {
-/* Text data */
+  const user = await currentUser();
+  const userId = user?.id || 'guest';
+
+  /* Text data */
   const [bookId, chapterId] = params.page ? params.page : ['1', '1'];
   const page = {
     bookId: parseInt(bookId, 10) || DEFAULT_BOOK_ID,
     chapterId: parseInt(chapterId, 10) || DEFAULT_CHAPTER_ID,
   };
 
-  const user = { id: 'guest' };
-
-  const data = await AzureReaderService.fetchPage(page.chapterId, user?.id || '');
+  // const user = { id: 'guest' };
+  console.log(userId);
+  const data = await AzureReaderService.fetchPage(page.chapterId, userId);
   if (!data) {
     throw new Error('Error fetching the reader page.');
   }
@@ -84,43 +83,7 @@ export default async function ReaderPage({ params } : { params: { page: string[]
             pb: { xs: 'calc(env(safe-area-inset-bottom) + 16px)', sm: 0 },
           }}
         >
-          <Nav>
-            <SignedIn>
-              <BottomNavigationAction
-                value={1}
-                label="Lessons"
-                icon={<LibraryBooksIcon />}
-              />
-              <BottomNavigationAction
-                value={2}
-                label="Vocab"
-                icon={<AbcIcon />}
-              />
-            </SignedIn>
-            <BottomNavigationAction
-              value={3}
-              label="Details"
-              icon={<LibraryBooksIcon />}
-            />
-            <SignedIn>
-              <NextLink href="/profile">
-                <BottomNavigationAction
-                  value={4}
-                  label="Profile"
-                  icon={<PersonIcon />}
-                />
-              </NextLink>
-            </SignedIn>
-            <SignedOut>
-              <NextLink href="/welcome">
-                <BottomNavigationAction
-                  value={4}
-                  label="Sign in"
-                  icon={<PersonIcon />}
-                />
-              </NextLink>
-            </SignedOut>
-          </Nav>
+          <Nav />
         </Box>
         <Sidebar />
         {/* Reader Page */}

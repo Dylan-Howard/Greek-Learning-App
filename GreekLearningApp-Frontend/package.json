@@ -4,6 +4,7 @@
   "private": false,
   "homepage": "https://dylan-howard.github.io/Greek-Learning-App/",
   "dependencies": {
+    "@clerk/clerk-react": "^5.9.4",
     "@clerk/nextjs": "^5.6.0",
     "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.11.4",
