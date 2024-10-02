@@ -38,8 +38,6 @@ export default async function ReaderPage({ params } : { params: { page: string[]
     chapterId: parseInt(chapterId, 10) || DEFAULT_CHAPTER_ID,
   };
 
-  // const user = { id: 'guest' };
-  console.log(userId);
   const data = await AzureReaderService.fetchPage(page.chapterId, userId);
   if (!data) {
     throw new Error('Error fetching the reader page.');
