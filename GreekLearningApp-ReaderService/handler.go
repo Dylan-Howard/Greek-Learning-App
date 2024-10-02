@@ -18,20 +18,14 @@ type Text struct {
 
 type Chapter struct {
 	ChapterId			int			`json:"chapterId"`
-	ChapterNumber	int	`json:"chapterNumber"`
+	ChapterNumber	int			`json:"chapterNumber"`
 	TextId				int			`json:"textId"`
 }
 
 type Unit struct {
-	UnitId int	`json:"unitId"`
-	Content string	`json:"content"`
-	MorphologyId int	`json:"morphologyId"`
-}
-
-type Translation struct {
-	TranslationId int			`json:"translationId"`
 	UnitId 				int			`json:"unitId"`
 	Content 			string	`json:"content"`
+	MorphologyId int			`json:"morphologyId"`
 }
 
 type Root struct {
@@ -77,6 +71,13 @@ type UnitMorphology struct {
 	PatternId			int			`json:"patternId"`
 	DegreeId			int			`json:"degreeId"`
 	RootId				int			`json:"rootId"`
+}
+
+type UnitTranslation struct {
+	TranslationId		int			`json:"translationId"`
+	TranslationGuid	string	`json:"translationGuid"`
+	UnitId					int			`json:"unitId"`
+	Content					string	`json:"content"`
 }
 
 func (m UnitMorphology) GetAbbreviation(g Grammar) string {
@@ -129,9 +130,14 @@ func (m UnitMorphology) GetAbbreviation(g Grammar) string {
 }
 
 func (m UnitMorphology) GetTranslation(tranlationId string) string {
-	var translation, _ = fetchTranslation(m.UnitId);
-	// return m.Content + "(To be translated)"
-	return translation.Content;
+	// Ignore translation id until multiple translations exists
+
+	translation, err := fetchTranslation(m.UnitId);
+	if (err != nil) {
+		return m.Content + " (Error translating)"
+	}
+
+	return translation.Content
 }
 
 type UnitLessons struct {
@@ -474,21 +480,21 @@ func fetchRoots(chapterId int)  ([]Root, error) {
 	return roots, nil;
 }
 
-func fetchTranslation(unitId int)  (*Translation , error) {
+func fetchTranslation(unitId int) (UnitTranslation, error) {
 	resp := fetch(API_URL, "units/" + strconv.Itoa(unitId) + "/translation")
 	defer resp.Body.Close()
 
 	/* Decode the request body into the user struct */
-	var translation Translation
+	var translation UnitTranslation
 	decoder := json.NewDecoder(resp.Body)
 	err := decoder.Decode(&translation)
 	if err != nil {
 		log.Println(err)
 		log.Println("Failed to decode")
-		return nil, err
+		return UnitTranslation{}, err
 	}
 
-	return &translation, nil;
+	return translation, nil;
 }
 
 func fetchUser(userId string) (User, error) {

@@ -4,12 +4,14 @@
   "private": false,
   "homepage": "https://dylan-howard.github.io/Greek-Learning-App/",
   "dependencies": {
-    "@azure/msal-browser": "^3.11.0",
-    "@azure/msal-react": "^2.0.13",
+    "@clerk/clerk-react": "^5.9.4",
+    "@clerk/nextjs": "^5.6.0",
+    "@emotion/cache": "^11.13.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.14",
     "@mui/material": "^5.15.14",
+    "@mui/material-nextjs": "^5.16.6",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -17,6 +19,7 @@
     "@types/node": "^16.18.68",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.17",
+    "next": "^14.2.5",
     "react": "^18.2.0",
     "react-cookie": "^7.1.0",
     "react-dom": "^18.2.0",
@@ -26,12 +29,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

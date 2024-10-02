@@ -1,55 +1,35 @@
-using System.Collections.Generic;
-using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Extensions.Sql;
-using Microsoft.Azure.Functions.Worker.Http;
-using Microsoft.Extensions.Logging;
 
-namespace Koine.GetTranslation
+namespace KoineTexts;
+public class Translation
 {
-  public class Translation
-  {
-    public Guid translationGUID { get; set; }
-    public int translationId { get; set; }
-    public required string content { get; set; }
-  }
-  public class GetTranslation
-  {
-
+    [JsonPropertyName("translationGuid")]
+    public Guid TranslationGuid { get; set; }
+    [JsonPropertyName("translationId")]
+    public int TranslationId { get; set; }
+    [JsonPropertyName("unitId")]
+    public int UnitId { get; set; }
+    [JsonPropertyName("content")]
+    public required string Content { get; set; }
+}
+public class GetTranslation
+{
     [Function("GetTranslation")]
     public static IActionResult Run(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "units/{untiId}/translation")]
-      HttpRequest req,
-      [SqlInput(commandText: "select * from dbo.[Translation] where [unitId] = @Id",
-        commandType: System.Data.CommandType.Text,
-        parameters: "@Id={untiId}",
-        connectionStringSetting: "SqlConnectionString")]
-    IEnumerable<Translation> translation)
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "units/{unitId}/translation")]
+        HttpRequest req,
+        [SqlInput(commandText: "select * from dbo.[Translation] where [unitId] = @Id",
+            commandType: System.Data.CommandType.Text,
+            parameters: "@Id={unitId}",
+            connectionStringSetting: "SqlConnectionString")]
+    IEnumerable<Translation> translations)
     {
-      return new OkObjectResult(translation.FirstOrDefault());
+        return new OkObjectResult(translations.FirstOrDefault());
     }
-  }
-
-  public class GetTranslations
-  {
-    [Function("GetTranslations")]
-    public static IActionResult Run(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "translations")]
-      HttpRequest req,
-      [SqlInput(commandText: "select [translationId], [content] from dbo.[Translation]",
-        commandType: System.Data.CommandType.Text,
-        parameters: "",
-        connectionStringSetting: "SqlConnectionString")] IEnumerable<Translation> translations,
-      FunctionContext executionContext
-      )
-    {
-      var logger = executionContext.GetLogger("GetTranslations");
-      logger.LogInformation("C# HTTP trigger function processed a request.");
-
-      return new OkObjectResult(translations);
-    }
-  }
 }
+
 

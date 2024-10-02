@@ -1,66 +1,62 @@
-using Koine.KoineUser;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Azure.Functions.Worker.Http;
-using Microsoft.Extensions.Logging;
-using System.Text.Json;
+using System.Net;
 
-namespace Koine.UpdateUser
-{
-  public class ResponseUser {
-    public string id { get; set; }
-  }
-  public class MultiResponse
+namespace KoineUsers;
+
+public class UserUpdateResponse
   {
     [CosmosDBOutput("koineUsers", "user-container",
-      Connection = "CosmosDbConnectionSetting", CreateIfNotExists = true)]
+      Connection = "CosmosDbConnectionSetting")]
     public required User? User { get; set; }
     public required HttpResponseData HttpResponse { get; set; }
-  }
-  public class RegisterUser
+}
+
+public class UpdateUser
+{
+  [Function("UpdateUser")]
+  public static async Task<UserUpdateResponse> RunAsync(
+    [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = "users/{id}")] HttpRequestData req,
+    string id)
   {
-    private readonly ILogger<RegisterUser> _logger;
+    User? requestUser = await req.ReadFromJsonAsync<User>();
 
-    public RegisterUser(ILogger<RegisterUser> logger)
-    {
-      _logger = logger;
-    }
+    if (id == null || requestUser == null) {
+      var notFoundResponse = req.CreateResponse(HttpStatusCode.NotFound);
 
-    [Function("UpdateUser")]
-    public static async Task<MultiResponse> RunAsync(
-      [HttpTrigger(AuthorizationLevel.Anonymous, "patch", Route = "users/{id}")] HttpRequestData req,
-      string id)
-    {
-      string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-      User? reqUser = JsonSerializer.Deserialize<User>(requestBody);
-
-      if (id != null) {
-        var user = new User
-        {
-          id = id,
-          name = reqUser?.name ?? "",
-          progress = reqUser?.progress,
-          settings = reqUser?.settings,
-        };
-
-        var okResponse = req.CreateResponse(System.Net.HttpStatusCode.OK);
-        await okResponse.WriteAsJsonAsync(new ResponseUser { id = id });
-
-        // Return a response to both HTTP trigger and Azure Cosmos DB output binding.
-        return new MultiResponse()
-        {
-          User = user,
-          HttpResponse = okResponse
-        };
-      }
-
-      var response = req.CreateResponse(System.Net.HttpStatusCode.NotFound);
-
-      // Return a response to both HTTP trigger and Azure Cosmos DB output binding.
-      return new MultiResponse()
+      return new UserUpdateResponse
       {
         User = null,
-        HttpResponse = response
+        HttpResponse = notFoundResponse
       };
     }
+
+    if (id != requestUser.Id) {
+      var badRequestRepsonse = req.CreateResponse(HttpStatusCode.BadRequest);
+
+      return new UserUpdateResponse
+      {
+        User = null,
+        HttpResponse = badRequestRepsonse
+      };
+    }
+
+    var user = new User
+    {
+      Id = requestUser.Id,
+      Name = requestUser.Name,
+      Progress = requestUser.Progress,
+      Settings = requestUser.Settings,
+    };
+
+    var okResponse = req.CreateResponse(HttpStatusCode.OK);
+    await okResponse.WriteAsJsonAsync(new ResponseUser { Id = user.Id });
+    
+    // Return a response to both HTTP trigger and Azure Cosmos DB output binding.
+    return new UserUpdateResponse
+    {
+      User = user,
+      HttpResponse = okResponse
+    };
   }
 }

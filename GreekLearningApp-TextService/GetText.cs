@@ -7,23 +7,6 @@ using Microsoft.Azure.Functions.Worker.Extensions.Sql;
 using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 
-// namespace AzureSQL.Koine
-// {
-//     public class Text
-//     {
-//         public Guid textGUID { get; set; }
-//         public string title { get; set; }
-//     }
-
-//     public class Chapter
-//     {
-//         public Guid chapterGUID { get; set; }
-//         public int chapterId { get; set; }
-//         public int chapterNumber { get; set; }
-//         public Guid textId { get; set; }
-//     }
-// }
-
 namespace Koine.GetText
 {
   public class Text
