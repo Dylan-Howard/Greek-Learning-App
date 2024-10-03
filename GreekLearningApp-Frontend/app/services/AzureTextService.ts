@@ -1,8 +1,9 @@
-const { NEXT_PUBLIC_API_URL } = process.env;
+const API_URL = process.env['NEXT_PUBLIC_API_URL'];
 
 const fetchData = async (resource: string) => {
   try {
-    const response = await fetch(`${NEXT_PUBLIC_API_URL}/${resource}`);
+    console.log(`${API_URL}/${resource}`);
+    const response = await fetch(`${API_URL}/${resource}`);
 
     if (!response.ok) {
       throw new Error(`Error fetching data: ${response.statusText}`);

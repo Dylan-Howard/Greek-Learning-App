@@ -1,11 +1,12 @@
 import { Unitv2 } from 'app/modules/Text';
 
-const { NEXT_PUBLIC_API_URL } = process.env;
+const API_URL = process.env['NEXT_PUBLIC_API_URL'];
 
 const postData = async (resource: string, data: Object) => {
   try {
+    console.log(`${API_URL}/${resource}`);
     const response = await fetch(
-      `${NEXT_PUBLIC_API_URL}/${resource}`,
+      `${API_URL}/${resource}`,
       {
         method: 'POST',
         cache: 'force-cache',
