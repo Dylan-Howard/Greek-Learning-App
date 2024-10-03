@@ -1,6 +1,6 @@
 import { Unitv2 } from 'app/modules/Text';
 
-const API_URL = process.env['NEXT_PUBLIC_API_URL'];
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const postData = async (resource: string, data: Object) => {
   try {

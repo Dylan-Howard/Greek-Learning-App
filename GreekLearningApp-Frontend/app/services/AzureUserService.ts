@@ -1,7 +1,7 @@
 import users from './data/userData.json';
 import { User } from './User';
 
-const API_URL = process.env['NEXT_PUBLIC_API_URL'];
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const fetchData = async (resource: string) => {
   try {
