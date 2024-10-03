@@ -57,13 +57,11 @@ const OptionSwitch = styled(Switch)(({ theme }) => ({
 function OptionCheckbox(
   {
     id,
-    // type,
     name,
     value,
     onCheck,
   }: {
     id: string,
-    // type: string,
     name: string,
     value: boolean,
     onCheck: ChangeEventHandler<HTMLInputElement>,

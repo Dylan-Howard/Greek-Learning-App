@@ -19,8 +19,6 @@ export default async function Vocabulary() {
   const data = await AzureTextService.fetchVocabulary();
   words = data;
 
-  // console.log(words);
-
   return (
     <Grid container justifyContent="center" sx={{ mt: 4 }}>
       <Grid item sm={11} sx={{ mb: 8 }}>

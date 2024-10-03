@@ -39,7 +39,6 @@ function DetailsMenu() {
         if (!frm) {
           return;
         }
-        console.log(frm);
 
         const newContent: {
           title: string,

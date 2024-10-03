@@ -181,7 +181,6 @@ function SettingsMenu({ title } : { title: string }) {
     if (!activeUser || activeUser.id === 'guest') { return; }
 
     if (!editing.isEditing) {
-      console.log('Editing on.');
       setEditing({
         updatedUser: activeUser,
         isEditing: true,
@@ -241,10 +240,6 @@ function SettingsMenu({ title } : { title: string }) {
     }
 
     AzureUserService.updateUser(activeUser)
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.log(err);
-      })
       .then((usr) => setEditing({ updatedUser: usr, isEditing: false }));
   };
 

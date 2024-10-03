@@ -4,7 +4,6 @@ const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 const postData = async (resource: string, data: Object) => {
   try {
-    console.log(`${API_URL}/${resource}`);
     const response = await fetch(
       `${API_URL}/${resource}`,
       {

@@ -12,23 +12,16 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
 
   useEffect(() => {
     if (!isLoaded || !isSignedIn || !user) {
-      console.log('preventing user data error');
       return;
     }
-
-    console.log('updating user data');
 
     const userId = user.id;
 
     UserService.fetchUser(userId)
       .then((usr) => {
-        console.log(usr);
         setActiveUser(usr);
       });
   }, [user]);
-
-  console.log(activeUser);
-  console.log(user);
 
   return (
     <UserContext.Provider

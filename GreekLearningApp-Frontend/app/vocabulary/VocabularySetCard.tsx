@@ -25,7 +25,6 @@ function VocabularySetCard(
     progress: number,
   },
 ) {
-  console.log(link);
   return (
     <Card sx={{ m: 1, p: 2 }}>
       <CardContent sx={{ p: 0, mb: 2 }}>
