@@ -36,12 +36,15 @@
     ".next/types/**/*.ts",
     "./dist/types/**/*.ts",
     "app/(client)/profile",
-    "app/Auth"
-],
+    "app/Auth",
+    "./build/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules"
   ],
   "paths": {
-    "@app": ["./app"]
+    "@app": [
+      "./app"
+    ]
   }
 }
