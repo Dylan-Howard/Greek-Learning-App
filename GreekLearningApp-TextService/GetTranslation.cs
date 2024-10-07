@@ -18,6 +18,7 @@ public class Translation
 }
 public class GetTranslation
 {
+
     [Function("GetTranslation")]
     public static IActionResult Run(
         [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "units/{unitId}/translation")]

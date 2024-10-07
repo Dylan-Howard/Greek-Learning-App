@@ -15,9 +15,9 @@ namespace Koine.UpdateWord
   public class OutputType
   {
     [SqlOutput("dbo.[Root]", connectionStringSetting: "SqlConnectionString")]
-    public Word Word { get; set; }
+    public Word? Word { get; set; }
 
-    public HttpResponseData HttpResponse { get; set; }
+    public required HttpResponseData HttpResponse { get; set; }
   }
   public static class UpdateWord
   {
@@ -31,6 +31,13 @@ namespace Koine.UpdateWord
 
       string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
       Word? word = JsonSerializer.Deserialize<Word>(requestBody);
+
+      if (word == null) {
+        return new OutputType {
+          Word = null,
+          HttpResponse = req.CreateResponse(System.Net.HttpStatusCode.InternalServerError)
+        };
+      }
 
       return new OutputType()
       {

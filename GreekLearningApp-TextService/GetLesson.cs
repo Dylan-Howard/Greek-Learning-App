@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -7,9 +8,12 @@ namespace Koine.GetLesson
 {
   public class Lesson
   {
-    public Guid lessonGUID { get; set; }
-    public int lessonId { get; set; }
-    public string title { get; set; }
+    [JsonPropertyName("lessonGUID")]
+    public Guid LessonGUID { get; set; }
+    [JsonPropertyName("lessonId")]
+    public int LessonId { get; set; }
+    [JsonPropertyName("title")]
+    public required string Title { get; set; }
   }
   public class GetLesson
   {

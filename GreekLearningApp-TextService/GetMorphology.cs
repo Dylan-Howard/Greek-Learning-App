@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -10,54 +11,96 @@ namespace Koine.GetMorphology
 {
   public class Morphology
   {
-    public int morphologyId { get; set; }
-    public Guid morphologyGUID { get; set; }
-    public string content { get; set; }
-    public int posId { get; set; }
-    public int? caseId { get; set; }
-    public int? tenseId { get; set; }
-    public int? voiceId { get; set; }
-    public int? moodId { get; set; }
-    public int? personId { get; set; }
-    public int? numberId { get; set; }
-    public int? genderId { get; set; }
-    public int? patternId { get; set; }
-    public int? degreeId { get; set; }
-    public int rootId { get; set; }
+    [JsonPropertyName("morphologyId")]
+    public int MorphologyId { get; set; }
+    [JsonPropertyName("morphologyGUID")]
+    public Guid MorphologyGUID { get; set; }
+    [JsonPropertyName("content")]
+    public required string Content { get; set; }
+    [JsonPropertyName("posId")]
+    public int PosId { get; set; }
+    [JsonPropertyName("caseId")]
+    public int? CaseId { get; set; }
+    [JsonPropertyName("tenseId")]
+    public int? TenseId { get; set; }
+    [JsonPropertyName("voiceId")]
+    public int? VoiceId { get; set; }
+    [JsonPropertyName("moodId")]
+    public int? MoodId { get; set; }
+    [JsonPropertyName("personId")]
+    public int? PersonId { get; set; }
+    [JsonPropertyName("numberId")]
+    public int? NumberId { get; set; }
+    [JsonPropertyName("genderId")]
+    public int? GenderId { get; set; }
+    [JsonPropertyName("patternId")]
+    public int? PatternId { get; set; }
+    [JsonPropertyName("degreeId")]
+    public int? DegreeId { get; set; }
+    [JsonPropertyName("rootId")]
+    public int RootId { get; set; }
   }
   public class MorphologyDetails
   {
-    public int morphologyId { get; set; }
-    public string content { get; set; }
-    public string posName { get; set; }
-    public string? caseName { get; set; }
-    public string? tenseName { get; set; }
-    public string? voiceName { get; set; }
-    public string? moodName { get; set; }
-    public string? personName { get; set; }
-    public string? numberName { get; set; }
-    public string? genderName { get; set; }
-    public string? patternName { get; set; }
-    public string? degreeName { get; set; }
-    public string rootName { get; set; }
+    [JsonPropertyName("morphologyId")]
+    public int MorphologyId { get; set; }
+    [JsonPropertyName("content")]
+    public required string Content { get; set; }
+    [JsonPropertyName("posName")]
+    public required string PosName { get; set; }
+    [JsonPropertyName("caseName")]
+    public string? CaseName { get; set; }
+    [JsonPropertyName("tenseName")]
+    public string? TenseName { get; set; }
+    [JsonPropertyName("voiceName")]
+    public string? VoiceName { get; set; }
+    [JsonPropertyName("moodName")]
+    public string? MoodName { get; set; }
+    [JsonPropertyName("personName")]
+    public string? PersonName { get; set; }
+    [JsonPropertyName("numberName")]
+    public string? NumberName { get; set; }
+    [JsonPropertyName("genderName")]
+    public string? GenderName { get; set; }
+    [JsonPropertyName("patternName")]
+    public string? PatternName { get; set; }
+    [JsonPropertyName("degreeName")]
+    public string? DegreeName { get; set; }
+    [JsonPropertyName("rootName")]
+    public string RootName { get; set; }
   }
   public class UnitMorphology
   {
-    public int unitId { get; set; }
-    public int verseNumber { get; set; }
-    public string content { get; set; }
-    public int morphologyId { get; set; }
-    public int posId { get; set; }
-    public int? caseId { get; set; }
-    public int? tenseId { get; set; }
-    public int? voiceId { get; set; }
-    public int? moodId { get; set; }
-    public int? personId { get; set; }
-    public int? numberId { get; set; }
-    public int? genderId { get; set; }
-    public int? patternId { get; set; }
-    public int? degreeId { get; set; }
-    public int rootId { get; set; }
+    [JsonPropertyName("unitId")]
+    public int UnitId { get; set; }
+    [JsonPropertyName("verseNumber")]
+    public int VerseNumber { get; set; }
+    [JsonPropertyName("content")]
+    public required string Content { get; set; }
+    [JsonPropertyName("morphologyId")]
+    public int MorphologyId { get; set; }
+    [JsonPropertyName("posId")]
+    public int PosId { get; set; }
+    [JsonPropertyName("caseId")]
+    public int? CaseId { get; set; }
+    [JsonPropertyName("tenseId")]
+    public int? TenseId { get; set; }
+    [JsonPropertyName("voiceId")]
+    public int? VoiceId { get; set; }
+    [JsonPropertyName("moodId")]
+    public int? MoodId { get; set; }
+    [JsonPropertyName("personId")]
+    public int? PersonId { get; set; }
+    [JsonPropertyName("numberId")]
+    public int? NumberId { get; set; }
+    [JsonPropertyName("genderId")]
+    public int? GenderId { get; set; }
+    [JsonPropertyName("patternId")]
+    public int? PatternId { get; set; }
+    [JsonPropertyName("degreeId")]
+    public int? DegreeId { get; set; }
+    [JsonPropertyName("rootId")]
+    public int RootId { get; set; }
   }
   public class GetMorphology
   {

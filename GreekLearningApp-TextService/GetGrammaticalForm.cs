@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -10,11 +11,16 @@ namespace Koine.GetGrammaticalForm
 {
   public class GrammaticalForm
   {
-    public Guid grammarGUID { get; set; }
-    public int grammarId { get; set; }
-    public string name { get; set; }
-    public string abbreviation { get; set; }
-    public int lessonId { get; set; }
+    [JsonPropertyName("grammarGUID")]
+    public Guid GrammarGUID { get; set; }
+    [JsonPropertyName("grammarId")]
+    public int GrammarId { get; set; }
+    [JsonPropertyName("name")]
+    public required string Name { get; set; }
+    [JsonPropertyName("abbreviation")]
+    public required string Abbreviation { get; set; }
+    [JsonPropertyName("lessonId")]
+    public int LessonId { get; set; }
   }
   public class GetGrammaticalForm
   {

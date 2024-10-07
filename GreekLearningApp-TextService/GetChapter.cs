@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -10,9 +11,12 @@ namespace Koine.GetChapter
 {
     public class Chapter
     {
-      public int chapterId { get; set; }
-      public int chapterNumber { get; set; }
-      public int textId { get; set; }
+      [JsonPropertyName("chapterId")]
+      public int ChapterId { get; set; }
+      [JsonPropertyName("chapterNumber")]
+      public int ChapterNumber { get; set; }
+      [JsonPropertyName("textId")]
+      public int TextId { get; set; }
     }
     public class GetChapter
     {

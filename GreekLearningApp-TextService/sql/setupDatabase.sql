@@ -80,3 +80,15 @@ CREATE TABLE [Translation] (
 	unitID INT NOT NULL FOREIGN KEY REFERENCES Unit(unitId),
 	[content] NVARCHAR(64) NOT NULL
 )
+
+CREATE TABLE [Set] (
+	setId INT IDENTITY(1, 1) PRIMARY KEY,
+  title NVARCHAR(48),
+  [description] NVARCHAR(48)
+);
+
+CREATE TABLE [SetMembership] (
+  setMembershipId INT IDENTITY(1, 1) PRIMARY KEY,
+	setId INT NOT NULL FOREIGN KEY REFERENCES [Set](setId),
+  rootId Int NOT NULL FOREIGN KEY REFERENCES [Root](rootId)
+);

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -10,18 +11,29 @@ namespace Koine.GetSelections
 {
   public class Selections
   {
-    public TextSelection[] texts { get; set; }
-    public ChapterSelection[] chapters { get; set; }
+    [JsonPropertyName("texts")]
+    public required TextSelection[] Texts { get; set; }
+    [JsonPropertyName("chapters")]
+    public required ChapterSelection[] Chapters { get; set; }
   }
   public class TextSelection
   {
-    public int textId { get; set; }
-    public string title { get; set; }
+      [JsonPropertyName("textId")]
+      public int TextId { get; set; }
+      [JsonPropertyName("title")]
+      public required string Title { get; set; }
+
+      public TextSelection(string title)
+      {
+          Title = title ?? "";
+      }
   }
   public class ChapterSelection
   {
-    public int chapterId { get; set; }
-    public int chapterNumber { get; set; }
+    [JsonPropertyName("chapterId")]
+    public int ChapterId { get; set; }
+    [JsonPropertyName("chapterNumber")]
+    public int ChapterNumber { get; set; }
   }
     
   public class GetSelectionsByTextId
@@ -44,8 +56,8 @@ namespace Koine.GetSelections
     {
       var selections = new Selections
       {
-        texts = texts.ToArray(),
-        chapters = chapters.ToArray(),
+        Texts = texts.ToArray(),
+        Chapters = chapters.ToArray(),
       };
       
       return new OkObjectResult(selections);

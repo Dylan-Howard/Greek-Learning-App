@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -10,12 +11,18 @@ namespace Koine.GetUnit
 {
   public class Unit
   {
-    public Guid unitGUID { get; set; }
-    public int unitId { get; set; }
-    public int unitPlacement { get; set; }
-    public string content { get; set; }
-    public int morphologyId { get; set; }
-    public int verseId { get; set; }
+    [JsonPropertyName("unitGUID")]
+    public Guid UnitGUID { get; set; }
+    [JsonPropertyName("unitId")]
+    public int UnitId { get; set; }
+    [JsonPropertyName("unitPlacement")]
+    public int UnitPlacement { get; set; }
+    [JsonPropertyName("content")]
+    public required string Content { get; set; }
+    [JsonPropertyName("morphologyId")]
+    public int MorphologyId { get; set; }
+    [JsonPropertyName("verseId")]
+    public int VerseId { get; set; }
   }
   public class GetUnit
   {

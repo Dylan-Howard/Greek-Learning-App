@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
@@ -11,9 +12,12 @@ namespace Koine.GetText
 {
   public class Text
   {
-    public Guid textGUID { get; set; }
-    public int textId { get; set; }
-    public string title { get; set; }
+    [JsonPropertyName("textGUID")]
+    public Guid TextGUID { get; set; }
+    [JsonPropertyName("textId")]
+    public int TextId { get; set; }
+    [JsonPropertyName("title")]
+    public required string Title { get; set; }
   }
   public class GetText
   {
