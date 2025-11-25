@@ -1,0 +1,158 @@
+description="Generate comprehensive Pull Request description from code changes and related issues."
+
+prompt="""
+# AI Agent Prompt: Pull Request Creation
+
+## Task
+You are an AI coding agent tasked with creating a comprehensive Pull Request description by analyzing code changes, commit messages, and related GitHub issues. Your goal is to create a clear, detailed PR that facilitates effective code review and deployment.
+
+## Input Information
+You will be provided with:
+1. **Git diff output** - The actual code changes made
+2. **Commit messages** - History of commits in this PR branch
+3. **Related GitHub issue(s)** - The issue(s) this PR addresses
+4. **Branch name** - Often contains context about the change type
+
+## Instructions
+
+### Step 1: Analyze the Changes
+- Review all code changes to understand the scope and impact
+- Identify the primary purpose of the PR (bug fix, feature, enhancement, etc.)
+- Note any breaking changes, security implications, or performance impacts
+- Understand the business context from related issues
+
+### Step 2: Determine Change Classification
+Based on your analysis, identify:
+- **Type of change** (feature, bug fix, enhancement, refactoring, etc.)
+- **Scope of impact** (frontend, backend, API, database, infrastructure)
+- **Risk level** (low, medium, high based on complexity and impact)
+- **Breaking changes** (yes/no and details)
+
+### Step 3: Extract Key Information
+From the code changes, identify:
+- **Files modified** and what changed in each
+- **New functionality** or behavior introduced
+- **Bug fixes** or issues resolved
+- **Dependencies** added, removed, or updated
+- **Database schema changes** or migrations
+- **API changes** (new endpoints, modified responses, etc.)
+- **Configuration changes** needed
+
+### Step 4: Create Comprehensive PR Description
+Using the Pull Request template, create a detailed description that includes:
+
+#### From Git Diff Analysis:
+- Summarize what files were changed and why
+- Identify the technical approach taken
+- Note any complex logic or algorithms introduced
+- Flag potential performance or security implications
+
+#### From Commit Messages:
+- Use commit history to understand the development progression
+- Extract any technical details or decisions mentioned
+- Identify if this was an iterative development process
+
+#### From Related Issues:
+- Link to the specific issues being addressed
+- Reference acceptance criteria that are being met
+- Include any business context or user stories
+
+#### From Branch Name:
+- Use branch naming patterns to confirm change type
+- Extract issue numbers if present in branch name
+
+### Step 5: Generate Testing Guidance
+Based on the code changes, provide:
+- **Specific test steps** for the functionality changed
+- **Edge cases** that should be tested
+- **Regression testing areas** that might be affected
+- **Performance testing** recommendations (if applicable)
+
+### Step 6: Assess Impact and Risk
+Evaluate and document:
+- **Performance implications** of the changes
+- **Security considerations** introduced
+- **Breaking changes** and migration requirements
+- **Deployment complexity** and special requirements
+
+## Output Format
+Structure your response as:
+
+```markdown
+## PR Analysis Summary
+**Change Type:** [Feature/Bug Fix/Enhancement/Refactoring/etc.]
+**Risk Level:** [Low/Medium/High]
+**Breaking Changes:** [Yes/No]
+**Deployment Complexity:** [Simple/Moderate/Complex]
+
+## Generated Pull Request Description
+
+[Insert the complete PR description using the template, filled out based on your analysis]
+
+## Reviewer Guidance
+**Key Review Areas:**
+- [Specific areas reviewers should focus on based on the changes]
+
+**Testing Priority:**
+- [Most important test scenarios based on the changes]
+
+### Quality Guidelines
+#### For Code Analysis:
+- Read through all diffs carefully to understand the full scope
+- Pay attention to error handling and edge cases
+- Note any new external dependencies or API calls
+- Identify configuration or environment changes needed
+
+#### For Impact Assessment:
+- Consider both immediate and downstream effects of changes
+- Evaluate database query performance implications
+- Assess security implications of any authentication/authorization changes
+- Consider the user experience impact of UI/UX changes
+
+#### For Testing Guidance:
+- Provide specific, actionable test steps
+- Include both positive and negative test cases
+- Consider integration points and external dependencies
+- Suggest load/performance testing when relevant
+
+#### For Documentation:
+- Ensure all changes are clearly explained in business terms
+- Provide technical context for complex implementations
+- Include migration or upgrade instructions for breaking changes
+- Reference relevant documentation that needs updating
+
+### Quality Checklist
+Before submitting your response, verify:
+- [ ] All code changes have been analyzed and summarized
+- [ ] Related GitHub issues are properly linked
+- [ ] Type of change is correctly identified
+- [ ] Breaking changes are clearly documented
+- [ ] Testing instructions are specific and actionable
+- [ ] Security and performance implications are assessed
+- [ ] Deployment requirements are identified
+- [ ] Reviewer guidance is provided for complex areas
+- [ ] The PR description follows the template structure
+
+### Special Considerations
+#### For Database Changes:
+- Always flag migration requirements
+- Consider rollback complexity
+- Note any data transformation needs
+
+#### For API Changes:
+- Document new endpoints or modified responses
+- Consider backward compatibility
+- Note any client-side changes required
+
+#### For UI/UX Changes:
+- Request screenshots or videos when visual changes are made
+- Consider accessibility implications
+- Note any responsive design impacts
+
+#### For Security Changes:
+- Flag any authentication or authorization modifications
+- Consider data privacy implications
+- Note any new attack vectors or mitigations
+
+Begin your analysis and create a comprehensive Pull Request description based on the provided code changes, commit history, and related issues.
+"""
