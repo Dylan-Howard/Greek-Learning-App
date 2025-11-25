@@ -37,7 +37,7 @@ This plan is broken into phases to de-risk the migration and allow for iterative
 
 1.  **Schema Replication (SQL):** Use the Supabase SQL Editor to run the contents of your `setupDatabase.sql` file. Tweak it as necessary to create all the tables, relationships, and indexes for your `TextService` data.
 2.  **Data Migration (SQL):**
-    *   Write a one-off script (e.g., in Node.js or Python) to export data from Azure SQL.
+    *   Write a one-off script (e.g., in Node.js or Python) to export Text data from CSV.
     *   Use the `supabase-js` client library (or a direct Postgres connection with the `service_role` key) in your script to import the data into your new Supabase tables.
 3.  **Data Migration (CosmosDB & Users):**
     *   Create tables in Supabase for your `User`, `UserSettings`, `UserWords`, etc. Use `JSONB` columns where you need the schema flexibility you had with CosmosDB.
@@ -49,10 +49,10 @@ This plan is broken into phases to de-risk the migration and allow for iterative
 
 **Phase 2: Backend Logic Migration (Azure Functions -> Edge Functions)**
 
-1.  **Organize Functions:** In your `GreekLearningApp-Frontend` repo (or a new repo), create a `supabase/functions` directory. Inside, mirror your old services: `text-service`, `user-service`, etc.
+1.  **Organize Functions:** Create new repos to host individual services and segment CI/CD pipelines.
 2.  **Port Logic (C#/.NET/Go -> TypeScript):**
     *   Go through each Azure Function one by one.
-    *   Rewrite the business logic from C#/Go into a TypeScript Supabase Edge Function.
+    *   Rewrite the business logic from C#/Go into a Typescript Supabase Edge Function.
     *   Instead of calling an SQL/CosmosDB driver, you will use the `supabase-js` client to interact with your database.
     *   Example: `GetUserSets.cs` becomes a `supabase/functions/get-user-sets/index.ts` that uses `supabase.from('sets').select('*').eq('user_id', userId)`.
 3.  **Implement Row Level Security (RLS):** This is a key architectural change. Instead of relying solely on your functions for security, define RLS policies on your Supabase tables.
@@ -70,11 +70,10 @@ This plan is broken into phases to de-risk the migration and allow for iterative
 
 **Phase 4: Testing & Go-Live**
 
-1.  **Staging Environment:** Strongly consider creating a second Supabase project to act as a staging/QA environment.
-2.  **End-to-End Testing:** Rigorously test every feature of the application against your staging environment.
-3.  **Pre-Launch:** Announce the migration and scheduled downtime/password-reset requirement to your users.
-4.  **Go-Live:**
+1.  **End-to-End Testing:** Rigorously test every feature of the application against your staging environment.
+2.  **Go-Live:**
     *   Perform one final, full data sync from your Azure databases to Supabase.
     *   Update your frontend application's production environment variables to point to the live Supabase project.
     *   Deploy the frontend.
-5.  **Decommission:** Once you have verified the new system is stable for a few days/weeks, you can safely decommission your Azure Functions and databases.
+3.  **Decommission:** Once you have verified the new system is stable for a few days/weeks, you can safely decommission your Azure Functions and databases.
+4.  **Staging Environment:** As a next step, consider creating a second Supabase project to act as a staging/QA environment.
